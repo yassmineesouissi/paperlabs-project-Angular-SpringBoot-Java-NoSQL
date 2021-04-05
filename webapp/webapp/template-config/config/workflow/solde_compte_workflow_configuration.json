@@ -1,0 +1,68 @@
+{
+  "workflow": [ 
+       {
+      "inputId": "input_nature_employe_tunisien",
+      "valuesConstraints": [
+        {
+          "value": "De nationalité tunisienne",
+          "constraints": [
+            {
+              "elementId": "bloc_tunisien",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+  
+  {
+      "inputId": "input_nature_employe_etrange",
+      "valuesConstraints": [
+        {
+          "value": "De nationalité étrangère",
+          "constraints": [
+            {
+              "elementId": "bloc_etrange",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+
+	
+	{
+      "inputId": "input_employeur_morale",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale",
+          "constraints": [
+            {
+              "elementId": "bloc_employeur_moral",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_employeur_physique",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique",
+          "constraints": [
+            {
+              "elementId": "bloc_employeur_physique",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+  
+  
+  ]}
+  
+  
+  
+  

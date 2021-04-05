@@ -1,0 +1,1226 @@
+{
+	"steps": [
+		
+		{
+			"id": "step_nature_employe_demission",
+			"title": "L’employé :",
+			"description": "",
+			"blocs": [
+				"bloc_nature_employe_dimission"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_employe_dimission",
+			"title": "L’employé :",
+			"description": "",
+			"blocs": [
+				"bloc_tunisien_dimission",
+				"bloc_etrange_dimission"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_employeur_dimission",
+			"title": "L’employeur:",
+			"description": "",
+			"blocs": [
+				"bloc_employeur_dimission"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_information_employeur_dimission",
+			"title": "L'employeur :",
+			"description": "",
+			"blocs": [
+				"bloc_employeur_physique_dimission",
+				"bloc_employeur_moral_dimission"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_fonction_employe_dimission",
+			"title": "Employé :",
+			"description": "",
+			"blocs": [
+				"bloc_fonction_employe_dimission"
+				
+			],
+			"visibility": true
+		}
+		
+		
+		
+	],
+	"blocs": [
+		{
+			"id": "bloc_nature_employe_dimission",
+			"title": "",
+			"description": "",
+			"inputs": [
+				"input_nature_employe_tunisien",
+				"input_nature_employe_etrange"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_tunisien_dimission",
+			"title": "De nationalité tunisienne",
+			"description": "",
+			"inputs": [
+				"input_nom_employe_tu_dimission",
+                "input_prenom_employe_tu_dimission",
+				"input_datenaissance_employe_tu_dimission",
+				"input_villenaissance_employe_tu_dimission",
+				"input_cin_employe_tu_dimission",
+				"input_adresse_employe_tu_dimission"],
+			"visibility": true
+		},
+		
+		{
+			"id": "bloc_etrange_dimission",
+			"title": "De nationalité étrangère",
+			"description": "",
+			"inputs": [
+				"input_prénom_etrange_dimission",
+				"input_nom_etrange_dimission",
+				"input_datenaissance_employe_et_dimission",
+				"input_villenaissance_employe_et_dimission",
+				"input_nationalité_dimission",
+				"input_num_passport_représentant_dimission",
+				"input_date_expiration_passport_dimission",
+				"input_adresse_employe_et_dimission"],
+			"visibility": false
+		},
+		
+		{
+			"id": "bloc_employeur_dimission",
+			"title": "L'employeur est une:",
+			"description": "",
+			"inputs": [
+			"input_employeur_physique_dimission",
+			"input_employeur_morale_dimission"
+				
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_employeur_physique_dimission",
+			"title": "Personne physique",
+			"description": "",
+			"inputs": [
+				"input_nom_employeur_dimission",
+				"input_prenom_employeur_dimission"
+				
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_employeur_moral_dimission",
+			"title": "Personne morale",
+			"description": "",
+			"inputs": [
+				"input_denomination_dimission",
+				"input_adresse_siege_social_dimission_dimission"
+				
+			],
+			"visibility": false
+		},
+		{
+			"id": "bloc_fonction_employe_dimission",
+			"title": "",
+			"description": "",
+			"inputs": [
+				"input_fonction_employe_dimission",
+				"input_date_demission"
+				
+			],
+			"visibility": true
+		}
+		
+		
+		
+		
+	],
+	"inputs": [
+		
+		
+		{
+			"id": "input_prenom_employe_tu_dimission",
+			"type": "text",
+			"color":"red",
+			"description": "",
+			"name": "input_prenom_employe_tu_dimission",
+			"label": "Prénom:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_employe_tu_dimission",
+			"type": "text",
+			"description": "",
+			"name": "input_nom_employe_tu_dimission",
+			"label": "Nom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_associe1"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_datenaissance_employe_tu_dimission",
+			"type": "Date",
+			"description": "",
+			"name": "input_datenaissance_employe_tu_dimission",
+			"label": "Date de naissance:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"datenaissance_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_villenaissance_employe_tu_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Ville de naissance ",
+			"label": "Ville de naissance :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"villenaissance_associe1"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_cin_employe_tu_dimission",
+			"type": "cin",
+			"description": "",
+			"name": "input_cin_employe_tu_dimission",
+			"label": "Numéro de carte d'identité nationale ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"cin_associe1"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		
+		{
+			"id": "input_adresse_employe_tu_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Adresse",
+			"label": "Adresse",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adress_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_villenaissance_employe_et_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Ville de naissance ",
+			"label": "Ville de naissance :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"villenaissance_associe2"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_nationalité_dimission",
+			"type": "select",
+			"description": "",
+			"name": "Nationalite: ",
+			"label": "Nationalite: ",
+			"placeHolder": "",
+			"help": "",
+			"options": ["Afghan-e",
+"Sud-Africain-e",
+"Albanais-e",
+"Algérien-ne",
+"Allemand-e",
+"Andorran-e",
+"Angolais-e",
+"Saoudien-ne",
+"Argentin-e",
+"Arménien-ne",
+"Arubain-ne",
+"Australien-ne",
+"Autrichien-ne",
+"Azerbaïdjanais-e",
+"Bahamien-ne",
+"Bahreïnien-ne",
+"Bangladais-e, Bangladeshi-e",
+"Barbadien-ne",
+"Biélorusse",
+"Birman-e",
+"Belge",
+"Bélizien-ne",
+"Béninois-e",
+"Bermudien-ne",
+"Bhoutanais-e",
+"Bolivien-ne",
+"Bosniaque, Bosnien-ne",
+"Botswanais-e, Botswanéen-ne",
+"Brésilien-ne",
+"Brunéien-ne",
+"Bulgare",
+"Burkinabé-e, Burkinais-e",
+"Burundais-e",
+"Camerounais-e",
+"Canadien-ne",
+"Cap-Verdien-ne",
+"Centrafricain-e",
+"Chilien-ne",
+"Chinois-e",
+"Chypriote, Cypriote",
+"Colombien-ne",
+"Comorien-ne",
+"Congolais-e",
+"Congolais-e",
+"Nord-Coréen-ne",
+"Sud-Coréen-ne",
+"Costaricain-e, Costaricien-ne",
+"Ivoirien-ne",
+"Croate",
+"Cubain-e",
+"Danois-e",
+"Djiboutien-ne",
+"Dominiquais-e",
+"Égyptien-ne",
+"Émirien-ne",
+"Équatorien-ne",
+"Érythréen-ne",
+"Espagnol-e",
+"Estonien-ne",
+"Américain-e",
+"Éthiopien-ne",
+"Fidjien-ne",
+"Finlandais-e",
+"Français-e",
+"Gabonais-e",
+"Gambien-ne",
+"Géorgien-ne",
+"Ghanéen-ne",
+"Gibraltarien-ne",
+"Grec - Grecque",
+"Grenadien-ne",
+"Guatémaltèque",
+"Guinéen-ne",
+"Bissau-Guinéen-ne",
+"Équato-Guinéen-ne",
+"Guyanais-e, Guyanien-ne",
+"Haïtien-ne",
+"Hondurien-ne",
+"Hongrois-e",
+"Indien-ne",
+"Indonésien-ne",
+"Iranien-ne",
+"Irakien-ne, Iraquien-ne",
+"Irlandais-e",
+"Islandais-e",
+"Israélien-ne",
+"Italien-ne",
+"Jamaïcain-e",
+"Japonais-e",
+"Jordanien-ne",
+"Kazakh(-e)",
+"Kenyan-e",
+"Kirghiz",
+"Kiribatien-ne",
+"Koweïtien-ne",
+"Kosovar-e",
+"Laotien-ne",
+"Lesothan-e",
+"Letton-(n)e",
+"Libanais-e",
+"Libérien-ne",
+"Libyen-ne",
+"Liechtensteinois-e",
+"Lituanien-ne",
+"Luxembourgeois-e",
+"Macédonien-ne",
+"Malgache",
+"Malaisien-ne",
+"Malawite, Malawien-ne",
+"Maldivien-ne",
+"Malien-ne",
+"Maltais-e",
+"Marocain-e",
+"Mauricien-ne",
+"Mauritanien-ne",
+"Mexicain-e",
+"Monégasque",
+"Mongol-e",
+"Monténégrin-e",
+"Mozambicain-e",
+"Namibien-ne",
+"Népalais-e",
+"Nicaraguayen-ne",
+"Nigérien-ne",
+"Nigérian-e",
+"Norvégien-ne",
+"Néo-Zélandais-e",
+"Omanais-e",
+"Ougandais-e",
+"Ouzbek",
+"Pakistanais-e",
+"Panaméen-ne",
+"Papouasien-ne",
+"Paraguayen-ne",
+"Néerlandais-e",
+"Péruvien-ne",
+"Philippin-e",
+"Polonais-e",
+"Portoricain-e",
+"Portugais-e",
+"Qatari-e, Qatarien-ne",
+"Dominicain-e",
+"Tchèque",
+"Roumain-e",
+"Britannique",
+"Russe",
+"Rwandais-e",
+"Saint-Vincentais-e, Grenadin-e",
+"Salvadorien-ne",
+"Sénégalais-e",
+"Serbe",
+"Sierra-Léonais-e",
+"Singapourien-ne",
+"Slovaque",
+"Slovène",
+"Somalien-ne",
+"Soudanais-e",
+"Sri-Lankais-e",
+"Suédois-e",
+"Suisse",
+"Surinamien-ne",
+"Swazi-e",
+"Syrien-ne",
+"Tadjik",
+"Taïwanais-e",
+"Tanzanien-ne",
+"Tchadien-ne",
+"Thaïlandais-e",
+"Est-Timorais-e",
+"Togolais-e",
+"Tunisien-ne",
+"Turkmène",
+"Turc - Turque",
+"Tuvaluan-e",
+"Ukrainien-ne",
+"Uruguayen-ne",
+"Vénézuélien-ne",
+"Vietnamien-ne",
+"Yéménite",
+"Zambien-ne",
+"Zimbabwéen-ne"],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"Afghan-e": ["Nationalite"],
+"Sud-Africain-e": ["Nationalite"],
+"Albanais-e": ["Nationalite"],
+"Algérien-ne": ["Nationalite"],
+"Allemand-e": ["Nationalite"],
+"Andorran-e": ["Nationalite"],
+"Angolais-e": ["Nationalite"],
+"Saoudien-ne": ["Nationalite"],
+"Argentin-e": ["Nationalite"],
+"Arménien-ne": ["Nationalite"],
+"Arubain-ne": ["Nationalite"],
+"Australien-ne": ["Nationalite"],
+"Autrichien-ne": ["Nationalite"],
+"Azerbaïdjanais-e": ["Nationalite"],
+"Bahamien-ne": ["Nationalite"],
+"Bahreïnien-ne": ["Nationalite"],
+"Bangladais-e, Bangladeshi-e": ["Nationalite"],
+"Barbadien-ne": ["Nationalite"],
+"Biélorusse": ["Nationalite"],
+"Birman-e": ["Nationalite"],
+"Belge": ["Nationalite"],
+"Bélizien-ne": ["Nationalite"],
+"Béninois-e": ["Nationalite"],
+"Bermudien-ne": ["Nationalite"],
+"Bhoutanais-e": ["Nationalite"],
+"Bolivien-ne": ["Nationalite"],
+"Bosniaque, Bosnien-ne": ["Nationalite"],
+"Botswanais-e, Botswanéen-ne": ["Nationalite"],
+"Brésilien-ne": ["Nationalite"],
+"Brunéien-ne": ["Nationalite"],
+"Bulgare": ["Nationalite"],
+"Burkinabé-e, Burkinais-e": ["Nationalite"],
+"Burundais-e": ["Nationalite"],
+"Camerounais-e": ["Nationalite"],
+"Canadien-ne": ["Nationalite"],
+"Cap-Verdien-ne": ["Nationalite"],
+"Centrafricain-e": ["Nationalite"],
+"Chilien-ne": ["Nationalite"],
+"Chinois-e": ["Nationalite"],
+"Chypriote, Cypriote": ["Nationalite"],
+"Colombien-ne": ["Nationalite"],
+"Comorien-ne": ["Nationalite"],
+"Congolais-e": ["Nationalite"],
+"Congolais-e": ["Nationalite"],
+"Nord-Coréen-ne": ["Nationalite"],
+"Sud-Coréen-ne": ["Nationalite"],
+"Costaricain-e, Costaricien-ne": ["Nationalite"],
+"Ivoirien-ne": ["Nationalite"],
+"Croate": ["Nationalite"],
+"Cubain-e": ["Nationalite"],
+"Danois-e": ["Nationalite"],
+"Djiboutien-ne": ["Nationalite"],
+"Dominiquais-e": ["Nationalite"],
+"Égyptien-ne": ["Nationalite"],
+"Émirien-ne": ["Nationalite"],
+"Équatorien-ne": ["Nationalite"],
+"Érythréen-ne": ["Nationalite"],
+"Espagnol-e": ["Nationalite"],
+"Estonien-ne": ["Nationalite"],
+"Américain-e": ["Nationalite"],
+"Éthiopien-ne": ["Nationalite"],
+"Fidjien-ne": ["Nationalite"],
+"Finlandais-e": ["Nationalite"],
+"Français-e": ["Nationalite"],
+"Gabonais-e": ["Nationalite"],
+"Gambien-ne": ["Nationalite"],
+"Géorgien-ne": ["Nationalite"],
+"Ghanéen-ne": ["Nationalite"],
+"Gibraltarien-ne": ["Nationalite"],
+"Grec - Grecque": ["Nationalite"],
+"Grenadien-ne": ["Nationalite"],
+"Guatémaltèque": ["Nationalite"],
+"Guinéen-ne": ["Nationalite"],
+"Bissau-Guinéen-ne": ["Nationalite"],
+"Équato-Guinéen-ne": ["Nationalite"],
+"Guyanais-e, Guyanien-ne": ["Nationalite"],
+"Haïtien-ne": ["Nationalite"],
+"Hondurien-ne": ["Nationalite"],
+"Hongrois-e": ["Nationalite"],
+"Indien-ne": ["Nationalite"],
+"Indonésien-ne": ["Nationalite"],
+"Iranien-ne": ["Nationalite"],
+"Irakien-ne, Iraquien-ne": ["Nationalite"],
+"Irlandais-e": ["Nationalite"],
+"Islandais-e": ["Nationalite"],
+"Israélien-ne": ["Nationalite"],
+"Italien-ne": ["Nationalite"],
+"Jamaïcain-e": ["Nationalite"],
+"Japonais-e": ["Nationalite"],
+"Jordanien-ne": ["Nationalite"],
+"Kazakh(-e)": ["Nationalite"],
+"Kenyan-e": ["Nationalite"],
+"Kirghiz": ["Nationalite"],
+"Kiribatien-ne": ["Nationalite"],
+"Koweïtien-ne": ["Nationalite"],
+"Kosovar-e": ["Nationalite"],
+"Laotien-ne": ["Nationalite"],
+"Lesothan-e": ["Nationalite"],
+"Letton-(n)e": ["Nationalite"],
+"Libanais-e": ["Nationalite"],
+"Libérien-ne": ["Nationalite"],
+"Libyen-ne": ["Nationalite"],
+"Liechtensteinois-e": ["Nationalite"],
+"Lituanien-ne": ["Nationalite"],
+"Luxembourgeois-e": ["Nationalite"],
+"Macédonien-ne": ["Nationalite"],
+"Malgache": ["Nationalite"],
+"Malaisien-ne": ["Nationalite"],
+"Malawite, Malawien-ne": ["Nationalite"],
+"Maldivien-ne": ["Nationalite"],
+"Malien-ne": ["Nationalite"],
+"Maltais-e": ["Nationalite"],
+"Marocain-e": ["Nationalite"],
+"Mauritanien-ne": ["Nationalite"],
+"Mexicain-e": ["Nationalite"],
+"Monégasque": ["Nationalite"],
+"Mongol-e": ["Nationalite"],
+"Monténégrin-e": ["Nationalite"],
+"Mozambicain-e": ["Nationalite"],
+"Namibien-ne": ["Nationalite"],
+"Népalais-e": ["Nationalite"],
+"Nicaraguayen-ne": ["Nationalite"],
+"Nigérien-ne": ["Nationalite"],
+"Nigérian-e": ["Nationalite"],
+"Norvégien-ne": ["Nationalite"],
+"Néo-Zélandais-e": ["Nationalite"],
+"Omanais-e": ["Nationalite"],
+"Ougandais-e": ["Nationalite"],
+"Ouzbek": ["Nationalite"],
+"Pakistanais-e": ["Nationalite"],
+"Panaméen-ne": ["Nationalite"],
+"Papouasien-ne": ["Nationalite"],
+"Paraguayen-ne": ["Nationalite"],
+"Néerlandais-e": ["Nationalite"],
+"Péruvien-ne": ["Nationalite"],
+"Philippin-e": ["Nationalite"],
+"Polonais-e": ["Nationalite"],
+"Portoricain-e": ["Nationalite"],
+"Portugais-e": ["Nationalite"],
+"Qatari-e, Qatarien-ne": ["Nationalite"],
+"Dominicain-e": ["Nationalite"],
+"Tchèque": ["Nationalite"],
+"Roumain-e": ["Nationalite"],
+"Britannique": ["Nationalite"],
+"Russe": ["Nationalite"],
+"Rwandais-e": ["Nationalite"],
+"Saint-Vincentais-e, Grenadin-e": ["Nationalite"],
+"Salvadorien-ne": ["Nationalite"],
+"Sénégalais-e": ["Nationalite"],
+"Serbe": ["Nationalite"],
+"Sierra-Léonais-e": ["Nationalite"],
+"Singapourien-ne": ["Nationalite"],
+"Slovaque": ["Nationalite"],
+"Slovène": ["Nationalite"],
+"Somalien-ne": ["Nationalite"],
+"Soudanais-e": ["Nationalite"],
+"Sri-Lankais-e": ["Nationalite"],
+"Suédois-e": ["Nationalite"],
+"Suisse": ["Nationalite"],
+"Surinamien-ne": ["Nationalite"],
+"Swazi-e": ["Nationalite"],
+"Syrien-ne": ["Nationalite"],
+"Tadjik": ["Nationalite"],
+"Taïwanais-e": ["Nationalite"],
+"Tanzanien-ne": ["Nationalite"],
+"Tchadien-ne": ["Nationalite"],
+"Thaïlandais-e": ["Nationalite"],
+"Est-Timorais-e": ["Nationalite"],
+"Togolais-e": ["Nationalite"],
+"Tunisien-ne": ["Nationalite"],
+"Turkmène": ["Nationalite"],
+"Turc - Turque": ["Nationalite"],
+"Tuvaluan-e": ["Nationalite"],
+"Ukrainien-ne": ["Nationalite"],
+"Uruguayen-ne": ["Nationalite"],
+"Vénézuélien-ne": ["Nationalite"],
+"Vietnamien-ne": ["Nationalite"],
+"Yéménite": ["Nationalite"],
+"Zambien-ne": ["Nationalite"],
+"Zimbabwéen-ne": ["Nationalite"]
+			},
+			"visibility": true
+		},
+		
+		
+		
+		{
+			"id": "input_prénom_etrange_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Prénom : ",
+			"label": "Prénom : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_etrange_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Nom : ",
+			"label": "Nom : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_representant"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_datenaissance_employe_et_dimission",
+			"type": "Date",
+			"description": "",
+			"name": "input_datenaissance_employe_et_dimission",
+			"label": "Date de naissance:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"datenaissance_associe2"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		
+		
+	
+		{
+			"id": "input_num_passport_représentant_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Numéro de passport  du représentant: ",
+			"label": "Numéro de passport du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"num_passport_representant"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_date_expiration_passport_dimission",
+			"type": "Date",
+			"description": "",
+			"name": "input_date_expiration_passport_dimission",
+			"label": "Date d’expiration du passeport:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"date_passport"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_adresse_employe_et_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Adresse",
+			"label": "Adresse",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adress_associe2"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		{
+			"id": "input_nature_employe_tunisien",
+			"type": "radio",
+			
+			"description": "",
+			"name": "employee",
+			"label": "Est de nationalité tunisienne",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne tunisien",
+			"bookmarkIdPerValue": {
+				"Personne tunisien": [
+					"Infos_employeur_physique"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nature_employe_etrange",
+			"type": "radio",
+			"description": "",
+			"name": "employee",
+			"label": "Est de nationalité étrangère",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne étrange",
+			"bookmarkIdPerValue": {
+				"Personne étrange": [
+					"Infos_employeur_moral"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_employeur_physique_dimission",
+			"type": "radio",
+			"description": "",
+			"name": "employeur",
+			"label": "Personne physique",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne physique",
+			"bookmarkIdPerValue": {
+				"Personne physique": [
+					"employeur_physique"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_employeur_morale_dimission",
+			"type": "radio",
+			"description": "",
+			"name": "employeur",
+			"label": "Personne morale",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne morale",
+			"bookmarkIdPerValue": {
+				"Personne morale": [
+					"employeur_moral"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_employeur_dimission",
+			"type": "text",
+			"description": "",
+			"name": "input_nom_employeur_dimission",
+			"label": "Nom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_emloyeur"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_employeur_dimission",
+			"type": "text",
+			"description": "",
+			"name": "input_prenom_employeur_dimission",
+			"label": "Prenom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_emloyeur"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_denomination_dimission",
+			"type": "text",
+			"description": "",
+			"name": "input_denomination_dimission",
+			"label": "Dénomination sociale :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"denomination"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_adresse_siege_social_dimission_dimission",
+			"type": "text",
+			"description": "",
+			"name": "input_adresse_siege_social_dimission_dimission",
+			"label": "Adresse siége social :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adresse"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_fonction_employe_dimission",
+			"type": "text",
+			"description": "",
+			"name": "Fonction : ",
+			"label": "Fonction de l'employé: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"fonction_salarié"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_date_demission",
+			"type": "Date",
+			"description": "",
+			"name": "input_date_demission",
+			"label": "Date de demission: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"date_demission"
+				]
+			},
+			"visibility": true
+		}
+		
+	],
+	
+	
+	
+	
+	"bookmarks": [
+		
+		
+			
+		{
+			"bookmarkId": "nom_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "datenaissance_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "datenaissance_associe2",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "villenaissance_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "villenaissance_associe2",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "cin_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "date_passport",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adress_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adress_associe2",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Infos_employeur_physique",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Infos_employeur_moral",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "Nationalite",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "prenom_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "nom_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "num_passport_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "denomination",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "adresse",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_emloyeur",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "nom_emloyeur",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "date_demission",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "employeur_physique",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+				{
+			"bookmarkId": "employeur_moral",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "fonction_salarié",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		}
+		
+	]
+}

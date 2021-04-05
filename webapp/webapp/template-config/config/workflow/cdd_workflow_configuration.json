@@ -1,0 +1,363 @@
+{
+  "workflow": [
+  {
+      "inputId": "input_nature_personne_physique_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne caution",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_employeur_physique",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_lemployeur_physique",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_employeur_morale",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_lemployeur_morale",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_annee_question_5",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_inserez_annee_question_5",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_inserez_annee_question_5",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_mois_question_5",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_inserez_mois_question_5",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_inserez_mois_question_5",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_jours_question_5",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_inserez_jours_question_5",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_inserez_jours_question_5",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_oui_8",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_date_essai_8",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_date_essai_8",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_temps_complet_question_12",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_duree_normal_travail_question_12_1",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_duree_normal_travail_question_12_1",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_temps_partiel_question_12",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_duree_normal_travail_question_12_2",
+              "visibility": true
+            },
+			{
+              "elementId": "input_duree_hebdomadaire_question_12_3",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_duree_normal_travail_question_12_2",
+              "visibility": false
+            },
+			{
+              "elementId": "input_duree_hebdomadaire_question_12_3",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+
+	
+	{
+      "inputId": "input_question_oui_17",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_obligation_question_oui_17",
+              "visibility": true
+            },
+			{
+              "elementId": "input_perimetre_question_oui_17",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_obligation_question_oui_17",
+              "visibility": false
+            },
+			{
+              "elementId": "input_perimetre_question_oui_17",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+		  {
+      "inputId": "input_question_4",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_4",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "Remplacement d'un salarié absent",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_4",
+              "visibility": false
+            }
+          ]
+        },
+		
+		{
+          "value": "Accroissement temporaire d'activité",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "Attente de la prise de fonctions d'un salarié recruté en CDI",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_4",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  }
+	]
+	}

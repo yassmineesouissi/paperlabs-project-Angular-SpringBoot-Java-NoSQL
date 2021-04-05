@@ -1,0 +1,1026 @@
+{
+  "steps": [
+  {
+      "id": "step_info_société",
+      "title": "عـــقد الإعداد للحياة المهنية",
+      "description": "",
+      "blocs": ["bloc_info_société"],
+      "visibility": true
+    },
+	{
+      "id": "step_info_employe",
+      "title": "",
+      "description": "",
+      "blocs": ["bloc_info_employe"],
+      "visibility": true
+    },
+	{
+      "id": "step_info_accord",
+      "title": " آلاتفاق على ما يلي",
+      "description": "",
+      "blocs": ["bloc_info_accord_2",
+	            "bloc_info_accord_3",
+				"bloc_info_accord_6"],
+      "visibility": true
+    },
+	{
+      "id": "step_info_details",
+      "title": "",
+      "description": "",
+      "blocs": ["bloc_info_details"],
+      "visibility": true
+    }
+  
+  ],
+  "blocs": [
+  {
+      "id": "bloc_info_société",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_nom_societe",
+		"input_matricule_societe",
+		"input_adresse_sociale_societe",
+		"input_numero_tel_societe",
+		"input_fax_societe",
+		"input_email_societe",
+		"input_identification_fiscale",
+		"input_num_cnss",
+		"input_chef_entreprise",
+		"input_vise_chef_entreprise",
+		"input_adjectif_vise_chef_entreprise"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_info_employe",
+      "title": " المنتفع ",
+      "description": "",
+      "inputs": [
+        "input_nom_prenom_employe",
+		"input_date_naissance_employe",
+		"input_lieu_naissance_employe",
+		"input_num_cin_employe",
+		"input_adresse_employe",
+		"input_num_tel_employe",
+		"input_email_employe",
+		"input_diplome_employe",
+		"input_specialite_diplome_employe",
+		"input_date_diplome_employe",
+		"input_inscription_employe_bureau_emploi",
+		"input_rip_rib_employe",
+		"input_banque_poste_employe"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_info_accord_2",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_poste_travail_employe",
+		"input_adresse_stage_employe"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_info_accord_3",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_duree_total_contrat",
+		"input_date_debut_contrat",
+		"input_date_fin_contrat"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_info_accord_6",
+      "title": "",
+      "description": "",
+      "inputs": ["input_montant_entreprise"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_info_details",
+      "title": "",
+      "description": "",
+      "inputs": ["input_adresse_bureau_emploi",
+	  "input_numero_de_contrat",
+        "input_date_signature_contrat",
+		"input_lieu_signature_contrat"],
+      "visibility": true
+    }
+  
+  
+  ],
+  "inputs": [
+   {
+      "id": "input_lieu_signature_contrat",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_signature_contrat",
+      "label": "مكان إبرام العقد",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_signature_contrat"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_signature_contrat",
+      "type": "date",
+      "description": "",
+      "name": "input_date_signature_contrat",
+      "label": "تاريخ إبرام العقد",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_signature_contrat"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_numero_de_contrat",
+      "type": "text",
+      "description": "",
+      "name": "input_numero_de_contrat",
+      "label": "عـدد عـــقد الإعداد للحياة المهنية",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numero_de_contrat"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_bureau_emploi",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_bureau_emploi",
+      "label": "عنوان مكتب التشغيل والعمل المستقل",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_bureau_emploi"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_montant_entreprise",
+      "type": "text",
+      "description": "",
+      "name": "input_montant_entreprise",
+      "label": "مبلغ المنحة من طرف المشغّل",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["montant_entreprise"]
+      },
+      "visibility": true
+    },
+   
+    {
+      "id": "input_date_fin_contrat",
+      "type": "date",
+      "description": "",
+      "name": "input_date_fin_contrat",
+      "label": "تاريخ نهاية العقد",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_fin_contrat"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_debut_contrat",
+      "type": "date",
+      "description": "",
+      "name": "input_date_debut_contrat",
+      "label": "تاريخ بداية العقد",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_debut_contrat"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_duree_total_contrat",
+      "type": "text",
+      "description": "",
+      "name": "input_duree_total_contrat",
+      "label": "مدّة العقد",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["duree_total_contrat"]
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_adresse_stage_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_stage_employe",
+      "label": "مكان التربص",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_stage_employe"]
+      },
+      "visibility": true
+    },
+   
+  {
+      "id": "input_poste_travail_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_poste_travail_employe",
+      "label": " خطّة المنتفع ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["poste_travail_employe"]
+      },
+      "visibility": true
+    },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {
+      "id": "input_nom_prenom_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_employe",
+      "label": "الإسم واللقب",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_naissance_employe",
+      "type": "date",
+      "description": "",
+      "name": "input_date_naissance_employe",
+      "label": "تاريخ الولادة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_naiss_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_lieu_naissance_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_naissance_employe",
+      "label": "مكان الولادة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_naissa_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_num_cin_employe",
+      "type": "number",
+      "description": "",
+      "name": "input_num_cin_employe",
+      "label": "رقم بطاقة التعريف الوطنية",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_cin_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_adresse_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_employe",
+      "label": "عنوان محل السكنى",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_num_tel_employe",
+      "type": "number",
+      "description": "",
+      "name": "input_num_tel_employe",
+      "label": "الهاتف",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_tel_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_email_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_email_employe",
+      "label": "العنوان الاكتروني",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["email_employe"]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_diplome_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_diplome_employe",
+      "label": "الشهادة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["diplome_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_specialite_diplome_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_specialite_diplome_employe",
+      "label": "الاختصاص",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["speci_diplome_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_diplome_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_date_diplome_employe",
+      "label": "تاريخ الحصول على الشهادة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_diplome_employe"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_inscription_employe_bureau_emploi",
+      "type": "text",
+      "description": "",
+      "name": "input_inscription_employe_bureau_emploi",
+      "label": "مسجل بمكتب التشغيل و العمل المستقل ب",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["inscr_employe_bureau_emploi"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_rip_rib_employe",
+      "type": "number",
+      "description": "",
+      "name": "input_rip_rib_employe",
+      "label": "الحساب الجاري",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["rip_rib_employe"]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_banque_poste_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_banque_poste_employe",
+      "label": "فرع البنك أو مكتب البريد",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["banque_poste_employe"]
+      },
+      "visibility": true
+    },
+ 
+  {
+      "id": "input_adjectif_vise_chef_entreprise",
+      "type": "text",
+      "description": "",
+      "name": "input_adjectif_vise_chef_entreprise",
+      "label": "الصفة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adjectif_vise_entreprise"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_vise_chef_entreprise",
+      "type": "text",
+      "description": "",
+      "name": "input_vise_chef_entreprise",
+      "label": " الممثل عند الإقتضاء",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["vise_chef_entreprise"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_chef_entreprise",
+      "type": "text",
+      "description": "",
+      "name": "input_chef_entreprise",
+      "label": "رئيس المؤسّسة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["chef_entreprise"]
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_num_cnss",
+      "type": "text",
+      "description": "",
+      "name": "input_num_cnss",
+      "label": "رقم الانخراط بالصندوق الوطين للضمان آلجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_cnss"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_identification_fiscale",
+      "type": "text",
+      "description": "",
+      "name": "input_identification_fiscale",
+      "label": "المعرف الجبائي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identification_fiscale"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_email_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_email_societe",
+      "label": "العنوان الاكتروني",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["email_societe"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_fax_societe",
+      "type": "number",
+      "description": "",
+      "name": "input_fax_societe",
+      "label": "الفاكس",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["fax_societe"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_numero_tel_societe",
+      "type": "number",
+      "description": "",
+      "name": "input_numero_tel_societe",
+      "label": "الهاتف",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numero_tel_societe"]
+      },
+      "visibility": true
+    },
+ 
+  {
+      "id": "input_adresse_sociale_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_sociale_societe",
+      "label": "المقر الاجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_sociale"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_matricule_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_matricule_societe",
+      "label": "قطاع النشاط",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["matricule"]
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_societe",
+      "label": " إسم المؤسسة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_societe"]
+      },
+      "visibility": true
+    }
+  
+   ],
+  "bookmarks": [
+  {
+      "bookmarkId": "email_societe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "fax_societe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "numero_tel_societe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  
+  {
+      "bookmarkId": "adresse_sociale",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "matricule",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "nom_societe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	 {
+      "bookmarkId": "identification_fiscale",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	 {
+      "bookmarkId": "num_cnss",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "chef_entreprise",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "vise_chef_entreprise",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adjectif_vise_entreprise",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "banque_poste_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "rip_rib_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "date_diplome_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "inscr_employe_bureau_emploi",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "speci_diplome_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "diplome_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "email_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "num_tel_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "num_cin_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_naiss_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "lieu_naissa_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "poste_travail_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "adresse_stage_employe",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_fin_contrat",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_debut_contrat",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "duree_total_contrat",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "montant_entreprise",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "lieu_signature_contrat",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_signature_contrat",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numero_de_contrat",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_bureau_emploi",
+      "value": null,
+      "fontFamily": "arial",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+  ]
+}

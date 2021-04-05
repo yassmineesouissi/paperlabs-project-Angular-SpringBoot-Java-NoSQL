@@ -1,0 +1,198 @@
+{
+  "steps": [
+  
+  
+    {
+      "id": "step_informations_sur_lassemble",
+      "title": "Informations sur l'assemblée",
+      "description": "",
+      "blocs": ["bloc_lettre_demission_gerant"],
+      "visibility": true
+    }
+	],
+	
+	
+ "blocs": [
+   
+   
+    {
+	"id": "bloc_lettre_demission_gerant",
+	"title": "",
+	"description": "",
+	"inputs": ["input_qestion_1",
+	           "input_qestion_2",
+			   "input_qestion_4",
+			   "input_qestion_13_2"
+																		  
+			  ],
+	"visibility": true}
+																		   
+																		   
+	],
+	
+"inputs": [
+	   
+	   
+	   
+	{
+	"id": "input_qestion_1",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_1",
+	 "label": "Dénomination Sociale",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_1_1","bookmark_qestion_1_2","bookmark_qestion_1_3","bookmark_qestion_1_4","bookmark_qestion_1_5"]},
+	 "visibility": true
+	 },
+	 
+	 {
+	"id": "input_qestion_2",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_2",
+	 "label": "Siège Social",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_2"]},
+	 "visibility": true
+	 },
+	 
+	  {
+	"id": "input_qestion_4",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_4",
+	 "label": "Identifiant Unique",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_4"]},
+	 "visibility": true
+	 },
+	  {
+	"id": "input_qestion_13_2",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_13_2",
+	 "label": "Nom et Prénom de l’ancien gérant",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_13_2"]},
+	 "visibility": true
+	 }
+	 
+	  
+	  
+	  
+	],
+	
+	"bookmarks": [
+   
+	
+	{
+      "bookmarkId": "bookmark_qestion_1_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "bookmark_qestion_1_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_1_3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_1_4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_1_5",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_13_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+	
+	
+	]
+	
+	
+}

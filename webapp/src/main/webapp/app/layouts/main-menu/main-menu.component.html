@@ -1,0 +1,252 @@
+<nav class=" navbar navbar-expand-xl navbar-light indexing" [class.sticky]="windowScroll >= 10 && section === 'home-section'" [class.isAdmin]="hasRoleAdmin()">
+    <div class="pap-brand">
+        <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
+            <span class="logo-pap"></span>
+            <span jhiTranslate="global.title" class="navbar-title"></span> <span class="navbar-version"></span>
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" [attr.aria-expanded]="!isNavbarCollapsed" aria-label="Toggle navigation" (click)="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="isAuthenticated()">
+        <div class="form-inline my-2 my-lg-0 pap-menu-items-container">
+            <ul class="navbar-nav pap-menu-items">
+
+
+                <!---------------------------------- NOS DOCUMENT  ----------------------------------------->
+                <li ngbDropdown class="nav-item dropdown pointer  " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
+                        <span [matMenuTriggerFor]="alldocs" class="item">Nos documents</span></a>
+
+
+                    <mat-menu #alldocs="matMenu" xPosition="before" class="fixedmenu1">
+
+                        <a mat-menu-item [matMenuTriggerFor]="docpop" class="docs1">Services populaires</a>
+                        <a mat-menu-item [matMenuTriggerFor]="droitsocial" class="docs">Droit social</a>
+                        <a mat-menu-item [matMenuTriggerFor]="droitcommercial" class="docs">Droit commercial</a>
+                        <a mat-menu-item [matMenuTriggerFor]="droitsociete" class="docs">Droit des sociétés</a>
+                        <a mat-menu-item [matMenuTriggerFor]="droitimmobilier" class="docs">Droit immobilier</a>
+                        <a mat-menu-item [matMenuTriggerFor]="droitpropintel" class="docs">Droit de la propriété intellectuelle</a>
+
+
+                    </mat-menu>
+                    <mat-menu #docpop="matMenu" class="fixedmenu">
+                        <a>
+                            <ul>
+                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level3"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                            </ul>
+                        </a>
+                    </mat-menu>
+                    <mat-menu #droitsocial="matMenu" class="fixedmenu">
+                        <a>
+                            <ul>
+                                <li *ngFor="let legalDocument of filterByKeyword('droit de travail')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                            </ul>
+                        </a>
+                    </mat-menu>
+                    <mat-menu #droitcommercial="matMenu" class="fixedmenu">
+                        <a>
+                            <ul>
+                                <li *ngFor="let legalDocument of filterByKeyword('comm')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                            </ul>
+                        </a>
+                    </mat-menu>
+                    <mat-menu #droitsociete="matMenu" class="fixedmenu">
+                        <a>
+                            <ul>
+                                <li *ngFor="let legalDocument of filterByKeyword('remunerations gr')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level2"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                            </ul>
+                        </a>
+                    </mat-menu>
+                    <mat-menu #droitimmobilier="matMenu" class="fixedmenu">
+                        <a>
+                            <ul>
+                                <li *ngFor="let legalDocument of filterByKeyword('gérer baux')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                            </ul>
+                        </a>
+                    </mat-menu>
+                    <mat-menu #droitpropintel="matMenu" class="fixedmenu">
+                        <a>
+                            <ul>
+                                <li *ngFor="let legalDocument of filterByKeyword('Acc Conf')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+
+                            </ul>
+                        </a>
+                    </mat-menu>
+
+                </li>
+
+
+                <!---------------------------------- NOS DOCUMENT  ----------------------------------------->
+
+                <!--  <li ngbDropdown class="nav-item dropdown pointer  " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+
+                                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
+                                        <span class="item">
+                                            Nos documents
+                                        </span>
+                                    </a>
+                
+                
+                
+                                    <ul class="dropdown-menu entreprise-drop " ngbDropdownMenu aria-labelledby="entity-menu">
+                
+                                        <li class="level0-item-1">
+                                            <a class="dropdown-item">
+                                                <span>Droit social</span>
+                                            </a>
+                                            <ul>
+                                                <li *ngFor="let legalDocument of filterByKeyword('droit de travail')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="level0-item-1">
+                                            <a class="dropdown-item">
+                                                <span>Droit commercial</span>
+                                            </a>
+                                            <ul>
+                                                <li *ngFor="let legalDocument of filterByKeyword('comm')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                                            </ul>
+                                        </li>
+                
+                
+                
+                                        <li class="level0-item-1">
+                                            <a class="dropdown-item">
+                                                <span>Droit des sociétés</span>
+                                            </a>
+                                            <ul class="item-list">
+                                                <li *ngFor="let legalDocument of filterByKeyword('remunerations gr')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                                            </ul>
+                                        </li>
+                
+                                        <li class="level0-item-1">
+                                            <a class="dropdown-item">
+                                                <span>Droit immobilier </span>
+                                            </a>
+                                            <ul>
+                                                <li *ngFor="let legalDocument of filterByKeyword('gérer baux')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                
+                
+                
+                                        <li class="level0-item-1">
+                                            <a class="dropdown-item">
+                                                <span>Droit de la propriété intellectuelle</span>
+                
+                                            </a>
+                                            <ul>
+                                                <li *ngFor="let legalDocument of filterByKeyword('Acc Conf')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li> -->
+                <!-----------------------   FIN NOS DOCUMENTS --------------------------------->
+
+
+                <!-- 
+            <li ngbDropdown class="nav-item dropdown pointer mx-2 " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
+                    <span class="item">
+                        Entreprise
+                    </span>
+                </a>
+                <ul class="dropdown-menu entreprise-drop1" ngbDropdownMenu aria-labelledby="entity-menu">
+                    <li class="level0-item-2">
+                        <a class="dropdown-item">
+                            <span>Créez votre entreprise</span>
+
+                        </a>
+                        <ul>
+                            <li *ngFor="let legalDocument of filterByKeyword('créer entreprise')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                        </ul>+
+                    </li>
+                    <li class="level0-item-2">
+                        <a class="dropdown-item">
+                            <span>Gérez votre entreprise</span>
+                        </a>
+                        <ul>
+                            <li *ngFor="let legalDocument of filterByKeyword('gérer entreprise')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="level0-item-2">
+                        <a class="dropdown-item">
+                            <span>Document populaire</span>
+                        </a>
+                        <ul>
+                            <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li> -->
+
+
+
+
+                <li class="nav-item mx-2 ">
+                    <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()">Guides</a>
+                </li>
+
+
+
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link item" routerLink="user/professional-solution" (click)="collapseNavbar()">Solution
+                    Pro</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()">Contact</a>
+                </li>
+                <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
+                    <a class="nav-link item  " (click)="login()">
+                        <span class="item-compte">
+                        Mon compte
+                    </span><span class="sr-only">(current)</span></a>
+                </li>
+                <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer mx-2" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
+                        <span class="sr-only">(current)</span>
+                        <span *ngIf="!getImageUrl()" id="accountNameSpan">
+                        <fa-icon icon="user"></fa-icon>
+                        <span id="accountName">{{getAccountName()}}</span>
+                        </span>
+                        <span *ngIf="getImageUrl()">
+                        <img [src]="getImageUrl()" class="profile-image rounded-circle" alt="Avatar">
+                    </span>
+                    </a>
+                    <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="account-menu">
+                        <li>
+                            <a class="dropdown-item" routerLink="account/profile/settings" routerLinkActive="active" (click)="collapseNavbar()">
+                                <fa-icon icon="wrench" fixedWidth="true"></fa-icon>
+                                <span jhiTranslate="global.menu.account.settings">Settings</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" routerLink="account/profile/employers/company" routerLinkActive="active" (click)="collapseNavbar()">
+                                <fa-icon icon="user-friends" fixedWidth="true"></fa-icon>
+                                <span>Mes employeurs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="account/profile/orders" routerLinkActive="active" (click)="collapseNavbar()">
+                                <fa-icon icon="box-open" fixedWidth="true"></fa-icon>
+                                <span>Mes commandes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" (click)="logout()" id="logout">
+                                <fa-icon icon="sign-out-alt" fixedWidth="true"></fa-icon>
+                                <span jhiTranslate="global.menu.account.logout">Sign out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->

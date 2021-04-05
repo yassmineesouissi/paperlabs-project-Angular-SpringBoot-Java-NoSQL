@@ -1,0 +1,107 @@
+.bg_yellow {
+  color: #212529;
+  background-color: #ff9800;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 86%;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: bottom;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.bg_green {
+  color: #fff;
+  background-color: #009688;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 86%;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: bottom;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.bg_red {
+  color: #fff;
+  background-color: #f44336;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 86%;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: bottom;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.vl {
+  border-left: 1px solid #3b424d;
+  height: 500px;
+}
+
+
+/* The Close Button */
+.close {
+  color: #fff;
+  background-color: mediumvioletred;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: bottom;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.uploadPDF{
+  width: 820px;
+  height: 20%;
+  background: white;
+  border: 2px solid gray;
+  position:fixed;
+  top:110px;
+  left:35%;
+  right:0;
+  bottom:0;
+  text-align:center;
+}
+.modal-header{
+  display: -webkit-box;
+  display: block;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+
+}
+
+.fileupload{
+  color: #ff9800;
+  font-weight: bold;
+}
+.PAYinvoice{
+  font-size: large;
+  font-weight: bold;
+
+}

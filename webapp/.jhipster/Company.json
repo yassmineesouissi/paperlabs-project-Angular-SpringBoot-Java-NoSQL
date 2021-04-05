@@ -1,0 +1,62 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "companyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyCapital",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "companyUniqueIdentification",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyRepresentativeFullName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyFullAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "String"
+        },
+      {
+        "fieldName": "companyActivityArea",
+        "fieldType": "String"
+      },
+      {
+        "fieldName": "companyFoundingPartners",
+        "fieldType": "List<String>"
+      },
+      {
+        "fieldName": "companyExportability",
+        "fieldType": "String"
+      },
+      {
+        "fieldName": "companyJurisdiction",
+        "fieldType": "String"
+      },
+      {
+        "fieldName": "companyManagerFullName",
+        "fieldType": "String"
+      }
+    ],
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "no",
+    "entityTableName": "company",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

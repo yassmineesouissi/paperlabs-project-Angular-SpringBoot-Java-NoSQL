@@ -1,0 +1,515 @@
+{
+  "steps": [
+  {
+      "id": "step_informations_sur_lassemble",
+      "title": "Informations sur l'assemblée",
+      "description": "",
+      "blocs": ["bloc_details_assemblé",
+	   "bloc_cacher_11","bloc_question_11","bloc_question_11_1","bloc_question_11_2","bloc_question_11_3","bloc_question_11_4",
+	  "bloc_question_11_5"],
+      "visibility": true
+    },
+	
+  
+
+	 {
+      "id": "step_convocation",
+      "title": "Le gérant",
+      "description": "",
+      "blocs": ["bloc_resultat_exercice_beneficiare_deficiare",
+	             "bloc_gerant_tun_or_not","bloc_question_dureee_mondat","bloc_gerant_remunere_or_not"],
+      "visibility": true
+    }
+  ],
+  "blocs": [
+  
+
+  
+ 
+  
+  {
+      "id": "bloc_details_assemblé",
+      "title": "",
+      "description": "",
+      "inputs": [
+	    "input_denomination_sociale",
+		"input_siege_social",
+		"input_capital_sociale_en_dinars",
+		"input_identifiant_unique",
+		"input_date_reunion_de_lassemble",
+		"input_heure_debut_reuiion_lassemble",
+		"input_heure_fin_reuiion_lassemble",
+		"input_questionn_8"],
+      "visibility": true
+    },
+	
+  {"id": "bloc_cacher_11","title": "","description": "","inputs": ["input_cacher_11"],"visibility": true},
+  {"id": "bloc_question_11","title": "","description": "","inputs": ["input_question_11"],"visibility": true},
+  {"id": "bloc_question_11_1","title": "Autre personne présente 1","description": "","inputs": ["input_qestion_11_1","input_nom_prénom_11_1"],"visibility": false},
+  {"id": "bloc_question_11_2","title": "Autre personne présente 2","description": "","inputs": ["input_qestion_11_2","input_nom_prénom_11_2"],"visibility": false},
+  {"id": "bloc_question_11_3","title": "Autre personne présente 3","description": "","inputs": ["input_qestion_11_3","input_nom_prénom_11_3"],"visibility": false},
+  {"id": "bloc_question_11_4","title": "Autre personne présente 4","description": "","inputs": ["input_qestion_11_4","input_nom_prénom_11_4"],"visibility": false},
+  {"id": "bloc_question_11_5","title": "Autre personne présente 5","description": "","inputs": ["input_qestion_11_5","input_nom_prénom_11_5"],"visibility": false},
+
+ 
+ 
+ 
+ 
+ 
+ {
+      "id": "bloc_resultat_exercice_beneficiare_deficiare",
+      "title": "",
+      "description": "",
+      "inputs": [
+	    
+		"input_nom_prenom_du_gerant"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_gerant_tun_or_not",
+      "title": "Est-ce que le nouveau gérant est Tunisien ?",
+      "description": "",
+      "inputs": [
+	    
+		"input_reponse_oui",
+		"input_reponse_oui_num_cin",
+		"input_reponse_non",
+		"input_reponse_non_num_passeport",
+		"input_reponse_non_nationalite"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_gerant_remunere_or_not",
+      "title": "Est-ce que le gérant est rémunéré ?",
+      "description": "",
+      "inputs": [
+	    
+		"input_reponse_remunere_oui",
+		"input_reponse_remuneration_brute",
+		"input_reponse_remunere_non"
+		],
+      "visibility": true
+    },
+	{
+      "id": "bloc_question_dureee_mondat",
+      "title": "",
+      "description": "",
+      "inputs": [
+	    
+		"input_question_dureee_mondat"
+		
+		],
+      "visibility": true
+    }
+  
+  ],
+  "inputs": [ 
+  
+  {"id": "input_question_dureee_mondat","type": "number","description": "",
+  "name": "input_question_dureee_mondat","label": "Durée du mandat en années","placeHolder": "","help": "","options": [],
+  "value": "","bookmarkIdPerValue": {"text": ["duree_mondat_question_12","duree_mondat_question_12_1","duree_mondat_question_12_2","duree_mondat_question_12_3"]},"visibility": true},
+  
+  
+  {"id": "input_reponse_remuneration_brute","type": "number","description": "",
+  "name": "input_reponse_remuneration_brute","label": "Quelle sera sa rémunération mensuelle brute en dinars ?","placeHolder": "","help": "","options": [],
+  "value": "","bookmarkIdPerValue": {"text": ["remuneration_brute_oui"]},"visibility": false},
+  
+  
+  {
+      "id": "input_reponse_remunere_oui",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["remunere_oui"],
+        "true": []
+      },
+      "visibility": true
+	  },
+  {
+      "id": "input_reponse_remunere_non",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Non",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["remunere_non"],
+        "true": []
+      },
+      "visibility": true
+	  },
+  
+  {"id": "input_reponse_oui_num_cin","type": "number","description": "",
+  "name": "input_reponse_oui_num_cin","label": "Numéro de carte d’identité nationale du nouveau gérant","placeHolder": "","help": "","options": [],
+  "value": "","bookmarkIdPerValue": {"text": ["num_cin_nv_gerant","num_cin_nv_gerant_2"]},"visibility": false},
+  
+  {"id": "input_reponse_non_num_passeport","type": "text","description": "",
+  "name": "input_reponse_non_num_passeport","label": "Numéro de Passeport","placeHolder": "","help": "","options": [],
+  "value": "","bookmarkIdPerValue": {"text": ["num_passport_gerant"]},"visibility": false},
+  
+  {"id": "input_reponse_non_nationalite","type": "country","description": "",
+  "name": "input_reponse_non_nationalite","label": "Nationalité du passeport ","placeHolder": "","help": "","options": [],
+  "value": "","bookmarkIdPerValue": {"text": ["nationalité_grant","nationalité_grant_2"]},"visibility": false},
+ 
+  {
+      "id": "input_reponse_oui",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["bookmarks_reponse_oui","bookmarks_reponse_oui_2"],
+        "true": []
+      },
+      "visibility": true
+	  },
+  
+  {
+      "id": "input_reponse_non",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Non",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["bookmarks_reponse_non","bookmarks_reponse_non_2"],
+        "true": []
+      },
+      "visibility": true
+	  },
+  
+  
+  
+  
+  
+
+  {"id": "input_nom_prenom_du_gerant",
+  "type": "text","description": "",
+  "name": "input_nom_prenom_du_gerant",
+  "label": "Nom et Prénom du nouveau gérant",
+  "placeHolder": "","help": "","options": [],"value": "",
+  "bookmarkIdPerValue": {"text": ["nom_prenom_nouveau_comm","nom_prenom_nouveau_comm_1","nom_prenom_nouveau_comm_2","nom_prenom_nouveau_comm_3","nom_prenom_nouveau_comm_4"]},"visibility": true},
+ 
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+  {"id": "input_nom_prénom_11_1","type": "text","description": "","name": "input_nom_prénom_11_1","label": "Nom et prénom du personne présent :","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["n_p_aa_1"]},"visibility": true},
+  {"id": "input_nom_prénom_11_2","type": "text","description": "","name": "input_nom_prénom_11_2","label": "Nom et prénom du personne présent :","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["n_p_aa_2"]},"visibility": true},
+  {"id": "input_nom_prénom_11_3","type": "text","description": "","name": "input_nom_prénom_11_3","label": "Nom et prénom du personne présent :","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["n_p_aa_3"]},"visibility": true},
+  {"id": "input_nom_prénom_11_4","type": "text","description": "","name": "input_nom_prénom_11_4","label": "Nom et prénom du personne présent :","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["n_p_aa_4"]},"visibility": true},
+  {"id": "input_nom_prénom_11_5","type": "text","description": "","name": "input_nom_prénom_11_5","label": "Nom et prénom du personne présent :","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["n_p_aa_5"]},"visibility": true},
+  
+  {"id": "input_qestion_11_1","type": "text","description": "","name": "input_qestion_11_1","label": "Qualité:","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["ques_aa_1"]},"visibility": true},
+  {"id": "input_qestion_11_2","type": "text","description": "","name": "input_qestion_11_2","label": "Qualité:","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["ques_aa_2"]},"visibility": true},
+  {"id": "input_qestion_11_3","type": "text","description": "","name": "input_qestion_11_3","label": "Qualité:","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["ques_aa_3"]},"visibility": true},
+  {"id": "input_qestion_11_4","type": "text","description": "","name": "input_qestion_11_4","label": "Qualité:","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["ques_aa_4"]},"visibility": true},
+  {"id": "input_qestion_11_5","type": "text","description": "","name": "input_qestion_11_5","label": "Qualité:","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["ques_aa_5"]},"visibility": true},
+  
+  {"id": "input_question_11","type": "select_input_generator","description": "","name": "input_question_11",
+  "label": "Nombre","placeHolder": "",
+  "help": "","options": ["0","1","2", "3", "4", "5"],"value": "",
+  "bookmarkIdPerValue": {"0":["autre_per_2"],"1":["autre_per_2"], "2": ["autre_per_2"],"3": ["autre_per_2"],"4": ["autre_per_2"],"5": ["autre_per_2"]},"visibility": false},
+						   
+	{"id": "input_cacher_11","type": "checkbox","description": "","name": "","label": "Autre(s) personne(s) présente(s)", "placeHolder": "","help": "il peut s’agir du nouveau gérant","options": [],"value": "",
+      "bookmarkIdPerValue": {"false": ["cacher_cacher_2","cacher_cacher_3","cacher_cacher_4","cacher_cacher_5","cacher_cacher_6","cacher_cacher_7"],"true": []},"visibility": true},
+	  
+	  
+	  
+	  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    {"id": "input_denomination_sociale","type": "text","description": "","name": "input_denomination_sociale","label": "Dénomination Sociale","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": { "text": ["denomination_sociale","denomination_sociale_1"]},"visibility": true},
+	{"id": "input_capital_sociale_en_dinars", "type": "text", "description": "", "name": "input_capital_sociale_en_dinars", "label": "Capital social en Dinars", "placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {  "text": ["capital_sociale_en_dinars","capital_sociale_en_dinars_1"]},"visibility": true},
+	{"id": "input_siege_social","type": "text","description": "","name": "input_siege_social","label": "Siège Social","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": { "text": ["siege_social"] }, "visibility": true},
+	{"id": "input_identifiant_unique","type": "text","description": "","name": "input_identifiant_unique","label": "Identifiant Unique","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["identifiant_unique"]}, "visibility": true},
+	{"id": "input_date_reunion_de_lassemble","type": "Date", "description": "","name": "input_date_reunion_de_lassemble", "label": "Date de réunion de l'assemblée", "placeHolder": "", "help": "","options": [],"value": "","bookmarkIdPerValue": { "text": ["date_reunion_lassemble","date_reunion_lassemble_1"]}, "visibility": true},
+	{"id": "input_heure_debut_reuiion_lassemble","type": "time","description": "","name": "input_heure_debut_reuiion_lassemble","label": "Heure de début de la réunion de l'assemblée","placeHolder": "","help": "", "options": [], "value": "","bookmarkIdPerValue": {  "text": ["heure_debut_reuiion"]},"visibility": true},
+	{"id": "input_heure_fin_reuiion_lassemble","type": "time","description": "","name": "input_heure_fin_reuiion_lassemble","label": "Heure de fin de la réunion de l'assemblée","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["heure_fin_reuiion"] }, "visibility": true},
+  	{"id": "input_questionn_8","type": "text","description": "","name": "input_questionn_8","label": "L’Assemblée est présidée par","placeHolder": "","help": "Quel est le nom et le prénom de l’associé unique?","options": [],"value": "","bookmarkIdPerValue": {"text": ["question_8","question_8_1"] }, "visibility": true}
+
+ 
+  
+ 
+  
+   ],
+  "bookmarks": [
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  {"bookmarkId": "denomination_sociale","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "denomination_sociale_1","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "capital_sociale_en_dinars","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "capital_sociale_en_dinars_1","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "siege_social","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "identifiant_unique","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "date_reunion_lassemble","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "date_reunion_lassemble_1","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "heure_debut_reuiion","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "heure_fin_reuiion","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "question_8","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+  {"bookmarkId": "question_8_1","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 11},
+
+  
+  {"bookmarkId": "cacher_cacher_2","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+    {"bookmarkId": "cacher_cacher_3","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "cacher_cacher_4","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "cacher_cacher_5","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "cacher_cacher_6","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "cacher_cacher_7","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+
+  {"bookmarkId": "autre_per_2","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "n_p_aa_1","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "n_p_aa_2","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "n_p_aa_3","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "n_p_aa_4","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "n_p_aa_5","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "ques_aa_1","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "ques_aa_2","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "ques_aa_3","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "ques_aa_4","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+  {"bookmarkId": "ques_aa_5","value": "","fontFamily": "Times New Roman","color": null,"bold": true,"italic": false,"capitalized": false,"type": "USER_INPUT","fontSize": 12},
+
+
+ 
+   
+	
+	{
+      "bookmarkId": "nom_prenom_nouveau_comm",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "nom_prenom_nouveau_comm_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },{
+      "bookmarkId": "nom_prenom_nouveau_comm_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "nom_prenom_nouveau_comm_3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "nom_prenom_nouveau_comm_4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	
+	
+	{
+      "bookmarkId": "num_cin_nv_gerant",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "num_cin_nv_gerant_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "num_passport_gerant",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "nationalité_grant",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "nationalité_grant_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "remuneration_brute_oui",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "duree_mondat_question_12",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "duree_mondat_question_12_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "duree_mondat_question_12_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "duree_mondat_question_12_3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+{"bookmarkId": "bookmarks_reponse_oui","value": "","fontFamily": "Times New Roman","color": null,
+"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+{"bookmarkId": "bookmarks_reponse_oui_2","value": "","fontFamily": "Times New Roman","color": null,
+"bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "bookmarks_reponse_non","value": "","fontFamily": "Times New Roman","color": null,
+  "bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  {"bookmarkId": "bookmarks_reponse_non_2","value": "","fontFamily": "Times New Roman","color": null,
+  "bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+
+	 {"bookmarkId": "remunere_oui","value": "","fontFamily": "Times New Roman","color": null,
+  "bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12},
+  
+
+	
+ {"bookmarkId": "remunere_non","value": "","fontFamily": "Times New Roman","color": null,
+  "bold": true,"italic": false,"capitalized": false,"underline": null,"type": "PARAGRAPH_WITH_BOOKMARKS", "fontSize": 12}
+  
+	
+
+
+	
+
+	
+
+	
+
+
+
+  ]
+}

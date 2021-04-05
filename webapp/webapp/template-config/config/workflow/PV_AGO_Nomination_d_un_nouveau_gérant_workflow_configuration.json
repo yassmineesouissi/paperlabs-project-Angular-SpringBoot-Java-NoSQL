@@ -1,0 +1,468 @@
+{
+  "workflow": [
+ {
+      "inputId": "input_question_11_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_personne_physique",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_personne_morale",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_personne_physique",
+              "visibility": false
+            },
+			{
+              "elementId": "input_question_personne_morale",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_8_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_8_nom_prenom",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_8_nom_prenom",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	 {
+      "inputId": "input_question_personne_physique",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_11_personne_physique",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_11_personne_physique",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_personne_morale",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_personne_morale_denomination_sociale",
+              "visibility": true
+            },
+			{
+              "elementId": "input_personne_morale_representé_par",
+              "visibility": true
+            },
+			{
+              "elementId": "input_personne_morale_nom_prenom_du_represantant",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_personne_morale_denomination_sociale",
+              "visibility": false
+            },
+			{
+              "elementId": "input_personne_morale_representé_par",
+              "visibility": false
+            },
+			{
+              "elementId": "input_personne_morale_nom_prenom_du_represantant",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	 
+  {
+      "inputId": "input_question_11",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+           
+			 {
+              "elementId": "bloc_question_11_1",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_2",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_3",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_4",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_5",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_ass",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+             {
+              "elementId": "bloc_ass_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_ass_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_ass_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_ass_4",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_ass_5",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_ass_6",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_7",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_8",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_9",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_10",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_11",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_12",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_ass_13",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_14",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_15",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_ass_16",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_17",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_18",
+              "visibility": true
+            }, {
+              "elementId": "bloc_ass_19",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_ass_20",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_21",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_22",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_23",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_24",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_25",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_26",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_27",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_28",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_29",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_30",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_31",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_32",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_33",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_34",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_35",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_36",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_37",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_38",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_39",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_40",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_41",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_42",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_ass_43",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_44",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_45",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_46",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_47",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_48",
+              "visibility": true
+            },{
+              "elementId": "bloc_ass_49",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_ass_50",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	{
+      "inputId": "input_question_15",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_question_15_cin",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_question_15_cin",
+              "visibility": false
+            }
+          ]
+        }
+		
+      ]
+    },
+	
+	{
+      "inputId": "input_qestion_13",
+      "valuesConstraints": [
+        {
+          "value": "Constitution de la société",
+          "constraints": [
+            {
+              "elementId": "input_qestion_13_revocation_nom_gerant",
+              "visibility": false
+            }
+          ]
+        },
+        {
+          "value": "Reeevocation du preeeceeedent geeerant",
+          "constraints": [
+            {
+              "elementId": "input_qestion_13_revocation_nom_gerant",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "Deeemission du preeeceeedent geeerant",
+          "constraints": [
+            {
+              "elementId": "input_qestion_13_revocation_nom_gerant",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "Deeeceeees du preeeceeedent geeerant,
+          "constraints": [
+            {
+              "elementId": "input_qestion_13_revocation_nom_gerant",
+              "visibility": true
+            }
+          ]
+        }
+		
+      ]
+    },
+	
+	{
+      "inputId": "input_question_15",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_question_15_passeport",
+              "visibility": false
+            }
+          ]
+        },
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_question_15_passeport",
+              "visibility": true
+            }
+          ]
+        }
+		
+      ]
+    },
+	{
+      "inputId": "input_question_15",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_question_15_nat_pass",
+              "visibility": false
+            }
+          ]
+        },
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_question_15_nat_pass",
+              "visibility": true
+            }
+          ]
+        }
+		
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_17",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_question_17_remuneration",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_question_17_remuneration",
+              "visibility": false
+            }
+          ]
+        }
+		
+      ]
+    }
+	
+  
+  
+  ]}

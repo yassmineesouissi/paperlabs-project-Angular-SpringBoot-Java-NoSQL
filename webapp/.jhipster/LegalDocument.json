@@ -1,0 +1,84 @@
+{
+    "name": "LegalDocument",
+    "fields": [
+        {
+            "fieldName": "shortName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "fullName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "keywords",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "templatePreviewPath",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "templateFilePath",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "stepperConfigFilePath",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "workflowConfigFilePath",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Float"
+        },
+      {
+        "fieldName": "autoFillConcernedEntities",
+        "fieldType": "List<String>"
+      },
+      {
+        "fieldName": "companiesAutoFillInputIdsByFieldName",
+        "fieldType": "List<Map<String, String>>"
+      },
+      {
+        "fieldName": "employersAutoFillInputIdsByFieldName",
+        "fieldType": "List<Map<String, String>>"
+      }
+    ],
+    "relationships": [],
+    "changelogDate": "20191005213359",
+    "entityTableName": "legal_document",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

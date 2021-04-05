@@ -1,0 +1,67 @@
+{
+  "workflow": [ 
+  
+  {
+      "inputId": "input_nature_employe_tunisien",
+      "valuesConstraints": [
+        {
+          "value": "Personne tunisien",
+          "constraints": [
+            {
+              "elementId": "bloc_tunisien_dimission",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+     {
+      "inputId": "input_nature_employe_etrange",
+      "valuesConstraints": [
+        {
+          "value": "Personne étrange",
+          "constraints": [
+            {
+              "elementId": "bloc_etrange_dimission",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_employeur_morale_dimission",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale",
+          "constraints": [
+            {
+              "elementId": "bloc_employeur_moral_dimission",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_employeur_physique_dimission",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique",
+          "constraints": [
+            {
+              "elementId": "bloc_employeur_physique_dimission",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+  
+  
+  ]}
+  
+  
+  
+  

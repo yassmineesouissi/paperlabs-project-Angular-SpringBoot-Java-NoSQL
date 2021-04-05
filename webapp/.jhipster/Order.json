@@ -1,0 +1,55 @@
+{
+    "name": "Order",
+    "fields": [
+        {
+            "fieldName": "paymentMethod",
+            "fieldType": "PaymentMethod",
+            "fieldValues": "MOBICACH,EDINAR"
+        },
+        {
+            "fieldName": "totalPrice",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tax",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "invoiceFilePath",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "OrderStatus",
+            "fieldValues": "WAITING,PAID,ABANDONED"
+        },
+        {
+            "fieldName": "destinationEmail",
+            "fieldType": "String"
+        },
+        {
+          "fieldName": "orderIdentifier",
+          "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191005213403",
+    "entityTableName": "order",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

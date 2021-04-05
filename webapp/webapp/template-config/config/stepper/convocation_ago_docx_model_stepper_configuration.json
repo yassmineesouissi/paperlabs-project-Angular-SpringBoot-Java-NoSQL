@@ -1,0 +1,918 @@
+ {
+ "steps": [
+ {
+      "id": "step_details_assemble",
+      "title": "Informations sur l'assemblée",
+      "description": "",
+      "blocs": ["bloc_details_assemblé",
+	            "bloc_convocation"],
+      "visibility": true
+    },
+	{
+      "id": "step_resolution",
+      "title": "",
+      "description": "",
+      "blocs": ["bloc_deuxieme_resolution",
+	            "bloc_gerant_tunisien_oui_non",
+	            "bloc_gerant_remunere",
+				"bloc_troisieme_resolution"],
+      "visibility": true
+    }
+  ],
+  "blocs": [
+  {
+      "id": "bloc_details_assemblé",
+      "title": "",
+      "description": "",
+      "inputs": [
+	    "input_date_convocation",
+        "input_denomination_sociale",
+		"input_siege_sociale",
+		"input_identifiant_unique",
+		"input_date_reunion_assemblee",
+		"input_heure_debut_reunion",
+		"input_liste_associee"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_convocation",
+      "title": "Convocations",
+      "description": "",
+      "inputs": [
+	    "input_nom_prenom_emmetteur",
+        "input_qualite_emmetteur"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_deuxieme_resolution",
+      "title": "Quelle est la raison de nomination du gérant ?",
+      "description": "",
+      "inputs": ["input_revocation_oui",
+	             "input_nom_prenom_ancien_gerant_revocation",
+				 "input_demission_oui",
+	             "input_nom_prenom_ancien_gerant_demission",
+				 "input_deces_oui",
+                 "input_nom_prenom_ancien_gerant_deces",
+			"input_nom_prenom_nv_gerant",
+		"input_duree_mondat_e_année"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_gerant_tunisien_oui_non",
+      "title": "Est-ce que le nouveau gérant est Tunisien ?",
+      "description": "",
+      "inputs": [
+	    "input_gerant_tunisien",
+		"input_numero_cin_gerant_tunisien",
+        "input_gerant_non_tunisien",
+		"input_numero_passeport_gerant_non_tunisien",
+		"input_nationalitee_gerant_non_tunisien"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_gerant_remunere",
+      "title": "",
+      "description": "",
+      "inputs": [
+	    "input_gerant_remunere_oui",
+		"input_remuneration_brute"
+       ],
+      "visibility": true
+    },
+	{
+      "id": "bloc_troisieme_resolution",
+      "title": "",
+      "description": "",
+      "inputs": [
+	    "input_heure_fin_reunion"],
+      "visibility": true
+    }
+  ],
+  "inputs": [
+  {
+      "id": "input_numero_passeport_gerant_non_tunisien",
+      "type": "text",
+      "description": "",
+      "name": "input_numero_passeport_gerant_non_tunisien",
+      "label": "Numéro de Passeport",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_pass_non_tunisien"]
+      },
+      "visibility": false
+    },
+  {
+      "id": "input_nationalitee_gerant_non_tunisien",
+      "type": "text",
+      "description": "",
+      "name": "input_nationalitee_gerant_non_tunisien",
+      "label": "Nationalité du passeport",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nationalitee_non_tunisien"]
+      },
+      "visibility": false
+    },
+  {
+      "id": "input_gerant_non_tunisien",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Non",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["gerant_non_tunisien"],
+        "true": []
+      },
+      "visibility": true
+
+	   },
+  {
+      "id": "input_gerant_tunisien",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["gerant_tunisien"],
+        "true": []
+      },
+      "visibility": true
+
+	   },
+  {
+      "id": "input_numero_cin_gerant_tunisien",
+      "type": "number",
+      "description": "",
+      "name": "input_numero_cin_gerant_tunisien",
+      "label": "Veuillez indiquer le numéro de carte d’identité nationale du nouveau gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numero_cin_gerant_tunisien"]
+      },
+      "visibility": false
+    },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {
+      "id": "input_revocation_oui",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Révocation du précédent gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["revocation_oui","revocation_oui_1"],
+        "true": []
+      },
+      "visibility": true
+
+	   },
+	   {
+      "id": "input_demission_oui",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Démission du précédent gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["demission_oui","demission_oui_1"],
+        "true": []
+      },
+      "visibility": true
+
+	   },
+	   {
+      "id": "input_deces_oui",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Décès du précédent gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["deces_oui","deces_oui_1"],
+        "true": []
+      },
+      "visibility": true
+
+	   },
+  {
+      "id": "input_heure_fin_reunion",
+      "type": "Date",
+      "description": "",
+      "name": "input_heure_fin_reunion",
+      "label": "Heure de fin de la réunion de l'assemblée",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["heure_fin_reunion"]
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_gerant_remunere_oui",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "Est-ce que le gérant est rémunéré ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["gerant_remunere_oui","gerant_remunere_oui_1"],
+        "true": []
+      },
+      "visibility": true
+
+	   },
+	   {
+      "id": "input_remuneration_brute",
+      "type": "number",
+      "description": "",
+      "name": "input_remuneration_brute",
+      "label": "Quelle sera sa rémunération mensuelle brute en dinars ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["remuneration_brute"]
+      },
+      "visibility": false
+    },
+	   
+  {
+      "id": "input_duree_mondat_e_année",
+      "type": "number",
+      "description": "",
+      "name": "input_duree_mondat_e_année",
+      "label": "Durée du mandat en années",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["duree_mondat_e_année","duree_mondat_e_année_1"]
+      },
+      "visibility": true
+    },
+  
+  {
+      "id": "input_nom_prenom_nv_gerant",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_nv_gerant",
+      "label": "Nom et Prénom du nouveau géran",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_nv_gerant","nom_prenom_nv_gerant_1"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_nom_prenom_ancien_gerant_revocation",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_ancien_gerant_revocation",
+      "label": "Quel est le Nom et Prénom de l’ancien gérant ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_gerant_revocation"]
+      },
+      "visibility": false
+    },
+	{
+      "id": "input_nom_prenom_ancien_gerant_demission",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_ancien_gerant_demission",
+      "label": "Quel est le Nom et Prénom de l’ancien gérant ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_gerant_demission"]
+      },
+      "visibility": false
+    },
+	{
+      "id": "input_nom_prenom_ancien_gerant_deces",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_ancien_gerant_deces",
+      "label": "Quel est le Nom et Prénom de l’ancien gérant ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_gerant_deces"]
+      },
+      "visibility": false
+    },
+  
+  {
+      "id": "input_nom_prenom_emmetteur",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_emmetteur",
+      "label": "Quel est le nom et le prénom de l’émetteur de la convocation",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_emmetteur"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_qualite_emmetteur",
+      "type": "text",
+      "description": "",
+      "name": "input_qualite_emmetteur",
+      "label": "Quelle est la qualité de l’émetteur de la convocation ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["qualite_emmetteur"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_liste_associee",
+      "type": "text",
+      "description": "",
+      "name": "input_liste_associee",
+      "label": "Liste des associés présents ou représentés",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["liste_associee"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_heure_debut_reunion",
+      "type": "time",
+      "description": "",
+      "name": "input_heure_debut_reunion",
+      "label": "Heure de début de la réunion de l'assemblée",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["heure_debut_reunion"]
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_convocation",
+      "type": "Date",
+      "description": "",
+      "name": "input_date_convocation",
+      "label": "Quelle est la date de convocation",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_convocation"]
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_denomination_sociale",
+      "type": "text",
+      "description": "",
+      "name": "input_denomination_sociale",
+      "label": "Dénomination Sociale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["denomination_sociale","denomination_sociale_1","denomination_sociale_2"]
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_siege_sociale",
+      "type": "text",
+      "description": "",
+      "name": "input_siege_sociale",
+      "label": "Siège Social (adresse)",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["siege_sociale","siege_sociale_1"]
+      },
+      "visibility": true
+    },
+  
+   {
+      "id": "input_identifiant_unique",
+      "type": "text",
+      "description": "",
+      "name": "input_identifiant_unique",
+      "label": "Identifiant Unique",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identifiant_unique"]
+      },
+      "visibility": true
+    },
+  
+   {
+      "id": "input_date_reunion_assemblee",
+      "type": "Date",
+      "description": "",
+      "name": "input_date_reunion_assemblee",
+      "label": "Date de réunion de l'assemblée",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_reunion_assemblee","date_reunion_assemblee_1","date_reunion_assemblee_2"]
+      },
+      "visibility": true
+    }
+  ],
+  "bookmarks": [
+   {
+      "bookmarkId": "nom_prenom_nv_gerant_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "nom_prenom_nv_gerant",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "nom_prenom_gerant_revocation",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_gerant_demission",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_gerant_deces",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "nom_prenom_emmetteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "qualite_emmetteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+   {
+      "bookmarkId": "liste_associee",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "heure_debut_reunion",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  
+  {
+      "bookmarkId": "date_convocation",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "siege_sociale_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "siege_sociale",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "identifiant_unique",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_reunion_assemblee",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_reunion_assemblee_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_reunion_assemblee_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "duree_mondat_e_année",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "duree_mondat_e_année_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "remuneration_brute",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant_remunere_non",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant_remunere_oui",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant_remunere_oui_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "revocation_oui",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "revocation_oui_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "demission_oui_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "demission_oui",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "deces_oui",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "deces_oui_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "heure_fin_reunion",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numero_cin_gerant_tunisien",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant_tunisien",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant_non_tunisien",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "num_pass_non_tunisien",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalitee_non_tunisien",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+   ]
+}

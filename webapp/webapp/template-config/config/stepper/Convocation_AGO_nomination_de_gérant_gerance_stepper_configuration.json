@@ -1,0 +1,226 @@
+{
+  "steps": [
+  
+  
+    {
+      "id": "step_informations_sur_lassemble",
+      "title": "Informations sur l'assemblée",
+      "description": "",
+      "blocs": ["bloc_lettre_demission_gerant"],
+      "visibility": true
+    }
+	],
+	
+	
+ "blocs": [
+   
+   
+    {
+	"id": "bloc_lettre_demission_gerant",
+	"title": "",
+	"description": "",
+	"inputs": ["input_qestion_1",
+	           "input_qestion_2",
+			   "input_qestion_4",
+			   "input_qestion_5",
+			   "input_qestion_6"
+			   
+																		  
+			  ],
+	"visibility": true}
+																		   
+																		   
+	],
+	
+"inputs": [
+	   
+	   
+	   
+	{
+	"id": "input_qestion_1",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_1",
+	 "label": "Dénomination Sociale",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_1_1","bookmark_qestion_1_2","bookmark_qestion_1_3"]},
+	 "visibility": true
+	 },
+	 
+	 {
+	"id": "input_qestion_2",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_2",
+	 "label": "Siège Social",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_2","bookmark_qestion_2_1"]},
+	 "visibility": true
+	 },
+	 
+	  {
+	"id": "input_qestion_4",
+	 "type": "text",
+	 "description": "",
+	 "name": "input_qestion_4",
+	 "label": "Identifiant Unique",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_4"]},
+	 "visibility": true
+	 },
+	  {
+	"id": "input_qestion_5",
+	 "type": "Date",
+	 "description": "",
+	 "name": "input_qestion_5",
+	 "label": "Date de réunion de l'assemblée",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_5","bookmark_qestion_5_1"]},
+	 "visibility": true
+	 },
+	  {
+	"id": "input_qestion_6",
+	 "type": "time",
+	 "description": "",
+	 "name": "input_qestion_6",
+	 "label": "Heure de début de la réunion de l'assemblée",
+	 "placeHolder": "",
+	 "help": "",
+	 "options": [],
+	 "value": "",
+	 "bookmarkIdPerValue": {
+	 "text": ["bookmark_qestion_4"]},
+	 "visibility": true
+	 }
+	 
+	  
+	  
+	  
+	],
+	
+	"bookmarks": [
+   
+	
+	{
+      "bookmarkId": "bookmark_qestion_1_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "bookmark_qestion_1_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_1_3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "bookmark_qestion_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_2_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_5",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_5_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmark_qestion_6",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+	
+	
+	]
+	
+	
+}

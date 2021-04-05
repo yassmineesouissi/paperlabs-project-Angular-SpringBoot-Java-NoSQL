@@ -1,0 +1,1749 @@
+{
+    "steps": [
+	 {
+      "id": "step_nature_peronne_caution",
+      "title": "L’employeur",
+      "description": "",
+      "blocs": ["bloc_nature_peronne_caution"],
+      "visibility": true
+    },
+		{
+            "id": "step_employeur",
+            "title": "L’employeur",
+            "description": "",
+            "blocs": ["bloc_employeur_physique_tun",
+			           "bloc_employeur_physique_etr",
+					   "bloc_employeur_morale"],
+            "visibility": true
+        },
+		 {
+      "id": "step_nature_employeur",
+      "title": "L’employé",
+      "description": "",
+      "blocs": ["bloc_nature_employeur"],
+      "visibility": true
+    },
+		
+		{
+            "id": "step_employéé",
+            "title": "L’employé",
+            "description": "",
+            "blocs": ["bloc_employee_tun",
+			           "bloc_employee_etrg"
+					   ],
+            "visibility": true
+        },
+		{
+            "id": "step_date_conclusion",
+            "title": "Accord de résiliation amiable",
+            "description": "",
+            "blocs": ["bloc_date_conclusion",
+			         "bloc_type_contrat_cdi_cdd",
+					 "bloc_prise_effet",
+					 "bloc_indemnité"
+			],
+            "visibility": true
+        }
+		
+		],
+		"blocs": [
+		 {
+      "id": "bloc_nature_employeur",
+      "title": "L’employé est :",
+      "description": "",
+      "inputs": [
+        "input_nature_employeur_morale",
+        "input_nature_employeur_physique"
+      ],
+      "visibility": true
+    },
+    
+		{
+      "id": "bloc_nature_peronne_caution",
+      "title": "L’employeur est une:",
+      "description": "",
+      "inputs": [
+        "input_nature_personne_physique_tunisienne_caution",
+        "input_nature_personne_physique_etrangere_caution",
+		"input_nature_personne_morale_tunisienne_caution"],
+      "visibility": true
+    },
+		
+		{
+            "id": "bloc_indemnité",
+            "title": "",
+            "description": "",
+            "inputs": [
+                "input_montant_chiffre",
+				"input_montant_lettre" ],
+            "visibility": true
+        },
+		{
+            "id": "bloc_prise_effet",
+            "title": "",
+            "description": "",
+            "inputs": [
+                "input_prise_effet"],
+            "visibility": true
+        },
+		{
+            "id": "bloc_type_contrat_cdi_cdd",
+            "title": "",
+            "description": "",
+            "inputs": [
+                "input_contrat_type"
+               
+            ],
+            "visibility": true
+        },
+		{
+            "id": "bloc_date_conclusion",
+            "title": "",
+            "description": "",
+            "inputs": [
+                "input_date_conclusion"
+               
+            ],
+            "visibility": true
+        },
+		
+		{
+            "id": "bloc_employee_tun",
+            "title": "De nationalité tunisienne",
+            "description": "",
+            "inputs": [
+                "input_nom_employee_tunisien",
+                "input_prenom_employee_tunisien",
+                "input_date_naiss_employee_tunisien",
+				"input_lieu_naiss_employee_tunisien",
+				"input_num_cin_employee_tunisien",
+				"input_adresse_employee_tunisien"
+            ],
+            "visibility": true
+        },
+		{
+            "id": "bloc_employee_etrg",
+            "title": "De nationalité étrangère",
+            "description": "",
+            "inputs": [
+                "input_nom_employee_etrangere",
+                "input_prenom_employee_etrangere",
+                "input_date_naissance_employee_etrangere",
+				"input_lieu_naissance_employee_etrangere",
+				"input_nationalite_employe_etranger",
+				"input_num_pass_employee_etrangere",
+				"input_expir_pass_employee_etrangere",
+				"input_adresse_employee_etrangere"
+            ],
+            "visibility": false
+        },
+		{
+            "id": "bloc_employeur_physique_tun",
+            "title": "Personne physique tunisienne",
+            "description": "",
+            "inputs": [
+                "input_nom_employeur_physique_tunisien",
+                "input_prenom_employeur_physique_tunisien",
+                "input_date_naissance_employeur_physique_tunisien",
+				"input_lieu_naissance_employeur_physique_tunisien",
+				"input_num_cin_employeur_physique_tunisien",
+				"input_adresse_employeur_physique_tunisien"
+            ],
+            "visibility": true
+        },
+		{
+            "id": "bloc_employeur_physique_etr",
+            "title": "Personne physique étrangère",
+            "description": "",
+            "inputs": [
+                "input_nom_employeur_physique_etrangere",
+                "input_prenom_employeur_physique_etrangere",
+                "input_date_naissance_employeur_physique_etrangere",
+				"input_lieu_naissance_employeur_physique_etrangere",
+				"input_num_passport_employeur_physique_etrangere",
+				"input_expiration_passport_employeur_physique_etrangere",
+				"input_adresse_employeur_physique_etrangere"
+            ],
+            "visibility": false
+        },
+		{
+            "id": "bloc_employeur_morale",
+            "title": "Personne morale",
+            "description": "",
+            "inputs": [
+                "input_denomination_sociale_employeur_morale",
+				"input_forme_employeur_morale",
+				"input_forme_libre_accord_resiliation",
+				"input_capitale_sociale_employeur_morale",
+				"input_identifiant_unique_employeur_morale",
+				"input_adresse_employeur_morale",
+				"input_nom_employeur_morale",
+                "input_prenom_employeur_morale"
+            ],
+            "visibility": false
+        }
+		
+		
+		],
+		"inputs": [
+		{
+      "id": "input_nature_employeur_morale",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "De nationalité tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne morale",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_employeur_physique"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nature_employeur_physique",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "De nationalité étrangère",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne physique",
+      "bookmarkIdPerValue": {
+        "Personne physique": ["Infos_employeur_moral"]
+      },
+      "visibility": true
+    },
+		{
+      "id": "input_nature_personne_physique_tunisienne_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "Personne physique tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "physique tunisienne caution",
+      "bookmarkIdPerValue": {
+        "physique tunisienne caution": [
+		                                "personne_physique_etrangere_caution",
+										"personne_morale_tunisienne_caution"
+										]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_physique_etrangere_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "Personne physique étrangère",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "physique etrangere caution",
+      "bookmarkIdPerValue": {
+        "physique etrangere caution": ["personne_physique_tunisienne_caution",
+									   "personne_morale_tunisienne_caution"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_morale_tunisienne_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "Personne morale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "morale tunisienne caution",
+      "bookmarkIdPerValue": {
+        "morale tunisienne caution": [ "personne_physique_tunisienne_caution",
+									  "personne_physique_etrangere_caution"
+									  ]
+      },
+      "visibility": true
+    },
+		
+		
+		{
+            "id": "input_prise_effet",
+            "type": "Date",
+            "description": "",
+            "name": "input_prise_effet",
+            "label": "Prise d'effet",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["prise_effet"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_montant_chiffre",
+            "type": "number",
+            "description": "Quel est le montant de l’indemnité brut à accorder à l’employé ?",
+            "name": "input_montant_chiffre",
+            "label": " Indemnité en chiffre ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["montant_chiffre"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_montant_lettre",
+            "type": "text",
+            "description": "Quel est le montant de l’indemnité brut à accorder à l’employé ?",
+            "name": "input_montant_lettre",
+            "label": "Indemnité en lettre ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["montant_lettre"]
+            },
+            "visibility": true
+        },
+		
+		{
+            "id": "input_contrat_type",
+            "type": "select",
+            "description": "Quel est le type de contrat objet de la résiliation ?",
+            "name": "input_contrat_type",
+            "label": "Type de contrat ",
+            "placeHolder": "Type de contrat",
+            "help": "",
+            "options": ["Contrat à Durée Déterminée","Contrat à Durée Indéterminée"],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "Contrat à Durée Déterminée": ["contrat_type"],
+				"Contrat à Durée Indéterminée": ["contrat_type"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_date_conclusion",
+            "type": "Date",
+            "description": "Quelle est la date de commencement du contrat de travail?",
+            "name": "input_date_conclusion",
+            "label": "Date de conclusion du contrat de travail",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["date_conclusion"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_nom_employee_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_nom_employee_etrangere",
+            "label": "Nom",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["nom_employee_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_prenom_employee_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_prenom_employee_etrangere",
+            "label": "Prénom",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["prenom_employee_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_date_naissance_employee_etrangere",
+            "type": "Date",
+            "description": "",
+            "name": "input_date_naissance_employee_etrangere",
+            "label": "Date de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["date_nais_eplyee_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_lieu_naissance_employee_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_lieu_naissance_employee_etrangere",
+            "label": "Ville de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["lieu_nais_eplyee_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_nationalite_employe_etranger",
+            "type": "select",
+            "description": "",
+            "name": "input_nationalite_employe_etranger",
+            "label": "Nationalité",
+            "placeHolder": "",
+            "help": "",
+            "options": ["Afghan-e",
+"Sud-Africain-e",
+"Albanais-e",
+"Algérien-ne",
+"Allemand-e",
+"Andorran-e",
+"Angolais-e",
+"Saoudien-ne",
+"Argentin-e",
+"Arménien-ne",
+"Arubain-ne",
+"Australien-ne",
+"Autrichien-ne",
+"Azerbaïdjanais-e",
+"Bahamien-ne",
+"Bahreïnien-ne",
+"Bangladais-e, Bangladeshi-e",
+"Barbadien-ne",
+"Biélorusse",
+"Birman-e",
+"Belge",
+"Bélizien-ne",
+"Béninois-e",
+"Bermudien-ne",
+"Bhoutanais-e",
+"Bolivien-ne",
+"Bosniaque, Bosnien-ne",
+"Botswanais-e, Botswanéen-ne",
+"Brésilien-ne",
+"Brunéien-ne",
+"Bulgare",
+"Burkinabé-e, Burkinais-e",
+"Burundais-e",
+"Camerounais-e",
+"Canadien-ne",
+"Cap-Verdien-ne",
+"Centrafricain-e",
+"Chilien-ne",
+"Chinois-e",
+"Chypriote, Cypriote",
+"Colombien-ne",
+"Comorien-ne",
+"Congolais-e",
+"Congolais-e",
+"Nord-Coréen-ne",
+"Sud-Coréen-ne",
+"Costaricain-e, Costaricien-ne",
+"Ivoirien-ne",
+"Croate",
+"Cubain-e",
+"Danois-e",
+"Djiboutien-ne",
+"Dominiquais-e",
+"Égyptien-ne",
+"Émirien-ne",
+"Équatorien-ne",
+"Érythréen-ne",
+"Espagnol-e",
+"Estonien-ne",
+"Américain-e",
+"Éthiopien-ne",
+"Fidjien-ne",
+"Finlandais-e",
+"Français-e",
+"Gabonais-e",
+"Gambien-ne",
+"Géorgien-ne",
+"Ghanéen-ne",
+"Gibraltarien-ne",
+"Grec - Grecque",
+"Grenadien-ne",
+"Guatémaltèque",
+"Guinéen-ne",
+"Bissau-Guinéen-ne",
+"Équato-Guinéen-ne",
+"Guyanais-e, Guyanien-ne",
+"Haïtien-ne",
+"Hondurien-ne",
+"Hongrois-e",
+"Indien-ne",
+"Indonésien-ne",
+"Iranien-ne",
+"Irakien-ne, Iraquien-ne",
+"Irlandais-e",
+"Islandais-e",
+"Israélien-ne",
+"Italien-ne",
+"Jamaïcain-e",
+"Japonais-e",
+"Jordanien-ne",
+"Kazakh(-e)",
+"Kenyan-e",
+"Kirghiz",
+"Kiribatien-ne",
+"Koweïtien-ne",
+"Kosovar-e",
+"Laotien-ne",
+"Lesothan-e",
+"Letton-(n)e",
+"Libanais-e",
+"Libérien-ne",
+"Libyen-ne",
+"Liechtensteinois-e",
+"Lituanien-ne",
+"Luxembourgeois-e",
+"Macédonien-ne",
+"Malgache",
+"Malaisien-ne",
+"Malawite, Malawien-ne",
+"Maldivien-ne",
+"Malien-ne",
+"Maltais-e",
+"Marocain-e",
+"Mauricien-ne",
+"Mauritanien-ne",
+"Mexicain-e",
+"Monégasque",
+"Mongol-e",
+"Monténégrin-e",
+"Mozambicain-e",
+"Namibien-ne",
+"Népalais-e",
+"Nicaraguayen-ne",
+"Nigérien-ne",
+"Nigérian-e",
+"Norvégien-ne",
+"Néo-Zélandais-e",
+"Omanais-e",
+"Ougandais-e",
+"Ouzbek",
+"Pakistanais-e",
+"Panaméen-ne",
+"Papouasien-ne",
+"Paraguayen-ne",
+"Néerlandais-e",
+"Péruvien-ne",
+"Philippin-e",
+"Polonais-e",
+"Portoricain-e",
+"Portugais-e",
+"Qatari-e, Qatarien-ne",
+"Dominicain-e",
+"Tchèque",
+"Roumain-e",
+"Britannique",
+"Russe",
+"Rwandais-e",
+"Saint-Vincentais-e, Grenadin-e",
+"Salvadorien-ne",
+"Sénégalais-e",
+"Serbe",
+"Sierra-Léonais-e",
+"Singapourien-ne",
+"Slovaque",
+"Slovène",
+"Somalien-ne",
+"Soudanais-e",
+"Sri-Lankais-e",
+"Suédois-e",
+"Suisse",
+"Surinamien-ne",
+"Swazi-e",
+"Syrien-ne",
+"Tadjik",
+"Taïwanais-e",
+"Tanzanien-ne",
+"Tchadien-ne",
+"Thaïlandais-e",
+"Est-Timorais-e",
+"Togolais-e",
+"Tunisien-ne",
+"Turkmène",
+"Turc - Turque",
+"Tuvaluan-e",
+"Ukrainien-ne",
+"Uruguayen-ne",
+"Vénézuélien-ne",
+"Vietnamien-ne",
+"Yéménite",
+"Zambien-ne",
+"Zimbabwéen-ne"],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "Afghan-e": ["nationalite_employee"],
+"Sud-Africain-e": ["nationalite_employee"],
+"Albanais-e": ["nationalite_employee"],
+"Algérien-ne": ["nationalite_employee"],
+"Allemand-e": ["nationalite_employee"],
+"Andorran-e": ["nationalite_employee"],
+"Angolais-e": ["nationalite_employee"],
+"Saoudien-ne": ["nationalite_employee"],
+"Argentin-e": ["nationalite_employee"],
+"Arménien-ne": ["nationalite_employee"],
+"Arubain-ne": ["nationalite_employee"],
+"Australien-ne": ["nationalite_employee"],
+"Autrichien-ne": ["nationalite_employee"],
+"Azerbaïdjanais-e": ["nationalite_employee"],
+"Bahamien-ne": ["nationalite_employee"],
+"Bahreïnien-ne": ["nationalite_employee"],
+"Bangladais-e, Bangladeshi-e": ["nationalite_employee"],
+"Barbadien-ne": ["nationalite_employee"],
+"Biélorusse": ["nationalite_employee"],
+"Birman-e": ["nationalite_employee"],
+"Belge": ["nationalite_employee"],
+"Bélizien-ne": ["nationalite_employee"],
+"Béninois-e": ["nationalite_employee"],
+"Bermudien-ne": ["nationalite_employee"],
+"Bhoutanais-e": ["nationalite_employee"],
+"Bolivien-ne": ["nationalite_employee"],
+"Bosniaque, Bosnien-ne": ["nationalite_employee"],
+"Botswanais-e, Botswanéen-ne": ["nationalite_employee"],
+"Brésilien-ne": ["nationalite_employee"],
+"Brunéien-ne": ["nationalite_employee"],
+"Bulgare": ["nationalite_employee"],
+"Burkinabé-e, Burkinais-e": ["nationalite_employee"],
+"Burundais-e": ["nationalite_employee"],
+"Camerounais-e": ["nationalite_employee"],
+"Canadien-ne": ["nationalite_employee"],
+"Cap-Verdien-ne": ["nationalite_employee"],
+"Centrafricain-e": ["nationalite_employee"],
+"Chilien-ne": ["nationalite_employee"],
+"Chinois-e": ["nationalite_employee"],
+"Chypriote, Cypriote": ["nationalite_employee"],
+"Colombien-ne": ["nationalite_employee"],
+"Comorien-ne": ["nationalite_employee"],
+"Congolais-e": ["nationalite_employee"],
+"Congolais-e": ["nationalite_employee"],
+"Nord-Coréen-ne": ["nationalite_employee"],
+"Sud-Coréen-ne": ["nationalite_employee"],
+"Costaricain-e, Costaricien-ne": ["nationalite_employee"],
+"Ivoirien-ne": ["nationalite_employee"],
+"Croate": ["nationalite_employee"],
+"Cubain-e": ["nationalite_employee"],
+"Danois-e": ["nationalite_employee"],
+"Djiboutien-ne": ["nationalite_employee"],
+"Dominiquais-e": ["nationalite_employee"],
+"Égyptien-ne": ["nationalite_employee"],
+"Émirien-ne": ["nationalite_employee"],
+"Équatorien-ne": ["nationalite_employee"],
+"Érythréen-ne": ["nationalite_employee"],
+"Espagnol-e": ["nationalite_employee"],
+"Estonien-ne": ["nationalite_employee"],
+"Américain-e": ["nationalite_employee"],
+"Éthiopien-ne": ["nationalite_employee"],
+"Fidjien-ne": ["nationalite_employee"],
+"Finlandais-e": ["nationalite_employee"],
+"Français-e": ["nationalite_employee"],
+"Gabonais-e": ["nationalite_employee"],
+"Gambien-ne": ["nationalite_employee"],
+"Géorgien-ne": ["nationalite_employee"],
+"Ghanéen-ne": ["nationalite_employee"],
+"Gibraltarien-ne": ["nationalite_employee"],
+"Grec - Grecque": ["nationalite_employee"],
+"Grenadien-ne": ["nationalite_employee"],
+"Guatémaltèque": ["nationalite_employee"],
+"Guinéen-ne": ["nationalite_employee"],
+"Bissau-Guinéen-ne": ["nationalite_employee"],
+"Équato-Guinéen-ne": ["nationalite_employee"],
+"Guyanais-e, Guyanien-ne": ["nationalite_employee"],
+"Haïtien-ne": ["nationalite_employee"],
+"Hondurien-ne": ["nationalite_employee"],
+"Hongrois-e": ["nationalite_employee"],
+"Indien-ne": ["nationalite_employee"],
+"Indonésien-ne": ["nationalite_employee"],
+"Iranien-ne": ["nationalite_employee"],
+"Irakien-ne, Iraquien-ne": ["nationalite_employee"],
+"Irlandais-e": ["nationalite_employee"],
+"Islandais-e": ["nationalite_employee"],
+"Israélien-ne": ["nationalite_employee"],
+"Italien-ne": ["nationalite_employee"],
+"Jamaïcain-e": ["nationalite_employee"],
+"Japonais-e": ["nationalite_employee"],
+"Jordanien-ne": ["nationalite_employee"],
+"Kazakh(-e)": ["nationalite_employee"],
+"Kenyan-e": ["nationalite_employee"],
+"Kirghiz": ["nationalite_employee"],
+"Kiribatien-ne": ["nationalite_employee"],
+"Koweïtien-ne": ["nationalite_employee"],
+"Kosovar-e": ["nationalite_employee"],
+"Laotien-ne": ["nationalite_employee"],
+"Lesothan-e": ["nationalite_employee"],
+"Letton-(n)e": ["nationalite_employee"],
+"Libanais-e": ["nationalite_employee"],
+"Libérien-ne": ["nationalite_employee"],
+"Libyen-ne": ["nationalite_employee"],
+"Liechtensteinois-e": ["nationalite_employee"],
+"Lituanien-ne": ["nationalite_employee"],
+"Luxembourgeois-e": ["nationalite_employee"],
+"Macédonien-ne": ["nationalite_employee"],
+"Malgache": ["nationalite_employee"],
+"Malaisien-ne": ["nationalite_employee"],
+"Malawite, Malawien-ne": ["nationalite_employee"],
+"Maldivien-ne": ["nationalite_employee"],
+"Malien-ne": ["nationalite_employee"],
+"Maltais-e": ["nationalite_employee"],
+"Marocain-e": ["nationalite_employee"],
+"Mauritanien-ne": ["nationalite_employee"],
+"Mexicain-e": ["nationalite_employee"],
+"Monégasque": ["nationalite_employee"],
+"Mongol-e": ["nationalite_employee"],
+"Monténégrin-e": ["nationalite_employee"],
+"Mozambicain-e": ["nationalite_employee"],
+"Namibien-ne": ["nationalite_employee"],
+"Népalais-e": ["nationalite_employee"],
+"Nicaraguayen-ne": ["nationalite_employee"],
+"Nigérien-ne": ["nationalite_employee"],
+"Nigérian-e": ["nationalite_employee"],
+"Norvégien-ne": ["nationalite_employee"],
+"Néo-Zélandais-e": ["nationalite_employee"],
+"Omanais-e": ["nationalite_employee"],
+"Ougandais-e": ["nationalite_employee"],
+"Ouzbek": ["nationalite_employee"],
+"Pakistanais-e": ["nationalite_employee"],
+"Panaméen-ne": ["nationalite_employee"],
+"Papouasien-ne": ["nationalite_employee"],
+"Paraguayen-ne": ["nationalite_employee"],
+"Néerlandais-e": ["nationalite_employee"],
+"Péruvien-ne": ["nationalite_employee"],
+"Philippin-e": ["nationalite_employee"],
+"Polonais-e": ["nationalite_employee"],
+"Portoricain-e": ["nationalite_employee"],
+"Portugais-e": ["nationalite_employee"],
+"Qatari-e, Qatarien-ne": ["nationalite_employee"],
+"Dominicain-e": ["nationalite_employee"],
+"Tchèque": ["nationalite_employee"],
+"Roumain-e": ["nationalite_employee"],
+"Britannique": ["nationalite_employee"],
+"Russe": ["nationalite_employee"],
+"Rwandais-e": ["nationalite_employee"],
+"Saint-Vincentais-e, Grenadin-e": ["nationalite_employee"],
+"Salvadorien-ne": ["nationalite_employee"],
+"Sénégalais-e": ["nationalite_employee"],
+"Serbe": ["nationalite_employee"],
+"Sierra-Léonais-e": ["nationalite_employee"],
+"Singapourien-ne": ["nationalite_employee"],
+"Slovaque": ["nationalite_employee"],
+"Slovène": ["nationalite_employee"],
+"Somalien-ne": ["nationalite_employee"],
+"Soudanais-e": ["nationalite_employee"],
+"Sri-Lankais-e": ["nationalite_employee"],
+"Suédois-e": ["nationalite_employee"],
+"Suisse": ["nationalite_employee"],
+"Surinamien-ne": ["nationalite_employee"],
+"Swazi-e": ["nationalite_employee"],
+"Syrien-ne": ["nationalite_employee"],
+"Tadjik": ["nationalite_employee"],
+"Taïwanais-e": ["nationalite_employee"],
+"Tanzanien-ne": ["nationalite_employee"],
+"Tchadien-ne": ["nationalite_employee"],
+"Thaïlandais-e": ["nationalite_employee"],
+"Est-Timorais-e": ["nationalite_employee"],
+"Togolais-e": ["nationalite_employee"],
+"Tunisien-ne": ["nationalite_employee"],
+"Turkmène": ["nationalite_employee"],
+"Turc - Turque": ["nationalite_employee"],
+"Tuvaluan-e": ["nationalite_employee"],
+"Ukrainien-ne": ["nationalite_employee"],
+"Uruguayen-ne": ["nationalite_employee"],
+"Vénézuélien-ne": ["nationalite_employee"],
+"Vietnamien-ne": ["nationalite_employee"],
+"Yéménite": ["nationalite_employee"],
+"Zambien-ne": ["nationalite_employee"],
+"Zimbabwéen-ne": ["nationalite_employee"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_num_pass_employee_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_num_pass_employee_etrangere",
+            "label": "Numéro de passeport",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["num_pass_employee_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_expir_pass_employee_etrangere",
+            "type": "Date",
+            "description": "",
+            "name": "input_expir_pass_employee_etrangere",
+            "label": "Date d’expiration du passeport",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["expir_pass_employee"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_adresse_employee_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_adresse_employee_etrangere",
+            "label": "Adresse/Domiciliation",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["adresse_employee"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_nom_employee_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_nom_employee_tunisien",
+            "label": "Nom ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["nom_employee_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_prenom_employee_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_prenom_employee_tunisien",
+            "label": "Prénom ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["prenom_employee_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_date_naiss_employee_tunisien",
+            "type": "Date",
+            "description": "",
+            "name": "input_date_naiss_employee_tunisien",
+            "label": "Date de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["date_naiss_employee_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_lieu_naiss_employee_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_lieu_naiss_employee_tunisien",
+            "label": "Ville de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["lieu_nais_employee_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_num_cin_employee_tunisien",
+            "type": "cin",
+            "description": "",
+            "name": "input_num_cin_employee_tunisien",
+            "label": "Numéro de carte d'identité nationale",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["num_cin_employee_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_adresse_employee_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_adresse_employee_tunisien",
+            "label": "Adresse/Domiciliation",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["adresse_employee_tun"]
+            },
+            "visibility": true
+        },
+		
+		{
+            "id": "input_nom_employeur_physique_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_nom_employeur_physique_etrangere",
+            "label": "Nom ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["nom_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_prenom_employeur_physique_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_prenom_employeur_physique_etrangere",
+            "label": "Prénom ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["prenom_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_date_naissance_employeur_physique_etrangere",
+            "type": "Date",
+            "description": "",
+            "name": "input_date_naissance_employeur_physique_etrangere",
+            "label": "Date de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["naiss_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_lieu_naissance_employeur_physique_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_lieu_naissance_employeur_physique_etrangere",
+            "label": "Ville de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["ville_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_num_passport_employeur_physique_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_num_passport_employeur_physique_etrangere",
+            "label": "Numéro de passeport",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["num_pass_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_expiration_passport_employeur_physique_etrangere",
+            "type": "Date",
+            "description": "",
+            "name": "input_expiration_passport_employeur_physique_etrangere",
+            "label": "Date d’expiration du passeport",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["expir_pass_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_adresse_employeur_physique_etrangere",
+            "type": "text",
+            "description": "",
+            "name": "input_adresse_employeur_physique_etrangere",
+            "label": "Adresse/Domiciliation",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["adresse_phy_etrg"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_denomination_sociale_employeur_morale",
+            "type": "text",
+            "description": "",
+            "name": "input_denomination_sociale_employeur_morale",
+            "label": "Dénomination sociale",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["denomination_morale"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_forme_employeur_morale",
+            "type": "select",
+            "description": "",
+            "name": "input_forme_employeur_morale",
+            "label": "Forme",
+            "placeHolder": "",
+            "help": "",
+            "options": ["SA","SARL","SUARL","LLP","GMBH","Autre"],
+            "value": "",
+            "bookmarkIdPerValue": {
+		"SA": ["forme_morale"],
+		"SARL": ["forme_morale"],
+		"SUARL": ["forme_morale"],
+		"LLP": ["forme_morale"],
+		"GMBH": ["forme_morale"],
+        "Autre": ["forme_morale"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_forme_libre_accord_resiliation",
+            "type": "text",
+            "description": "",
+            "name": "input_forme_libre_accord_resiliation",
+            "label": "Préciser la forme",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["forme_morale"]
+            },
+            "visibility": false
+        },
+		{
+            "id": "input_capitale_sociale_employeur_morale",
+            "type": "text",
+            "description": "",
+            "name": "input_capitale_sociale_employeur_morale",
+            "label": "Capital social en Dinars",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["capitale_sociale"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_identifiant_unique_employeur_morale",
+            "type": "text",
+            "description": "",
+            "name": "input_identifiant_unique_employeur_morale",
+            "label": "Identifiant Unique",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["identifiant_unique"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_adresse_employeur_morale",
+            "type": "text",
+            "description": "",
+            "name": "input_adresse_employeur_morale",
+            "label": "Adresse du siège social",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["adresse_siege_morale"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_nom_employeur_morale",
+            "type": "text",
+            "description": "",
+            "name": "input_nom_employeur_morale",
+            "label": "Nom du signataire du document",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["nom_employeur_morale"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_prenom_employeur_morale",
+            "type": "text",
+            "description": "",
+            "name": "input_prenom_employeur_morale",
+            "label": "Prénom du signataire du document",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["prenom_employeur_morale"]
+            },
+            "visibility": true
+        },
+		
+		
+		{
+            "id": "input_nom_employeur_physique_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_nom_employeur_physique_tunisien",
+            "label": "Nom ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["nom_employeur_phy_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_prenom_employeur_physique_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_prenom_employeur_physique_tunisien",
+            "label": "Prénom ",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["prenom_employeur_phy_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_date_naissance_employeur_physique_tunisien",
+            "type": "Date",
+            "description": "",
+            "name": "input_date_naissance_employeur_physique_tunisien",
+            "label": "Date de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["date_naiss_phy_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_lieu_naissance_employeur_physique_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_lieu_naissance_employeur_physique_tunisien",
+            "label": "Ville de naissance",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["lieu_nais_phys_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_num_cin_employeur_physique_tunisien",
+            "type": "cin",
+            "description": "",
+            "name": "input_num_cin_employeur_physique_tunisien",
+            "label": "Numéro de carte d'identité nationale",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["num_cin_phys_tun"]
+            },
+            "visibility": true
+        },
+		{
+            "id": "input_adresse_employeur_physique_tunisien",
+            "type": "text",
+            "description": "",
+            "name": "input_adresse_employeur_physique_tunisien",
+            "label": "Adresse/Domiciliation",
+            "placeHolder": "",
+            "help": "",
+            "options": [],
+            "value": "",
+            "bookmarkIdPerValue": {
+                "text": ["adresse_phy_tun"]
+            },
+            "visibility": true
+        }
+		
+		],
+		
+		"bookmarks": [ 
+		{
+            "bookmarkId": "montant_lettre",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "montant_chiffre",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "prise_effet",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "contrat_type",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "date_conclusion",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "nom_employee_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "prenom_employee_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "date_nais_eplyee_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "lieu_nais_eplyee_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "nationalite_employee",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "num_pass_employee_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "expir_pass_employee",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "adresse_employee",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		
+		{
+            "bookmarkId": "nom_employee_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "prenom_employee_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "date_naiss_employee_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "lieu_nais_employee_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "num_cin_employee_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "adresse_employee_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+	
+		
+		{
+            "bookmarkId": "denomination_morale",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "forme_morale",
+            "value": "",
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "forme_morale",
+            "value": "",
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "capitale_sociale",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "identifiant_unique",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		
+		{
+            "bookmarkId": "adresse_siege_morale",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "nom_employeur_morale",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "prenom_employeur_morale",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		
+		{
+            "bookmarkId": "nom_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "prenom_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "naiss_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "ville_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "num_pass_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "expir_pass_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "adresse_phy_etrg",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "nom_employeur_phy_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "prenom_employeur_phy_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "date_naiss_phy_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "lieu_nais_phys_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "num_cin_phys_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		{
+            "bookmarkId": "adresse_phy_tun",
+            "value": null,
+            "fontFamily": "Times New Roman",
+            "color": null,
+            "bold": true,
+            "italic": false,
+            "capitalized": false,
+            "type": "USER_INPUT",
+            "fontSize": 11
+        },
+		 
+		 
+		
+		{
+      "bookmarkId": "personne_physique_tunisienne_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_physique_etrangere_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_morale_tunisienne_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	 {
+      "bookmarkId": "Infos_employeur_moral",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Infos_employeur_physique",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    }
+		]
+		}

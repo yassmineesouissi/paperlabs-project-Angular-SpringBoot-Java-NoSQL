@@ -1,0 +1,249 @@
+{
+  "workflow": [
+  {
+      "inputId": "input_nature_personne_physique_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne caution",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere caution",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_nature_personne_physique_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne debiteur",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_debiteur",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere debiteur",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_debiteur",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne debiteur",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_debiteur",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere debiteur",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_debiteur",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_dinar_tunisien",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_dinar_en_lettre",
+              "visibility": true
+            },
+			 {
+              "elementId": "input_dinar_en_chiffre",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_dinar_en_lettre",
+              "visibility": false
+            },
+			{
+              "elementId": "input_dinar_en_chiffre",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_devise",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_type_devise",
+              "visibility": true
+            },
+			 {
+              "elementId": "input_devise_en_lettre",
+              "visibility": true
+            },
+			{
+              "elementId": "input_devise_en_chiffre",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_type_devise",
+              "visibility": false
+            },
+			{
+              "elementId": "input_devise_en_lettre",
+              "visibility": false
+            },
+			{
+              "elementId": "input_devise_en_chiffre",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_une_seul_tranche",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_date_seul_tranche",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_date_seul_tranche",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_plusieurs_tranche",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_nombre_tranche",
+              "visibility": true
+            },
+			 {
+              "elementId": "input_date_derniere_tranche",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_nombre_tranche",
+              "visibility": false
+            },
+			{
+              "elementId": "input_date_derniere_tranche",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    }
+	]
+	}

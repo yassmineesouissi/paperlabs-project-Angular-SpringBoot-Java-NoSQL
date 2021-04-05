@@ -1,0 +1,152 @@
+{
+  "workflow": [
+  {
+      "inputId": "input_gerant_tunisien",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_numero_cin_gerant_tunisien",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_numero_cin_gerant_tunisien",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_gerant_non_tunisien",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_numero_passeport_gerant_non_tunisien",
+              "visibility": true
+            },
+			{
+              "elementId": "input_nationalitee_gerant_non_tunisien",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_numero_passeport_gerant_non_tunisien",
+              "visibility": false
+            },
+			{
+              "elementId": "input_nationalitee_gerant_non_tunisien",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_gerant_remunere_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_remuneration_brute",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_remuneration_brute",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_revocation_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_nom_prenom_ancien_gerant_revocation",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_nom_prenom_ancien_gerant_revocation",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_demission_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_nom_prenom_ancien_gerant_demission",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_nom_prenom_ancien_gerant_demission",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_deces_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_nom_prenom_ancien_gerant_deces",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_nom_prenom_ancien_gerant_deces",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

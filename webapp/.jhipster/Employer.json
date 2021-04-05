@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "employerCinNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "employerFullName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employerFullAddress",
+            "fieldType": "String"
+        },
+        {
+          "fieldName": "userId",
+          "fieldType": "String"
+        }
+    ],
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "no",
+    "entityTableName": "employer",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

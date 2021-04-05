@@ -1,0 +1,419 @@
+<div class="test">
+
+
+    <div class="title">  CONTRAT DE BAIL COMMERCIAL    </div>
+    
+       
+            
+        Le présent contrat (« Contrat ») est conclu entre les soussigné(e)s : 
+    
+        <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+            <span
+                *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value}}
+            </span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value}}</span>,
+            de nationalité tunisienne, née le <span
+                *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value}}</span>
+            à <span
+                *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value}}</span>,
+            titulaire de la carte d’identité nationale n° <span
+                *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value}}</span>
+            délivrée à <span
+                *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>
+            le <span
+                *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>,
+            demeurant au <span
+                *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value}}</span>.
+        </div>
+    
+        <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+            <span
+                *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value}}</span>,
+            de nationalité <span
+                *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value}}</span>,
+            titulaire du passeport <span
+                *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value}}</span>
+            n°<span
+                *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value}}</span>
+            délivré le <span
+                *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value}}</span>,
+            élisant domicile au <span
+                *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value}}</span>.
+        </div>
+    
+        <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+            La société <span
+                *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value}}</span>,
+            <span
+                *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value}}</span>,
+            au capital de <span
+                *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value}}</span>
+            Dinars Tunisiens dont
+            le siège social est sis au <span
+                *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value}}</span>
+            titulaire de
+            l’identifiant unique n° <span
+                *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value}}</span>
+            ,
+            représentée par <span
+                *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value}}</span>dûment
+            habilité(e) à l’effet des présentes.
+        </div>
+    
+        <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_caution').checked">
+            La société <span
+                *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value}}</span>
+            , <span
+                *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value}}</span>,
+            immatriculée en <span
+                *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value}}</span>
+            sous le n° <span
+                *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value}}</span>
+            ,
+            dont le siège social est sis au <span
+                *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value}}</span>,
+            représentée par <span
+                *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value}}</span>dûment
+            habilité(e) à l’effet des présentes.
+        </div>
+    
+    <p>    Ci-après dénommée le « Bailleur », </p>
+    <div class="domination">
+    <p> <strong>  D’une part  </strong>   </p>
+    </div>
+     <p>  Et</p>
+    
+     <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_debiteur').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value}}</span>,
+        de nationalité tunisienne, née le <span
+            *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value}}</span>
+        à <span
+            *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value}}</span>,
+        titulaire de la carte d’identité nationale n° <span
+            *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value}}</span>
+        délivrée à <span
+            *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>
+        le <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>,
+        demeurant au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value}}</span>.
+    </div>
+    
+    
+    
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_debiteur').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value}}</span>,
+        de nationalité <span
+            *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value}}</span>,
+        titulaire du passeport <span
+            *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value}}</span>
+        n°<span
+            *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value}}</span>
+        délivré le <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value}}</span>,
+        élisant domicile au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value}}</span>.
+    </div>
+    
+    
+    
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_debiteur').checked">
+        La société <span
+            *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value}}</span>,
+        <span
+            *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value}}</span>,
+        au capital de <span
+            *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value}}</span>
+        Dinars Tunisiens dont
+        le siège social est sis au <span
+            *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value}}</span>
+        titulaire de
+        l’identifiant unique n° <span
+            *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value}}</span>
+        ,
+        représentée par <span
+            *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value}}</span>dûment
+        habilité(e) à l’effet des présentes.
+    </div>
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_debiteur').checked">
+        La société <span
+            *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value}}</span>
+        , <span
+            *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value}}</span>,
+        immatriculée en <span
+            *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value}}</span>
+        sous le n° <span
+            *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value}}</span>
+        ,
+        dont le siège social est sis au <span
+            *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value}}</span>,
+        représentée par <span
+            *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value}}</span>dûment
+        habilité(e) à l’effet des présentes.
+    </div>
+     <P>   Ci-après dénommée le « Preneur »,</P>
+    
+     <div class="domination">
+        <p> <strong>  D’autre part </strong>   </p>
+        </div>
+     
+     <P>Le Bailleur et le Preneur seront ci-après dénommés conjointement (les « Parties ») et individuellement (la « Partie »).  </P> 
+    
+     <P> <strong> IL EST PREALABLEMENT EXPOSE CE QUI SUIT :    </strong> </P>      
+    <P>
+     <strong> A-  </strong>  	Le Preneur s’est déclaré intéressé par l’exploitation d’un local, tel que plus amplement décrit ci-après, dans le cadre du présent contrat.
+    </P>
+    <P>
+    <strong> B-   </strong>       	Les Parties ont convenu de conclure le présent contrat en vue de permettre au Bailleur de consentir au Preneur qui l’accepte un bail portant sur le local dans les conditions stipulées ci-dessous.
+    </P>
+    <p><strong>   CECI ETANT EXPOSE, IL A ETE CONVENU CE QUI SUIT :           </strong></p>    
+    
+    <p><strong>    1	DEFINITIONS </strong></p>
+    Aux fins du contrat, les termes et expressions commençant par une majuscule auront le sens résultant des définitions ci-dessous : 
+    
+    <p> <strong> « Bailleur »    </strong> </p>                                                          
+    A la signification qui lui est  donnée aux  comparutions.
+    <p> <strong>   « Contrat » ou « Bail »    </strong>  </p> 
+    Désigne le présent contrat de  bail commercial et toute éventuelle annexe relative au Bail, tel qu'ils pourront, le cas échéant, être modifiés ou complétés par tout avenant écrit et signé par les Parties.
+    <p><strong> « Date d'Entrée en Vigueur »     </strong>    </p>
+    <div *ngIf="getHtmlInputElement('input_date_signature').checked">
+    Désigne la date de la dernière signature apposée sur le Contrat.</div>
+    <div *ngIf="getHtmlInputElement('input_autre_date').checked">
+    Désigne le <span
+    *ngIf="getHtmlInputElement('input_inserez_date').value !== '' ">{{getHtmlInputElement('input_inserez_date').value}}</span> .
+    </div>
+     <P><strong>    « Dinar Tunisien » ou « DT »</strong>    </P>
+    Désigne la monnaie ayant cours légal en République Tunisienne.
+    <P><strong>           « Durée du Bail  </strong></P>
+    Désigne la durée pour laquelle le Bail est accepté et consenti. Cette durée est de 
+    <span
+    *ngIf="getHtmlInputElement('input_question_4').value !== '' ">{{getHtmlInputElement('input_question_4').value}}</span>qui commencent à courir à compter de la Date d'Entrée en Vigueur. 
+    
+    
+    <P><strong>      « Local Loué » </strong></P>
+    Désigne le Local Loué d’une superficie locative sur plan <span *ngIf="getHtmlInputElement('input_adresse_local_6').value !== '' ">{{getHtmlInputElement('input_adresse_local_6').value}}</span> 
+    mètres carrés composé de <span *ngIf="getHtmlInputElement('input_nombre_piece_6').value !== '' ">{{getHtmlInputElement('input_nombre_piece_6').value}}</span>pièces, 
+    situé au <span *ngIf="getHtmlInputElement('input_adresse_local_6').value !== '' ">{{getHtmlInputElement('input_adresse_local_6').value}}</span>
+    <div *ngIf="getHtmlInputElement('input_num_titre_fonicier_6_oui').checked">
+    et ayant titre foncier n° <span *ngIf="getHtmlInputElement('input_numero_titre_financier_6').value !== '' ">{{getHtmlInputElement('input_numero_titre_financier_6').value}}</span>
+    </div>
+    
+    
+    <P><strong>   « Loyer » </strong></P>
+    Désigne le loyer, hors taxes municipales et hors charges, payable par le Preneur ou son mandataire au Bailleur en contrepartie d’une quittance de loyer annexée au Contrat.
+    Le montant du loyer est de <span *ngIf="getHtmlInputElement('input_montant_loyer_lettres_8').value !== '' ">{{getHtmlInputElement('input_montant_loyer_lettres_8').value}}</span>
+     (<span *ngIf="getHtmlInputElement('input_montant_loyer_chiffres_8').value !== '' ">{{getHtmlInputElement('input_montant_loyer_chiffres_8').value}}</span>) HT
+      payable <span *ngIf="getHtmlInputElement('input_echaince_de_paiement_8').value !== '' ">{{getHtmlInputElement('input_echaince_de_paiement_8').value}}</span>, 
+      soit un Loyer annuel HT de <span *ngIf="getHtmlInputElement('input_loyer_annuel_8').value !== '' ">{{getHtmlInputElement('input_loyer_annuel_8').value}}</span>DT. 
+    Le Loyer sera, de plein droit et sans aucune formalité ni notification préalable, augmenté de <span *ngIf="getHtmlInputElement('input_pourcentage_augmentation_8').value !== '' ">{{getHtmlInputElement('input_pourcentage_augmentation_8').value}}</span> % chaque année à compter de la 2ème année suivante celle de l’Entrée en Vigueur, sur la base du dernier Loyer.
+    
+    
+    
+    
+    <P><strong>       « Preneur » </strong></P>
+     A la signification qui lui est donnée aux comparutions.
+     <P><strong>  2	OBJET DU CONTRAT </strong></P>
+    Le Bailleur loue au Preneur qui l'accepte le Local Loué désigné et décrit ci-après, selon les termes et conditions du présent Bail.
+    
+    <P><strong>   3	DATE D'ENTREE EN VIGUEUR DU BAIL- DUREE- RENOUVELLEMENT </strong></P>
+    <P><strong>     3.1	Entrée en Vigueur et Durée du Bail </strong></P>
+    
+    Le Contrat entrera en vigueur et produira ses effets à compter de la Date d'Entrée en Vigueur pour la Durée du Bail consentie.
+    
+    <P><strong>  3.2	Renouvellement </strong></P>
+    <div *ngIf="getHtmlInputElement('input_question_5_oui').checked">
+    Le Bail est renouvelable pour <span
+    *ngIf="getHtmlInputElement('input_question_5_oui_duree_renouvelement').value !== '' ">{{getHtmlInputElement('input_question_5_oui_duree_renouvelement').value}}</span> par tacite reconduction, sous réserve de préavis de non-renouvellement qui devra être communiqué par l’une des Parties à l'autre par voie d'huissier de justice six (06) mois à l'avance, conformément à la loi N° 77- 37 du 25 Mai 1977 relative aux baux commerciaux.
+    </div>
+    <div *ngIf="getHtmlInputElement('input_question_5_non').checked">
+    Le contrat est conclu pour la Durée du Bail et ne sera renouvelé que par la volonté expresse des deux parties.
+    </div>
+     <p><strong>    4	DESTINATION DU LOCAL LOUÉ      </strong>  </p> 
+     
+     <p><strong>     4.1	Activité commerciale ou de services</strong>  </p>
+     <div *ngIf="getHtmlInputElement('input_une_activite_7').checked">
+    Le Preneur exercera dans le Local Loué l’activité de <span *ngIf="getHtmlInputElement('input_precisez_activite_7').value !== '' ">{{getHtmlInputElement('input_precisez_activite_7').value}}</span> à l’exclusion de toute autre activité, industrie, commerce ou profession, même à titre occasionnel ou accessoire et s'interdit à ce titre de proposer à la clientèle des produits et/ou services ne faisant pas partie de ceux proposés dans son activité et/ou dans le Local Loué. Le Preneur devra exercer son activité dans la totalité des lieux loués lesquels forment un tout indivisible.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+     </div>
+     <div *ngIf="getHtmlInputElement('input_toutes_activite_7').checked">
+    Le Preneur exercera dans le Local Loué toute activité commerciale. Le Preneur devra exercer son activité dans la totalité des lieux loués lesquels forment un tout indivisible.
+     </div>
+    <p><strong>     4.2	Respect de la réglementation en vigueur </strong></p>
+    <P>
+    Le Preneur devra se conformer scrupuleusement à la réglementation en vigueur, notamment en ce qui concerne l’activité envisagée, la salubrité, l’hygiène, la sécurité, la réglementation du travail, la protection de l’environnement et si besoin, supporter le coût de la mise en conformité du Local Loué avec les textes susvisés ainsi que tous travaux, modifications ou aménagements ordonnés par les autorités administratives le tout de façon à ce que le Bailleur ne soit jamais inquiété ni recherché. 
+    </P>
+    <P>
+    Le Preneur sera personnellement responsable de toute réclamation ou injonction qui pourrait émaner des autorités compétentes concernant les modalités de l’occupation par lui du Local Loué au titre des présentes.
+    </P>
+    <P>
+    En cas de défaillance du Preneur quant à la mise en conformité du Local Loué, le Bailleur pourra se substituer au Preneur défaillant pour faire réaliser les travaux de mise en conformité aux frais exclusifs du Preneur.
+    </P>
+    Cette clause est une condition substantielle du présent Contrat sans laquelle le Bailleur n’aurait pas contracté.
+    
+    <p><strong>  5		ENSEIGNE </strong></p>
+    
+    Le Preneur devra exercer son activité sous l’enseigne de son choix et en relation avec son activité.
+    
+    <p><strong>    6	LOYER </strong></p>
+    
+    Le Preneur sera redevable au Bailleur du Loyer <span *ngIf="getHtmlInputElement('input_echaince_de_paiement_8').value !== '' ">{{getHtmlInputElement('input_echaince_de_paiement_8').value}}</span>.
+    Le paiement du Loyer devra être effectué par avance et sera dû au premier jour ouvré suivant son échéance. 
+    Le paiement du Loyer pourra être effectué à la demande du Bailleur par chèques, espèces ou par virements bancaires sur le compte bancaire du Bailleur.
+    
+    Le Preneur opérera, le cas échéant, les retenues à la source qui sont ou qui seraient exigibles conformément à la législation en vigueur. 
+    
+    <p><strong>   7	DEPOT DE GARANTIE </strong></p>
+    
+    En vue de garantir l'exécution par le Preneur de l'ensemble de ses obligations au titre du présent Bail et le paiement de toutes sommes quelles qu'elles soient dues par le Preneur en application des présentes, 
+    le Preneur remet au Bailleur à la Date d’Entrée en Vigueur du Bail, 
+    un dépôt de garantie représentant la somme de <span *ngIf="getHtmlInputElement('input_montant_garantie_9').value !== '' ">{{getHtmlInputElement('input_montant_garantie_9').value}}</span> DT.
+    
+    Le dépôt de garantie sera conservé par le Bailleur pendant toute la durée du Bail sans intérêts. Il sera restitué au Preneur en fin de Bail, après réduction de toutes sommes (y compris de tous Loyers) dont le Preneur resterait redevable envers le Bailleur au titre des présentes, et contre remise des clés, et ce, sans préjudice des droits du Bailleur.
+    
+    <p><strong>    8  	ETAT DES LIEUX D’ENTREE, ENTRETIEN ET REPARATION DU LOCAL LOUÉ </strong></p>
+    <p>
+    Le Preneur reconnaît avoir reçu les lieux <span *ngIf="getHtmlInputElement('input_etat_lieu_10').value !== '' ">{{getHtmlInputElement('input_etat_lieu_10').value}}</span>.
+    </p>
+    <p>
+    Le Preneur jouira du Local Loué en bon père de famille et s’engage à maintenir le Local Loué en bon état d’entretien, de fonctionnement, de sécurité et de propreté, les installations techniques ainsi que les vitres, les sols, les accessoires, l’équipement, la devanture, l'enseigne et la vitrine, de procéder à la peinture de ceux-ci aussi souvent qu’il sera nécessaire et de remplacer, s’il y a lieu, ce qui ne pourra être réparé.
+    </p>
+    <p>
+    Le Preneur sera tenu d’effectuer à ses frais toutes les réparations locatives et les travaux nécessaires en cours de Bail pour le maintien du Local Loué en bon état. 
+    </p>
+    <p>
+    Le Preneur devra informer sans délai le Bailleur de toute réparation nécessaire comme de toute dégradation ou sinistre se produisant dans le Local Loué quand bien même il n'en résulterait aucun dégât apparent sous peine d'en être tenu pour responsable.
+    </p>
+    <p>
+    Le Bailleur se réserve le droit de vérifier à tout moment le bon état d’entretien des éléments visés ci-dessus et de faire réaliser les réparations nécessaires et dont il prend la charge.
+    </p>
+    <p>
+    Le Preneur devra faire place nette, à ses frais, à l'occasion de tous travaux, des meubles, teintures, agencements divers, canalisations et appareils dont la dépose serait nécessaire.
+    </p>
+    <p>
+    Le Preneur devra supporter, à ses frais, toute modification d'arrivée de ses branchements, de remplacement de compteurs ou d'installations intérieures pouvant être exigés par les compagnies ou sociétés distributrices des eaux, du gaz et de l'électricité, ou du téléphone.
+    </p>
+    Lors de l’expiration du Contrat, tous les aménagements immobiliers, agencements et travaux d’amélioration effectués par le Preneur seront acquis au Bailleur à l’exclusion des installations techniques mobiles (enseigne) lequel pourra les récupérer à charge pour lui de remettre le Local Loué en état si ladite récupération altère le Local Loué.
+    
+    <p><strong>   9	IMPOTS ET TAXES </strong></p>
+    <div *ngIf="getHtmlInputElement('input_bailleur_11').checked">
+    Le Bailleur devra satisfaire à tout impôt ou taxe en ce inclus les droits d’enregistrement relatifs au Local Loué dans la limite ou ces droits, impôts ou taxes ne sont pas légalement à la charge du Preneur.
+    </div>
+    <div *ngIf="getHtmlInputElement('input_preneur_11').checked">
+    Le Preneur devra satisfaire à tout impôt ou taxe en ce inclus les droits d’enregistrement relatifs au Local Loué dans la limite ou ces droits, impôts ou taxes ne sont pas légalement à la charge du Bailleur.
+    </div>
+    
+    <P><strong>10	RESILIATION DU BAIL SANCTIONS- PENALITES   </strong>   </P>      
+    
+    A défaut de paiement d’un seul terme du Loyer et toute charge à son échéance, le Contrat pourra être résilié si bon semble au Bailleur, trois (03) mois après simple mise en demeure adressée par voie d’exploit d’huissier de justice restée infructueuse en application des clauses de ce Contrat et des dispositions de la loi 77-37 du 25/05/1977.
+    
+    <P>  La résiliation interviendra selon les mêmes formes :</P>
+    
+    <P>  (i)	En cas de manquement du Preneur à une des dispositions légales ou réglementaires régissant les baux commerciaux, </P>
+    <P>  (ii)	En cas de non-respect par le Preneur de ses obligations essentielles en vertu du Bail;  </P>
+    <P>   (iii)	Plus généralement, en cas de non-respect par le Preneur à toute autre obligation au titre du Bail. </P>
+    
+    <p><strong>   11	OBLIGATIONS DU PRENEUR A LA FIN DU CONTRAT </strong></p>
+    
+    <p><strong>  11.1	Restitution du Local Loué </strong></p>
+    
+    Nonobstant les dispositions des articles 786 et 787 du Code des Obligations et des Contrats, les Parties conviennent d'un commun accord que le Preneur devra rendre en fin de Contrat, le Local Loué en bon état de réparation de toutes sortes sauf l’usure locative normale.
+    
+    <p><strong>   11.2	Etat des lieux de sortie </strong></p>
+    
+    A la demande du Bailleur, il sera établi un constat d’état des lieux de sortie contradictoire deux (02) mois avant l’expiration du Bail ou dans les deux (02) semaines qui suivent la résiliation du Bail (un état des lieux est annexé à ce contrat).
+    
+    Cet état des lieux comportera le relevé des réparations incombant au Preneur, que celui-ci devra avoir exécutées avant son départ.
+    
+    La restitution des clefs par le Preneur aura lieu le jour de son déménagement.
+    
+    <p><strong>    12	STIPULATIONS DIVERSES </strong></p>
+    
+    <p><strong>  12.1	Divisibilité </strong></p>
+    
+    Si une ou plusieurs dispositions du Contrat sont ou deviennent nulles, les autres clauses du Contrat demeurent valables et les Parties devront remplacer lesdites dispositions nulles par d’autres valables.
+    
+    <p><strong>   12.2	Survivance des droits, devoirs et obligations </strong></p>
+    
+    L’expiration du Contrat, pour une quelconque cause, ne libérera pas une Partie d’une quelconque obligation ou responsabilité, si cette obligation ou responsabilité résulte d’un quelconque agissement ou omission réalisé antérieurement à la date d’expiration du Contrat.
+    
+    <p><strong>   12.3	Exercice des droits </strong></p>
+    
+    Tout retard par l’une des Parties à se prévaloir du bénéfice de l’une quelconque des stipulations du Contrat ou d’un droit ou d’une prérogative qui en découle, ne pourra être interprétée comme une renonciation générale et définitive à se prévaloir du bénéfice de cette stipulation ni de celui d’aucune autre stipulation du Contrat.
+    
+    Toute renonciation ayant pour conséquence une modification du Contrat doit être faite par écrit. Les droits et recours reconnus aux Parties par les présentes ne limitent en aucune façon leur droit de se prévaloir également de tout autre moyen et actions prévus par la loi. 
+    
+      <p><strong> 12.4	Notifications et élection de domicile      </strong>   </p> 
+    
+    A l’exception où la loi exige une autre forme de notification, toute notification entre les Parties au titre des présentes sera adressée par lettre recommandée avec accusé de réception ou remise de document papier contre décharge ou email avec réponse écrite de l’autre Partie à laquelle elle est destinée.
+    <div *ngIf="getHtmlInputElement('input_non_12').checked">
+    Les Parties déclarent élire domicile en leur demeure respective, tel qu’indiqué en tête des présentes.
+    </div>
+    <div *ngIf="getHtmlInputElement('input_oui_12').checked">
+    Les Parties déclarent élire domicile à l’adresse ci-dessous (ou à toute adresse qu’elles pourront ultérieurement notifier aux autres Parties).
+    
+    
+    <p> En ce qui concerne le Bailleur :</p>
+    <p> Attention de : <span *ngIf="getHtmlInputElement('input_adresse_notification_12_1').value !== '' ">{{getHtmlInputElement('input_adresse_notification_12_1').value}}</span>
+    </p>
+     <p>   Email : <span *ngIf="getHtmlInputElement('input_adresse_email_bailleur_12_2').value !== '' ">{{getHtmlInputElement('input_adresse_email_bailleur_12_2').value}}</span>
+     </p>
+      <p>  Téléphone : <span *ngIf="getHtmlInputElement('input_num_tel_bailleur_12_3').value !== '' ">{{getHtmlInputElement('input_num_tel_bailleur_12_3').value}}</span>
+      </p>
+      <p>
+      </p> Adresse : <span *ngIf="getHtmlInputElement('input_adresse_bailleur_12_4').value !== '' ">{{getHtmlInputElement('input_adresse_bailleur_12_4').value}}</span>
+    
+    
+    <P>   En ce qui concerne le Preneur : </P>
+     <P>  Attention de : <span *ngIf="getHtmlInputElement('input_adresse_envoye_preneur_12_5').value !== '' ">{{getHtmlInputElement('input_adresse_envoye_preneur_12_5').value}}</span>
+      </P>
+     <P>   Email : <span *ngIf="getHtmlInputElement('input_adresse_email_preneur_12_6').value !== '' ">{{getHtmlInputElement('input_adresse_email_preneur_12_6').value}}</span>
+     </P>
+     <P>   Téléphone : <span *ngIf="getHtmlInputElement('input_num_tel_preneur_12_7').value !== '' ">{{getHtmlInputElement('input_num_tel_preneur_12_7').value}}</span>
+     </P>
+     <P>
+        Adresse : <span *ngIf="getHtmlInputElement('input_adresse_preneur_12_8').value !== '' ">{{getHtmlInputElement('input_adresse_preneur_12_8').value}}</span>
+    </P>
+    
+    
+    </div>
+    
+    <p>   Fait en <span *ngIf="getHtmlInputElement('input_nombre_exemplaire_13').value !== '' ">{{getHtmlInputElement('input_nombre_exemplaire_13').value}}</span> exemplaires originaux.  </p>
+    <p>
+    (Signature et mention manuscrite «lu et approuvé ») 
+    </p>
+    <div>
+    Le Bailleur  Le Preneur</div>
+    <div>
+    Date : __________________
+    
+        
+    Date : _________________	
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    

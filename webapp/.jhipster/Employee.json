@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "employeeFullName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeeCinNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeeCinDeliveredDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "employeeCinDeliveredLocation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeeFullAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeePostion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "String"
+        }
+    ],
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "no",
+    "entityTableName": "employee",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

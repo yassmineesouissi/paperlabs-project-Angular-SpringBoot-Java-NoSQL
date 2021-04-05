@@ -1,0 +1,635 @@
+{
+  "workflow": [
+ 
+ {
+      "inputId": "input_question_8_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_8_nom_prenom",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_8_non",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_8_nom_prenom",
+              "visibility": false
+            }
+			
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_10_phy",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_10_1",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	  {
+      "inputId": "input_question_10_phy",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_10_1",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_10_1", 
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+            
+            {
+              "elementId": "bloc_question_10_phy_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_10_phy_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_10_phy_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_10_phy_4",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_phy_5",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_6",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_7",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_8",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_9",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_10",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_11",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_phy_12",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_13",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_14",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_phy_15",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_16",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_17",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_phy_18",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_phy_19",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_20",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_21",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_22",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_23",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_24",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_25",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_26",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_27",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_28",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_29",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_30",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_31",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_32",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_33",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_34",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_35",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_36",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_37",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_38",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_39",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_40",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_41",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_question_10_phy_42",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_43",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_44",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_45",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_46",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_47",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_phy_48",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_question_10_phy_49",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_question_10_phy_50",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_10_morale",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_10_2",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_10_morale",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_10_2",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_10_2",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+            
+            {
+              "elementId": "bloc_question_10_mor_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_10_mor_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_10_mor_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_10_mor_4",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_mor_5",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_6",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_7",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_8",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_9",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_10",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_11",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_mor_12",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_13",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_14",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_mor_15",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_16",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_17",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_10_mor_18",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_10_mor_19",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_20",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_21",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_22",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_23",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_24",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_25",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_26",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_27",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_28",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_29",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_30",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_31",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_32",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_33",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_34",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_35",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_36",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_37",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_38",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_39",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_40",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_41",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_question_10_mor_42",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_43",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_44",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_45",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_46",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_47",
+              "visibility": true
+            },{
+              "elementId": "bloc_question_10_mor_48",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_question_10_mor_49",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_question_10_mor_50",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_11_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_commissaire",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_11_oui",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_commissaire",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_personne_physique",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_11_personne_physique",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_personne_physique",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_11_personne_physique",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_personne_morale",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_personne_morale_denomination_sociale",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_personne_morale_represente_par",
+              "visibility": true
+            }
+          ]
+        }
+		
+		
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_personne_morale",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_personne_morale_denomination_sociale",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_personne_morale_represente_par",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	{
+      "inputId": "input_cacher_12",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_12",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+		{
+      "inputId": "input_cacher_12",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_12",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+  {
+      "inputId": "input_question_12",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+           
+			 {
+              "elementId": "bloc_question_12_1",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_12_2",
+              "visibility": true
+            }, {
+			
+              "elementId": "bloc_question_12_3",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_12_4",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_12_5",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+	
+	
+  ]}

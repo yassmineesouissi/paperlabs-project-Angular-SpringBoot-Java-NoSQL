@@ -1,0 +1,2295 @@
+{
+  "steps": [
+   {
+      "id": "step_nature_peronne_caution",
+      "title": "الا طراف",
+      "description": "",
+      "blocs": ["bloc_nature_peronne_caution"],
+      "visibility": true
+    },
+	 {
+      "id": "step_caution",
+      "title": "المدين  ",
+      "description": "",
+      "blocs": [
+        "bloc_personne_physique_tunisienne_caution",
+        "bloc_personne_physique_etrangere_caution",
+		"bloc_personne_morale_tunisienne_caution",
+		"bloc_personne_morale_etrangere_caution"
+      ],
+      "visibility": true
+    },
+	{
+      "id": "step_nature_peronne_debiteur",
+      "title": "الا طراف",
+      "description": "",
+      "blocs": ["bloc_nature_peronne_debiteur"],
+      "visibility": true
+    },
+	{
+      "id": "step_debiteur",
+      "title": "الدائن",
+      "description": "",
+      "blocs": [
+        "bloc_personne_physique_tunisienne_debiteur",
+        "bloc_personne_physique_etrangere_debiteur",
+		"bloc_personne_morale_tunisienne_debiteur",
+		"bloc_personne_morale_etrangere_debiteur"
+      ],
+      "visibility": true
+    },
+	{
+      "id": "step_dette",
+      "title": "الدين",
+      "description": "",
+      "blocs": [
+        "bloc_dette_question_3",
+		"bloc_dette_question_4",
+		"bloc_dette_question_5"],
+      "visibility": true
+    }
+  ],
+  "blocs": [
+   {
+      "id": "bloc_nature_peronne_caution",
+      "title": "هل ان الشخص هو شخص طبيعي او معنوي؟",
+      "description": "",
+      "inputs": [
+        "input_nature_personne_physique_tunisienne_caution",
+        "input_nature_personne_physique_etrangere_caution",
+		"input_nature_personne_morale_tunisienne_caution",
+		"input_nature_personne_morale_etrangere_caution"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_tunisienne_caution",
+      "title": "شخص طبيعي تونسي",
+      "description": "",
+      "inputs": [
+        "input_nom_personne_physique_tunisienne_caution",
+		"input_prenom_personne_physique_tunisienne_caution",
+		"input_date_naissance_personne_physique_tunisienne_caution",
+		"input_lieu_naissance_personne_physique_tunisienne_caution",
+		"input_numero_cin_personne_physique_tunisienne_caution",
+		"input_date_delivrance_cin_personne_physique_tunisienne_caution",
+		"input_adresse_personne_physique_tunisienne_caution"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_etrangere_caution",
+      "title": "شخص طبيعي أجنبي ",
+      "description": "",
+      "inputs": [
+        "input_nom_personne_physique_etrangere_caution",
+		"input_prenom_personne_physique_etrangere_caution",
+		"input_nationalité_personne_physique_etrangere_caution",
+		"input_pays_emmetteur_passeport_personne_physique_etrangere_caution",
+		"input_numero_passeport_personne_physique_etrangere_caution",
+		"input_date_delivrance_passeport_personne_physique_etrangere_caution",
+		"input_adresse_personne_physique_etrangere_caution"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_morale_tunisienne_caution",
+      "title": "شخص معنوي تونسي ",
+      "description": "",
+      "inputs": [
+        "input_denomination_personne_morale_tunisienne_caution",
+		"input_forme_personne_morale_tunisienne_caution",
+		"input_capital_personne_morale_tunisienne_caution",
+		"input_adresse_siege_personne_morale_tunisienne_caution",
+		"input_identifiant_unique_personne_morale_tunisienne_caution",
+		"input_nom_personne_morale_tunisienne_caution",
+		"input_prenom_personne_morale_tunisienne_caution"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_morale_etrangere_caution",
+      "title": "شخص معنوي أجنبي",
+      "description": "",
+      "inputs": [
+        "input_denomination_personne_morale_etrangere_caution",
+		"input_forme_personne_morale_etrangere_caution",
+		"input_pays_immatriculation_personne_morale_etrangere_caution",
+		"input_adresse_siege_personne_morale_etrangere_caution",
+		"input_num_immatriculation_personne_morale_etrangere_caution",
+		"input_nom_personne_morale_etrangere_caution",
+		"input_prenom_personne_morale_etrangere_caution"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_nature_peronne_debiteur",
+      "title": "هل ان الشخص هو شخص طبيعي او معنوي؟",
+      "description": "",
+      "inputs": [
+        "input_nature_personne_physique_tunisienne_debiteur",
+        "input_nature_personne_physique_etrangere_debiteur",
+		"input_nature_personne_morale_tunisienne_debiteur",
+		"input_nature_personne_morale_etrangere_debiteur"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_tunisienne_debiteur",
+      "title": "شخص طبيعي تونسي",
+      "description": "",
+      "inputs": [
+        "input_nom_personne_physique_tunisienne_debiteur",
+		"input_prenom_personne_physique_tunisienne_debiteur",
+		"input_date_naissance_personne_physique_tunisienne_debiteur",
+		"input_lieu_naissance_personne_physique_tunisienne_debiteur",
+		"input_numero_cin_personne_physique_tunisienne_debiteur",
+		"input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
+		"input_adresse_personne_physique_tunisienne_debiteur"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_etrangere_debiteur",
+      "title": "شخص طبيعي أجنبي ",
+      "description": "",
+      "inputs": [
+        "input_nom_personne_physique_etrangere_debiteur",
+		"input_prenom_personne_physique_etrangere_debiteur",
+		"input_nationalité_personne_physique_etrangere_debiteur",
+		"input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur",
+		"input_numero_passeport_personne_physique_etrangere_debiteur",
+		"input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
+		"input_adresse_personne_physique_etrangere_debiteur"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_morale_tunisienne_debiteur",
+      "title": "شخص معنوي تونسي ",
+      "description": "",
+      "inputs": [
+        "input_denomination_personne_morale_tunisienne_debiteur",
+		"input_forme_personne_morale_tunisienne_debiteur",
+		"input_capital_personne_morale_tunisienne_debiteur",
+		"input_adresse_siege_personne_morale_tunisienne_debiteur",
+		"input_identifiant_unique_personne_morale_tunisienne_debiteur",
+		"input_nom_personne_morale_tunisienne_debiteur",
+		"input_prenom_personne_morale_tunisienne_debiteur"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_morale_etrangere_debiteur",
+      "title": "شخص معنوي أجنبي ",
+      "description": "",
+      "inputs": [
+        "input_denomination_personne_morale_etrangere_debiteur",
+		"input_forme_personne_morale_etrangere_debiteur",
+		"input_pays_immatriculation_personne_morale_etrangere_debiteur",
+		"input_adresse_siege_personne_morale_etrangere_debiteur",
+		"input_num_immatriculation_personne_morale_etrangere_debiteur",
+		"input_nom_personne_morale_etrangere_debiteur",
+		"input_prenom_personne_morale_etrangere_debiteur"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_dette_question_3",
+      "title": "ماهي خاصيات الدين؟ ",
+      "description": "",
+      "inputs": [
+        "input_dinar_tunisien",
+		"input_dinar_en_lettre",
+		"input_dinar_en_chiffre",
+		"input_devise",
+		"input_type_devise",
+		"input_devise_en_lettre",
+		"input_devise_en_chiffre"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_dette_question_4",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_date_debut_dette"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_dette_question_5",
+      "title": "هل سيقع الخلاص دفعة واحدة ام على عدة أقساط؟ ",
+      "description": "",
+      "inputs": [
+        "input_une_seul_tranche",
+		 "input_date_seul_tranche",
+		"input_plusieurs_tranche",
+		 "input_nombre_tranche",
+		  "input_date_derniere_tranche"],
+      "visibility": true
+    }
+  ],
+  "inputs": [
+  {
+      "id": "input_date_derniere_tranche",
+      "type": "date",
+      "description": "",
+      "name": "input_date_derniere_tranche",
+      "label": "ماهو تاريخ القسط النهائي؟ ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_derniere_tranche"]
+        },
+      "visibility": false
+    },
+  {
+      "id": "input_nombre_tranche",
+      "type": "number",
+      "description": "",
+      "name": "input_nombre_tranche",
+      "label": "ماهو عدد الأقساط؟",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nombre_tranche"]
+        },
+      "visibility": false
+    },
+  {
+      "id": "input_date_seul_tranche",
+      "type": "date",
+      "description": "",
+      "name": "input_date_seul_tranche",
+      "label": "التاريخ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_seul_tranche"]
+        },
+      "visibility": false
+    },
+  {
+      "id": "input_plusieurs_tranche",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "على عدة أقساط ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["plusieurs_tranche"],
+        "true": []
+      },
+      "visibility": true
+	  },
+   {
+      "id": "input_une_seul_tranche",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "دفعة واحدة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["une_seul_tranche"],
+        "true": []
+      },
+      "visibility": true
+	  },
+  {
+      "id": "input_date_debut_dette",
+      "type": "date",
+      "description": "",
+      "name": "input_date_debut_dette",
+      "label": "متى نشا الدين؟",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_debut_dette","date_debut_dette_1"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_devise_en_chiffre",
+      "type": "number",
+      "description": "",
+      "name": "input_devise_en_chiffre",
+      "label": "المبلغ بالأرقام ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["devise_en_chiffre"]
+        },
+      "visibility": false
+    },
+  {
+      "id": "input_devise_en_lettre",
+      "type": "text",
+      "description": "",
+      "name": "input_devise_en_lettre",
+      "label": "المبلغ بلسان القلم ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["devise_en_lettre"]
+        },
+      "visibility": false
+    },
+  {
+      "id": "input_type_devise",
+      "type": "text",
+      "description": "",
+      "name": "input_type_devise",
+      "label": "نوع العملة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["type_devise","type_devise_1"]
+        },
+      "visibility": false
+    },
+   {
+      "id": "input_dinar_en_chiffre",
+      "type": "number",
+      "description": "",
+      "name": "input_dinar_en_chiffre",
+      "label": "المبلغ بالأرقام",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["dinar_en_chiffre"]
+        },
+      "visibility": false
+    },
+	
+  {
+      "id": "input_dinar_en_lettre",
+      "type": "text",
+      "description": "",
+      "name": "input_dinar_en_lettre",
+      "label": "المبلغ بلسان القلم ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["dinar_en_lettre"]
+        },
+      "visibility": false
+    },
+	
+  {
+      "id": "input_devise",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "بالعملة الأجنبية ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["devise_choix"],
+        "true": []
+      },
+      "visibility": true
+	  },
+
+  {
+      "id": "input_dinar_tunisien",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "بالدينار التونسي ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["dinars_tunisien"],
+        "true": []
+      },
+      "visibility": true
+	  },
+
+  {
+      "id": "input_prenom_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_morale_etrangere_debiteur",
+      "label": "لقب الممثل القانوني للشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_morale_etrangere_debiteur",
+      "label": "اسم الممثل القانوني للشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_num_immatriculation_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_num_immatriculation_personne_morale_etrangere_debiteur",
+      "label": "عدد الترسيم بالبلد الام ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_immat_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_siege_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_siege_personne_morale_etrangere_debiteur",
+      "label": "عنوان المقر الاجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adress_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_pays_immatriculation_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_pays_immatriculation_personne_morale_etrangere_debiteur",
+      "label": "بلد الترسيم ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_immat_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_forme_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_personne_morale_etrangere_debiteur",
+      "label": "شكل الشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_denomination_personne_morale_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_denomination_personne_morale_etrangere_debiteur",
+      "label": "الاسم الاجتماعي ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["denomi_morale_etrg_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_prenom_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_morale_tunisienne_debiteur",
+      "label": "لقب الممثل القانوني للشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_nom_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_morale_tunisienne_debiteur",
+      "label": "اسم الممثل القانوني للشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_identifiant_unique_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_identifiant_unique_personne_morale_tunisienne_debiteur",
+      "label": "المعرف الوحيد للشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identi_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_siege_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_siege_personne_morale_tunisienne_debiteur",
+      "label": "المقر الاجتماعي للشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_capital_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_capital_personne_morale_tunisienne_debiteur",
+      "label": "راس مال الشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["capital_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_forme_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_personne_morale_tunisienne_debiteur",
+      "label": "شكل الشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_denomination_personne_morale_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_denomination_personne_morale_tunisienne_debiteur",
+      "label": "الاسم الاجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["denomin_morale_tun_debiteur"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_personne_physique_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_personne_physique_etrangere_debiteur",
+      "label": "العنوان",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_phys_etrg_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
+      "type": "date",
+      "description": "",
+      "name": "input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
+      "label": "تاريخ اصدار جواز السفر ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_passp_phys_etrg_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_numero_passeport_personne_physique_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_numero_passeport_personne_physique_etrangere_debiteur",
+      "label": "عدد جواز السفر",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_passp_phys_etrg_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur",
+      "label": "البلد المصدر لجواز السفر",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_passp_phys_etrg_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_nationalité_personne_physique_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_nationalité_personne_physique_etrangere_debiteur",
+      "label": "الجنسية",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nationalité_phy_etrg_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_prenom_personne_physique_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_physique_etrangere_debiteur",
+      "label": "اللقب",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_phy_etrangere_debiteur"]
+        
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_personne_physique_etrangere_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_physique_etrangere_debiteur",
+      "label": "الاسم",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_phys_etrangere_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
+      "label": "تاريخ اصدار بطاقة التعريف الوطنية ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_cin_phy_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_personne_physique_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_personne_physique_tunisienne_debiteur",
+      "label": "العنوان ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_phy_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+ 
+  {
+      "id": "input_numero_cin_personne_physique_tunisienne_debiteur",
+      "type": "number",
+      "description": "",
+      "name": "input_numero_cin_personne_physique_tunisienne_debiteur",
+      "label": "رقم بطاقة التعريف الوطنية ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nume_cin_phy_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_lieu_naissance_personne_physique_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_naissance_personne_physique_tunisienne_debiteur",
+      "label": "مكان الولادة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_naiss_phy_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_naissance_personne_physique_tunisienne_debiteur",
+      "type": "date",
+      "description": "",
+      "name": "input_date_naissance_personne_physique_tunisienne_debiteur",
+      "label": "تاريخ الولادة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_naiss_phys_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_personne_physique_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_physique_tunisienne_debiteur",
+      "label": "الاسم",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_phys_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_prenom_personne_physique_tunisienne_debiteur",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_physique_tunisienne_debiteur",
+      "label": "اللقب",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_phys_tun_debiteur"]
+        
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_nature_personne_physique_tunisienne_debiteur",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur_1",
+      "label": "شخص طبيعي تونسي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "physique tunisienne debiteur",
+      "bookmarkIdPerValue": {
+        "physique tunisienne debiteur": [
+		                                "personne_physique_etrangere_debiteur",
+										"personne_morale_tunisienne_debiteur",
+										"personne_morale_etrangere_debiteur"]
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_nature_personne_physique_etrangere_debiteur",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur_1",
+      "label": "شخص طبيعي أجنبي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "physique etrangere debiteur",
+      "bookmarkIdPerValue": {
+        "physique etrangere debiteur": [
+		                               "personne_physique_tunisienne_debiteur",
+									   "personne_morale_tunisienne_debiteur",
+									   "personne_morale_etrangere_debiteur"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_morale_tunisienne_debiteur",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur_1",
+      "label": "شخص معنوي تونسي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "morale tunisienne debiteur",
+      "bookmarkIdPerValue": {
+        "morale tunisienne debiteur": [
+		                              "personne_physique_tunisienne_debiteur",
+									  "personne_physique_etrangere_debiteur",
+									  "personne_morale_etrangere_debiteur"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_morale_etrangere_debiteur",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur_1",
+      "label": "شخص معنوي أجنبي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "morale etrangere debiteur",
+      "bookmarkIdPerValue": {
+        "morale etrangere debiteur": [
+		                             "personne_physique_tunisienne_debiteur",
+									 "personne_physique_etrangere_debiteur",
+									 "personne_morale_tunisienne_debiteur"]
+      },
+      "visibility": true
+    },
+  
+   {
+      "id": "input_prenom_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_morale_etrangere_caution",
+      "label": "لقب الممثل القانوني للشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_morale_etrangere_caution",
+      "label": "اسم الممثل القانوني للشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_num_immatriculation_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_num_immatriculation_personne_morale_etrangere_caution",
+      "label": "عدد الترسيم بالبلد الام",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_immat_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_siege_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_siege_personne_morale_etrangere_caution",
+      "label": "عنوان المقر الاجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adress_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_pays_immatriculation_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_pays_immatriculation_personne_morale_etrangere_caution",
+      "label": "بلد الترسيم ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_immat_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_forme_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_personne_morale_etrangere_caution",
+      "label": "شكل الشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_denomination_personne_morale_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_denomination_personne_morale_etrangere_caution",
+      "label": "الاسم الاجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["denomi_morale_etrg_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_prenom_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_morale_tunisienne_caution",
+      "label": "لقب الممثل القانوني للشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_nom_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_morale_tunisienne_caution",
+      "label": "اسم الممثل القانوني للشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_identifiant_unique_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_identifiant_unique_personne_morale_tunisienne_caution",
+      "label": "المعرف الوحيد للشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identi_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_siege_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_siege_personne_morale_tunisienne_caution",
+      "label": "المقر الاجتماعي للشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_capital_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_capital_personne_morale_tunisienne_caution",
+      "label": "راس مال الشركة ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["capital_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_forme_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_personne_morale_tunisienne_caution",
+      "label": "شكل الشركة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_denomination_personne_morale_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_denomination_personne_morale_tunisienne_caution",
+      "label": "الاسم الاجتماعي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["denomin_morale_tun_caution"]
+        },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_personne_physique_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_personne_physique_etrangere_caution",
+      "label": "العنوان",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_phys_etrg_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
+      "type": "date",
+      "description": "",
+      "name": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
+      "label": "تاريخ اصدار جواز السفر",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_passp_phys_etrg_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_numero_passeport_personne_physique_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_numero_passeport_personne_physique_etrangere_caution",
+      "label": "عدد جواز السفر",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["num_passp_phys_etrg_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_pays_emmetteur_passeport_personne_physique_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_pays_emmetteur_passeport_personne_physique_etrangere_caution",
+      "label": "البلد المصدر لجواز السفر",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_passp_phys_etrg_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_nationalité_personne_physique_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_nationalité_personne_physique_etrangere_caution",
+      "label": "الجنسية",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nationalité_phy_etrg_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_prenom_personne_physique_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_physique_etrangere_caution",
+      "label": "اللقب",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_phy_etrangere_caution"]
+        
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_personne_physique_etrangere_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_physique_etrangere_caution",
+      "label": "الاسم",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_phys_etrangere_caution"]
+        
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_date_delivrance_cin_personne_physique_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_date_delivrance_cin_personne_physique_tunisienne_caution",
+      "label": "تاريخ اصدار بطاقة التعريف الوطنية ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_cin_phy_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_adresse_personne_physique_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_personne_physique_tunisienne_caution",
+      "label": "العنوان",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_phy_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+  
+  {
+      "id": "input_numero_cin_personne_physique_tunisienne_caution",
+      "type": "number",
+      "description": "",
+      "name": "input_numero_cin_personne_physique_tunisienne_caution",
+      "label": "رقم بطاقة التعريف الوطنية",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nume_cin_phy_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_lieu_naissance_personne_physique_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_naissance_personne_physique_tunisienne_caution",
+      "label": "مكان الولادة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_naiss_phy_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_date_naissance_personne_physique_tunisienne_caution",
+      "type": "date",
+      "description": "",
+      "name": "input_date_naissance_personne_physique_tunisienne_caution",
+      "label": "تاريخ الولادة",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_naiss_phys_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+   {
+      "id": "input_nom_personne_physique_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_personne_physique_tunisienne_caution",
+      "label": "الاسم",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_phys_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_prenom_personne_physique_tunisienne_caution",
+      "type": "text",
+      "description": "",
+      "name": "input_prenom_personne_physique_tunisienne_caution",
+      "label": "اللقب",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenom_phys_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+  {
+      "id": "input_nature_personne_physique_tunisienne_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "شخص طبيعي تونسي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "physique tunisienne caution",
+      "bookmarkIdPerValue": {
+        "physique tunisienne caution": [
+		                                "personne_physique_etrangere_caution",
+										"personne_morale_tunisienne_caution",
+										"personne_morale_etrangere_caution"]
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_nature_personne_physique_etrangere_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "شخص طبيعي أجنبي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "physique etrangere caution",
+      "bookmarkIdPerValue": {
+        "physique etrangere caution": [
+		                               "personne_physique_tunisienne_caution",
+									   "personne_morale_tunisienne_caution",
+									   "personne_morale_etrangere_caution"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_morale_tunisienne_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "شخص معنوي تونسي",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "morale tunisienne caution",
+      "bookmarkIdPerValue": {
+        "morale tunisienne caution": [
+		                              "personne_physique_tunisienne_caution",
+									  "personne_physique_etrangere_caution",
+									  "personne_morale_etrangere_caution"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_morale_etrangere_caution",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "شخص معنوي أجنبي ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "morale etrangere caution",
+      "bookmarkIdPerValue": {
+        "morale etrangere caution": [
+		                             "personne_physique_tunisienne_caution",
+									 "personne_physique_etrangere_caution",
+									 "personne_morale_tunisienne_caution"]
+      },
+      "visibility": true
+    }
+  
+   ],
+  "bookmarks": [
+  
+   {
+      "bookmarkId": "denomi_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_immat_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "adress_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "num_immat_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "nom_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "prenom_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "denomin_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "capital_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "adresse_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "identi_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "prenom_morale_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+
+  {
+      "bookmarkId": "nom_phys_etrangere_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prenom_phy_etrangere_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalité_phy_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_passp_phys_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "num_passp_phys_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_passp_phys_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_phys_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  
+  {
+      "bookmarkId": "prenom_phys_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_phys_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "date_naiss_phys_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "lieu_naiss_phy_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "nume_cin_phy_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "adresse_phy_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "date_cin_phy_tun_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "denomi_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_immat_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "adress_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "num_immat_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "nom_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "prenom_morale_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+   {
+      "bookmarkId": "denomin_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "capital_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "adresse_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "identi_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "prenom_morale_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "nom_phys_etrangere_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prenom_phy_etrangere_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalité_phy_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_passp_phys_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "num_passp_phys_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_passp_phys_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_phys_etrg_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  {
+      "bookmarkId": "prenom_phys_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_phys_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "date_naiss_phys_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "lieu_naiss_phy_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "nume_cin_phy_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "adresse_phy_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },{
+      "bookmarkId": "date_cin_phy_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+   
+  {
+      "bookmarkId": "personne_physique_tunisienne_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_physique_etrangere_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_morale_tunisienne_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_morale_etrangere_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_physique_tunisienne_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_physique_etrangere_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_morale_tunisienne_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "personne_morale_etrangere_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dinar_en_chiffre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dinar_en_lettre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "devise_choix",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dinars_tunisien",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "type_devise",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "type_devise_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "devise_en_lettre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "devise_en_chiffre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_debut_dette",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_debut_dette_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "plusieurs_tranche",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "une_seul_tranche",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_seul_tranche",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nombre_tranche",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	{
+      "bookmarkId": "date_derniere_tranche",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+	
+	
+  ]
+}

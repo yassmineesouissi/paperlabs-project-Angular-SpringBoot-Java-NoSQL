@@ -1,0 +1,1055 @@
+{
+  "workflow": [
+  {
+      "inputId": "input_nature_personne_physique_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne caution",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere caution",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_nature_personne_physique_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne debiteur",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_debiteur",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere debiteur",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_debiteur",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne debiteur",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_debiteur",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere debiteur",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_debiteur",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_dinars_tunisien",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_dinars_tunisien_montant_en_lettres",
+              "visibility": true
+            },
+			{
+              "elementId": "input_dinars_tunisien_montant_en_chiffres",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_dinars_tunisien_montant_en_lettres",
+              "visibility": false
+            },
+			{
+              "elementId": "input_dinars_tunisien_montant_en_chiffres",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_devise_etrangere",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_devise_etrangere_montant_en_lettres",
+              "visibility": true
+            },
+			{
+              "elementId": "input_devise_etrangere_montanten_chiffres",
+              "visibility": true
+            },
+			{
+              "elementId": "input_nature_devise_en_lettres",
+              "visibility": true
+            },
+			{
+              "elementId": "input_devise_etrangere_montant_en_lettres_1",
+              "visibility": true
+            },
+			{
+              "elementId": "input_devise_etrangere_montanten_chiffres_1",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_devise_etrangere_montant_en_lettres",
+              "visibility": false
+            },
+			{
+              "elementId": "input_devise_etrangere_montanten_chiffres",
+              "visibility": false
+            },
+			{
+              "elementId": "input_nature_devise_en_lettres",
+              "visibility": false
+            },
+			{
+              "elementId": "input_devise_etrangere_montant_en_lettres_1",
+              "visibility": false
+            },
+			{
+              "elementId": "input_devise_etrangere_montanten_chiffres_1",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_echeance_contrat_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_duree_successive_reconduction",
+              "visibility": true
+            },
+			{
+              "elementId": "input_combien_jours_preavi",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_duree_successive_reconduction",
+              "visibility": false
+            },
+			{
+              "elementId": "input_combien_jours_preavi",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	
+	{
+      "inputId": "input_forme_personne_morale_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_prestation_forme_3",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_prestation_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_prestation_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_prestation_forme_3",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  {
+      "inputId": "input_forme_personne_morale_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_prestation_4",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_prestation_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_prestation_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_prestation_4",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  {
+      "inputId": "input_forme_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_prestation_1",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_1",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_1",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_prestation_1",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_personne_morale_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_prestation_2",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_prestation_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_prestation_2",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	 
+	
+	
+	{
+      "inputId": "input_question_6_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_6_1",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_2",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_3",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_4",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_5",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_6",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_7",
+              "visibility": true
+            },{
+              "elementId": "input_question_6_8",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_6_oui",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_6_1",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_2",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_3",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_4",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_5",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_6",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_7",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_8",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_6_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_6_1",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_2",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_3",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_4",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_5",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_6",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_7",
+              "visibility": false
+            },{
+              "elementId": "input_question_6_8",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_5_dinars",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_dinars_texte",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_dinars_texte",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_5_mois",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_mois_texte",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_mois_texte",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_5_jours",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_jours_texte",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_jours_texte",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	{
+      "inputId": "input_question_5_dinars",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_mois",
+              "visibility": false
+            }
+          ]
+        },
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_jours",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_5_dinars",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_mois",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_jours",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	
+	
+	
+	{
+      "inputId": "input_question_5_mois",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_dinars",
+              "visibility": false
+            }
+          ]
+        },
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_jours",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_5_mois",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_dinars",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_jours",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	
+	{
+      "inputId": "input_question_5_jours",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_dinars",
+              "visibility": false
+            }
+          ]
+        },
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_5_mois",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_5_jours",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_dinars",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_5_mois",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_question_4_2_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_4_2_oui_1",
+              "visibility": true
+            },{
+              "elementId": "input_question_4_2_oui_2",
+              "visibility": true
+            },{
+              "elementId": "input_question_4_2_oui_3",
+              "visibility": true
+            },{
+              "elementId": "input_question_4_2_oui_4",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_4_2_oui_5",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_4_2_oui",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_4_2_oui_1",
+              "visibility": false
+            },{
+              "elementId": "input_question_4_2_oui_2",
+              "visibility": false
+            },{
+              "elementId": "input_question_4_2_oui_3",
+              "visibility": false
+            },{
+              "elementId": "input_question_4_2_oui_4",
+              "visibility": false
+            },
+			{
+              "elementId": "input_question_4_2_oui_5",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_4_2_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_question_4_2_oui_1",
+              "visibility": false
+            },{
+              "elementId": "input_question_4_2_oui_2",
+              "visibility": false
+            },{
+              "elementId": "input_question_4_2_oui_3",
+              "visibility": false
+            },{
+              "elementId": "input_question_4_2_oui_4",
+              "visibility": false
+            },
+			{
+              "elementId": "input_question_4_2_oui_5",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_question_4_2_non",
+      "valuesConstraints": [
+       
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_numero_1",
+              "visibility": false
+            },
+			 {
+              "elementId": "input_montant_1",
+              "visibility": false
+            },
+			 {
+              "elementId": "input_echeance_1",
+              "visibility": false
+            },
+			{
+              "elementId": "input_numero_2",
+              "visibility": false
+            },
+			{
+              "elementId": "input_montant_2",
+              "visibility": false
+            },
+			{
+              "elementId": "input_echeance_2",
+              "visibility": false
+            },
+			{
+              "elementId": "input_numero_3",
+              "visibility": false
+            },
+			{
+              "elementId": "input_montant_3",
+              "visibility": false
+            },
+			{
+              "elementId": "input_echeance_3",
+              "visibility": false
+            },
+			{
+              "elementId": "input_numero_4",
+              "visibility": false
+            },
+			{
+              "elementId": "input_montant_4",
+              "visibility": false
+            },
+			{
+              "elementId": "input_echeance_4",
+              "visibility": false
+            },
+			{
+              "elementId": "input_numero_5",
+              "visibility": false
+            },{
+              "elementId": "input_montant_5",
+              "visibility": false
+            },{
+              "elementId": "input_echeance_5",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	{
+      "inputId": "input_question_4_2_oui_5",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_4_2_oui_5_numeros",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_4_2_oui_5_montant",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_4_2_oui_5_echeance",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_4_2_oui_5_numeros",
+              "visibility": false
+            },
+			 {
+              "elementId": "input_question_4_2_oui_5_montant",
+              "visibility": false
+            },
+			 {
+              "elementId": "input_question_4_2_oui_5_echeance",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+      "inputId": "input_question_4_2_oui_5",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+            
+            {
+              "elementId": "bloc_question_4_2_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_4_2_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_4_2_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_question_4_2_4",
+              "visibility": true
+            },
+			 {
+              "elementId": "bloc_question_4_2_5",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+      ]
+	  },
+	
+	
+	
+	

@@ -1,0 +1,119 @@
+<div class="test">
+    <div class="title"><strong> ACCORD DE RESILIATION AMIABLE DE CONTRAT DE TRAVAIL </strong></div>
+    
+    <strong> ENTRE-LES SOUSSIGNES</strong>
+    <!-------------------------------------------------------->
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+     <p>  <span *ngIf="getHtmlInputElement('input_nom_employeur_physique_tunisien').value !== '' ">{{getHtmlInputElement('input_nom_employeur_physique_tunisien').value}}</span>  <span *ngIf="getHtmlInputElement('input_prenom_employeur_physique_tunisien').value !== '' ">{{getHtmlInputElement('input_prenom_employeur_physique_tunisien').value}}</span>, 
+        né le <span *ngIf="getHtmlInputElement('input_date_naissance_employeur_physique_tunisien').value !== '' ">{{getHtmlInputElement('input_date_naissance_employeur_physique_tunisien').value}}</span>  à <span *ngIf="getHtmlInputElement('input_lieu_naissance_employeur_physique_tunisien').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_employeur_physique_tunisien').value}}</span> , 
+        titulaire de la carte d’identité tunisienne n° <span *ngIf="getHtmlInputElement('input_num_cin_employeur_physique_tunisien').value !== '' ">{{getHtmlInputElement('input_num_cin_employeur_physique_tunisien').value}}</span>, élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_employeur_physique_tunisien').value !== '' ">{{getHtmlInputElement('input_adresse_employeur_physique_tunisien').value}}</span>. </p>
+    </div>
+    
+    
+     <!-------------------------------------------------------->
+     <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+     <p> <span *ngIf="getHtmlInputElement('input_nom_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_nom_employeur_physique_etrangere').value}}</span>  <span *ngIf="getHtmlInputElement('input_prenom_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_prenom_employeur_physique_etrangere').value}}</span>, né le <span *ngIf="getHtmlInputElement('input_date_naissance_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_date_naissance_employeur_physique_etrangere').value}}</span> à <span *ngIf="getHtmlInputElement('input_lieu_naissance_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_employeur_physique_etrangere').value}}</span>, 
+        titulaire du passeport n° <span *ngIf="getHtmlInputElement('input_num_passport_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_num_passport_employeur_physique_etrangere').value}}</span>, 
+        valide jusqu’au <span *ngIf="getHtmlInputElement('input_expiration_passport_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_expiration_passport_employeur_physique_etrangere').value}}</span>, 
+        élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_employeur_physique_etrangere').value !== '' ">{{getHtmlInputElement('input_adresse_employeur_physique_etrangere').value}}</span>.</p>
+    </div>
+    
+    
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+     <!-------------------------------------------------------->
+     <p> <span *ngIf="getHtmlInputElement('input_denomination_sociale_employeur_morale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale_employeur_morale').value}}</span> , <span *ngIf="getHtmlInputElement('input_forme_employeur_morale').value !== '' ">{{getHtmlInputElement('input_forme_employeur_morale').value}}</span>,
+         au capital de <span *ngIf="getHtmlInputElement('input_capitale_sociale_employeur_morale').value !== '' ">{{getHtmlInputElement('input_capitale_sociale_employeur_morale').value}}</span> Dinars, 
+         titulaire de l’identifiant unique n°<span *ngIf="getHtmlInputElement('input_identifiant_unique_employeur_morale').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_employeur_morale').value}}</span> , 
+         dont le siège social est au <span *ngIf="getHtmlInputElement('input_adresse_employeur_morale').value !== '' ">{{getHtmlInputElement('input_adresse_employeur_morale').value}}</span>,
+          dument représentée par <span *ngIf="getHtmlInputElement('input_nom_employeur_morale').value !== '' ">{{getHtmlInputElement('input_nom_employeur_morale').value}}</span> 
+          <span *ngIf="getHtmlInputElement('input_prenom_employeur_morale').value !== '' ">{{getHtmlInputElement('input_prenom_employeur_morale').value}}</span>.</p>
+    </div>
+    <p> Ci-après désignée par l’« Employeur »</p>
+    
+    <p>D’une part</p> 
+    
+    <p> ET </p>
+    <div *ngIf="getHtmlInputElement('input_nature_employeur_morale').checked">
+    <p><span *ngIf="getHtmlInputElement('input_nom_employee_tunisien').value !== '' ">{{getHtmlInputElement('input_nom_employee_tunisien').value}}</span>  <span *ngIf="getHtmlInputElement('input_prenom_employee_tunisien').value !== '' ">{{getHtmlInputElement('input_prenom_employee_tunisien').value}}</span>,
+         né le <span *ngIf="getHtmlInputElement('input_date_naiss_employee_tunisien').value !== '' ">{{getHtmlInputElement('input_date_naiss_employee_tunisien').value}}</span> à <span *ngIf="getHtmlInputElement('input_lieu_naiss_employee_tunisien').value !== '' ">{{getHtmlInputElement('input_lieu_naiss_employee_tunisien').value}}</span>,
+          titulaire de la carte d’identité tunisienne n° <span *ngIf="getHtmlInputElement('input_num_cin_employee_tunisien').value !== '' ">{{getHtmlInputElement('input_num_cin_employee_tunisien').value}}</span>, élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_employee_tunisien').value !== '' ">{{getHtmlInputElement('input_adresse_employee_tunisien').value}}</span>. </p>
+    </div>
+    <!------------------------>
+    <div *ngIf="getHtmlInputElement('input_nature_employeur_physique').checked">
+    <p> <span *ngIf="getHtmlInputElement('input_nom_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_nom_employee_etrangere').value}}</span>   <span *ngIf="getHtmlInputElement('input_prenom_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_prenom_employee_etrangere').value}}</span>, 
+        né le <span *ngIf="getHtmlInputElement('input_date_naissance_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_date_naissance_employee_etrangere').value}}</span> à  <span *ngIf="getHtmlInputElement('input_lieu_naissance_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_employee_etrangere').value}}</span>,
+         de nationalité  <span *ngIf="getHtmlInputElement('input_nationalite_employe_etranger').value !== '' ">{{getHtmlInputElement('input_nationalite_employe_etranger').value}}</span>,
+          titulaire du passeport n° <span *ngIf="getHtmlInputElement('input_num_pass_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_num_pass_employee_etrangere').value}}</span>, 
+          valide jusqu’au <span *ngIf="getHtmlInputElement('input_expir_pass_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_expir_pass_employee_etrangere').value}}</span>, 
+          élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_employee_etrangere').value !== '' ">{{getHtmlInputElement('input_adresse_employee_etrangere').value}}</span>. </p>
+    </div>
+    <p> Ci-après désignée par l’« Employé »</p>
+    
+    <p> D’une autre part</p>
+    
+    <p> L’Employeur et l’Employé seront ci-après désignés collectivement par les « Parties ».</p>
+    
+    <p><strong> IL EST PREALABLEMENT EXPOSE CE QUI SUIT : </strong> </p> 
+    <p> 1) L’Employé et l’Employeur ont conclu le <span *ngIf="getHtmlInputElement('input_date_conclusion').value !== '' ">{{getHtmlInputElement('input_date_conclusion').value}}</span>, 
+        un contrat de travail à <span *ngIf="getHtmlInputElement('input_contrat_type').value !== '' ">{{getHtmlInputElement('input_contrat_type').value}}</span>.</p>
+    
+    <p> 2) Attendu qu’il est apparu nécessaire de mettre fin aux rapports de travail entre les Parties amicalement et avant le terme du Contrat ;</p>
+    
+    <p>3) A la suite de discussions et négociations, les Parties ont arrêté, selon les modalités ci-dessous définies, les termes du présent accord (l’ « Accord ») qu’elles ont décidé de placer sous les dispositions des articles 1458 et suivants du Code des Obligations et des Contrats, de l’article 242 dudit Code et de l’article 14 paragraphe 3 a) du Code du Travail, afin de résilier le Contrat et prévenir d’une façon définitive un quelconque différend susceptible de les opposer qui serait directement ou indirectement lié à la résiliation du Contrat de travail conclu entre les Parties ;</p>
+    
+    <p> 4) Les Parties déclarent comprendre tous les termes et conditions inclus dans le présent Accord et avoir disposé du temps nécessaire pour en négocier et arrêter les termes en toute connaissance de leurs droits.</p>
+    
+    <p><strong> CECI ETANT EXPOSE, IL A ETE CONVENU CE QUI SUIT : </strong></p>
+    
+    <p><strong>ARTICLE 1. VALEUR JURIDIQUE DU PREAMBULE</strong></p>
+    
+    Le préambule qui précède à la même valeur juridique que le présent Accord dont fait partie intégrante.
+    
+    <p><strong> ARTICLE 2. OBJET DE L’ACCORD</strong></p>
+    
+    D’un commun accord, les Parties sont convenues de résilier le Contrat et de fixer le montant des indemnisations à payer par l’Employeur à l’Employé.
+    
+    <p><strong>   ARTICLE 3. DATE D’EFFET DE LA RESILIATION</strong></p>
+    
+    Les Parties conviennent de mettre fin au Contrat, de manière amiable, définitive, irrévocable et transactionnelle, avec effet au <span *ngIf="getHtmlInputElement('input_prise_effet').value !== '' ">{{getHtmlInputElement('input_prise_effet').value}}</span>.
+    
+    
+    <p><strong>   ARTICLE 4. INDEMNITES LEGALES ET TRANSACTIONNELLES</strong></p>
+    
+    En contrepartie de la résiliation amiable du Contrat, l’Employeur s’engage à payer à l’Employé, à titre d’indemnités légales et transactionnelles agrées d’un commun accord et conformément à la réglementation en vigueur, la somme totale brut de <span *ngIf="getHtmlInputElement('input_montant_chiffre').value !== '' ">{{getHtmlInputElement('input_montant_chiffre').value}}</span>
+    <span *ngIf="getHtmlInputElement('input_montant_lettre').value !== '' ">{{getHtmlInputElement('input_montant_lettre').value}}</span> Dinars Tunisiens, incluant tous les droits et toutes les indemnités convenues entre les Parties, et plus généralement toutes sommes et droits auxquels l’Employé, pourrait prétendre.
+    
+    Au moment de signature du présent Accord, un solde de tout compte sera remis à l’Employé.
+    
+    <p><strong>  ARTICLE 5. RENONCIATION — DESISTEMENT</strong></p>
+    <P>
+    L’Employée se déclare remplie de tous ses droits tant au titre de l’exécution, de la résiliation du Contrat le liant à l’Employeur, du solde de tout compte ainsi que du règlement définitif de tout différend l’opposant à l’Employeur.
+    </P>
+    
+    <P>  En conséquence et en contrepartie des indemnités et sommes versées par l’Employeur à l’Employée en vertu de l’article 4 ci-dessus, l’Employé déclare n’avoir plus aucune réclamation à formuler à l’encontre de l’Employeur et renonce de manière définitive et irrévocable à toutes actions de quelque nature que ce soit relative tant à l’exécution qu’à la résiliation du Contrat de travail.
+    </P>
+    <p><strong>ARTICLE 6. CONFIDENTIALITE</strong></p>
+    
+    L’Employé s’engage à conserver confidentielles toutes les informations qu’il a pu recueillir à l’occasion de l’exercice de ses fonctions.
+    
+    Toute divulgation et/ou utilisation quelconque, par l’Employé ou par un tiers, du présent Accord et tout document en rapport avec le présent Accord, constitueront une violation du secret professionnel pouvant entraîner des poursuites et sanctions pénales, sauf accord préalable et écrit de l’Employeur ou impératif légal ou judiciaire.
+    
+    <p><strong>ARTICLE 7. CARACTERE DEFINITIF DE L’ACCORD</strong></p>
+    
+    Le présent Accord, arrêté suite à des négociations entre les Parties effectuées en toute liberté et connaissance de cause, à la valeur d’un accord transactionnel constituant la loi des Parties au sens de l’article 1458 et suivant du Code des Obligations et des Contrats, qui constituent l’intégralité des arrangements convenus entre les Parties, annulant et remplaçant tout autre accord similaire qui aurait été conclu entre elles.
+    
+    En conséquence, les Parties s’interdisent de saisir les tribunaux ou de formuler la moindre contestation de quelque nature que ce soit, l’une envers l’autre, pour toute cause directement ou indirectement liée à la résiliation de la relation de travail ayant existé entre elles.
+    
+    <p><strong>ARTICLE 8. ELECTION DE DOMICILE</strong></p>
+    
+    <p> Pour l’exécution du présent Contrat, les Parties font élection de domicile en leur lieu respectif de résidence effectif.</p>
+       
+    
+    <table>
+        <tr> <td><strong> L’EMPLOYEUR  </strong> </td> <td></td>     <td><strong>  L’EMPLOYE   </strong></td>   </tr>
+      
+          <tr>  <td> Date______________________ </td>         <td></td>               <td>  Date______________________ </td>     </tr>                        
+      
+          </table>
+     -->
+    </div>

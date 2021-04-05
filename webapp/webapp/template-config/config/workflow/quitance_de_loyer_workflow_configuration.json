@@ -1,0 +1,413 @@
+{
+  "workflow": [
+  {
+      "inputId": "input_nature_personne_physique_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne caution",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne caution",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_caution",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere caution",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_caution",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_nature_personne_physique_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne debiteur",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_debiteur",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere debiteur",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_debiteur",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne debiteur",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_debiteur",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere debiteur",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_debiteur",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_personne_morale_tunisienne_caution",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_personne_morale_etrangere_caution",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  {
+      "inputId": "input_forme_personne_morale_tunisienne_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_personne_morale_etrangere_debiteur",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  
+	  {
+      "inputId": "input_question_3_mandataire_du_bailleur",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_3_mandataire_du_bailleur_nom",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_3_mandataire_du_bailleur_prenom",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_3_mandataire_du_bailleur_nom",
+              "visibility": false
+            },
+			{
+              "elementId": "input_question_3_mandataire_du_bailleur_prenom",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_question_4_mandataire_du_preneur",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_4_mandataire_du_preneur_nom",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_4_mandataire_du_preneur_prenom",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_4_mandataire_du_preneur_nom",
+              "visibility": false
+            },
+			{
+              "elementId": "input_question_4_mandataire_du_preneur_prenom",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_question_7",
+      "valuesConstraints": [
+        {
+          "value": "N° du titre foncier",
+          "constraints": [
+            {
+              "elementId": "input_question_7_1",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "Non applicable",
+          "constraints": [
+            {
+              "elementId": "input_question_7_1",
+              "visibility": false
+            }
+          ]
+        }
+		
+      ]
+    }
+
+	]
+	}

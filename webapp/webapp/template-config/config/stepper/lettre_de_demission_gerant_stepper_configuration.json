@@ -1,0 +1,209 @@
+{
+  "steps": [
+  {
+      "id": "step_details_societe",
+      "title": "Lettre de démission gérant",
+      "description": "",
+      "blocs": ["bloc_details_societe"],
+      "visibility": true
+    }
+	
+  ],
+  "blocs": [
+  {
+      "id": "bloc_details_societe",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_denomination_sociale",
+        "input_siege_sociale",
+		"input_date_demission",
+		"input_identifiant_unique",
+		"input_nom_prenom_nv_gerant"],
+      "visibility": true
+    }
+  ],
+  "inputs": [
+  {
+      "id": "input_denomination_sociale",
+      "type": "text",
+      "description": "",
+      "name": "input_denomination_sociale",
+      "label": "Dénomination Sociale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["denomination_sociale",
+		         "denomination_sociale_1",
+		         "denomination_sociale_2",
+		         "denomination_sociale_3",
+				 "denomination_sociale_4"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_siege_sociale",
+      "type": "text",
+      "description": "",
+      "name": "input_siege_sociale",
+      "label": "Siège Social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["siege_sociale"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_identifiant_unique",
+      "type": "text",
+      "description": "",
+      "name": "input_identifiant_unique",
+      "label": "Identifiant unique",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identifiant_unique"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_demission",
+      "type": "Date",
+      "description": "",
+      "name": "input_date_demission",
+      "label": "Date de démission",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_demission"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nom_prenom_nv_gerant",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_nv_gerant",
+      "label": "Nom et Prénom de l’ancien gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_nv_gerant"]
+      },
+      "visibility": true
+    }
+    
+  ],
+  "bookmarks": [
+  {
+      "bookmarkId": "denomination_sociale",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale_1",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale_2",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale_3",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_sociale_4",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "siege_sociale",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "identifiant_unique",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_demission",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_nv_gerant",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    } 
+  ]
+}

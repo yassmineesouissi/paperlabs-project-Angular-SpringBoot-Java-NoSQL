@@ -1,0 +1,67 @@
+{
+  "workflow": [
+  
+  
+	 {
+      "inputId": "input_cacher_11",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_11",
+              "visibility": true
+            }
+          ]
+        }
+		]
+	 },
+	 {
+	 "inputId": "input_cacher_11",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_11",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+  
+  {
+      "inputId": "input_question_11",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+		  
+           
+			 {
+              "elementId": "bloc_question_11_1",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_2",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_3",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_4",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_5",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+	 
+	
+  
+  
+  
+  ]}

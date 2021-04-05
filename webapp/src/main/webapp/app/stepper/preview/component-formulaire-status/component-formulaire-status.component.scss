@@ -1,0 +1,338 @@
+/* Font Definitions */
+@font-face {
+  font-family: Wingdings;
+  panose-1: 5 0 0 0 0 0 0 0 0 0;
+}
+@font-face {
+  font-family: 'Cambria Math';
+  panose-1: 2 4 5 3 5 4 6 3 2 4;
+}
+@font-face {
+  font-family: Calibri;
+  panose-1: 2 15 5 2 2 2 4 3 2 4;
+}
+@font-face {
+  font-family: 'Segoe UI';
+  panose-1: 2 11 5 2 4 2 4 2 2 3;
+}
+/* Style Definitions */
+p.MsoNormal,
+li.MsoNormal,
+div.MsoNormal {
+  margin: 0in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+h1 {
+  mso-style-link: 'Heading 1 Char';
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.25in;
+  text-align: justify;
+  text-indent: -0.25in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h1.CxSpFirst {
+  mso-style-link: 'Heading 1 Char';
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.25in;
+  text-align: justify;
+  text-indent: -0.25in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h1.CxSpMiddle {
+  mso-style-link: 'Heading 1 Char';
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.25in;
+  text-align: justify;
+  text-indent: -0.25in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h1.CxSpLast {
+  mso-style-link: 'Heading 1 Char';
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.25in;
+  text-align: justify;
+  text-indent: -0.25in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h2 {
+  mso-style-link: 'Heading 2 Char';
+  margin: 0in;
+  text-align: justify;
+  text-indent: 0in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h2.CxSpFirst {
+  mso-style-link: 'Heading 2 Char';
+  margin: 0in;
+  text-align: justify;
+  text-indent: 0in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h2.CxSpMiddle {
+  mso-style-link: 'Heading 2 Char';
+  margin: 0in;
+  text-align: justify;
+  text-indent: 0in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h2.CxSpLast {
+  mso-style-link: 'Heading 2 Char';
+  margin: 0in;
+  text-align: justify;
+  text-indent: 0in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: line;
+}
+h3 {
+  mso-style-link: 'Heading 3 Char';
+  margin-top: 2pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  text-indent: -0.3in;
+  page-break-after: avoid;
+  font-size: 12pt;
+  font-family: 'Cambria', serif;
+  color: #243f60;
+  font-weight: normal;
+}
+h4 {
+  mso-style-link: 'Heading 4 Char';
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 3pt;
+  margin-left: 0.6in;
+  text-indent: -0.1in;
+  page-break-after: avoid;
+  font-size: 14pt;
+  font-family: 'Times New Roman', serif;
+}
+h5 {
+  mso-style-link: 'Heading 5 Char';
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 3pt;
+  margin-left: 0.7in;
+  text-indent: -0.3in;
+  font-size: 13pt;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+}
+h6 {
+  mso-style-link: 'Heading 6 Char';
+  margin-top: 2pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.8in;
+  text-indent: -0.3in;
+  page-break-after: avoid;
+  font-size: 12pt;
+  font-family: 'Cambria', serif;
+  color: #243f60;
+  font-weight: normal;
+}
+p.MsoHeading7,
+li.MsoHeading7,
+div.MsoHeading7 {
+  mso-style-link: 'Heading 7 Char';
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 3pt;
+  margin-left: 0.9in;
+  text-indent: -0.2in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+p.MsoHeading8,
+li.MsoHeading8,
+div.MsoHeading8 {
+  mso-style-link: 'Heading 8 Char';
+  margin-top: 2pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 1in;
+  text-indent: -0.3in;
+  page-break-after: avoid;
+  font-size: 10.5pt;
+  font-family: 'Cambria', serif;
+  color: #272727;
+}
+p.MsoHeading9,
+li.MsoHeading9,
+div.MsoHeading9 {
+  mso-style-link: 'Heading 9 Char';
+  margin-top: 2pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 1.1in;
+  text-indent: -0.1in;
+  page-break-after: avoid;
+  font-size: 10.5pt;
+  font-family: 'Cambria', serif;
+  color: #272727;
+  font-style: italic;
+}
+p.MsoBodyText,
+li.MsoBodyText,
+div.MsoBodyText {
+  mso-style-link: 'Body Text Char';
+  margin: 0in;
+  text-align: justify;
+  text-justify: kashida;
+  text-kashida: 0%;
+  font-size: 12pt;
+  font-family: 'Arial', sans-serif;
+}
+p.MsoBodyTextIndent,
+li.MsoBodyTextIndent,
+div.MsoBodyTextIndent {
+  mso-style-link: 'Body Text Indent Char';
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 6pt;
+  margin-left: 14.15pt;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+p.MsoBlockText,
+li.MsoBlockText,
+div.MsoBlockText {
+  margin-top: 0in;
+  margin-right: 131.8pt;
+  margin-bottom: 0in;
+  margin-left: 155.95pt;
+  text-align: center;
+  background: #e5e5e5;
+  border: none;
+  padding: 0in;
+  font-size: 18pt;
+  font-family: 'Arial', sans-serif;
+  layout-grid-mode: line;
+  font-weight: bold;
+  font-style: italic;
+}
+p.MsoListParagraph,
+li.MsoListParagraph,
+div.MsoListParagraph {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+p.MsoListParagraphCxSpFirst,
+li.MsoListParagraphCxSpFirst,
+div.MsoListParagraphCxSpFirst {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+p.MsoListParagraphCxSpMiddle,
+li.MsoListParagraphCxSpMiddle,
+div.MsoListParagraphCxSpMiddle {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+p.MsoListParagraphCxSpLast,
+li.MsoListParagraphCxSpLast,
+div.MsoListParagraphCxSpLast {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+span.Heading2Char {
+  mso-style-name: 'Heading 2 Char';
+  mso-style-link: 'Heading 2';
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: both;
+  font-weight: bold;
+}
+span.Heading7Char {
+  mso-style-name: 'Heading 7 Char';
+  mso-style-link: 'Heading 7';
+  font-family: 'Times New Roman', serif;
+}
+span.BodyTextChar {
+  mso-style-name: 'Body Text Char';
+  mso-style-link: 'Body Text';
+  font-family: 'Arial', sans-serif;
+}
+span.BodyTextIndentChar {
+  mso-style-name: 'Body Text Indent Char';
+  mso-style-link: 'Body Text Indent';
+  font-family: 'Times New Roman', serif;
+}
+span.Heading1Char {
+  mso-style-name: 'Heading 1 Char';
+  mso-style-link: 'Heading 1';
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  layout-grid-mode: both;
+  font-weight: bold;
+}
+.MsoChpDefault {
+  font-family: 'Calibri', sans-serif;
+}
+.MsoPapDefault {
+  margin-bottom: 10pt;
+  line-height: 115%;
+}
+/* Page Definitions */
+@page WordSection1 {
+  size: 595.3pt 841.9pt;
+  margin: 70.9pt 70.9pt 56.7pt 70.9pt;
+}
+div.WordSection1 {
+  page: WordSection1;
+}
+/* List Definitions */
+ol {
+  margin-bottom: 0in;
+}
+ul {
+  margin-bottom: 0in;
+}

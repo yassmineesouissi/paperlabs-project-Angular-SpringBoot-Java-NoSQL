@@ -1,0 +1,146 @@
+{
+  "workflow": [
+    {
+      "inputId": "input_nature_employeur_morale",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale",
+          "constraints": [
+            {
+              "elementId": "bloc_lemployeur_morale",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_nature_employeur_physique",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique",
+          "constraints": [
+            {
+              "elementId": "bloc_lemployeur_physique",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_periode_dessai_1",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_periode_dessai",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_periode_dessai",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_non_concurence",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_non_concurrence_A",
+              "visibility": true
+            },
+            {
+              "elementId": "input_non_concurrence_B",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_non_concurrence_A",
+              "visibility": false
+            },
+            {
+              "elementId": "input_non_concurrence_B",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_type_de_la_societé",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  }
+	
+  ]
+}

@@ -1,0 +1,233 @@
+/* Font Definitions */
+body {
+  background-color: white;
+}
+@font-face {
+  font-family: 'Cambria Math';
+  panose-1: 2 4 5 3 5 4 6 3 2 4;
+}
+@font-face {
+  font-family: Calibri;
+  panose-1: 2 15 5 2 2 2 4 3 2 4;
+}
+/* Style Definitions */
+p.MsoNormal,
+li.MsoNormal,
+div.MsoNormal {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 10pt;
+  margin-left: 0in;
+  line-height: 115%;
+  font-size: 11pt;
+  font-family: 'Calibri', sans-serif;
+}
+h1 {
+  mso-style-link: 'Heading 1 Char';
+  margin: 0in;
+  text-align: center;
+  page-break-after: avoid;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+  font-weight: normal;
+  text-decoration: underline;
+}
+p.MsoListParagraph,
+li.MsoListParagraph,
+div.MsoListParagraph {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 10pt;
+  margin-left: 0.5in;
+  line-height: 115%;
+  font-size: 11pt;
+  font-family: 'Calibri', sans-serif;
+}
+p.MsoListParagraphCxSpFirst,
+li.MsoListParagraphCxSpFirst,
+div.MsoListParagraphCxSpFirst {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  line-height: 115%;
+  font-size: 11pt;
+  font-family: 'Calibri', sans-serif;
+}
+p.MsoListParagraphCxSpMiddle,
+li.MsoListParagraphCxSpMiddle,
+div.MsoListParagraphCxSpMiddle {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  line-height: 115%;
+  font-size: 11pt;
+  font-family: 'Calibri', sans-serif;
+}
+p.MsoListParagraphCxSpLast,
+li.MsoListParagraphCxSpLast,
+div.MsoListParagraphCxSpLast {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 10pt;
+  margin-left: 0.5in;
+  line-height: 115%;
+  font-size: 11pt;
+  font-family: 'Calibri', sans-serif;
+}
+span.Heading1Char {
+  mso-style-name: 'Heading 1 Char';
+  mso-style-link: 'Heading 1';
+  font-family: 'Times New Roman', serif;
+  text-decoration: underline;
+}
+p.AOHead1,
+li.AOHead1,
+div.AOHead1 {
+  mso-style-name: AOHead1;
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: -0.5in;
+  line-height: 13pt;
+  page-break-after: avoid;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+p.AOHead2,
+li.AOHead2,
+div.AOHead2 {
+  mso-style-name: AOHead2;
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: -0.5in;
+  line-height: 13pt;
+  page-break-after: avoid;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+p.AOHead3,
+li.AOHead3,
+div.AOHead3 {
+  mso-style-name: AOHead3;
+  mso-style-link: 'AOHead3 Char';
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: -0.5in;
+  line-height: 13pt;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+}
+p.AOHead4,
+li.AOHead4,
+div.AOHead4 {
+  mso-style-name: AOHead4;
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 1.5in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: -0.5in;
+  line-height: 13pt;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+}
+p.AOHead5,
+li.AOHead5,
+div.AOHead5 {
+  mso-style-name: AOHead5;
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 2in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: -0.5in;
+  line-height: 13pt;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+}
+p.AOHead6,
+li.AOHead6,
+div.AOHead6 {
+  mso-style-name: AOHead6;
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 2.5in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: -0.5in;
+  line-height: 13pt;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+}
+p.AODocTxtL1,
+li.AODocTxtL1,
+div.AODocTxtL1 {
+  mso-style-name: AODocTxtL1;
+  margin-top: 12pt;
+  margin-right: 0in;
+  margin-bottom: 0in;
+  margin-left: 0.5in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  line-height: 13pt;
+  font-size: 11pt;
+  font-family: 'Times New Roman', serif;
+}
+p.logo215,
+li.logo215,
+div.logo215 {
+  mso-style-name: logo215;
+  margin: 0in;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  punctuation-wrap: simple;
+  text-autospace: none;
+  font-size: 12pt;
+  font-family: 'Times New Roman', serif;
+}
+span.AOHead3Char {
+  mso-style-name: 'AOHead3 Char';
+  mso-style-link: AOHead3;
+  font-family: 'Times New Roman', serif;
+}
+.MsoChpDefault {
+  font-family: 'Calibri', sans-serif;
+}
+.MsoPapDefault {
+  margin-bottom: 10pt;
+  line-height: 115%;
+}
+@page WordSection1 {
+  size: 595.3pt 841.9pt;
+  margin: 70.85pt 70.85pt 70.85pt 70.85pt;
+}
+div.WordSection1 {
+  page: WordSection1;
+  margin-top: 4%;
+}
+/* List Definitions */
+ol {
+  margin-bottom: 0in;
+}
+ul {
+  margin-bottom: 0in;
+}

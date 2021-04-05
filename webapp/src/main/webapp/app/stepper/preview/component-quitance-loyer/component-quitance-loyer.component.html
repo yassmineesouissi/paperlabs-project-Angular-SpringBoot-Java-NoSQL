@@ -1,0 +1,122 @@
+<div class="test">
+ <div  class="title"><strong>QUITTANCE DE LOYER</strong>  </div>
+<p><strong>Le Bailleur </strong> </p>
+
+<!----------------------------------->
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+ <span *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value}}</span> <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value}}</span>,
+  de nationalité tunisienne, née le <span *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value}}</span>
+   à <span *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value}}</span>, 
+   titulaire de la carte d’identité nationale n° <span *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value}}</span> 
+   délivrée à <span *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value}}</span> 
+   le <span *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>, 
+   demeurant au <span *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value}}</span>,
+</div>
+
+<!-------------------------------------->
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+  
+    <span *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value}}</span>  <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value}}</span>,
+     de nationalité <span *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value}}</span>,
+      titulaire du passeport <span *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value}}</span> 
+      n° <span *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value}}</span> 
+      délivré le <span *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value}}</span>,
+       élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value}}</span>,
+</div>
+
+<!------------------------------------->
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+    La société <span *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value}}</span>,
+    <span *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value}}</span> ,
+     au capital de <span *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value}}</span> Dinars Tunisiens dont 
+     le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value}}</span> 
+     titulaire de l’identifiant unique n° <span *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value}}</span> 
+     représentée par <span *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value}}</span>  
+     <span *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value}}</span>.
+</div>
+<!----------------------------------->
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_caution').checked">
+    La société <span *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value}}</span>,
+    <span *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value}}</span>,
+     immatriculée en <span *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value}}</span>
+      sous le n° <span *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value}}</span>,
+       dont le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value}}</span>,
+        représentée par <span *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value}}</span> 
+        <span *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value}}</span>.
+</div>
+    <p><strong>Le Preneur </strong> </p>
+<!---------------------------------------------->
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_debiteur').checked">
+        <span *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value}}</span> 
+        <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value}}</span> ,
+         de nationalité tunisienne, 
+         né le <span *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value}}</span> 
+         à <span *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value}}</span>,
+          titulaire de la 
+          carte d’identité nationale n° <span *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value}}</span>,
+           délivrée à <span *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span> 
+            le <span *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>, 
+            demeurant au <span *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value}}</span>,
+  </div>
+<!------------------------------------------------->
+  <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_debiteur').checked">
+    <span *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value}}</span>
+    <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value}}</span>,
+     de nationalité  <span *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value}}</span>,
+      titulaire du passeport  <span *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value}}</span> 
+      n°  <span *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value}}</span> 
+      délivré le  <span *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value}}</span>, 
+      élisant domicile au  <span *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value}}</span>,
+  </div>
+<!-------------------------------->
+
+  <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_debiteur').checked">
+    La société <span *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value}}</span>, <span *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value}}</span>,
+     au capital de <span *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value}}</span>  
+     Dinars Tunisiens dont le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value}}</span> 
+     titulaire de l’identifiant unique n° <span *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value}}</span> 
+     représentée par <span *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value}}</span> 
+     <span *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value}}</span>.
+  </div>
+  <!--------------------------------->
+
+  <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_debiteur').checked">
+    La société  <span *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value}}</span>,
+    <span *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value}}</span>,
+     immatriculée en  <span *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value}}</span> 
+     sous le n°  <span *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value}}</span>,
+      dont le siège social est sis au  <span *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value}}</span>,
+       représentée par  <span *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value}}</span> 
+       <span *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value}}</span>.
+    </div>
+
+    <!-------------------------------------------->
+           <div *ngIf="getHtmlInputElement('input_question_3_bailleur').checked">
+                  <p><strong>Le Bailleur </strong> </p>
+           </div>
+    <div *ngIf="getHtmlInputElement('input_question_3_mandataire_du_bailleur').checked" >
+           Je soussigné(e)  <span *ngIf="getHtmlInputElement('input_question_3_mandataire_du_bailleur_nom').value !== '' ">{{getHtmlInputElement('input_question_3_mandataire_du_bailleur_nom').value}}</span>   <span *ngIf="getHtmlInputElement('input_question_3_mandataire_du_bailleur_prenom').value !== '' ">{{getHtmlInputElement('input_question_3_mandataire_du_bailleur_prenom').value}}</span>, en ma qualité de mandataire du Bailleur de l’immeuble </div>
+         sis à <span *ngIf="getHtmlInputElement('input_question_6').value !== '' ">{{getHtmlInputElement('input_question_6').value}}</span>,
+         <div *ngIf="getHtmlInputElement('input_question_7').value !== ''  ">
+            ayant titre foncier n°
+        <span *ngIf="getHtmlInputElement('input_question_7_1').value !== '' ">{{getHtmlInputElement('input_question_7_1').value}}</span>
+       </div>
+        déclare avoir reçu du Preneur
+       <div *ngIf="getHtmlInputElement('input_question_4_mandataire_du_preneur').checked" >
+        <span *ngIf="getHtmlInputElement('input_question_4_mandataire_du_preneur_nom').value !== '' ">{{getHtmlInputElement('input_question_4_mandataire_du_preneur_nom').value}}</span> <span *ngIf="getHtmlInputElement('input_question_4_mandataire_du_preneur_prenom').value !== '' ">{{getHtmlInputElement('input_question_4_mandataire_du_preneur_prenom').value}}</span> en sa qualité de mandataire du Preneur</div>
+
+      <p>
+    la somme totale de <span *ngIf="getHtmlInputElement('input_question_5_loyer').value !== '' ">{{getHtmlInputElement('input_question_5_loyer').value}}</span> Dinars Tunisiens. 
+    Cette somme correspond au règlement du loyer pour la période de location du <span *ngIf="getHtmlInputElement('input_question_8').value !== '' ">{{getHtmlInputElement('input_question_8').value}}</span>
+     au <span *ngIf="getHtmlInputElement('input_question_9').value !== '' ">{{getHtmlInputElement('input_question_9').value}}</span>. 
+    </p>
+    <P>La présente quittance est délivrée sous réserve de tout droit, action ou procédure quelconque et, en cas de paiement par chèque, sous la condition suspensive de son encaissement. Elle ne présume pas du paiement des loyers antérieurs ou de toute autre somme dûs. 
+    </P>
+    
+    <div *ngIf="getHtmlInputElement('input_question_3_bailleur').checked">  <p>  Le Bailleur </p> </div>
+    <div *ngIf="getHtmlInputElement('input_question_3_mandataire_du_bailleur').checked" >   <p>  Le mandataire du Bailleur </p> </div>
+  <p>   Date : </p>
+
+</div>

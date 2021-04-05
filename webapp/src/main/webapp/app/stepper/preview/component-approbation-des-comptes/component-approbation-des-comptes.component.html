@@ -1,0 +1,147 @@
+<div class="test">
+
+    <div class="title">
+        <strong> SOCIETE <span
+                *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span>
+        </strong>
+    </div>
+
+    <div class="title"><strong> SARL AU CAPITAL SOCIAL : <span
+                *ngIf="getHtmlInputElement('input_capital_sociale_en_dinars').value !== '' ">{{getHtmlInputElement('input_capital_sociale_en_dinars').value}}</span>
+            DINARS </strong> </div>
+    <div class="title"><strong> SIEGE SOCIAL : <span
+                *ngIf="getHtmlInputElement('input_siege_social').value !== '' ">{{getHtmlInputElement('input_siege_social').value}}</span>
+        </strong></div>
+    <div class="title"><strong> IDENTIFIANT UNIQUE : <span
+                *ngIf="getHtmlInputElement('input_identifiant_unique').value !== '' ">{{getHtmlInputElement('input_identifiant_unique').value}}</span>
+        </strong></div>
+
+    <div class="title"><strong> PROCES-VERBAL DE L'ASSEMBLEE GENERALE ORDINAIRE
+            DU <span
+                *ngIf="getHtmlInputElement('input_date_reunion_de_lassemble').value !== '' ">{{getHtmlInputElement('input_date_reunion_de_lassemble').value}}</span>
+        </strong></div>
+    <p> L’assemblée générale s’est tenue le <span
+            *ngIf="getHtmlInputElement('input_date_reunion_de_lassemble').value !== '' ">{{getHtmlInputElement('input_date_reunion_de_lassemble').value}}</span>
+        à <span
+            *ngIf="getHtmlInputElement('input_heure_debut_reuiion_lassemble').value !== '' ">{{getHtmlInputElement('input_heure_debut_reuiion_lassemble').value}}</span>
+        heures entre les associés de la société <span
+            *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span>
+        , société à
+        responsabilité limitée au capital de <span
+            *ngIf="getHtmlInputElement('input_capital_sociale_en_dinars').value !== '' ">{{getHtmlInputElement('input_capital_sociale_en_dinars').value}}</span>
+        Dinars (ci-après désignée la « Société »), se sont réunis au siège de
+        la Société en Assemblée Générale Ordinaire (ci-après désignée l’ « Assemblée »).</p>
+         <P>  Associés présents ou représentés :  </P>
+    - ___ ___
+    - ___ ___
+
+
+
+    <P>  Autre(s) personne(s) présente(s) ou représentée(s) : </P>
+
+    - ___ ___
+    - ___ ___
+    
+
+
+    <p>  L’Assemblée est présidée par <span *ngIf="getHtmlInputElement('input_questionn_8').value !== '' ">{{getHtmlInputElement('input_questionn_8').value}}</span>. </p>
+
+
+
+
+    Le président constate que les associés représentants au moins la moitié du capital social sont présents ou
+    représentés et que l'Assemblée est régulièrement constituée et peut valablement délibérer.
+
+  <P> Le président dépose sur le bureau :   </P>    
+  <P>  - Le rapport de gestion de l’exercice  <span
+    *ngIf="getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value !== '' ">{{getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value}}</span>   </P> 
+   <P>    - Les états financiers relatifs audit exercice,</P>
+  <P>    - L’inventaire des biens de la Société,  </P>
+  <P>- Le texte des résolutions proposées. </P>   
+
+
+    <p> Personne ne demandant la parole, le président met successivement aux voix les résolutions suivantes figurant à
+        l'ordre du jour. </p>
+
+    <p><strong> PREMIERE RESOLUTION </strong> </p>
+    L'Assemblée ratifie le mode et le délai de convocation de la présente Assemblée et la déclare régulièrement
+    constituée.
+
+    <p> Cette résolution mise aux voix, est adoptée à la majorité des associés. </p>
+
+    <p> <strong> DEUXIEME RESOLUTION </strong> </p>
+    L'Assemblée, après avoir entendu la lecture du rapport de la gérance sur l'activité de la Société relatif à
+    l’exercice ___, approuve ledit rapport dans son intégralité et dans toutes ses parties, ainsi que les états
+    financiers relatifs audit exercice et donne quitus au gérant pour sa gestion au titre dudit exercice.
+
+    <p> Cette résolution mise aux voix est adoptée à l'unanimité. </p>
+
+    <p><strong> TROISIEME RESOLUTION </strong></p>
+    <div *ngIf="getHtmlInputElement('input_beneficiaire').checked">
+        L'Assemblée approuve le résultat bénéficiaire de l’exercice <span
+            *ngIf="getHtmlInputElement('input_annee_exercice').value !== '' ">{{getHtmlInputElement('input_annee_exercice').value}}</span>,
+        qui s’élève à un montant de <span
+            *ngIf="getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value !== '' ">{{getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value}}</span>
+        DT et décide de
+        l’affecter de la manière suivante : </div>
+    <div *ngIf="getHtmlInputElement('input_deficiare').checked">
+        L'Assemblée approuve le résultat déficitaire de l’exercice <span
+            *ngIf="getHtmlInputElement('input_annee_exercice').value !== '' ">{{getHtmlInputElement('input_annee_exercice').value}}</span>
+        ,
+        qui s’élève à un montant de <span
+            *ngIf="getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value !== '' ">{{getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value}}</span>
+        DT et décide de
+        l’affecter de la manière suivante : </div>
+
+    <p> Report à nouveau antérieur : <span
+            *ngIf="getHtmlInputElement('input_montat_en_chiffres_resultat_exercice').value !== '' ">{{getHtmlInputElement('input_montat_en_chiffres_resultat_exercice').value}}</span>
+        DT
+    </p>
+    <p> Résultat de l’exercice : <span
+            *ngIf="getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value !== '' ">{{getHtmlInputElement('input_montant_en_chiffre_resultat_exercice').value}}</span>
+        DT
+    </p>
+    <p> Réserves légales : <span
+            *ngIf="getHtmlInputElement('input_montant_en_chiffre_reserves_legales').value !== '' ">{{getHtmlInputElement('input_montant_en_chiffre_reserves_legales').value}}</span>
+        DT
+    </p>
+    <p> Bénéfices distribuables : <span
+            *ngIf="getHtmlInputElement('input_montant_en_chiffre_benefices_destributales').value !== '' ">{{getHtmlInputElement('input_montant_en_chiffre_benefices_destributales').value}}</span>
+        DT
+    </p>
+    Cette résolution mise aux voix est adoptée à l'unanimité.
+
+    <p><strong> QUATRIEME RESOLUTION </strong> </p>
+    L'Assemblée donne tous pouvoirs au porteur d'un extrait ou d'une copie du présent procès-verbal pour accomplir
+    toutes formalités et publications partout où besoin sera.
+
+    <p> Cette résolution mise aux voix, est adoptée à majorité des associés. </p>
+
+    Plus rien n'étant à l'ordre du jour, la séance est levée à <span
+        *ngIf="getHtmlInputElement('input_heure_fin_reuiion_lassemble').value !== '' ">{{getHtmlInputElement('input_heure_fin_reuiion_lassemble').value}}</span>
+    heures.
+
+     <P> LE PRESIDENT   </P> 
+    ____
+
+
+
+
+   <P>  LES ASSOCIES  </P>  
+    ___ ___
+    ___ ___
+
+
+
+    <P> Bon pour acceptation des fonctions de gérant </P>
+    <span
+            *ngIf="getHtmlInputElement('bloc_question_14').value !== '' ">{{getHtmlInputElement('bloc_question_14').value}}</span>
+
+
+
+
+
+
+
+
+</div>

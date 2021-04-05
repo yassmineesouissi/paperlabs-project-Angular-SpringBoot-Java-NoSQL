@@ -1,0 +1,217 @@
+{
+  "workflow": [
+  
+  
+	 {
+      "inputId": "input_cacher_11",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_question_11",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_question_11",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+  
+  {
+      "inputId": "input_question_11",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+           
+			 {
+              "elementId": "bloc_question_11_1",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_2",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_3",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_4",
+              "visibility": true
+            }, {
+              "elementId": "bloc_question_11_5",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_reponse_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_oui_num_cin",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_oui",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_oui_num_cin",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_oui_num_cin",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_oui",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_non_num_passeport",
+              "visibility": false
+            },{
+              "elementId": "input_reponse_non_nationalite",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_non_num_passeport",
+              "visibility": true
+            },{
+              "elementId": "input_reponse_non_nationalite",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_non",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_non_num_passeport",
+              "visibility": false
+            },{
+              "elementId": "input_reponse_non_nationalite",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_remunere_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_remuneration_brute",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_remunere_oui",
+      "valuesConstraints": [
+        {
+          "value": "false",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_remuneration_brute",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_reponse_remunere_non",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            
+			{
+              "elementId": "input_reponse_remuneration_brute",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    }
+	 
+	 
+	
+  
+  
+  
+  ]}

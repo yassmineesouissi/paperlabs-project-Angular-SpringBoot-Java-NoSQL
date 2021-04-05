@@ -1,0 +1,50 @@
+/* Font Definitions */
+body {
+  background-color: white;
+}
+@font-face {
+  font-family: Wingdings;
+  panose-1: 5 0 0 0 0 0 0 0 0 0;
+}
+@font-face {
+  font-family: 'Cambria Math';
+  panose-1: 2 4 5 3 5 4 6 3 2 4;
+}
+@font-face {
+  font-family: Calibri;
+  panose-1: 2 15 5 2 2 2 4 3 2 4;
+}
+/* Style Definitions */
+p.MsoNormal,
+li.MsoNormal,
+div.MsoNormal {
+  margin-top: 0in;
+  margin-right: 0in;
+  margin-bottom: 10pt;
+  margin-left: 0in;
+  line-height: 115%;
+  font-size: 11pt;
+  font-family: 'Calibri', sans-serif;
+}
+.MsoChpDefault {
+  font-family: 'Calibri', sans-serif;
+}
+.MsoPapDefault {
+  margin-bottom: 10pt;
+  line-height: 115%;
+}
+@page WordSection1 {
+  size: 595.3pt 841.9pt;
+  margin: 70.85pt 70.85pt 70.85pt 70.85pt;
+}
+div.WordSection1 {
+  page: WordSection1;
+  margin-top: 4%;
+}
+/* List Definitions */
+ol {
+  margin-bottom: 0in;
+}
+ul {
+  margin-bottom: 0in;
+}

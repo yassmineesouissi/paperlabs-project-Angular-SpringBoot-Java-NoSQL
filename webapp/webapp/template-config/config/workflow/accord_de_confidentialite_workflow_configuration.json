@@ -1,0 +1,427 @@
+
+{
+  "workflow": [
+    {
+      "inputId": "input_nature_personne_physique_tunisienne",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique tunisienne",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_étrangère",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique étrangère",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_étrangère",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale tunisienne",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_étrangère",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale étrangère",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_étrangère",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    
+	{
+      "inputId": "input_nature_personne_physique_tunisienne_d",
+      "valuesConstraints": [
+        {
+          "value": "aa",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_d",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_étrangère_d",
+      "valuesConstraints": [
+        {
+          "value": "bb",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_étrangère_d",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_d",
+      "valuesConstraints": [
+        {
+          "value": "cc",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_d",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_étrangère_d",
+      "valuesConstraints": [
+        {
+          "value": "dd",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_étrangère_d",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_contexte_oui",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_partie_emettrice",
+              "visibility": true
+            },
+			{
+              "elementId": "input_partie_destinare",
+              "visibility": true
+            },
+			{
+              "elementId": "input_partie_contractent",
+              "visibility": true
+            }
+			
+			
+			
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_partie_emettrice",
+              "visibility": false
+            },
+			{
+              "elementId": "input_partie_destinare",
+              "visibility": false
+            },
+			{
+              "elementId": "input_partie_contractent",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+          
+	{
+      "inputId": "input_arbitrage",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_reponse_arbitrage",
+              "visibility": true
+            }
+			
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_reponse_arbitrage",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	
+	{
+      "inputId": "input_tribunal",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_reponse_tribunal",
+              "visibility": true
+            }
+			
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_reponse_tribunal",
+              "visibility": false
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_SA_SARL_SUARL",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_1",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_SA_SARL_SUARL_d",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": true
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_2",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_forme_SA_SARL_SUARL_LLP_GMBH",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_3",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  {
+      "inputId": "input_forme_SA_SARL_SUARL_LLP_GMBH_d",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "GMBH",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "LLP",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SUARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_forme_4",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  }
+	
+	
+	
+      ]
+    }
+  

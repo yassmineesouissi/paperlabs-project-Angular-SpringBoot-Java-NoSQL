@@ -1,0 +1,876 @@
+{
+	"steps": [
+		
+		{
+			"id": "step_nature_employe",
+			"title": "L’Employé :",
+			"description": "",
+			"blocs": [
+				"bloc_nature_employe"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_employe",
+			"title": "Solde de tout compte",
+			"description": "Si vous ne disposez pas de ces informations, vous pouvez passer cette étape et la compléter au niveau du document que vous allez télécharger",
+			"blocs": [
+				"bloc_tunisien",
+				"bloc_etrange"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_employeur",
+			"title": "Employeur :",
+			"description": "",
+			"blocs": [
+				"bloc_employeur"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_information_employeur",
+			"title": "Employeur :",
+			"description": "",
+			"blocs": [
+				"bloc_employeur_physique",
+				"bloc_employeur_moral"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_montant_brut",
+			"title": "Montant :",
+			"description": "",
+			"blocs": [
+				"bloc_mantant_brut"
+			],
+			"visibility": true
+		}
+		
+		
+		
+	],
+	"blocs": [
+		{
+			"id": "bloc_nature_employe",
+			"title": "",
+			"description": "",
+			"inputs": [
+				"input_nature_employe_tunisien",
+				"input_nature_employe_etrange"
+			],
+			"visibility": true
+		},
+		
+		{
+			"id": "bloc_tunisien",
+			"title": "Employé tunisien",
+			"description": "",
+			"inputs": [
+				"input_prenom_employe_tu",
+				"input_nom_employe_tu",
+				"input_datenaissance_employe_tu",
+				"input_villenaissance_employe_tu",
+				"input_cin_employe_tu",
+				"input_adresse_employe_tu"
+			],
+			"visibility": false
+		},
+		{
+			"id": "bloc_etrange",
+			"title": "Employé étranger ",
+			"description": "",
+			"inputs": [
+				"input_prénom_etrange",
+				"input_nom_etrange",
+				"input_datenaissance_employe_et",
+				"input_villenaissance_employe_et",
+				"input_nationalité",
+				"input_num_passport_représentant",
+				"input_date_expiration_passport",
+				"input_adresse_employe_et"
+				
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_employeur",
+			"title": "",
+			"description": "",
+			"inputs": ["input_employeur_physique",
+				         "input_employeur_morale"
+				
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_employeur_physique",
+			"title": "Personne physique",
+			"description": "",
+			"inputs": [
+				"input_nom_employeur",
+				"input_prenom_employeur"
+				
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_employeur_moral",
+			"title": "Personne morale",
+			"description": "",
+			"inputs": [
+				"input_denomination",
+				"input_adresse_siege_social"	
+			],
+			"visibility": false
+		},
+		{
+			"id": "bloc_mantant_brut",
+			"title": "",
+			"description": "",
+			"inputs": [
+				"input_montant_brut"
+			],
+			"visibility": true
+		}
+		
+		
+		
+		
+	],
+	"inputs": [
+		
+		
+		{
+			"id": "input_prenom_employe_tu",
+			"type": "text",
+			"description": "",
+			"name": "input_prenom_employe_tu",
+			"label": "Prénom:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_employe_tu",
+			"type": "text",
+			"description": "",
+			"name": "input_nom_employe_tu",
+			"label": "Nom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_associe1"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_datenaissance_employe_tu",
+			"type": "Date",
+			"description": "",
+			"name": "input_datenaissance_employe_tu",
+			"label": "Date de naissance:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"datenaissance_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_villenaissance_employe_tu",
+			"type": "text",
+			"description": "",
+			"name": "input_villenaissance_employe_tu",
+			"label": "Ville de naissance :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"villenaissance_associe1"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_cin_employe_tu",
+			"type": "text",
+			"description": "",
+			"name": "input_cin_employe_tu",
+			"label": "CIN :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"cin_associe1"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		
+		{
+			"id": "input_adresse_employe_tu",
+			"type": "text",
+			"description": "",
+			"name": "input_adresse_employe_tu",
+			"label": "Adresse",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adress_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_villenaissance_employe_et",
+			"type": "text",
+			"description": "",
+			"name": "input_villenaissance_employe_et",
+			"label": "Ville de naissance :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"villenaissance_associe2"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_nationalité",
+			"type": "text",
+			"description": "",
+			"name": "input_nationalité",
+			"label": "Nationalite: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Nationalite"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		
+		{
+			"id": "input_prénom_etrange",
+			"type": "text",
+			"description": "",
+			"name": "input_prénom_etrange: ",
+			"label": "Prénom : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_etrange",
+			"type": "text",
+			"description": "",
+			"name": "input_nom_etrange",
+			"label": "Nom : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_representant"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_datenaissance_employe_et",
+			"type": "Date",
+			"description": "",
+			"name": "input_datenaissance_employe_et",
+			"label": "Date de naissance:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"datenaissance_associe2"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		
+		
+	
+		{
+			"id": "input_num_passport_représentant",
+			"type": "text",
+			"description": "",
+			"name": "input_num_passport_représentant",
+			"label": "Numéro de passport du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"num_passport_representant"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_date_expiration_passport",
+			"type": "Date",
+			"description": "",
+			"name": "input_date_expiration_passport",
+			"label": "Date d’expiration du passeport:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"date_passport"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_adresse_employe_et",
+			"type": "text",
+			"description": "",
+			"name": "input_adresse_employe_et",
+			"label": "Adresse",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adress_associe2"
+				]
+			},
+			"visibility": true
+		},
+		
+		
+		{
+			"id": "input_nature_employe_tunisien",
+			"type": "radio",
+			"description": "",
+			"name": "nature_employeur",
+			"label": "De nationalité tunisienne",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "De nationalité tunisienne",
+			"bookmarkIdPerValue": {
+				"De nationalité tunisienne": [
+					"Infos_employeur_physique"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nature_employe_etrange",
+			"type": "radio",
+			"description": "",
+			"name": "nature_employeur",
+			"label": "De nationalité étrangère",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "De nationalité étrangère",
+			"bookmarkIdPerValue": {
+				"De nationalité étrangère": [
+					"Infos_employeur_moral"
+				]
+			},
+			"visibility": true
+		},
+		
+		{
+			"id": "input_employeur_physique",
+			"type": "radio",
+			"description": "",
+			"name": "employeur",
+			"label": "Personne physique",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne physique",
+			"bookmarkIdPerValue": {
+				"Personne physique": [
+					"employeur_physique"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_employeur_morale",
+			"type": "radio",
+			"description": "",
+			"name": "employeur",
+			"label": "Personne morale",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne morale",
+			"bookmarkIdPerValue": {
+				"Personne morale": [
+					"employeur_moral"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_employeur",
+			"type": "text",
+			"description": "",
+			"name": "input_nom_employeur",
+			"label": "Nom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_emloyeur"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_employeur",
+			"type": "text",
+			"description": "",
+			"name": "input_prenom_employeur",
+			"label": "Prenom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_emloyeur"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_denomination",
+			"type": "text",
+			"description": "",
+			"name": "input_denomination",
+			"label": "Dénomination sociale :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"denomination"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_adresse_siege_social",
+			"type": "text",
+			"description": "",
+			"name": "input_adresse_siege_social",
+			"label": "Adresse siége social :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adresse"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_montant_brut",
+			"type": "text",
+			"description": "",
+			"name": "input_montant_brut",
+			"label": "Montant brut: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"montant_brut"
+				]
+			},
+			"visibility": true
+		}
+		
+	],
+	
+	
+	
+	
+	"bookmarks": [
+		
+		{
+			"bookmarkId": "capital_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adresse_siege_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "prenom_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "nom_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "datenaissance_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "datenaissance_associe2",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "villenaissance_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "villenaissance_associe2",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "cin_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "date_passport",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adress_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adress_associe2",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Infos_employeur_physique",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Infos_employeur_moral",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "Nationalite",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		{
+			"bookmarkId": "capital_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adresse_siege_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "prenom_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "nom_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+	
+		{
+			"bookmarkId": "num_passport_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+		
+		{
+			"bookmarkId": "denomination",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		
+	
+		{
+			"bookmarkId": "nom_emloyeur",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adresse",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "montant_brut",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "employeur_physique",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "employeur_moral",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_emloyeur",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "USER_INPUT",
+			"fontSize": 11
+		}
+	]
+}

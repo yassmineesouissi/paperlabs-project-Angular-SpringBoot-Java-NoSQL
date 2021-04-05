@@ -1,0 +1,34 @@
+{
+    "name": "GeneratedLegalDocument",
+    "fields": [
+        {
+            "fieldName": "generatedWordFilePath",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "genratedPDFFilePath",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        },
+        {
+          "fieldName": "paymentDate",
+          "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191005213400",
+    "entityTableName": "generated_legal_document",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

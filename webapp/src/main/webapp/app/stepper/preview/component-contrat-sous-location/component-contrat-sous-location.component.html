@@ -1,0 +1,666 @@
+<p>component-contrat-sous-location works!</p>
+<!DOCTYPE html>
+<!-- Created by pdf2htmlEX (https://github.com/coolwanglu/pdf2htmlex) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="pdf2htmlEX"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+<script>
+/*
+ Copyright 2012 Mozilla Foundation 
+ Copyright 2013 Lu Wang <coolwanglu@gmail.com>
+ Apachine License Version 2.0 
+*/
+(function(){function b(a,b,e,f){var c=(a.className||"").split(/\s+/g);""===c[0]&&c.shift();var d=c.indexOf(b);0>d&&e&&c.push(b);0<=d&&f&&c.splice(d,1);a.className=c.join(" ");return 0<=d}if(!("classList"in document.createElement("div"))){var e={add:function(a){b(this.element,a,!0,!1)},contains:function(a){return b(this.element,a,!1,!1)},remove:function(a){b(this.element,a,!1,!0)},toggle:function(a){b(this.element,a,!0,!0)}};Object.defineProperty(HTMLElement.prototype,"classList",{get:function(){if(this._classList)return this._classList;
+var a=Object.create(e,{element:{value:this,writable:!1,enumerable:!0}});Object.defineProperty(this,"_classList",{value:a,writable:!1,enumerable:!1});return a},enumerable:!0})}})();
+</script>
+<script>
+(function(){/*
+ pdf2htmlEX.js: Core UI functions for pdf2htmlEX 
+ Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> and other contributors 
+ https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE 
+*/
+var pdf2htmlEX=window.pdf2htmlEX=window.pdf2htmlEX||{},CSS_CLASS_NAMES={page_frame:"pf",page_content_box:"pc",page_data:"pi",background_image:"bi",link:"l",input_radio:"ir",__dummy__:"no comma"},DEFAULT_CONFIG={container_id:"page-container",sidebar_id:"sidebar",outline_id:"outline",loading_indicator_cls:"loading-indicator",preload_pages:3,render_timeout:100,scale_step:0.9,key_handler:!0,hashchange_handler:!0,view_history_handler:!0,__dummy__:"no comma"},EPS=1E-6;
+function invert(a){var b=a[0]*a[3]-a[1]*a[2];return[a[3]/b,-a[1]/b,-a[2]/b,a[0]/b,(a[2]*a[5]-a[3]*a[4])/b,(a[1]*a[4]-a[0]*a[5])/b]}function transform(a,b){return[a[0]*b[0]+a[2]*b[1]+a[4],a[1]*b[0]+a[3]*b[1]+a[5]]}function get_page_number(a){return parseInt(a.getAttribute("data-page-no"),16)}function disable_dragstart(a){for(var b=0,c=a.length;b<c;++b)a[b].addEventListener("dragstart",function(){return!1},!1)}
+function clone_and_extend_objs(a){for(var b={},c=0,e=arguments.length;c<e;++c){var h=arguments[c],d;for(d in h)h.hasOwnProperty(d)&&(b[d]=h[d])}return b}
+function Page(a){if(a){this.shown=this.loaded=!1;this.page=a;this.num=get_page_number(a);this.original_height=a.clientHeight;this.original_width=a.clientWidth;var b=a.getElementsByClassName(CSS_CLASS_NAMES.page_content_box)[0];b&&(this.content_box=b,this.original_scale=this.cur_scale=this.original_height/b.clientHeight,this.page_data=JSON.parse(a.getElementsByClassName(CSS_CLASS_NAMES.page_data)[0].getAttribute("data-data")),this.ctm=this.page_data.ctm,this.ictm=invert(this.ctm),this.loaded=!0)}}
+Page.prototype={hide:function(){this.loaded&&this.shown&&(this.content_box.classList.remove("opened"),this.shown=!1)},show:function(){this.loaded&&!this.shown&&(this.content_box.classList.add("opened"),this.shown=!0)},rescale:function(a){this.cur_scale=0===a?this.original_scale:a;this.loaded&&(a=this.content_box.style,a.msTransform=a.webkitTransform=a.transform="scale("+this.cur_scale.toFixed(3)+")");a=this.page.style;a.height=this.original_height*this.cur_scale+"px";a.width=this.original_width*this.cur_scale+
+"px"},view_position:function(){var a=this.page,b=a.parentNode;return[b.scrollLeft-a.offsetLeft-a.clientLeft,b.scrollTop-a.offsetTop-a.clientTop]},height:function(){return this.page.clientHeight},width:function(){return this.page.clientWidth}};function Viewer(a){this.config=clone_and_extend_objs(DEFAULT_CONFIG,0<arguments.length?a:{});this.pages_loading=[];this.init_before_loading_content();var b=this;document.addEventListener("DOMContentLoaded",function(){b.init_after_loading_content()},!1)}
+Viewer.prototype={scale:1,cur_page_idx:0,first_page_idx:0,init_before_loading_content:function(){this.pre_hide_pages()},initialize_radio_button:function(){for(var a=document.getElementsByClassName(CSS_CLASS_NAMES.input_radio),b=0;b<a.length;b++)a[b].addEventListener("click",function(){this.classList.toggle("checked")})},init_after_loading_content:function(){this.sidebar=document.getElementById(this.config.sidebar_id);this.outline=document.getElementById(this.config.outline_id);this.container=document.getElementById(this.config.container_id);
+this.loading_indicator=document.getElementsByClassName(this.config.loading_indicator_cls)[0];for(var a=!0,b=this.outline.childNodes,c=0,e=b.length;c<e;++c)if("ul"===b[c].nodeName.toLowerCase()){a=!1;break}a||this.sidebar.classList.add("opened");this.find_pages();if(0!=this.pages.length){disable_dragstart(document.getElementsByClassName(CSS_CLASS_NAMES.background_image));this.config.key_handler&&this.register_key_handler();var h=this;this.config.hashchange_handler&&window.addEventListener("hashchange",
+function(a){h.navigate_to_dest(document.location.hash.substring(1))},!1);this.config.view_history_handler&&window.addEventListener("popstate",function(a){a.state&&h.navigate_to_dest(a.state)},!1);this.container.addEventListener("scroll",function(){h.update_page_idx();h.schedule_render(!0)},!1);[this.container,this.outline].forEach(function(a){a.addEventListener("click",h.link_handler.bind(h),!1)});this.initialize_radio_button();this.render()}},find_pages:function(){for(var a=[],b={},c=this.container.childNodes,
+e=0,h=c.length;e<h;++e){var d=c[e];d.nodeType===Node.ELEMENT_NODE&&d.classList.contains(CSS_CLASS_NAMES.page_frame)&&(d=new Page(d),a.push(d),b[d.num]=a.length-1)}this.pages=a;this.page_map=b},load_page:function(a,b,c){var e=this.pages;if(!(a>=e.length||(e=e[a],e.loaded||this.pages_loading[a]))){var e=e.page,h=e.getAttribute("data-page-url");if(h){this.pages_loading[a]=!0;var d=e.getElementsByClassName(this.config.loading_indicator_cls)[0];"undefined"===typeof d&&(d=this.loading_indicator.cloneNode(!0),
+d.classList.add("active"),e.appendChild(d));var f=this,g=new XMLHttpRequest;g.open("GET",h,!0);g.onload=function(){if(200===g.status||0===g.status){var b=document.createElement("div");b.innerHTML=g.responseText;for(var d=null,b=b.childNodes,e=0,h=b.length;e<h;++e){var p=b[e];if(p.nodeType===Node.ELEMENT_NODE&&p.classList.contains(CSS_CLASS_NAMES.page_frame)){d=p;break}}b=f.pages[a];f.container.replaceChild(d,b.page);b=new Page(d);f.pages[a]=b;b.hide();b.rescale(f.scale);disable_dragstart(d.getElementsByClassName(CSS_CLASS_NAMES.background_image));
+f.schedule_render(!1);c&&c(b)}delete f.pages_loading[a]};g.send(null)}void 0===b&&(b=this.config.preload_pages);0<--b&&(f=this,setTimeout(function(){f.load_page(a+1,b)},0))}},pre_hide_pages:function(){var a="@media screen{."+CSS_CLASS_NAMES.page_content_box+"{display:none;}}",b=document.createElement("style");b.styleSheet?b.styleSheet.cssText=a:b.appendChild(document.createTextNode(a));document.head.appendChild(b)},render:function(){for(var a=this.container,b=a.scrollTop,c=a.clientHeight,a=b-c,b=
+b+c+c,c=this.pages,e=0,h=c.length;e<h;++e){var d=c[e],f=d.page,g=f.offsetTop+f.clientTop,f=g+f.clientHeight;g<=b&&f>=a?d.loaded?d.show():this.load_page(e):d.hide()}},update_page_idx:function(){var a=this.pages,b=a.length;if(!(2>b)){for(var c=this.container,e=c.scrollTop,c=e+c.clientHeight,h=-1,d=b,f=d-h;1<f;){var g=h+Math.floor(f/2),f=a[g].page;f.offsetTop+f.clientTop+f.clientHeight>=e?d=g:h=g;f=d-h}this.first_page_idx=d;for(var g=h=this.cur_page_idx,k=0;d<b;++d){var f=a[d].page,l=f.offsetTop+f.clientTop,
+f=f.clientHeight;if(l>c)break;f=(Math.min(c,l+f)-Math.max(e,l))/f;if(d===h&&Math.abs(f-1)<=EPS){g=h;break}f>k&&(k=f,g=d)}this.cur_page_idx=g}},schedule_render:function(a){if(void 0!==this.render_timer){if(!a)return;clearTimeout(this.render_timer)}var b=this;this.render_timer=setTimeout(function(){delete b.render_timer;b.render()},this.config.render_timeout)},register_key_handler:function(){var a=this;window.addEventListener("DOMMouseScroll",function(b){if(b.ctrlKey){b.preventDefault();var c=a.container,
+e=c.getBoundingClientRect(),c=[b.clientX-e.left-c.clientLeft,b.clientY-e.top-c.clientTop];a.rescale(Math.pow(a.config.scale_step,b.detail),!0,c)}},!1);window.addEventListener("keydown",function(b){var c=!1,e=b.ctrlKey||b.metaKey,h=b.altKey;switch(b.keyCode){case 61:case 107:case 187:e&&(a.rescale(1/a.config.scale_step,!0),c=!0);break;case 173:case 109:case 189:e&&(a.rescale(a.config.scale_step,!0),c=!0);break;case 48:e&&(a.rescale(0,!1),c=!0);break;case 33:h?a.scroll_to(a.cur_page_idx-1):a.container.scrollTop-=
+a.container.clientHeight;c=!0;break;case 34:h?a.scroll_to(a.cur_page_idx+1):a.container.scrollTop+=a.container.clientHeight;c=!0;break;case 35:a.container.scrollTop=a.container.scrollHeight;c=!0;break;case 36:a.container.scrollTop=0,c=!0}c&&b.preventDefault()},!1)},rescale:function(a,b,c){var e=this.scale;this.scale=a=0===a?1:b?e*a:a;c||(c=[0,0]);b=this.container;c[0]+=b.scrollLeft;c[1]+=b.scrollTop;for(var h=this.pages,d=h.length,f=this.first_page_idx;f<d;++f){var g=h[f].page;if(g.offsetTop+g.clientTop>=
+c[1])break}g=f-1;0>g&&(g=0);var g=h[g].page,k=g.clientWidth,f=g.clientHeight,l=g.offsetLeft+g.clientLeft,m=c[0]-l;0>m?m=0:m>k&&(m=k);k=g.offsetTop+g.clientTop;c=c[1]-k;0>c?c=0:c>f&&(c=f);for(f=0;f<d;++f)h[f].rescale(a);b.scrollLeft+=m/e*a+g.offsetLeft+g.clientLeft-m-l;b.scrollTop+=c/e*a+g.offsetTop+g.clientTop-c-k;this.schedule_render(!0)},fit_width:function(){var a=this.cur_page_idx;this.rescale(this.container.clientWidth/this.pages[a].width(),!0);this.scroll_to(a)},fit_height:function(){var a=this.cur_page_idx;
+this.rescale(this.container.clientHeight/this.pages[a].height(),!0);this.scroll_to(a)},get_containing_page:function(a){for(;a;){if(a.nodeType===Node.ELEMENT_NODE&&a.classList.contains(CSS_CLASS_NAMES.page_frame)){a=get_page_number(a);var b=this.page_map;return a in b?this.pages[b[a]]:null}a=a.parentNode}return null},link_handler:function(a){var b=a.target,c=b.getAttribute("data-dest-detail");if(c){if(this.config.view_history_handler)try{var e=this.get_current_view_hash();window.history.replaceState(e,
+"","#"+e);window.history.pushState(c,"","#"+c)}catch(h){}this.navigate_to_dest(c,this.get_containing_page(b));a.preventDefault()}},navigate_to_dest:function(a,b){try{var c=JSON.parse(a)}catch(e){return}if(c instanceof Array){var h=c[0],d=this.page_map;if(h in d){for(var f=d[h],h=this.pages[f],d=2,g=c.length;d<g;++d){var k=c[d];if(null!==k&&"number"!==typeof k)return}for(;6>c.length;)c.push(null);var g=b||this.pages[this.cur_page_idx],d=g.view_position(),d=transform(g.ictm,[d[0],g.height()-d[1]]),
+g=this.scale,l=[0,0],m=!0,k=!1,n=this.scale;switch(c[1]){case "XYZ":l=[null===c[2]?d[0]:c[2]*n,null===c[3]?d[1]:c[3]*n];g=c[4];if(null===g||0===g)g=this.scale;k=!0;break;case "Fit":case "FitB":l=[0,0];k=!0;break;case "FitH":case "FitBH":l=[0,null===c[2]?d[1]:c[2]*n];k=!0;break;case "FitV":case "FitBV":l=[null===c[2]?d[0]:c[2]*n,0];k=!0;break;case "FitR":l=[c[2]*n,c[5]*n],m=!1,k=!0}if(k){this.rescale(g,!1);var p=this,c=function(a){l=transform(a.ctm,l);m&&(l[1]=a.height()-l[1]);p.scroll_to(f,l)};h.loaded?
+c(h):(this.load_page(f,void 0,c),this.scroll_to(f))}}}},scroll_to:function(a,b){var c=this.pages;if(!(0>a||a>=c.length)){c=c[a].view_position();void 0===b&&(b=[0,0]);var e=this.container;e.scrollLeft+=b[0]-c[0];e.scrollTop+=b[1]-c[1]}},get_current_view_hash:function(){var a=[],b=this.pages[this.cur_page_idx];a.push(b.num);a.push("XYZ");var c=b.view_position(),c=transform(b.ictm,[c[0],b.height()-c[1]]);a.push(c[0]/this.scale);a.push(c[1]/this.scale);a.push(this.scale);return JSON.stringify(a)}};
+pdf2htmlEX.Viewer=Viewer;})();
+</script>
+<script>
+try{
+pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+</div>
+</div>
+<div id="page-container">
+
+
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w1 h1" alt="" 
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfEAAAADCAIAAAAMfaGMAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG0lEQVRYw+3BMQEAAADCoPVPbQo/oAAAAAB4GRF8AAFEk8yqAAAAAElFTkSuQmCC"/>
+<div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> 
+</div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">1 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x0 h4 y7 ff2 fs1 fc0 sc0 ls0 ws0"> CONTRAT DE <span class="_ _0"></span>SOUS-LOCATI<span class="_ _0"></span>ON<span class="ff3"> </span></div>
+<div class="t m0 x1 h5 y8 ff3 fs1 fc0 sc0 ls0 ws0"> <span class="_ _1"> </span> <span class="_ _2"> </span> </div>
+
+<div class="t m0 x1 h6 y9 ff3 fs2 fc0 sc0 ls0 ws0">
+<span class="_ _3"></span><span class="ff2">Le présent contrat <span class="ls1">(«</span> Contrat ») est conclu entre les soussigné(e)s :
+<span class="ff3"> </span></span></div>
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+<div class="t m0 x1 h7 ya ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 yb ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value}}</span>
+     <span class="_ _4"></span>
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value}}</span>, <span class="_ _4"></span>de <span class="_ _4"></span>nationalité <span class="_ _4"></span>tunisienne, <span class="_ _4"></span>
+née <span class="_ _4"></span>le <span class="_ _4"></span>
+<span
+    *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value}}</span> <span class="_ _4"></span><span class="ls2">à <span class="_ _5"></span>
+<span class="ls0">
+    <span
+    *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value}}</span>, <span class="_ _4"></span>titulaire <span class="_ _4"></span>de <span class="_ _4"></span>la <span class="_ _4"></span>
+c<span class="ff4">arte <span class="_ _4"></span>d’<span class="ff3">identité <span class="_ _4"></span>nationale </span></span></span></span></div>
+<div class="t m0 x1 h7 yc ff3 fs2 fc0 sc0 ls0 ws0">
+n°  <span
+    *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value}}</span> délivrée à
+<span
+    *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value}}</span> le
+<span
+    *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>, demeurant au 
+<span
+    *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value}}</span>, </div>
+</div>
+
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+<div class="t m0 x1 h7 yd ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 ye ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value}}</span> <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value}}</span>, <span class="_ _6"></span>de <span class="_ _6"></span>nationalité <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value}}</span>, <span class="_ _6"></span>titulaire <span class="_ _6"></span>du <span class="_ _6"></span>passeport <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value}}</span> <span class="_ _6"></span>n° <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value}}</span> <span class="_ _6"></span>délivré <span class="_ _6"></span>le <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value}}</span>, <span class="_ _6"></span>élisant </div><div class="t m0 x1 h7 yf ff3 fs2 fc0 sc0 ls0 ws0">domicile au
+<span
+    *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value}}</span>, </div>
+</div>
+
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+<div class="t m0 x1 h7 y10 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y11 ff3 fs2 fc0 sc0 ls0 ws0">La société
+<span
+    *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value}}</span>, 
+<span
+    *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value}}</span>, <span class="_ _0"></span>au capital de
+<span
+    *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value}}</span> <span class="_ _0"></span>
+Dinars Tunisiens dont <span class="_ _0"></span>le siège social est sis <span class="_ _0"></span>au
+<span
+    *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value}}</span> </div><div class="t m0 x1 h7 y12 ff4 fs2 fc0 sc0 ls0 ws0">
+titulaire de l’identifiant unique n<span class="ff3">°
+<span
+    *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value}}</span>, représentée par 
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value}}</span> 
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value}}</span><span class="_ _0"></span> </span>dûment habilité(e) à l’effet </div>
+<div class="t m0 x1 h7 y13 ff3 fs2 fc0 sc0 ls0 ws0">des présentes, </div>
+</div>
+
+
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_caution').checked">
+<div class="t m0 x1 h7 y14 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y15 ff3 fs2 fc0 sc0 ls0 ws0">
+La <span class="_ _7"></span>société <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value}}</span>, <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value}}</span>, <span class="_ _7"></span>i<span class="_ _0"></span>mmatriculée<span class="_ _7"></span>en <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value}}</span> <span class="_ _8"></span>sous <span class="_ _7"></span>le <span class="_ _8"></span>n° <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value}}</span><span class="_ _0"></span>, <span class="_ _7"></span>dont <span class="_ _8"></span>le <span class="_ _7"></span>siège <span class="_ _8"></span>social <span class="_ _7"></span>
+est <span class="_ _7"></span>sis <span class="_ _8"></span>au </div><div class="t m0 x1 h7 y16 ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value}}</span>, représentée par 
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value}}</span> 
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value}}</span> <span class="ff4">dûment habilité(e) à l’effet des présentes</span>, </div>
+</div>
+
+
+<div class="t m0 x1 h7 y17 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h6 y18 ff3 fs2 fc0 sc0 ls3 ws0">Ci<span class="ls0">-après dénommée le «<span class="_ _5"></span> <span class="_ _0"></span><span class="ff2">Preneur</span> », 
+</span></div><div class="t m0 x8 h6 y19 ff5 fs2 fc0 sc0 ls0 ws0">D’une part <span class="ff2"> </span></div><div class="t m0 x1 h7 y1a ff3 fs2 fc0 sc0 ls0 ws0">Et  </div>
+
+
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_debiteur').checked">
+<div class="t m0 x1 h7 y1b ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value}}</span>
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value}}</span>,<span class="ff6"> <span class="_ _4"></span><span class="ff3">de nationalité <span class="_ _5"></span>tunisienne, né <span class="_ _4"></span>le 
+<span
+    *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value}}</span> <span class="_ _4"></span><span class="ls2">à <span class="ls0">
+<span
+    *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value}}</span>, titulaire <span class="_ _5"></span>de <span class="_ _5"></span>la c<span class="ff4">arte <span class="_ _5"></span>d’<span class="ff3">identité na<span class="_ _5"></span>tionale </span></span></span></span></span></span></div><div class="t m0 x1 h7 y1c ff3 fs2 fc0 sc0 ls0 ws0">n°
+<span
+    *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value}}</span>, délivrée à 
+<span
+    *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span> le 
+<span
+    *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>, demeurant au
+<span
+    *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value}}</span>, </div>
+</div>
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_debiteur').checked">
+<div class="t m0 x9 h7 y1d ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y1e ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value}}</span> <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value}}</span>, <span class="_ _8"></span>de <span class="_ _6"></span>nationalit<span class="_ _5"></span>é <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value}}</span>, <span class="_ _6"></span>titulaire<span class="_ _5"></span> <span class="_ _8"></span>du <span class="_ _6"></span>pass<span class="_ _5"></span>eport <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value}}</span> <span class="_ _8"></span>n° <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value}}</span> <span class="_ _8"></span>délivré <span class="_ _8"></span>le <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value}}</span><span class="_ _0"></span>, <span class="_ _8"></span>élisant </div><div class="t m0 x1 h7 y1f ff3 fs2 fc0 sc0 ls0 ws0">domicile au 
+<span
+    *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value}}</span>, </div>
+</div>
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_debiteur').checked">
+<div class="t m0 x1 h7 y20 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y21 ff3 fs2 fc0 sc0 ls0 ws0">
+La société 
+<span
+    *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value}}</span>, 
+<span
+    *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value}}</span>, <span class="_ _0"></span>au capital de 
+<span
+    *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value}}</span> <span class="_ _0"></span>Dinars Tunisiens dont <span class="_ _0"></span>le siège social est sis <span class="_ _0"></span>au 
+<span
+    *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value}}</span> </div><div class="t m0 x1 h7 y22 ff3 fs2 fc0 sc0 ls0 ws0">titulaire de <span class="ff4 ls4">l’</span>identifiant unique n° 
+<span
+    *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value}}</span>, représentée par 
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value}}</span> 
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value}}</span> <span class="ff4">dûment<span class="_ _0"></span> habilité(e) à l’effet </span></div><div class="t m0 x1 h7 y23 ff3 fs2 fc0 sc0 ls0 ws0">
+des présentes, </div>
+</div>
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_debiteur').checked">
+<div class="t m0 x1 h7 y24 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y25 ff3 fs2 fc0 sc0 ls0 ws0"> La <span class="_ _7"></span>
+société <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value}}</span>, <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value}}</span>, <span class="_ _7"></span>immatriculée <span class="_ _7"></span>en <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value}}</span> <span class="_ _7"></span>sous <span class="_ _7"></span>le <span class="_ _7"></span>n° <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value}}</span>, <span class="_ _7"></span>dont <span class="_ _7"></span>le <span class="_ _7"></span>siège <span class="_ _7"></span>social <span class="_ _7"></span>est <span class="_ _7"></span>sis <span class="_ _7"></span>au </div><div class="t m0 x1 h7 y26 ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value}}</span>, représentée par 
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value}}</span> 
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value}}</span> <span class="ff4">
+dûment habilité(e) à l’effet de</span>s présentes, </div>
+</div>
+
+<div class="t m0 xa h7 y27 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y28 ff3 fs2 fc0 sc0 ls3 ws0">
+Ci<span class="ls0">-après dénommée le «<span class="_ _5"></span> <span class="_ _0"></span><span class="ff2">Sous-Locataire</span> », </span></div>
+<div class="t m0 xb h6 y29 ff5 fs2 fc0 sc0 ls0 ws0">D’autre part <span class="ff2"> </span></div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+
+
+
+
+
+
+
+
+
+
+<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><img class="bi x1 y2a w4 h1" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjIAAAADCAIAAAAGF3IvAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAHElEQVRYw+3BMQEAAADCoPVPbQ0PoAAAAACAawMTxQABF5ff5wAAAABJRU5ErkJggg=="/>
+<div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div>
+</div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> 
+</div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">2 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y2b ff3 fs2 fc0 sc0 ls0 ws0"> 
+</div><div class="t m0 x1 h6 y2c ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7"></span>Preneur <span class="_ _0"></span>et <span class="_ _7"></span>le <span class="_ _7">
+</span>Sous-<span class="_ _0"></span>Locataire <span class="_ _0"></span>seront <span class="_ _7"></span>ci<span class="_ _0"></span>-après <span class="_ _7"></span>
+dénommés <span class="_ _7"></span>conjointement <span class="_ _7"></span>(les <span class="_ _7"></span>«<span class="ff2"> <span class="_ _7"></span>Parties</span>
+<span class="_ _7"></span>»<span class="_ _5"></span>) <span class="_ _7"></span>et </div><div class="t m0 x1 h6 y2d ff3 fs2 fc0 sc0 ls0 ws0">individuellement (la «<span class="ff2"> Partie</span>
+<span class="ls5">»)<span class="_ _0"></span></span>. <span class="_ _0"></span> </div><div class="t m0 x1 h7 y2e ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h6 y2f ff3 fs2 fc0 sc0 ls0 ws0">En présence du propriétaire, ci-après dénommé le « <span class="ff2">Bailleur</span> <span class="_ _0"></span>»
+<span class="_ _4"></span> : <span class="_ _0"></span> </div><div class="t m0 x1 h7 y30 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+
+
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_creancier').checked">
+<div class="t m0 x1 h7 y31 ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_creancier').value}}</span>
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_creancier').value}}</span>,<span class="ff6"> <span class="_ _4"></span><span class="ff3">de nationalité tunisienne<span class="_ _5"></span>, né <span class="_ _5"></span>le 
+<span
+    *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_creancier').value}}</span> <span class="_ _4"></span>à<span class="_ _0"></span> 
+<span
+    *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_creancier').value}}</span>, <span class="_ _5"></span>titulaire de <span class="_ _4"></span>l<span class="_ _0"></span><span class="ff4">a c<span class="_ _5">
+</span>arte d’identité <span class="_ _5"></span>nationale </span></span></span></div><div class="t m0 x1 h7 y32 ff3 fs2 fc0 sc0 ls0 ws0">
+n° <span
+    *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_creancier').value}}</span>, 
+délivrée à <span
+    *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_creancier').value}}</span> 
+le <span
+    *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_creancier').value}}</span>, demeurant 
+au <span
+    *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_creancier').value}}</span>, </div>
+</div>
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_creancier').checked">
+<div class="t m0 x1 h7 y33 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y34 ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_creancier').value}}</span> <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_creancier').value}}</span>, <span class="_ _8"></span>de <span class="_ _6"></span>nationalité <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_creancier').value}}</span>, <span class="_ _8"></span>titulaire <span class="_ _8"></span>du <span class="_ _8"></span>pass<span class="_ _0"></span>eport <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_creancier').value}}</span> <span class="_ _8"></span>n° <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_creancier').value}}</span> <span class="_ _8"></span>délivré <span class="_ _8"></span>le <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_creancier').value}}</span><span class="_ _0"></span>, <span class="_ _6"></span>élisant </div><div class="t m0 x1 h7 y35 ff3 fs2 fc0 sc0 ls0 ws0">domicile au 
+<span
+    *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_creancier').value}}</span>, </div>
+</div>
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_creancier').checked">
+<div class="t m0 x1 h7 y36 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y37 ff3 fs2 fc0 sc0 ls0 ws0">La société 
+<span
+    *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_creancier').value}}</span>, 
+<span
+    *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_creancier').value}}</span>, <span class="_ _0"></span>au capital <span class="_ _0"></span>de 
+<span
+    *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_creancier').value}}</span> <span class="_ _0"></span>Dinars Tunisiens <span class="_ _0"></span>dont le siège <span class="_ _0"></span>social est sis <span class="_ _0"></span>au 
+<span
+    *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_creancier').value}}</span> </div><div class="t m0 x1 h7 y38 ff3 fs2 fc0 sc0 ls0 ws0">titul<span class="ff4">aire de l’identifiant u<span class="_ _0"></span>nique n° 
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_creancier').value}}</span>, <span class="_ _0"></span>représentée par 
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_creancier').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_creancier').value}}</span> <span class="_ _0"></span>____</span> <span class="_ _0"></span>dûment habil<span class="ff4">ité(e) <span class="_ _0"></span>à l’effet </span></div><div class="t m0 x1 h7 y39 ff3 fs2 fc0 sc0 ls0 ws0">des présentes, </div>
+</div>
+
+
+
+<div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_creancier').checked">
+<div class="t m0 x1 h7 y3a ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y3b ff3 fs2 fc0 sc0 ls0 ws0"> La <span class="_ _7"></span>société <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_creancier').value}}</span>, <span class="_ _8"></span>
+<span
+    *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_creancier').value}}</span>, <span class="_ _8"></span>immatriculée<span class="_ _5"></span> <span class="_ _8"></span>en <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_creancier').value}}</span> <span class="_ _8"></span>sous <span class="_ _8"></span>le <span class="_ _8"></span>
+n° <span
+    *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_creancier').value}}</span>, <span class="_ _8"></span>dont <span class="_ _8"></span>le <span class="_ _7"></span>siège <span class="_ _7"></span>so<span class="_ _0"></span>cial <span class="_ _8"></span>est <span class="_ _7"></span>sis <span class="_ _8"></span>au </div><div class="t m0 x1 h7 y3c ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_creancier').value}}</span>, représentée par 
+<span
+    *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_creancier').value}}</span> 
+<span
+    *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_creancier').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_creancier').value}}</span> dûment habilité(e) à <span class="ff4">l’effet des présentes,</span> </div><div class="t m0 x1 h7 y3d ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+</div>
+
+
+
+
+
+<div class="t m0 xc h7 y3e ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y3f ff2 fs2 fc0 sc0 ls0 ws0">IL EST PREALABLEMENT EXPOSE CE QUI SUIT 
+<span class="ls1">: </span> </div><div class="t m0 x1 h6 y40 ff2 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x9 h6 y41 ff2 fs2 fc0 sc0 ls0 ws0">
+A-<span class="ff7"> <span class="_ _9"></span><span class="ff3 ls6">Le<span class="ls0"> <span class="_ _8"></span>Sous-Locataire <span class="_ _7"></span><span class="ff4">s’est 
+<span class="_ _8"></span>déclaré <span class="_ _7"></span>intéressé <span class="_ _7"></span></span>de <span class="_ _7"></span>p<span class="_ _0"></span>rendre 
+<span class="_ _7"></span>en <span class="_ _8"></span>sous <span class="_ _7"></span>location <span class="_ _8"></span> <span class="_ _7"></span>une <span class="_ _7">
+</span>surface <span class="_ _8"></span>de </span></span></span></div><div class="t m0 xd h7 y42 ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_question_9_1').value !== '' ">{{getHtmlInputElement('input_question_9_1').value}}</span> <span class="_ _7"></span>mètre<span class="_ _5"></span>s <span class="_ _7"></span>carré<span class="_ _5"></span>s <span class="_ _7"></span><span class="ff4">de <span class="_ _0"></span>l’<span class="_ _0"></span>Ensemble <span class="_ _0"></span>de <span class="_ _7"></span>l’I<span class="_ _5"></span>mmeuble <span class="_ _7"></span>loué <span class="_ _7"></span><span class="ff3">, <span class="_ _0"></span>tel <span class="_ _7"></span>que <span class="_ _0"></span>plus <span class="_ _7"></span>ampl<span class="_ _5"></span>ement <span class="_ _7"></span>déc<span class="_ _5"></span>rit </span></span></div><div class="t m0 xd h7 y43 ff3 fs2 fc0 sc0 ls2 ws0">ci<span class="ls0">-après, dans le cadre du présent contrat ;</span></div><div class="t m0 x9 h6 y44 ff2 fs2 fc0 sc0 ls0 ws0">B-<span class="ff7"> <span class="_ _a"> </span><span class="ff3">Le Preneur <span class="_ _0"></span>accepte <span class="_ _0"></span>de m<span class="_ _0"></span>ettre en <span class="_ _0"></span>sous <span class="_ _0"></span>location, <span class="_ _0"></span>en <span class="_ _0"></span>faveur du <span class="_ _0"></span>Sous-<span class="_ _0"></span>Locataire, la <span class="_ _0"></span>surface </span></span></div><div class="t m0 xd h7 y45 ff3 fs2 fc0 sc0 ls0 ws0">de 
+<span
+    *ngIf="getHtmlInputElement('input_question_9_1').value !== '' ">{{getHtmlInputElement('input_question_9_1').value}}</span> mètres carrés <span class="ff4">tel qu’amplement décrit ci</span>-après ; </div><div class="t m0 x9 h6 y46 ff2 fs2 fc0 sc0 ls0 ws0">C-<span class="ff7"> <span class="_ _9"></span><span class="ff3">Les <span class="_ _7"></span>P<span class="_ _0"></span>arties <span class="_ _7"></span>ont<span class="_ _0"></span> <span class="_ _8"></span>convenu <span class="_ _8"></span>de <span class="_ _7"></span>conclure <span class="_ _8"></span>le <span class="_ _8"></span>présent <span class="_ _8"></span>contrat <span class="_ _8"></span>en <span class="_ _8"></span>vue <span class="_ _8"></span>de <span class="_ _7"></span>pe<span class="_ _0"></span>rmettre <span class="_ _7"></span>au<span class="_ _0"></span> <span class="_ _8"></span>Sous-</span></span></div><div class="t m0 xd h7 y47 ff3 fs2 fc0 sc0 ls0 ws0">Locataire <span class="_ _4"></span>de <span class="_ _4"></span>consentir <span class="_ _4"></span>a<span class="_ _5"></span>u <span class="_ _5"></span>Preneur <span class="_ _4"></span><span class="ff4">qui <span class="_ _4"></span>l’accepte <span class="_ _4"></span>un<span class="ff3">e <span class="_ _4"></span>Sous-Location <span class="_ _4"></span>portant <span class="_ _4"></span>sur <span class="_ _4"></span>la <span class="_ _4"></span>Surfa<span class="_ _5"></span>ce </span></span></div><div class="t m0 xd h7 y48 ff3 fs2 fc0 sc0 ls0 ws0">Sous-Louée dans les conditions stipulées ci-dessous. </div><div class="t m0 xd h7 y49 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y4a ff2 fs2 fc0 sc0 ls0 ws0">CECI ETANT EXPOSE, IL A ETE CONVENU CE QUI SUIT : </div><div class="t m0 x1 h6 y4b ff2 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y4c ff2 fs2 fc0 sc0 ls0 ws0">1<span class="ff7"> <span class="_ _b"> </span></span>DEFINITIONS </div><div class="t m0 x1 h7 y4d ff3 fs2 fc0 sc0 ls0 ws0">Aux fins du contrat, les termes et expressions commençant par une majuscule auront le sens </div><div class="t m0 x1 h7 y4e ff3 fs2 fc0 sc0 ls0 ws0">résultant des définitions ci-dessous :  </div><div class="t m0 x1 h7 y4f ff3 fs2 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+
+
+
+<div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div>
+<div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">
+</div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">3 </div>
+<div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y50 ff2 fs2 fc0 sc0 ls0 ws0"> « Bailleur »  </div><div class="t m0 x1 h7 y2c ff3 fs2 fc0 sc0 ls0 ws0">
+Désigne <span class="ff4">le propriétaire de l’Ensemble de l’I<span class="_ _5"></span>mmeu<span class="_ _0"></span>ble loué.<span class="ff3"> </span></span></div>
+<div class="t m0 x1 h6 y51 ff2 fs2 fc0 sc0 ls0 ws0">« Preneur » </div><div class="t m0 x1 h6 y52 ff3 fs2 fc0 sc0 ls0 ws0">A la signification qui lui est donnée aux comparutions.
+<span class="ff2"> </span></div><div class="t m0 x1 h6 y53 ff2 fs2 fc0 sc0 ls0 ws0">« Sous-Locataire » </div><div class="t m0 x1 h7 y54 ff3 fs2 fc0 sc0 ls0 ws0">
+A la signification qui lui est donnée aux comparutions. </div><div class="t m0 x1 h6 y55 ff2 fs2 fc0 sc0 ls0 ws0">« Contrat » ou « Sous-Location» </div>
+<div class="t m0 x1 h7 y56 ff3 fs2 fc0 sc0 ls0 ws0">Désigne <span class="_ _7"></span>le <span class="_ _7"></span>présent <span class="_ _8"></span>contrat 
+<span class="_ _7"></span>de <span class="_ _8"></span>sous-location <span class="_ _7"></span>et <span class="_ _8"></span>toute <span class="_ _7"></span>éventuelle 
+<span class="_ _7"></span>annexe <span class="_ _7"></span>relative <span class="_ _8"></span>au <span class="_ _7"></span>contrat, <span class="_ _7"></span>tel </div>
+<div class="t m0 x1 h7 y57 ff3 fs2 fc0 sc0 ls0 ws0">qu&apos;ils <span class="_ _5"></span>pourront, <span class="_ _5"></span>le cas <span class="_ _4"></span>é
+<span class="_ _0"></span>chéant, <span class="_ _5"></span>être modifiés <span class="_ _4"></span>ou complétés <span class="_ _5"></span>par <span class="_ _5"></span>
+tout avenant é<span class="_ _5"></span>crit e<span class="_ _5"></span>t signé <span class="_ _4"></span>pa<span class="_ _0"></span>r <span class="_ _5"></span>les </div>
+<div class="t m0 x1 h7 y34 ff3 fs2 fc0 sc0 ls0 ws0">Parties. </div><div class="t m0 x1 h6 y58 ff2 fs2 fc0 sc0 ls0 ws0">« Date d&apos;Entrée en Vigueur » </div>
+<div class="t m0 x1 h7 y59 ff3 fs2 fc0 sc0 ls0 ws0">Désigne la date de la dernière signature apposée sur le Contrat. </div><div class="t m0 x1 h7 y5a ff3 fs2 fc0 sc0 ls0 ws0">
+Désigne le 
+<span
+    *ngIf="getHtmlInputElement('input_inserez_date').value !== '' ">{{getHtmlInputElement('input_inserez_date').value}}</span>. </div><div class="t m0 x1 h6 y5b ff2 fs2 fc0 sc0 ls0 ws0">« Dinar Tunisien » ou « <span class="ls7">DT</span> » </div><div class="t m0 x1 h7 y5c ff3 fs2 fc0 sc0 ls0 ws0">
+Désigne la monnaie ayant cours légal en République Tunisienne. </div><div class="t m0 x1 h6 y5d ff2 fs2 fc0 sc0 ls0 ws0">« Durée de Sous-Location » </div>
+<div class="t m0 x1 h7 y5e ff3 fs2 fc0 sc0 ls0 ws0">Désigne <span class="_ _7"></span>la <span class="_ _0"></span>dur<span class="_ _0"></span>ée <span class="_ _0"></span>
+pour <span class="_ _7"></span>l<span class="_ _0"></span>aquelle <span class="_ _7"></span>la <span class="_ _0"></span>S<span class="_ _0"></span>ous-Location 
+<span class="_ _7"></span>est <span class="_ _7"></span>acceptée <span class="_ _7"></span>et <span class="_ _0"></span>consentie. <span class="_ _7"></span>Cette
+<span class="_ _7"></span>durée <span class="_ _7"></span>est <span class="_ _7"></span>de </div><div class="t m0 x1 h7 y5f ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_question_5').value !== '' ">{{getHtmlInputElement('input_question_5').value}}</span> qui commencent à courir à compter de la Date d&apos;Entrée<span class="_ _5"></span> en Vi<span class="_ _0"></span>gueur. </div><div class="t m0 x1 h6 y60 ff2 fs2 fc0 sc0 ls0 ws0">« 
+<span class="ff5">Ensemble de l’Immeuble</span> » </div><div class="t m0 x1 h7 y61 ff3 fs2 fc0 sc0 ls0 ws0">Désigne <span class="_ _0"></span><span class="ff4">l’ensemble de 
+<span class="_ _0"></span>l’im<span class="_ _0"></span>meuble loué <span class="_ _0"></span>par <span class="_ _0"></span>le <span class="_ _0"></span>Bailleur 
+<span class="_ _0"></span>au <span class="_ _0"></span>Preneur sis <span class="_ _7"></span>à 
+<span
+    *ngIf="getHtmlInputElement('input_question_8_1').value !== '' ">{{getHtmlInputElement('input_question_8_1').value}}</span> <span class="_ _7"></span>d’une <span class="_ _0"></span>superficie </span></div><div class="t m0 x1 h7 y62 ff3 fs2 fc0 sc0 ls0 ws0">locative sur plan 
+<span
+    *ngIf="getHtmlInputElement('input_question_8_3').value !== '' ">{{getHtmlInputElement('input_question_8_3').value}}</span> mètres carrés composé de 
+<span
+    *ngIf="getHtmlInputElement('input_question_8_2').value !== '' ">{{getHtmlInputElement('input_question_8_2').value}}</span> pièce(s)  </div><div class="t m0 x1 h7 y63 ff3 fs2 fc0 sc0 ls0 ws0">et ayant titre foncier
+n° <span
+    *ngIf="getHtmlInputElement('input_question_8_4_1').value !== '' ">{{getHtmlInputElement('input_question_8_4_1').value}}</span>   . </div><div class="t m0 x1 h6 y64 ff2 fs2 fc0 sc0 ls0 ws0">« Surface Sous-Louée » </div><div class="t m0 x1 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0">Désigne 
+<span class="_ _7"></span>la <span class="_ _7"></span>surface <span class="_ _8"></span>sous-louée <span class="_ _7"></span>par <span class="_ _8"></span>le 
+<span class="_ _7"></span>Preneur <span class="_ _7"></span>au <span class="_ _8"></span>Sous-Locataire <span class="_ _7"></span><span class="ff4">d’une <span class="_ _7">
+</span>superficie <span class="_ _8"></span>locative <span class="_ _7"></span>sur </span></div><div class="t m0 x1 h7 y66 ff3 fs2 fc0 sc0 ls0 ws0">plan de 
+<span
+    *ngIf="getHtmlInputElement('input_question_9_1').value !== '' ">{{getHtmlInputElement('input_question_9_1').value}}</span> mètres carrés composé de 
+<span
+    *ngIf="getHtmlInputElement('input_question_9_2').value !== '' ">{{getHtmlInputElement('input_question_9_2').value}}</span> pièce(s<span class="ls1">).</span> </div><div class="t m0 x1 h6 y67 ff2 fs2 fc0 sc0 ls0 ws0">« Bail Principal » </div>
+<div class="t m0 x1 h7 y68 ff3 fs2 fc0 sc0 ls0 ws0">Désigne le bail initial passé entre<span class="_ _5"></span> le Bailleur et le <span class="_ _0"></span>Preneur. </div>
+<div class="t m0 x1 h6 y69 ff2 fs2 fc0 sc0 ls0 ws0">« Loyer » </div><div class="t m0 x1 h7 y6a ff3 fs2 fc0 sc0 ls0 ws0">Désigne le loyer, hors tax<span class="_ _0">
+</span>es municipales et hors <span class="_ _0"></span>cha<span class="_ _5"></span>rges, pa<span class="_ _0"></span>y<span class="_ _5"></span>able par le 
+<span class="_ _0"></span>S<span class="_ _0"></span>ous-Locataire ou son </div><div class="t m0 x1 h7 y6b ff3 fs2 fc0 sc0 ls0 ws0">mandataire <span class="ff4">
+au Preneur en contrepartie d’une quittance de loyer.</span> </div><div class="t m0 x1 h7 y6c ff3 fs2 fc0 sc0 ls0 ws0">Le montant du loyer est de 
+<span
+    *ngIf="getHtmlInputElement('input_question_11_1').value !== '' ">{{getHtmlInputElement('input_question_11_1').value}}</span> 
+(<span
+    *ngIf="getHtmlInputElement('input_question_11_2').value !== '' ">{{getHtmlInputElement('input_question_11_2').value}}</span>) HT payable 
+<span
+    *ngIf="getHtmlInputElement('input_question_11_3').value !== '' ">{{getHtmlInputElement('input_question_11_3').value}}</span>.  </div><div class="t m0 x1 h7 y6d ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7"></span>Loyer <span class="_ _7"></span>sera, <span class="_ _8"></span>de 
+<span class="_ _7"></span>plein <span class="_ _8"></span>droit <span class="_ _7"></span>et <span class="_ _8"></span>sans <span class="_ _7"></span>aucune 
+<span class="_ _7"></span>formalité <span class="_ _8"></span>ni <span class="_ _7"></span>notif<span class="_ _0"></span>ication <span class="_ _7"></span>préalable, 
+<span class="_ _7"></span>augmenté <span class="_ _7"></span>de<span class="_ _0"></span> </div><div class="t m0 x1 h7 y6e ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_question_11_4').value !== '' ">{{getHtmlInputElement('input_question_11_4').value}}</span> <span class="_ _0"></span>% <span class="_ _0"></span>chaque <span class="_ _0"></span>année <span class="_ _0"></span>à <span class="_ _0"></span>compter 
+<span class="_ _0"></span>de <span class="_ _0"></span>la <span class="_ _0"></span>2</div><div class="t m0 xe h8 y6f ff3 fs3 fc0 sc0 ls0 ws0">ème</div>
+<div class="t m0 xf h7 y6e ff3 fs2 fc0 sc0 ls0 ws0"> <span class="_ _0"></span>année <span class="_ _0"></span>suivante <span class="_ _0"></span>celle 
+<span class="_ _0"></span>de <span class="_ _0"></span>D<span class="_ _0"></span>ate d<span class="_ _0"></span><span class="ff4">’Entrée <span class="_ _0"></span>
+en <span class="_ _0"></span>Vigueur, </span></div><div class="t m0 x1 h7 y70 ff3 fs2 fc0 sc0 ls0 ws0">sur la base du dernier Loy<span class="_ _5"></span>er.
+<span class="_ _0"></span> </div><div class="t m0 x1 h7 y71 ff3 fs2 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="pf4" class="pf w0 h0" data-page-no="4"><div class="pc pc4 w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div>
+<div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">
+</div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">4 </div>
+<div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y50 ff2 fs2 fc0 sc0 ls0 ws0">2<span class="ff7"> <span class="_ _b"> </span></span>
+OBJET DU CONTRAT </div><div class="t m0 x1 h3 y72 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y73 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7">
+</span>Preneur <span class="_ _7"></span>accepte <span class="_ _7"></span>de <span class="_ _0"></span>m<span class="_ _0"></span>ettre <span class="_ _7">
+</span>en <span class="_ _7"></span>sous <span class="_ _7"></span>location, <span class="_ _7"></span>en <span class="_ _7"></span>faveur <span class="_ _7">
+</span>du <span class="_ _7"></span>Sous-Locataire <span class="_ _7"></span>la <span class="_ _7"></span>Surface <span class="_ _7"></span>Sous-</div>
+<div class="t m0 x1 h7 y74 ff3 fs2 fc0 sc0 ls0 ws0">Louée <span class="ls2">à </span>
+<span
+    *ngIf="getHtmlInputElement('input_question_10').value !== '' ">{{getHtmlInputElement('input_question_10').value}}</span>. </div><div class="t m0 x1 h7 y75 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x10 h6 y76 ff2 fs2 fc0 sc0 ls0 ws0">3<span class="ff7"> <span class="_ _b"> </span>
+</span>DATE D&apos;ENTREE EN VIGUEUR DE LA SOUS-LOCATION- DUREE<span class="_ _0"></span>- </div><div class="t m0 x11 h6 y77 ff2 fs2 fc0 sc0 ls0 ws0">RENOUVELLEMENT </div>
+<div class="t m0 x1 h3 y78 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y79 ff2 fs2 fc0 sc0 ls0 ws0">3.1<span class="ff7"> <span class="_ _c"> </span></span>
+Entrée en Vigueur et Durée de la Sous-Location </div><div class="t m0 x1 h7 y7a ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _0"></span>Contrat <span class="_ _7"></span>
+entrera <span class="_ _0"></span>en <span class="_ _0"></span>vi<span class="_ _0"></span>gueur <span class="_ _0"></span>et <span class="_ _7"></span>produira 
+<span class="_ _0"></span>ses <span class="_ _7"></span>effets <span class="_ _0"></span>à <span class="_ _0"></span>compte<span class="_ _0"></span>r <span class="_ _0">
+</span>de <span class="_ _0"></span>la <span class="_ _7"></span>Date <span class="_ _7"></span>d&apos;Entrée <span class="_ _0"></span>en <span class="_ _0"></span>Vi
+<span class="_ _0"></span>gueur </div><div class="t m0 x1 h7 y7b ff3 fs2 fc0 sc0 ls0 ws0">pour la Durée de Sous-Location consentie.
+
+</div><div class="t m0 x1 h7 y7c ff3 fs2 fc0 sc0 ls0 ws0"></div><div class="t m0 x12 h6 y7d ff2 fs2 fc0 sc0 ls0 ws0">3.2<span class="ff7"> <span class="_ _c"> </span></span>Renouvellement </div><div class="t m0 x1 h7 y7e ff4 fs2 fc0 sc0 ls0 ws0">
+A l’expiration de<span class="_ _5"></span> la Dur<span class="_ _5"></span>ée de Sous<span class="ff3">-Location, et <span class="_ _5"></span>sous réserve
+<span class="_ _5"></span>de préavis de non-re<span class="_ _5"></span>nouvellement </span></div><div class="t m0 x1 h7 y7f ff3 fs2 fc0 sc0 ls0 ws0">communiquée
+<span class="_ _7"></span><span class="ff4">par <span class="_ _7"></span>l’une <span class="_ _8"></span>des <span class="_ _7"></span>Parties <span class="_ _7">
+</span>à <span class="_ _8"></span>l&apos;autre<span class="_ _5"></span> <span class="_ _8"></span><span class="ff3">par <span class="_ _7"></span>voie 
+<span class="_ _8"></span>d&apos;huissier <span class="_ _7"></span>de <span class="_ _7"></span>justice <span class="_ _7"></span>
+<span
+    *ngIf="getHtmlInputElement('input_question_6_duree_non_renouvelable').value !== '' ">{{getHtmlInputElement('input_question_6_duree_non_renouvelable').value}}</span>
+<span class="_ _0"></span> <span class="_ _7"></span>à <span class="_ _8"></span>l&apos;ava<span class="_ _5"></span>nce, <span class="_ _7"></span>le<span class="_ _0"></span> </span></span></div>
+<div class="t m0 x1 h7 y80 ff3 fs2 fc0 sc0 ls0 ws0">Contrat <span class="_ _0"></span>est <span class="_ _7"></span>tacite<span class="_ _5"></span>ment <span class="_ _0"></span>pr<span class="_ _0"></span>olongé <span class="_ _0"></span>
+<span
+    *ngIf="getHtmlInputElement('input_question_6_duree_renouvelable').value !== '' ">{{getHtmlInputElement('input_question_6_duree_renouvelable').value}}</span>.
+<span class="_ _7"></span>Les <span class="_ _0"></span>charges <span class="_ _7"></span>et <span class="_ _0"></span>les <span class="_ _0"></span>conditions 
+<span class="_ _0"></span>de <span class="_ _7"></span>la <span class="_ _7"></span>Sous-Location <span class="_ _0"></span> <span class="_ _0"></span>sont </div>
+<div class="t m0 x1 h7 y81 ff3 fs2 fc0 sc0 ls0 ws0">les mêmes lors de la prolongation tacite. </div><div class="t m0 x1 h7 y82 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y83 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _0"></span>Contrat <span class="_ _0"></span>est <span class="_ _0"></span>con<span class="_ _0"></span>
+clu <span class="_ _0"></span>pour <span class="_ _0"></span>la <span class="_ _7"></span>Duré<span class="_ _5"></span>e <span class="_ _0"></span>de <span class="_ _0">
+</span>S<span class="_ _0"></span>ous-Location <span class="_ _7"></span>et <span class="_ _0"></span>ne <span class="_ _0"></span>sera <span class="_ _0"></span>renouvelé 
+<span class="_ _0"></span>que <span class="_ _0"></span>par <span class="_ _7"></span>la <span class="_ _0"></span>volonté </div><div class="t m0 x1 h7 y84 ff3 fs2 fc0 sc0 ls0 ws0">expresse des Parties. </div>
+<div class="t m0 x1 h7 y85 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y86 ff3 fs2 fc0 sc0 ls0 ws0">La Sous-<span class="ff4">Location <span class="_ _0"></span>
+prendra <span class="_ _0"></span>fin de <span class="_ _0"></span>plein droit <span class="_ _0"></span>à <span class="_ _0"></span>l’</span> échéance <span class="_ _0">
+</span>du <span class="_ _0"></span>B<span class="ff4">ail Principal. <span class="_ _0"></span>Le Preneur <span class="_ _0"></span>n’aura </span></div>
+<div class="t m0 x1 h7 y87 ff3 fs2 fc0 sc0 ls0 ws0">pas à donner congé au Sous-Locataire à ce moment. </div><div class="t m0 x1 h7 y88 ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y89 ff3 fs2 fc0 sc0 ls0 ws0">En <span class="_ _0"></span>cas <span class="_ _0"></span>de résiliation <span class="_ _0"></span>anticipée 
+<span class="_ _0"></span>du <span class="_ _0"></span>Bail <span class="_ _0"></span>Principal, <span class="_ _0"></span>la <span class="_ _0"></span>Sous<span class="_ _0">
+</span>-Location prendra <span class="_ _0"></span>fin <span class="_ _0"></span>à <span class="_ _0"></span>la <span class="_ _0"></span>même <span class="_ _0">
+</span>date. </div><div class="t m0 x1 h7 y8a ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7"></span>Sous-Locataire <span class="_ _7"></span>est <span class="_ _7">
+</span>averti <span class="_ _7"></span>par <span class="_ _7"></span>le <span class="_ _7"></span>Preneur <span class="_ _7"></span>par <span class="_ _7"></span>lettre
+<span class="_ _7"></span>recommandée <span class="_ _7"></span>avec <span class="_ _7"></span>accusé <span class="_ _7"></span>de <span class="_ _7"></span>réception </div>
+<div class="t m0 x1 h7 y8b ff3 fs2 fc0 sc0 ls0 ws0">respectant un délai de préavis de 
+<span
+    *ngIf="getHtmlInputElement('input_question_7').value !== '' ">{{getHtmlInputElement('input_question_7').value}}</span>. 
+</div><div class="t m0 x1 h7 y8c ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+ <div class="t m0 x1 h7 y8d ff3 fs2 fc0 sc0 ls0 ws0">Toutefois, <span class="_ _5"></span>en c<span class="_ _5"></span>as de <span class="_ _4"></span>prolongation du 
+<span class="_ _4"></span>Bail Principal, <span class="_ _5"></span>la Sous-location <span class="_ _5"></span>pourra <span class="_ _4"></span>être prolongée. 
+<span class="_ _5"></span>Les </div><div class="t m0 x1 h7 y8e ff3 fs2 fc0 sc0 ls0 ws0">conditions et les charges resteront les mêmes. </div><div class="t m0 x1 h6 y8f ff2 fs2 fc0 sc0 ls0 ws0"> 
+</div><div class="t m0 x1 h6 y90 ff2 fs2 fc0 sc0 ls0 ws0">4<span class="ff7"> <span class="_ _b"> </span></span>LOYER </div><div class="t m0 x1 h3 y91 ff1 fs0 fc0 sc0 ls0 ws0"> </div>
+<div class="t m0 x1 h7 y92 ff3 fs2 fc0 sc0 ls0 ws0">Le Sous-Locataire sera redevable au Preneur du Loyer
+<span
+    *ngIf="getHtmlInputElement('input_question_11_3').value !== '' ">{{getHtmlInputElement('input_question_11_3').value}}</span>. </div><div class="t m0 x1 h7 y93 ff3 fs2 fc0 sc0 ls0 ws0"> 
+</div><div class="t m0 x1 h7 y94 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _0"></span>paiement <span class="_ _0"></span>du <span class="_ _0"></span>Loyer 
+<span class="_ _0"></span>devra <span class="_ _0"></span>être <span class="_ _7"></span>effec<span class="_ _5"></span>tué <span class="_ _0"></span>par <span class="_ _0">
+</span>av<span class="_ _0"></span>ance <span class="_ _0"></span>et <span class="_ _0"></span>sera <span class="_ _0"></span>dû <span class="_ _0"></span>au 
+<span class="_ _0"></span>p<span class="_ _0"></span>remier jour <span class="_ _0"></span>ouvr<span class="_ _0"></span>é <span class="_ _0"></span>suivant </div>
+<div class="t m0 x1 h7 y95 ff3 fs2 fc0 sc0 ls0 ws0">son échéance.  </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'>
+</div></div>
+
+
+
+
+
+<div id="pf5" class="pf w0 h0" data-page-no="5"><div class="pc pc5 w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">5 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y2b ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y96 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7"></span>paiement <span class="_ _0"></span>du<span class="_ _0"></span> <span class="_ _7"></span>Loyer <span class="_ _7"></span>pourra <span class="_ _7"></span>être <span class="_ _7"></span>effec<span class="_ _5"></span>tué <span class="_ _7"></span>à <span class="_ _7"></span>la <span class="_ _7"></span>demande <span class="_ _7"></span>du <span class="_ _7"></span>Preneur <span class="_ _7"></span>par <span class="_ _7"></span>chèques, <span class="_ _7"></span>espèces <span class="_ _7"></span>ou </div><div class="t m0 x1 h7 y2d ff3 fs2 fc0 sc0 ls0 ws0">par virements bancaires sur le compte bancaire du Preneu<span class="ls1">r.</span> </div><div class="t m0 x1 h7 y97 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y98 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _8"></span>Sous<span class="_ _0"></span>-Locataire <span class="_ _8"></span>opére<span class="_ _0"></span>ra, <span class="_ _8"></span>le <span class="_ _6"></span>cas <span class="_ _8"></span>échéant, <span class="_ _6"></span>les <span class="_ _6"></span>retenue<span class="_ _5"></span>s <span class="_ _6"></span>à <span class="_ _8"></span>la <span class="_ _6"></span>source <span class="_ _8"></span>qui <span class="_ _6"></span>sont <span class="_ _8"></span>ou <span class="_ _6"></span>qui <span class="_ _6"></span>se<span class="_ _5"></span>raient </div><div class="t m0 x1 h7 y99 ff3 fs2 fc0 sc0 ls0 ws0">exigibles conformément à la législation en vig<span class="_ _5"></span>ueur. 
+ <span class="_ _0"></span> </div><div class="t m0 x1 h6 y9a ff2 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y9b ff2 fs2 fc0 sc0 ls0 ws0">5<span class="ff7"> <span class="_ _b"> </span></span>DEPOT DE GARANTIE </div><div class="t m0 x1 h3 y9c ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y9d ff3 fs2 fc0 sc0 ls0 ws0">En <span class="_ _5"></span>vue de <span class="_ _5"></span>garantir <span class="_ _5"></span>l&apos;ex<span class="_ _0"></span>écution <span class="_ _4"></span>par le Sous-Locataire <span class="_ _4"></span>de l&apos;ensemble de <span class="_ _4"></span>ses obligations <span class="_ _5"></span>au titre <span class="_ _4"></span>d<span class="_ _0"></span><span class="ls8">e </span></div><div class="t m0 x1 h7 y9e ff3 fs2 fc0 sc0 ls0 ws0">la <span class="_ _0"></span>présente <span class="_ _7"></span>Sous-Location <span class="_ _7"></span>et <span class="_ _0"></span>le <span class="_ _7"></span>paiement <span class="_ _0"></span>de <span class="_ _7"></span>toutes <span class="_ _0"></span>sommes <span class="_ _7"></span>quelles <span class="_ _0"></span>qu&apos;elles <span class="_ _0"></span>soient <span class="_ _7"></span>dues <span class="_ _0"></span>par <span class="_ _7"></span>le<span class="_ _5"></span> </div><div class="t m0 x1 h7 y9f ff3 fs2 fc0 sc0 ls0 ws0">Sous-Locataire <span class="_ _6"></span>en <span class="_ _9"> </span>application <span class="_ _6"></span>des <span class="_ _9"> </span>présentes, <span class="_ _6"></span>le <span class="_ _d"> </span>Sous-Locataire <span class="_ _6"></span>remet <span class="_ _9"> </span>au <span class="_ _9"> </span>Preneur <span class="_ _6"></span>à <span class="_ _9"> </span>la <span class="_ _9"></span>Date </div><div class="t m0 x1 h7 ya0 ff4 fs2 fc0 sc0 ls0 ws0">d’Entrée <span class="_ _0"></span>en <span class="_ _0"></span>Vi<span class="_ _0"></span>gueur <span class="_ _0"></span><span class="ff3">de <span class="_ _0"></span>l<span class="_ _0"></span>a <span class="_ _0"></span>Sous-Location, <span class="_ _0"></span>un <span class="_ _7"></span>dépôt <span class="_ _0"></span>de <span class="_ _0"></span>garantie <span class="_ _7"></span>représentant <span class="_ _0"></span>la <span class="_ _0"></span>somm<span class="_ _0"></span>e <span class="_ _0">
+ </span>de <span class="_ _0"></span>
+ <span
+    *ngIf="getHtmlInputElement('input_question_12').value !== '' ">{{getHtmlInputElement('input_question_12').value}}</span>
+ <span class="_ _0"></span> </span></div><div class="t m0 x1 h7 ya1 ff3 fs2 fc0 sc0 ls0 ws0">DT. </div><div class="t m0 x1 h7 ya2 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 ya3 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _5"></span>dépôt de <span class="_ _5"></span>garantie <span class="_ _5"></span>sera conservé <span class="_ _4"></span>par le Preneur <span class="_ _4"></span>p<span class="_ _0"></span>endant <span class="_ _4"></span>tout<span class="_ _0"></span>e <span class="_ _5"></span>la <span class="_ _5"></span>durée de Sous-Location <span class="_ _4"></span>sans<span class="_ _0"></span> </div><div class="t m0 x1 h7 ya4 ff3 fs2 fc0 sc0 ls0 ws0">intérêts. <span class="_ _7"></span>Il <span class="_ _7"></span>sera <span class="_ _7"></span>restitué <span class="_ _7"></span>au <span class="_ _8"></span>Sous-<span class="ls9">Lo<span class="_ _0"></span></span>cataire <span class="_ _7"></span>en <span class="_ _7"></span>fin <span class="_ _7"></span>de <span class="_ _8"></span>Sous-L<span class="_ _5"></span>ocation, <span class="_ _7"></span>après <span class="_ _8"></span>réduc<span class="_ _5"></span>tion <span class="_ _7"></span>de <span class="_ _7"></span>toutes<span class="_ _0"></span> </div><div class="t m0 x1 h7 ya5 ff3 fs2 fc0 sc0 ls0 ws0">sommes <span class="_ _4"></span>(y <span class="_ _4"></span>compris <span class="_ _4"></span>de <span class="_ _4"></span>tous <span class="_ _5"></span>Loyers) <span class="_ _4"></span>dont <span class="_ _4"></span>le <span class="_ _4"></span>Sous-Locataire <span class="_ _4"></span>resterait <span class="_ _4"></span>redevable <span class="_ _4"></span>envers <span class="_ _4"></span>le <span class="_ _4"></span>Preneur<span class="_ _0"></span> </div><div class="t m0 x1 h7 ya6 ff3 fs2 fc0 sc0 ls0 ws0">au titre <span class="_ _5"></span>des présentes, et contre re<span class="_ _5"></span>mise des clés <span class="ff4">et réalisation d’un é<span class="_ _5"></span>tat des lieux de sortie,<span class="ff3"> et c<span class="_ _5"></span>e, </span></span></div><div class="t m0 x1 h7 ya7 ff3 fs2 fc0 sc0 ls0 ws0">sans préjudice des droits du Preneur. </div><div class="t m0 x1 h7 ya8 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 ya9 ff2 fs2 fc0 sc0 ls0 ws0">6<span class="ff7"> <span class="_ _b"> </span></span>DESTINATION DU BIEN LOUÉ </div><div class="t m0 x1 h3 yaa ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yab ff3 fs2 fc0 sc0 ls0 ws0">
+Cette Sous -Location est destinée exclusivement à 
+<span
+    *ngIf="getHtmlInputElement('input_question_10').value !== '' ">{{getHtmlInputElement('input_question_10').value}}</span>.
+ </div><div class="t m0 x1 h7 yac ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yad ff3 fs2 fc0 sc0 ls0 ws0">Toute <span class="_ _4"></span>transformation <span class="_ _4"></span>ou <span class="_ _4"></span>modi<span class="_ _0"></span>fication <span class="_ _4"></span>de <span class="_ _4"></span>la <span class="_ _4"></span>Surface <span class="_ _4"></span>Sous-<span class="_ _0"></span>L<span class="_ _5"></span>ouée <span class="_ _4"></span>que <span class="_ _5"></span>le <span class="_ _4"></span>Sous-Locataire <span class="_ _4"></span>envisage </div><div class="t m0 x1 h7 yae ff4 fs2 fc0 sc0 ls0 ws0">d’effectuer est soumise à l’accord préalable <span class="ff3">du Preneur. </span></div><div class="t m0 x1 h7 yaf ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 yb0 ff2 fs2 fc0 sc0 ls0 ws0">7<span class="ff7"> <span class="_ _b"> </span></span>ENGAGEMENT DU SOUS-LOCATAIRE </div><div class="t m0 x1 h3 yb1 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yb2 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7"></span>Sous-<span class="_ _0"></span>Locataire <span class="_ _7"></span>devra <span class="_ _8"></span>jouir <span class="_ _8"></span>de <span class="_ _8"></span>la <span class="_ _7"></span>Surface <span class="_ _7"></span>S<span class="_ _0"></span>ous-Louée <span class="_ _7"></span>en <span class="_ _8"></span>bon <span class="_ _8"></span>père <span class="_ _7"></span>de <span class="_ _8"></span>famille, <span class="_ _8"></span>et <span class="_ _7"></span>s&apos;interdit </div><div class="t m0 x1 h7 yb3 ff3 fs2 fc0 sc0 ls0 ws0">d&apos;introduire <span class="_ _5"></span>toute matière dangere<span class="_ _5"></span>use pour la <span class="_ _5"></span>sécurité de la Surface <span class="_ _5"></span>Sous-Louée ou de<span class="_ _5"></span>s voisins, </div><div class="t m0 x1 h7 yb4 ff3 fs2 fc0 sc0 ls0 ws0">ou <span class="_ _0"></span>prohibée <span class="_ _0"></span>par <span class="_ _0"></span>les <span class="_ _0"></span>lois <span class="_ _7"></span>en vigueur. <span class="_ _7"></span>Il s<span class="_ _0"></span>&apos;interdit <span class="_ _0"></span>également <span class="_ _0"></span>de <span class="_ _0"></span>causer <span class="_ _0"></span>des <span class="_ _0"></span>nuisances <span class="_ _7"></span>sonores <span class="_ _0"></span>ou<span class="_ _0"></span> </div><div class="t m0 x1 h7 yb5 ff3 fs2 fc0 sc0 ls0 ws0">autres, pour les voisins.  </div><div class="t m0 x1 h7 yb6 ff3 fs2 fc2 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yb7 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _8"></span>Sous<span class="_ _0"></span>-Locataire <span class="_ _8"></span>se<span class="_ _0"></span>ra <span class="_ _6"></span>personne<span class="_ _5"></span>llement <span class="_ _6"></span>responsable <span class="_ _6"></span>de<span class="_ _5"></span> <span class="_ _6"></span>toute <span class="_ _6"></span>ré<span class="_ _5"></span>clamation <span class="_ _6"></span>ou <span class="_ _6"></span>injonction<span class="_ _5"></span> <span class="_ _6"></span>qui<span class="_ _5"></span> </div><div class="t m0 x1 h7 yb8 ff4 fs2 fc0 sc0 ls0 ws0">pourrait <span class="_ _0"></span>émaner des <span class="_ _0"></span>autorités <span class="_ _0"></span>compétentes <span class="_ _0"></span>concernant <span class="_ _0"></span>les <span class="_ _0"></span>modalités <span class="_ _0"></span>de <span class="_ _0"></span>l’occupation par <span class="_ _0"></span>lui <span class="_ _7"></span><span class="ff3">d<span class="ls2">e </span></span></div><div class="t m0 x1 h7 yb9 ff3 fs2 fc0 sc0 ls0 ws0">la Surface Sous-Louée au titre de la présente Sous-Location. </div><div class="t m0 x1 h7 yba ff3 fs2 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+
+
+<div id="pf6" class="pf w0 h0" data-page-no="6"><div class="pc pc6 w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">6 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y2b ff3 fs2 fc0 sc0 ls0 ws0">En <span class="_ _8"></span>cas <span class="_ _8"></span>d<span class="_ _0"></span>e <span class="_ _8"></span>défaillance <span class="_ _8"></span>du <span class="_ _6"></span>Sous-Loca<span class="ls4">ta<span class="_ _5"></span><span class="ls0">ire <span class="_ _6"></span>qua<span class="_ _5"></span>nt <span class="_ _8"></span>à<span class="_ _0"></span> <span class="_ _8"></span>la <span class="_ _6"></span>mise <span class="_ _8"></span>en <span class="_ _8"></span>conformité <span class="_ _8"></span>d<span class="_ _0"></span>e <span class="_ _8"></span>la <span class="_ _8"></span>S<span class="_ _0"></span>urface <span class="_ _8"></span>Sous-</span></span></div><div class="t m0 x1 h7 ybb ff3 fs2 fc0 sc0 ls0 ws0">Louée, <span class="_ _d"> </span>le <span class="_ _d"> </span>Preneur <span class="_ _d"> </span>pour<span class="_ _0"></span>ra <span class="_ _d"> </span>se <span class="_ _d"> </span>substituer <span class="_ _d"> </span>au <span class="_ _a"> </span>Sous-Locataire <span class="_ _d"> </span>défaillant <span class="_ _a"> </span>pour <span class="_ _d"> </span>faire <span class="_ _d"> </span>réaliser <span class="_ _d"> </span>les </div><div class="t m0 x1 h7 ybc ff3 fs2 fc0 sc0 ls0 ws0">travaux de mise en conformité aux frais exclusifs du Sous-Locataire. </div><div class="t m0 x1 h7 ybd ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 ybe ff3 fs2 fc0 sc0 ls0 ws0">Cette clause<span class="_ _5"></span> est une condition substantielle du <span class="_ _5"></span>présent Contrat sans <span class="_ _5"></span>laquelle le Preneur <span class="ff4">n’aurait </span></div><div class="t m0 x1 h7 ybf ff3 fs2 fc0 sc0 ls0 ws0">pas contracté. </div><div class="t m0 x1 h7 yc0 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 yc1 ff2 fs2 fc0 sc0 ls0 ws0">8<span class="ff7"> <span class="_ _b"> </span></span>CONDITIONS ET RESPONSABILITE </div><div class="t m0 x1 h3 yc2 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yc3 ff3 fs2 fc0 sc0 ls0 ws0">Le Sous-<span class="_ _0"></span>Locataire est <span class="_ _0"></span>te<span class="_ _0"></span>nu <span class="_ _0"></span>de <span class="_ _0"></span>respecter <span class="_ _0"></span>les <span class="_ _0"></span>conditions <span class="_ _7"></span>inscrites dans <span class="_ _0"></span>le <span class="_ _0"></span>Bail <span class="_ _0"></span>Principal<span class="_ _0"></span> <span class="_ _0"></span>qui <span class="_ _0"></span>sont </div><div class="t m0 x1 h7 yc4 ff3 fs2 fc0 sc0 ls0 ws0">applicables pour régir toutes les situations non prévues dans le présent Contrat. </div><div class="t m0 x1 h7 yc5 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 yc6 ff2 fs2 fc0 sc0 ls0 ws0">9<span class="ff7"> <span class="_ _b"> </span></span>CESSION ET SOUS-LOCATION </div><div class="t m0 x1 h3 yc7 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yc8 ff3 fs2 fc0 sc0 ls0 ws0">La sous-location et la cession ne sont pas permises au Sous-Locataire. </div><div class="t m0 x1 h3 yc9 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 yca ff2 fs2 fc0 sc0 ls0 ws0">10<span class="ff7"> <span class="_ _e"> </span><span class="ff5">ETAT DES LIEUX D’ENTRE</span></span>E, ENTRETIEN ET REPARATION DU BIEN </div><div class="t m0 x12 h6 ycb ff2 fs2 fc0 sc0 ls0 ws0">LOUÉ </div><div class="t m0 x1 h3 ycc ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 ycd ff3 fs2 fc0 sc0 ls0 ws0">
+Le Sous-locataire reconnaît avoir reçu les lieux
+<span
+*ngIf="getHtmlInputElement('input_question_13').value !== '' ">{{getHtmlInputElement('input_question_13').value}}</span>.
+</div><div class="t m0 x1 h7 yce ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 ycf ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _8"></span>Sous-Locataire <span class="_ _6"></span>jouira <span class="_ _6"></span>de<span class="_ _5"></span> <span class="_ _6"></span>la <span class="_ _8"></span>Surface <span class="_ _8"></span>S<span class="_ _0"></span>ous-Louée <span class="_ _6"></span><span class="ff4">e<span class="_ _5"></span>n <span class="_ _6"> </span>bon <span class="_ _8"></span>père <span class="_ _6"> </span>de <span class="_ _8"></span>famille <span class="_ _6"> </span>e<span class="_ _5"></span>t <span class="_ _6"> </span>s’engage <span class="_ _8"></span>à <span class="_ _6"> </span><span class="ff3">la </span></span></div><div class="t m0 x1 h9 yd0 ff4 fs2 fc0 sc0 ls0 ws0">maintenir <span class="_ _4"></span>en bon <span class="_ _4"></span>état <span class="_ _4"></span>d’e<span class="_ _0"></span>ntretien, <span class="_ _4"></span>de <span class="_ _5"></span>fonctionnement, de<span class="_ _5"></span> <span class="_ _5"></span>sécurité <span class="_ _4"></span>et de <span class="_ _4"></span>propreté, <span class="_ _5"></span>les <span class="_ _5"></span>installations </div><div class="t m0 x1 h7 yd1 ff3 fs2 fc0 sc0 ls0 ws0">techniques <span class="_ _a"> </span>ainsi <span class="_ _d"> </span>que <span class="_ _a"> </span>les <span class="_ _d"> </span>vit<span class="_ _0"></span>res, <span class="_ _d"> </span>les <span class="_ _a"> </span>sols, <span class="_ _a"> </span>les <span class="_ _d"> </span>acc<span class="_ _0"></span>essoires, <span class="_ _a"> </span><span class="ff4">l’équipement, <span class="_ _d"> </span>l<span class="_ _0"></span>a <span class="_ _d"> </span>devanture<span class="_ _0"></span></span> <span class="_ _d"> </span><span class="ls2">et<span class="_ _0"></span></span> <span class="_ _d"> </span>d<span class="_ _0"></span>e </div><div class="t m0 x1 h7 yd2 ff3 fs2 fc0 sc0 ls0 ws0">procéder <span class="_ _7"></span>à <span class="_ _7"></span>la <span class="_ _7"></span>peinture <span class="_ _8"></span>de <span class="_ _7"></span>ceux-<span class="ff4">ci <span class="_ _7"></span>aussi <span class="_ _7"></span>souv<span class="_ _0"></span>ent <span class="_ _7"></span>qu’il <span class="_ _7"></span>sera <span class="_ _8"></span>nécessaire <span class="_ _7"></span>et <span class="_ _7"></span>de <span class="_ _7"></span>remplacer, <span class="_ _7"></span>s’il <span class="_ _8"></span>y <span class="_ _7"></span>a </span></div><div class="t m0 x1 h7 yd3 ff3 fs2 fc0 sc0 ls0 ws0">lieu, ce qui ne pourra être réparé. </div><div class="t m0 x1 h7 yd4 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yd5 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _4"></span>Sous-<span class="_ _0"></span>Locataire <span class="_ _5"></span><span class="ff4">sera tenu <span class="_ _4"></span>d’effectuer à <span class="_ _4"></span>ses frais <span class="_ _5"></span>toutes les <span class="_ _4"></span>réparations locatives <span class="_ _4"></span>et le<span class="ff3">s trava<span class="_ _5"></span>ux </span></span></div><div class="t m0 x1 h7 yd6 ff3 fs2 fc0 sc0 ls0 ws0">nécessaires en cours de Sous-Location pour le maintien de la surface Sous-Louée en bon état.  </div><div class="t m0 x1 h7 yd7 ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _0"></span>sous-<span class="_ _0"></span>Locataire <span class="_ _0"></span>devra <span class="_ _7"></span>informer <span class="_ _0"></span>sans <span class="_ _7"></span>délai <span class="_ _0"></span>le <span class="_ _7"></span>Preneur <span class="_ _7"></span>de <span class="_ _0"></span>toute <span class="_ _7"></span>réparation <span class="_ _7"></span>néce<span class="_ _5"></span>ssaire <span class="_ _7"></span>comme </div><div class="t m0 x1 h7 yd8 ff3 fs2 fc0 sc0 ls0 ws0">de toute dégradation ou <span class="_ _0"></span>sinistre se produisant <span class="_ _0"></span>dans <span class="_ _0"></span>la Surface Sous-<span class="_ _0"></span>Louée<span class="_ _5"></span> q<span class="_ _0"></span>uand bien même il<span class="_ _0"></span> </div><div class="t m0 x1 h7 yd9 ff3 fs2 fc0 sc0 ls0 ws0">n&apos;en résulterait aucun dégât apparent sous peine d&apos;<span class="_ _5"></span>en être tenu pour responsable.<span class="_ _0"></span> </div><div class="t m0 x1 h7 yda ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 ydb ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _7"></span>Preneur <span class="_ _8"></span><span class="ff4">se <span class="_ _7"></span>réserve <span class="_ _8"></span>le <span class="_ _7"></span>droit <span class="_ _8"></span>de <span class="_ _7"></span>vérifier <span class="_ _8"></span>à <span class="_ _7"></span>tout <span class="_ _8"></span>moment <span class="_ _7"></span>le <span class="_ _8"></span>bon <span class="_ _7"></span>état <span class="_ _7"></span>d<span class="_ _0"></span>’entretien <span class="_ _7"></span>des <span class="_ _8"></span>éléments </span></div><div class="t m0 x1 h7 ydc ff3 fs2 fc0 sc0 ls0 ws0">visés ci-dessus et de faire réaliser le<span class="_ _5"></span>s réparations nécessaires <span class="_ _0"></span>et dont il prend la charge. </div><div class="t m0 x1 h7 ydd ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yde ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _5"></span>Sous-Locataire devra<span class="_ _5"></span> faire <span class="_ _4"></span>pla<span class="_ _0"></span>ce <span class="_ _4"></span>n<span class="_ _0"></span>ette, <span class="_ _5"></span>à ses <span class="_ _4"></span>fr<span class="_ _0"></span>ais, à<span class="_ _5"></span> l&apos;<span class="_ _5"></span>occasion de <span class="_ _5"></span>tous travaux, <span class="_ _5"></span>des meuble<span class="_ _5"></span>s, </div><div class="t m0 x1 h7 ydf ff3 fs2 fc0 sc0 ls4 ws0">te<span class="ls0">intures, agencements divers, canalisations et appareils dont la dépose<span class="_ _5"></span> serait<span class="_ _0"></span> nécessaire. </span></div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+
+
+<div id="pf7" class="pf w0 h0" data-page-no="7"><div class="pc pc7 w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">7 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y2b ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y2c ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _f"></span>Sous-Locataire <span class="_ _f"></span>dev<span class="_ _0"></span>ra <span class="_ _f"></span>supporter, <span class="_ _4"></span>à <span class="_ _f"></span>ses <span class="_ _4"></span>frais, <span class="_ _f"></span>tout<span class="_ _0"></span>e <span class="_ _f"></span>modification <span class="_ _4"></span>d&apos;arrivée <span class="_ _f"></span>de <span class="_ _4"></span>ses <span class="_ _f"></span>branchements, </div><div class="t m0 x1 h7 y2d ff3 fs2 fc0 sc0 ls0 ws0">de  remplacement <span class="_ _10"> </span>de <span class="_ _10"> </span>compteurs  ou <span class="_ _10"> </span>d&apos;installations <span class="_ _10"> </span>intérieures  pouvant <span class="_ _10"> </span>être <span class="_ _10"> </span>exigés <span class="_ _10"> </span>par  les<span class="_ _0"></span> </div><div class="t m0 x1 h7 ye0 ff3 fs2 fc0 sc0 ls0 ws0">compagnies ou sociétés distributrices des eaux, du ga<span class="_ _5"></span>z et de l<span class="_ _0"></span>&apos;électricité, ou du téléphone. </div><div class="t m0 x1 h7 ybe ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h9 y99 ff4 fs2 fc0 sc0 ls0 ws0">Lors <span class="_ _0"></span>d<span class="_ _0"></span>e <span class="_ _7"></span>l’expiration <span class="_ _7"></span>du <span class="_ _7"></span>Contrat, <span class="_ _7"></span>tous <span class="_ _7"></span>les <span class="_ _0"></span>aménagements <span class="_ _7"></span>immobiliers, <span class="_ _7"></span>agencements <span class="_ _7"></span>et <span class="_ _7"></span>travaux </div><div class="t m0 x1 h7 yc0 ff4 fs2 fc0 sc0 ls0 ws0">d’amélioration <span class="_ _9"> </span>effectués<span class="_ _0"></span> <span class="_ _9"> </span>par <span class="_ _d"> </span>le <span class="_ _a"> </span><span class="ff3">Sous-Locataire <span class="_ _9"> </span>s<span class="_ _0"></span>eront <span class="_ _9"> </span>acquis <span class="_ _d"> </span>au <span class="_ _a"> </span>Bailleur <span class="_ _9"> </span></span>à <span class="_ _d"> </span>l’exclusion <span class="_ _d"> </span>des </div><div class="t m0 x1 h7 ye1 ff3 fs2 fc0 sc0 ls0 ws0">installations <span class="_ _8"></span>techniques <span class="_ _8"></span>mobiles <span class="_ _8"></span>lequel <span class="_ _8"></span>pourra <span class="_ _8"></span>les <span class="_ _8"></span>récupérer <span class="_ _8"></span>à <span class="_ _8"></span>charge <span class="_ _8"></span>pou<span class="_ _0"></span>r <span class="_ _8"></span>lui <span class="_ _8"></span>de <span class="_ _8"></span>remettre <span class="_ _6"></span>l<span class="ls2">a </span></div><div class="t m0 x1 h7 ye2 ff3 fs2 fc0 sc0 ls0 ws0">Surface Sous-louée en état si ladite récupération altère la Surface Sous-Louée. </div><div class="t m0 x1 h7 ye3 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 ye4 ff3 fs2 fc0 sc0 ls0 ws0">A l&apos;expiration du Contrat, le Sous-<span class="_ _0"></span>Locataire sera responsable de toutes les dégradations (mises </div><div class="t m0 x1 h9 ye5 ff4 fs2 fc0 sc0 ls0 ws0">à <span class="_ _8"></span>part <span class="_ _8"></span>celles <span class="_ _6"> </span>due<span class="_ _5"></span>s <span class="_ _8"></span>à <span class="_ _6"> </span>l’usure <span class="_ _8"></span>normale) <span class="_ _8"></span>qui <span class="_ _8"></span>se <span class="_ _6"> </span>produiraient <span class="_ _8"></span>par <span class="_ _8"></span>sa <span class="_ _8"></span>faute <span class="_ _8"></span>ou<span class="_ _0"></span> <span class="_ _8"></span>sa <span class="_ _8"></span>négligence <span class="_ _8"></span>d<span class="_ _0"></span>ans </div><div class="t m0 x1 h7 ye6 ff3 fs2 fc0 sc0 ls0 ws0">l&apos;entretien des lieux et des équipements. </div><div class="t m0 x1 h7 ye7 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 ye8 ff2 fs2 fc0 sc0 ls0 ws0">11<span class="ff7"> <span class="_ _e"> </span></span>IMPOTS ET TAXES </div><div class="t m0 x1 h3 ye9 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yea ff3 fs2 fc0 sc0 ls0 ws0">Le <span class="_ _d"> </span>Preneur <span class="_ _d"> </span>reste <span class="_ _d"> </span>le<span class="_ _0"></span> <span class="_ _d"> </span>seul <span class="_ _a"> </span>responsable <span class="_ _9"> </span>du <span class="_ _a"> </span>paiement <span class="_ _d"> </span>des <span class="_ _a"> </span>charges, <span class="_ _9"> </span>im<span class="_ _0"></span>pôts  e<span class="_ _5"></span>t <span class="_ _d"> </span>tax<span class="_ _0"></span>es <span class="_ _d"> </span>afférant <span class="_ _d"> </span>à </div><div class="t m0 x1 h7 yeb ff4 fs2 fc0 sc0 ls0 ws0">l’Ensemble de l’Immeuble initialement loué envers le B<span class="_ _5"></span>ailleur<span class="ff3">.<span class="_ _0"></span> </span></div><div class="t m0 x1 h7 yec ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yed ff3 fs2 fc0 sc0 ls0 ws0">Le Sous-<span class="ff4">Locataire <span class="_ _4"></span>s<span class="_ _0"></span>’engage à <span class="_ _4"></span>p<span class="_ _0"></span>ayer au <span class="ff3">Preneur, sur justifica<span class="_ _5"></span>tifs, les charges, impôts et taxes a<span class="_ _5"></span>u </span></span></div><div class="t m0 x1 h7 yee ff3 fs2 fc0 sc0 ls0 ws0">prorata de la Surface Sous-<span class="ff4">Louée à partir de la Date d’Entrée en Vigueur</span>. </div><div class="t m0 x1 h7 yef ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 yf0 ff2 fs2 fc0 sc0 ls0 ws0">12<span class="ff7"> <span class="_ _e"> </span></span>
+RESILIATION DE LA SOUS-LOCATION SANCTIONS- PENALITES </div><div class="t m0 x1 h3 yf1 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yf2 ff4 fs2 fc0 sc0 ls0 ws0">A <span class="_ _4"></span>défaut <span class="_ _f"></span>de <span class="_ _4"></span>paiement <span class="_ _4"></span>d’un <span class="_ _4"></span>seul <span class="_ _4"></span>terme <span class="_ _4"></span>du <span class="_ _5"></span>Loyer <span class="_ _f"></span>et <span class="_ _4"></span><span class="ff3">t<span class="_ _0"></span>oute <span class="_ _4"></span>charge <span class="_ _4"></span>à <span class="_ _f"></span>son <span class="_ _4"></span>é<span class="_ _0"></span>chéance, <span class="_ _f"></span>le <span class="_ _5"></span>Contrat <span class="_ _4"></span>pourra </span></div><div class="t m0 x1 h7 yf3 ff3 fs2 fc0 sc0 ls0 ws0">être <span class="_ _6"></span>résilié <span class="_ _6"></span>par <span class="_ _6"></span>le <span class="_ _6"></span>Preneur, <span class="_ _6"></span>
+<span
+    *ngIf="getHtmlInputElement('input_question_15').value !== '' ">{{getHtmlInputElement('input_question_15').value}}</span> 
+<span class="_ _6"></span><span class="ff4">après <span class="_ _6"> </span>simple <span class="_ _6"> </span>mise <span class="_ _6"> </span>en <span class="_ _6"> </span>demeure <span class="_ _6"> </span>adressée <span class="_ _6"> </span>par <span class="_ _6"> </span>voie <span class="_ _8"> </span>d’ex<span class="_ _0"></span>ploit </span></div><div class="t m0 x1 h7 yf4 ff4 fs2 fc0 sc0 ls0 ws0">d’huissier <span class="ff3">de justice restée infructueuse en application des clauses de ce Contrat. </span></div><div class="t m0 x1 h7 yf5 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yf6 ff3 fs2 fc0 sc0 ls0 ws0">La résiliation interviendra selon les mêmes for<span class="_ _5"></span>me<span class="_ _0"></span>s : </div><div class="t m0 x1 h7 yf7 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 yf8 ff3 fs2 fc0 sc0 ls0 ws0">(i)<span class="ff8"> <span class="_ _11"> </span></span>En <span class="_ _12"> </span>cas <span class="_ _12"> </span>de <span class="_ _12"> </span>manquement <span class="_ _12"> </span>du <span class="_ _12"> </span>Sous-L<span class="_ _5"></span>ocataire <span class="_ _12"> </span>à <span class="_ _12"> </span>une <span class="_ _12"> </span>des <span class="_ _12"> </span>dispositions <span class="_ _12"> </span>légales <span class="_ _12"> </span>ou </div><div class="t m0 xd h7 yf9 ff3 fs2 fc0 sc0 ls0 ws0">réglementaires régissant les sous-locations, </div><div class="t m0 x1 h7 yfa ff3 fs2 fc0 sc0 ls0 ws0">(ii)<span class="ff8"> <span class="_ _13"> </span></span>En <span class="_ _0"></span>cas <span class="_ _0"></span>de <span class="_ _7"></span>non-re<span class="_ _5"></span>spect <span class="_ _0"></span>pa<span class="_ _0"></span>r <span class="_ _0"></span>le <span class="_ _0"></span>Sous<span class="_ _0"></span>-L<span class="_ _4"></span>o<span class="_ _0"></span>cataire <span class="_ _0"></span>de <span class="_ _0"></span>se<span class="_ _0"></span>s <span class="_ _0"></span>obligations <span class="_ _0"></span>essentielles <span class="_ _7"></span>en <span class="_ _0"></span>vertu <span class="_ _0"></span>d<span class="lsa">e </span></div><div class="t m0 xd h7 yfb ff3 fs2 fc0 sc0 ls0 ws0">la Sous-Location ; </div><div class="t m0 x1 h7 yfc ff3 fs2 fc0 sc0 ls0 ws0">(iii)<span class="ff8"> <span class="_ _14"> </span></span>Plus généralement, en <span class="_ _0"></span>cas de non-respect <span class="_ _0"></span>par le S<span class="_ _0"></span>ous-Locataire à toute <span class="_ _0"></span>autre obligation </div><div class="t m0 xd h7 yfd ff3 fs2 fc0 sc0 ls0 ws0">au titre de la Sous-Location. </div><div class="t m0 x1 h7 yfe ff3 fs2 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="pf8" class="pf w0 h0" data-page-no="8"><div class="pc pc8 w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">8 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y50 ff2 fs2 fc0 sc0 ls0 ws0">13<span class="ff7"> <span class="_ _e"> </span></span>OBLIGATIONS DU SOUS-LOCATAIRE A LA FIN D<span class="ls7">U </span>CONTRAT </div><div class="t m0 x1 h7 y2c ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y51 ff2 fs2 fc0 sc0 ls0 ws0">13.1<span class="ff7"> <span class="_ _15"> </span></span>Restitution de la Surface Sous-Louée </div><div class="t m0 x1 h7 y52 ff3 fs2 fc0 sc0 ls0 ws0">Les <span class="_ _6"></span>Parties <span class="_ _8"></span>conviennent <span class="_ _6"></span>d&apos;un <span class="_ _6"></span>commun <span class="_ _6"></span>accord <span class="_ _8"></span>qu<span class="_ _0"></span>e <span class="_ _8"></span>le <span class="_ _9"></span>Sous-Locataire <span class="_ _6"></span>devra <span class="_ _6"></span>re<span class="_ _5"></span>ndre <span class="_ _6"></span>en <span class="_ _6"></span>fin <span class="_ _8"></span>d<span class="_ _0"></span>e </div><div class="t m0 x1 h7 y98 ff3 fs2 fc0 sc0 ls0 ws0">Contrat, <span class="_ _0"></span>la <span class="_ _0"></span>Surface Sous<span class="_ _0"></span>-Louée <span class="_ _0"></span>en <span class="_ _0"></span>bon <span class="_ _0"></span>état <span class="_ _0"></span>de <span class="_ _0"></span>réparation <span class="_ _0"></span>de <span class="_ _0"></span>toutes <span class="_ _0"></span>sortes <span class="_ _0"></span><span class="ff4">sauf <span class="_ _0"></span>l’usure <span class="_ _0"></span>locative </span></div><div class="t m0 x1 h7 y99 ff3 fs2 fc0 sc0 ls0 ws0">normale. </div><div class="t m0 x1 h7 yff ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y9b ff2 fs2 fc0 sc0 ls0 ws0">13.2<span class="ff7"> <span class="_ _15"> </span></span>Etat des lieux de sortie </div><div class="t m0 x1 h7 y33 ff3 fs2 fc0 sc0 ls0 ws0">A la demande du Prene<span class="_ _5"></span>ur, <span class="ls4">il</span> <span class="ff4">sera établi un constat d’état des lieux de sortie <span class="_ _5"></span>contradictoire deux </span></div><div class="t m0 x1 h7 y100 ff3 fs2 fc0 sc0 ls0 ws0">(0<span class="ff4">2) mois avant l’expiration </span>de la<span class="_ _0"></span> Sous-Location ou dans les deux (<span class="_ _0"></span>02) semaines qui suivent la </div><div class="t m0 x1 h7 y101 ff3 fs2 fc0 sc0 ls0 ws0">résiliation de la Sous-Location (un état des lieux est annexé à c<span class="_ _5"></span>e Contrat).<span class="_ _0"></span> </div><div class="t m0 x1 h7 y102 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y103 ff3 fs2 fc0 sc0 ls0 ws0">Cet é<span class="_ _5"></span>tat des <span class="_ _4"></span>lieux comportera <span class="_ _5"></span>le relevé <span class="_ _4"></span>des réparations incombant <span class="_ _4"></span>au Sous-Locataire, que <span class="_ _5"></span>celui-</div><div class="t m0 x1 h7 y104 ff3 fs2 fc0 sc0 ls0 ws0">ci devra avoir exécutées avant son départ. </div><div class="t m0 x1 h7 y105 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y3a ff3 fs2 fc0 sc0 ls0 ws0">La restitution des clefs par le Sous-Locataire aura lieu le jour de son déménagement. </div><div class="t m0 x1 h7 y3b ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h6 y106 ff2 fs2 fc0 sc0 ls0 ws0">14<span class="ff7"> <span class="_ _e"> </span></span>STIPU<span class="ls3">LA</span>TIONS DIVERSES </div><div class="t m0 x1 h3 y107 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y108 ff2 fs2 fc0 sc0 ls0 ws0">14.1<span class="ff7"> <span class="_ _15"> </span></span>Divisibilité </div><div class="t m0 x1 h7 y109 ff3 fs2 fc0 sc0 ls0 ws0">Si <span class="_ _6"></span>une <span class="_ _8"></span>ou <span class="_ _8"></span>plusieurs <span class="_ _6"></span>dispositions <span class="_ _8"></span>du <span class="_ _8"></span>Contrat <span class="_ _6"></span>sont <span class="_ _8"></span>ou <span class="_ _6"></span>devienne<span class="_ _5"></span>nt <span class="_ _6"></span>nulles, <span class="_ _8"></span>les <span class="_ _8"></span>autre<span class="_ _0"></span>s <span class="_ _6"></span>clause<span class="_ _5"></span>s <span class="_ _6"></span>du<span class="_ _5"></span> </div><div class="t m0 x1 h7 y10a ff3 fs2 fc0 sc0 ls0 ws0">Contrat <span class="_ _6"></span>demeurent <span class="_ _6"></span>valables <span class="_ _6"></span>et <span class="_ _6"></span>les <span class="_ _6"></span>Parties <span class="_ _6"></span>devront <span class="_ _6"></span>remplacer <span class="_ _6"></span>lesdites <span class="_ _6"></span>disposit<span class="_ _0"></span>ions <span class="_ _6"></span>nulles <span class="_ _6"></span>par </div><div class="t m0 x1 h7 y10b ff4 fs2 fc0 sc0 ls0 ws0">d’autres valables.<span class="ff3"> </span></div><div class="t m0 x1 h7 yd1 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 yf4 ff2 fs2 fc0 sc0 ls0 ws0">14.2<span class="ff7"> <span class="_ _15"> </span></span>Survivance des droits, devoirs et obligations </div><div class="t m0 x1 h7 y10c ff4 fs2 fc0 sc0 ls0 ws0">L’expiration <span class="_ _16"> </span>du <span class="_ _16"> </span><span class="ff3">C</span>ontrat, <span class="_ _16"> </span>pour <span class="_ _16"> </span>une <span class="_ _16"> </span>quelconque<span class="_ _0"></span> <span class="_ _16"> </span>cause, <span class="_ _16"> </span>ne <span class="_ _16"> </span>libérera <span class="_ _16"> </span>pas <span class="_ _16"> </span>une <span class="_ _16"> </span>Partie <span class="_ _16"> </span>d’une </div><div class="t m0 x1 h9 y10d ff4 fs2 fc0 sc0 ls0 ws0">quelconque <span class="_ _d"> </span>obli<span class="_ _0"></span>gation <span class="_ _d"> </span>o<span class="_ _0"></span>u <span class="_ _a"> </span>responsabilité, <span class="_ _a"> </span>si <span class="_ _a"> </span>cette <span class="_ _d"> </span>obli<span class="_ _0"></span>gation <span class="_ _a"> </span>ou <span class="_ _d"> </span>r<span class="_ _0"></span>esponsabilité <span class="_ _a"> </span>résulte <span class="_ _d"> </span>d’un<span class="_ _0"></span> </div><div class="t m0 x1 h7 y10e ff3 fs2 fc0 sc0 ls0 ws0">quelconque agissement ou omission réalisé antérieurement à l<span class="ff4">a date d’expiration du </span>Contrat. </div><div class="t m0 x1 h7 y10f ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y110 ff2 fs2 fc0 sc0 ls0 ws0">14.3<span class="ff7"> <span class="_ _15"> </span></span>Exercice des droits </div><div class="t m0 x1 h9 y111 ff4 fs2 fc0 sc0 ls0 ws0">Tout re<span class="_ _5"></span>tard <span class="_ _5"></span>par l’une <span class="_ _4"></span>des Parties <span class="_ _5"></span>à se <span class="_ _4"></span>prévaloir du <span class="_ _4"></span>bénéfice de <span class="_ _4"></span>l’une quelconque de<span class="_ _5"></span>s stipulations </div><div class="t m0 x1 h7 y112 ff3 fs2 fc0 sc0 ls0 ws0">du C<span class="ff4">ontra<span class="_ _5"></span>t ou <span class="_ _4"></span>d’un droit ou <span class="_ _4"></span>d’une prérogative <span class="_ _4"></span>qui en dé<span class="_ _5"></span>coule, ne <span class="_ _4"></span>pour<span class="_ _0"></span>ra <span class="_ _4"></span>être interprétée <span class="_ _4"></span>comme<span class="_ _0"></span> </span></div><div class="t m0 x1 h7 y113 ff3 fs2 fc0 sc0 ls0 ws0">une <span class="_ _5"></span>renonciation généra<span class="_ _5"></span>le et <span class="_ _5"></span>définitive à <span class="_ _4"></span>s<span class="_ _0"></span>e <span class="_ _5"></span>prévaloir du <span class="_ _4"></span>bénéfice de ce<span class="_ _5"></span>tte stipulation ni <span class="_ _4"></span>de celui </div><div class="t m0 x1 h7 y114 ff4 fs2 fc0 sc0 ls0 ws0">d’aucune autre stipulation du <span class="ff3">Contrat. </span></div><div class="t m0 x1 h7 y115 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y116 ff3 fs2 fc0 sc0 ls0 ws0">Toute <span class="_ _4"></span>renonciation <span class="_ _4"></span>a<span class="_ _0"></span>yant <span class="_ _4"></span>pour <span class="_ _4"></span>conséquence <span class="_ _4"></span>un<span class="_ _0"></span>e <span class="_ _4"></span>modification <span class="_ _4"></span>du Contrat <span class="_ _f"></span>doit<span class="_ _0"></span> <span class="_ _4"></span>être <span class="_ _4"></span>faite <span class="_ _4"></span>par <span class="_ _4"></span>é<span class="_ _0"></span>crit. </div><div class="t m0 x1 h7 y117 ff3 fs2 fc0 sc0 ls0 ws0">Les <span class="_ _7"></span>droits <span class="_ _8"></span>et <span class="_ _7"></span>recours <span class="_ _8"></span>reconnus <span class="_ _7"></span>aux <span class="_ _8"></span>Parties <span class="_ _7"></span>par <span class="_ _7"></span>le<span class="_ _0"></span>s <span class="_ _7"></span>présentes <span class="_ _8"></span>ne <span class="_ _7"></span>limitent <span class="_ _8"></span>en <span class="_ _7"></span>aucune <span class="_ _8"></span>façon <span class="_ _7"></span>leur </div><div class="t m0 x1 h7 y118 ff3 fs2 fc0 sc0 ls0 ws0">droit de se prévaloir également de tout autre moyen et ac<span class="_ _5"></span>tions prévus par la loi. <span class="_ _0"></span> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf9" class="pf w0 h0" data-page-no="9"><div class="pc pc9 w0 h0"><img class="bi x1 y119 w5 ha" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXMAAAD8CAIAAAAKSdN8AAAACXBIWXMAABYlAAAWJQFJUiTwAAACbUlEQVR42u3UwQ0AMAwCsab770zGQIrsDeBx84CqJPdGzclVQNd3AaAsgLIAygKgLICyAMoCoCyAsgDKAqAsgLIAygKgLICyAMoCoCyAsgDKAqAsgLIAygIoC4CyAMoCKAuAsgDKAigLgLIAygIoC4CyAMoCKAuAsgDKAigLgLIAygIoC4CyAMoCKAugLADKAigLoCwAygIoC6AsAMoCKAugLADKAigLoCwAygIoC6AsAMoCKAugLADKAigLoCyAsgAoC6AsgLIAKAugLICyACgLoCyAsgAoC6AsgLIAKAugLICyACgLoCyAsgAoC6AsgLIAygKgLICyAMoCoCyAsgDKAqAsgLIAygKgLICyAMoCoCyAsgDKAqAsgLIAygKgLICyAMoCKAuAsgDKAigLgLIAygIoC4CyAMoCKAuAsgDKAigLgLIAygIoC4CyAMoCKAugLC4AlAVQFkBZAJQFUBZAWQCUBVAWQFkAlAVQFkBZAJQFUBZAWQCUBVAWQFkAlAVQFkBZAGUBUBZAWQBlAVAWQFkAZQFQFkBZAGUBUBZAWQBlAVAWQFkAZQFQFkBZAGUBUBZAWQBlAZQFQFkAZQGUBUBZAGUBlAVAWQBlAZQFQFkAZQGUBUBZAGUBlAVAWQBlAZQFQFkAZQGUBVAWAGUBlAVQFgBlAZQFUBYAZQGUBVAWAGUBlAVQFgBlAZQFUBYAZQGUBVAWAGUBlAVQFkBZAJQFUBZAWQCUBVAWQFkAlAVQFkBZAJQFUBZAWQCUBVAWQFkAlAVQFkBZAJQFUBZAWQBlAVAWQFkAZQFQFkBZAGUBUBZAWQBlAQCoWH1RB+/FA/4jAAAAAElFTkSuQmCC"/><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x7 h3 y5 ff1 fs0 fc1 sc0 ls0 ws0">9 </div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y2b ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y11a ff2 fs2 fc0 sc0 ls0 ws0">14.4<span class="ff7"> <span class="_ _15"> </span></span>
+Frais et charges </div><div class="t m0 x1 h7 y11b ff3 fs2 fc0 sc0 ls0 ws0">
+<span
+    *ngIf="getHtmlInputElement('input_question_16').value !== '' ">{{getHtmlInputElement('input_question_16').value}}</span>
+<span class="ff4">supportera les frais de timbre et d’enregistrement.</span> </div><div class="t m0 x1 h7 y52 ff3 fs2 fc0 sc0 ls0 ws0">
+
+
+    
+La Preneur <span class="_ _0"></span><span class="ff4">prend en <span class="_ _0"></span>charge les <span class="_ _0"></span>frais de <span class="_ _0"></span>
+consommation <span class="_ _0"></span>d’eau, d’électricité et <span class="_ _0"></span>de <span class="_ _0"></span>gaz à partir <span class="_ _0"></span>de </span>
+</div><div class="t m0 x1 h7 y98 ff3 fs2 fc0 sc0 ls0 ws0">la Date <span class="ff4">d’Entrée en Vigueur</span> </div><div class="t m0 x1 h7 y30 ff3 fs2 fc0 sc0 ls0 ws0">
+ Le <span class="_ _9"> </span>Sous-<span class="ff4">Locataire <span class="_ _d"> </span>s’engage <span class="_ _d"> </span>à <span class="_ _d"> </span>assumer 
+<span class="_ _9"> </span>toutes <span class="_ _d"> </span>les <span class="_ _d"> </span>dépenses <span class="_ _a"> </span></span>personnelles <span class="_ _9"> 
+</span>qui <span class="_ _d"> </span>lui <span class="_ _d"> </span>incombent </div><div class="t m0 x1 h7 yff ff3 fs2 fc0 sc0 ls0 ws0">(électricité, eau, gaz,
+<span class="ff4">…).</span> </div><div class="t m0 x1 h7 y32 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x12 h6 y11c ff2 fs2 fc0 sc0 ls0 ws0">14.5<span class="ff7"> 
+<span class="_ _15"> </span>
+
+    
+</span>Notifications et élection de domicile </div><div class="t m0 x1 h7 y34 ff3 fs2 fc0 sc0 ls0 ws0">Toute notification <span class="_ _0"></span>entre <span class="_ _0"></span>les <span class="_ _0"></span>Parties au <span class="_ _0"></span>titre <span class="_ _0"></span>des <span class="_ _0"></span>présentes sera <span class="_ _0"></span>adressée <span class="_ _0"></span>par l<span class="_ _0"></span>ettre recommandée </div><div class="t m0 x1 h7 y35 ff3 fs2 fc0 sc0 ls0 ws0">avec <span class="_ _5"></span>accusé de réception ou <span class="_ _5"></span>remise de <span class="_ _5"></span>document papier <span class="_ _5"></span>contre décharge ou email <span class="_ _5"></span>avec réponse </div><div class="t m0 x1 h7 y102 ff4 fs2 fc0 sc0 ls0 ws0">écrite de l’autre Partie à laquelle elle e<span class="_ _5"></span>st destinée.
+<span class="_ _0"></span><span class="ff3"> </span></div><div class="t m0 x1 h7 y103 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y11d ff3 fs2 fc0 sc0 ls0 ws0">
+
+
+
+    <div *ngIf="getHtmlInputElement('input_question_oui_18').checked">
+L<span class="ff4">es <span class="_ _6"> </span>Pa<span class="_ _0"></span>rties <span class="_ _9"> </span>déclarent <span class="_ _6"> </span>éli<span class="_ _0">
+</span>re <span class="_ _9"> </span>domicile <span class="_ _9"> </span>en <span class="_ _6"> </span>leu<span class="_ _0"></span>r <span class="_ _9"> </span>demeure
+ <span class="_ _9"> </span>respective, <span class="_ _6"> </span>t<span class="_ _0"></span>el <span class="_ _9"> </span>qu’indiqué <span class="_ _9"> </span>en
+ <span class="_ _9"> </span>tête <span class="_ _9"> </span>des <br> présentes. </span></div><div class="t m0 x1 h7 y39 ff3 fs2 fc0 sc0 ls0 ws0">présentes. </div>
+ <div class="t m0 x1 h7 y3a ff3 fs2 fc0 sc0 ls0 ws0"> </div>
+</div>
+
+
+
+<div class="t m0 x1 h7 y3b ff3 fs2 fc0 sc0 ls0 ws0">L<span class="ff4">es Parties déclarent élire domicile à l’adresse ci</span>-dessous (ou à <span class="ff4">toute adresse qu’elles pourront </span></div><div class="t m0 x1 h7 y3c ff3 fs2 fc0 sc0 ls0 ws0">ultérieurement notifier aux autres Parties). </div><div class="t m0 x1 h7 y3d ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y3e ff3 fs2 fc0 sc0 ls0 ws0">En ce qui concerne le Preneur : </div><div class="t m0 x1 h7 y11e ff3 fs2 fc0 sc0 ls0 ws0">
+Attention de :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_1').value !== '' ">{{getHtmlInputElement('input_question_oui_18_1').value}}</span> </div><div class="t m0 x1 h7 y11f ff3 fs2 fc0 sc0 ls0 ws0">
+Email :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_2').value !== '' ">{{getHtmlInputElement('input_question_oui_18_2').value}}</span> </div><div class="t m0 x1 h7 y41 ff3 fs2 fc0 sc0 ls0 ws0">
+Téléphone :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_3').value !== '' ">{{getHtmlInputElement('input_question_oui_18_3').value}}</span> </div><div class="t m0 x1 h7 y120 ff3 fs2 fc0 sc0 ls0 ws0">
+Adresse :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_4').value !== '' ">{{getHtmlInputElement('input_question_oui_18_4').value}}</span> </div><div class="t m0 x1 h7 y121 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y122 ff3 fs2 fc0 sc0 ls0 ws0">En ce qui concerne le Sous-Locataire : </div><div class="t m0 x1 h7 y123 ff3 fs2 fc0 sc0 ls0 ws0">
+Attention de :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_5').value !== '' ">{{getHtmlInputElement('input_question_oui_18_5').value}}</span>  </div><div class="t m0 x1 h7 y124 ff3 fs2 fc0 sc0 ls0 ws0">
+Email :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_6').value !== '' ">{{getHtmlInputElement('input_question_oui_18_6').value}}</span> </div><div class="t m0 x1 h7 y125 ff3 fs2 fc0 sc0 ls0 ws0">
+Téléphone :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_7').value !== '' ">{{getHtmlInputElement('input_question_oui_18_7').value}}</span>  </div><div class="t m0 x1 h7 y6b ff3 fs2 fc0 sc0 ls0 ws0">
+Adresse :  <span
+    *ngIf="getHtmlInputElement('input_question_oui_18_8').value !== '' ">{{getHtmlInputElement('input_question_oui_18_8').value}}</span>  </div><div class="t m0 x1 h7 y6c ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x1 h7 y6d ff3 fs2 fc0 sc0 ls0 ws0">
+
+
+
+Fait en  <span
+*ngIf="getHtmlInputElement('input_question_19').value !== '' ">{{getHtmlInputElement('input_question_19').value}}</span> exemplaires originaux. </div><div class="t m0 x1 h7 y126 ff3 fs2 fc0 sc0 ls0 ws0">(Signature et mention manuscrite «lu et approuvé »<span class="lsb">) </span> </div><div class="t m0 x1 h7 y127 ff3 fs2 fc0 sc0 ls0 ws0"> </div></div><div class="c x1 y128 w6 hb"><div class="t m0 x13 h6 y129 ff2 fs2 fc0 sc0 ls0 ws0">Le Preneur </div></div><div class="c x14 y128 w7 hb"><div class="t m0 x15 h6 y129 ff2 fs2 fc0 sc0 ls0 ws0">Le Sous-Locataire </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfa" class="pf w0 h0" data-page-no="a"><div class="pc pca w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x16 h3 y5 ff1 fs0 fc1 sc0 lsc ws0">10<span class="ls0"> </span></div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x1 y12a w6 hc"><div class="t m0 x17 h6 y12b ff2 fs2 fc0 sc0 ls0 ws0">
+Date :______________ </div></div><div class="c x14 y12a w7 hc"><div class="t m0 x17 h6 y12b ff2 fs2 fc0 sc0 ls0 ws0">
+Date :______________ </div></div>
+
+
+
+
+<div *ngIf="getHtmlInputElement('input_bailleur_oui').checked">
+
+<div class="c x1 y12c w6 hd"><div class="t m0 x18 h7 y12b ff3 fs2 fc0 sc0 ls0 ws0"> </div></div><div class="c x14 y12c w7 hd"><div class="t m0 x18 h7 y12b ff3 fs2 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0">
+<div class="t m0 x19 h6 y12d ff2 fs2 fc0 sc0 ls0 ws0">Le Bailleur </div><div class="t m0 x1a h7 y12e ff3 fs2 fc0 sc0 ls0 ws0">
+Date :______________ 
+
+</div>
+
+
+</div><div class="t m0 x14 h7 y12f ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y130 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y131 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y132 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y133 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y134 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 ya0 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y135 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y136 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y137 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y138 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y139 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y13a ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 ycd ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y109 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y13b ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y13c ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y13d ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y13e ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y13f ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y140 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 h7 y141 ff3 fs2 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y142 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y143 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y144 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y145 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y146 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y147 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y148 ff3 fs0 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfb" class="pf w0 h0" data-page-no="b"><div class="pc pcb w0 h0"><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x3 y1 w2 h2"><div class="t m0 x4 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x5 y1 w2 h2"><div class="t m0 x6 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0"> </div></div><div class="c x2 y3 w3 h0"><div class="t m0 x1 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x16 h3 y5 ff1 fs0 fc1 sc0 lsc ws0">11<span class="ls0"> </span></div><div class="t m0 x1 h3 y6 ff1 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y149 ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y14a ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y14b ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y14c ff3 fs0 fc0 sc0 ls0 ws0"> </div><div class="t m0 x14 he y14d ff3 fs0 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAwAACAEBDAIDFgQFHwUIKggLMggPOgsQ/w1x/Q5v/w5w9w9ryhBT+xBsWhAbuhFKUhEXUhEXrhJEuxJKwBJN1xJY8hJn/xJsyhNRoxM+shNF8BNkZxMfXBMZ2xRZlxQ34BRb8BRk3hVarBVA7RZh8RZi4RZa/xZqkRcw9Rdjihgsqxg99BhibBkc5hla9xli9BlgaRoapho55xpZ/hpm8xpfchsd+Rtibxsc9htgexwichwdehwh/hxk9Rxedx0fhh4igB4idx4eeR4fhR8kfR8g/h9h9R9bdSAb9iBb7yFX/yJfpCMwgyQf8iVW/iVd+iVZ9iVWoCYsmycjhice/ihb/Sla+ylX/SpYmisl/StYjisfkiwg/ixX7CxN9yxS/S1W/i1W6y1M9y1Q7S5M6S5K+i5S6C9I/i9U+jBQ7jFK/jFStTIo+DJO9zNM7TRH+DRM/jRQ8jVJ/jZO8DhF9DhH9jlH+TlI/jpL8jpE8zpF8jtD9DxE7zw9/z1I9j1A9D5C+D5D4D8ywD8nwD8n90A/8kA8/0BGxEApv0El7kM5+ENA+UNAykMp7kQ1+0RB+EQ+7EQ2/0VCxUUl6kU0zkUp9UY8/kZByUkj1Eoo6Usw9Uw3300p500t3U8p91Ez11Ij4VIo81Mv+FMz+VM0/FM19FQw/lQ19VYv/lU1/1cz7Fgo/1gy8Fkp9lor4loi/1sw8l0o9l4o/l4t6l8i8mAl+WEn8mEk52Id9WMk9GMk/mMp+GUj72Qg8mQh92Uj/mUn+GYi7WYd+GYj6mYc62cb92ch8Gce7mcd6Wcb6mcb+mgi/mgl/Gsg+2sg+Wog/moj/msi/mwh/m0g/m8f/nEd/3Ic/3Mb/3Qb/3Ua/3Ya/3YZ/3cZ/3cY/3gY/0VC/0NE/0JE/w5wl4XsJQAAAPx0Uk5TAAAAAAAAAAAAAAAAAAAAAAABCQsNDxMWGRwhJioyOkBLT1VTUP77/vK99zRpPkVmsbbB7f5nYabkJy5kX8HeXaG/11H+W89Xn8JqTMuQcplC/op1x2GZhV2I/IV+HFRXgVSN+4N7n0T5m5RC+KN/mBaX9/qp+pv7mZr83EX8/N9+5Nip1fyt5f0RQ3rQr/zo/cq3sXr9xrzB6hf+De13DLi8RBT+wLM+7fTIDfh5Hf6yJMx0/bDPOXI1K85xrs5q8fT47f3q/v7L/uhkrP3lYf2ryZ9eit2o/aOUmKf92ILHfXNfYmZ3a9L9ycvG/f38+vr5+vz8/Pv7+ff36M+a+AAAAAFiS0dEQP7ZXNgAAAj0SURBVFjDnZf/W1J5Fsf9D3guiYYwKqglg1hqplKjpdSojYizbD05iz5kTlqjqYwW2tPkt83M1DIm5UuomZmkW3bVrmupiCY1mCNKrpvYM7VlTyjlZuM2Y+7nXsBK0XX28xM8957X53zO55z3OdcGt/zi7Azbhftfy2b5R+IwFms7z/RbGvI15w8DdkVHsVi+EGa/ZZ1bYMDqAIe+TRabNv02OiqK5b8Z/em7zs3NbQO0GoD0+0wB94Ac/DqQEI0SdobIOV98Pg8AfmtWAxBnZWYK0vYfkh7ixsVhhMDdgZs2zc/Pu9HsVwc4DgiCNG5WQoJ/sLeXF8070IeFEdzpJh+l0pUB+YBwRJDttS3cheJKp9MZDMZmD5r7+vl1HiAI0qDtgRG8lQAlBfnH0/Miqa47kvcnccEK2/1NCIdJ96Ctc/fwjfAGwXDbugKgsLggPy+csiOZmyb4LiEOjQMIhH/YFg4TINxMKxxaCmi8eLFaLJVeyi3N2eu8OTctMzM9O2fjtsjIbX5ewf4gIQK/5gR4uGP27i5LAdKyGons7IVzRaVV1Jjc/PzjP4TucHEirbUjEOyITvQNNH+A2MLj0NYDAM1x6RGk5e9raiQSkSzR+XRRcUFOoguJ8NE2kN2XfoEgsUN46DFoDlZi0DA3Bwiyg9TzpaUnE6kk/OL7xgdE+KBOgKSkrbUCuHJ1bu697KDrGZEoL5yMt5YyPN9glo9viu96GtEKQFEO/34tg1omEVVRidBy5bUdJXi7R4SIxWJzPi1cYwMMV1HO10gqnQnLFygPEDxSaPPuYPlEiD8B3IIrqDevvq9ytl1JPjhhrMBdIe7zaHG5oZn5sQf7YirgJqrV/aWHLPnPCQYis2U9RthjawHIFa0NnZcpZbCMTbRmnszN3mz5EwREJmX7JrQ6nU0eyFvbtX2dyi42/yqcQf40fnIsUsfSBIJIixhId7OCA7aA8nR3sTfF4EHn3d5elaoeONBEXXR/hWdzgZvHMrMjXWwtVczxZ3nwdm76fBvJfAvtajUgKPfxO1VHHRY5f6PkJBCBwrQcSor8WFIQFgl5RFQw/RuWjwveDGjr16jVvT3UBmXPYgdw0jPFOyCgEem5fw06BMqTu/+AGMeJjtrA8aGRFhJpqEejvlvl2qeqJC2J3+nSRHwhWlyZXvTkrLSEhAQuRxoW5RXA9aZ/yESUkMrv7IpffIWXbhSW5jkVlhQUpHuxHdbQt0b6ZcWF4vdHB9MjWNs5cgsAatd0szvu9rguSmFxWUVZSUmM9ERocbarPfoQ4nETNtofiIvzDIpCFUJqzgPFYI+rVt3k9MH2ys0bOFw1qG+R6DDelnmuYAcGF38vyHKxE++M28BBu47PbrE5kR62UB6qzSFQyBtvVZfDdVdwF2tO7jsrugCK93Rxoi1mf+QHtgNOyo3bxgsEis9i+a3BAA8GWlwHNRlYmTdqkQ64DobhHwNuzl0mVctKGKhS5jGBfW5mdjgJAs0nbiP9KyCVUSyaAwAoHvSPXGYMDgjRGCq0qgykE64/WAffrP5bPVl6ToJeZFFJDMCkp+/BUjUpwYvORdXWi2IL8uDR2NjIdaYJAOy7UpnlqlqHW3A5v66CgbsoQb3PLT2MB1mR+BkWiqTvACAuOnivEwFn82TixYuxsWYTQN6u7hI6Qg3KWvtLZ6/xy2E+rrqmCHhfiIZCznMyZVqSAAV4u4Dj4GwmpiYBoYXxeKSWgLvfpRaCl6qV4EbK4MMNcKVt9TVZjCWnIcjcgAV+9K+yXLCY2TwyTk1OvrjD0I4027f2DAgdwSaNPZ0xQGFq+SAQDXPvMe/zPBeyRFokiPwyLdRUODZtozpA6GeMj9xxbB24l4Eo5Di5VtUMdajqHYHOwbK5SrAVz/mDUoqzj+wJSfsiwJzKvJhh3aQxdmjsnqdicGCgu097X3G/t7tDq2wiN5bD1zIOL1aZY8fTXZMFAtPwguYBHvl5Soj0j8VDSEb9vQGN5hbS06tUqapIuBuHDzoTCItS/ER+DiUpU5C964Ootk3cZj58cdsOhycz4pvvXGf23W3q7I4HkoMnLOkR0qKCUDo6h2TtWgAoXvYz/jXZH4O1MQIzltiuro0N/8x6fygsLmYHoVOEIItnATyZNg636V8Mm3eDcK2avzMh6/bSM6V5lNwCjLAVMlfjozevB5mjk7qF0aNR1x27TGsoLC3dx88uwOYQIGsY4PmvM2+mnyO6qVGL9sq1GqF1By6dE+VRThQX54RG7qESTUdAfns7M/PGwHs29WrI8t6DO6lWW4z8vES0l1+St5dCsl9j6Uzjs7OzMzP/fnbKYNQjlhcZ1lt0dYWkinJG9JeFtLIAAEGPIHqjoW3F0fpKRU0e9aJI9Cfo4/beNmwwGPTv3hhSnk4bf16JcOXH3yvY/CIJ0LlP5gO8A5nsHDs8PZryy7TRgCxnLq+ug2V7PS+AWeiCvZUx75RhZjzl+bRxYkhuPf4NmH3Z3PsaSQXfCkBhePuf8ZSneuOrfyBLEYrqchXcxPYEkwwg1Cyc4RPA7Oyvo6cQw2ujbhRRLDLXdimVVVQgUjBGqFy7FND2G7iMtwaE90xvnHr18BekUSHHhoe21vY+Za+yZZ9zR13d5crKs7JrslTiUsATFDD79t2zU8xhvRHIlP7xI61W+3CwX6NRd7WkUmK0SuVBMpHo5PnncCcrR3g+a1rTL5+mMJ/f1r1C1XZkZASITEttPCWmoUel6ja1PwiCrATxKfDgXfNR9lH9zMtxJIAZe7QZrOu1wng2hTGk7UHnkI/b39IgDv8kdCXb4aFnoDKmDaNPEITJZDKY/KEObR84BTqH1JNX+mLBOxCxk7W9ezvz5vVr4yvdxMvHj/X94BT11+8BxN3eJvJqPvvAfaKE6fpa3eQkFohaJyJzGJ1D6kmr+m78J7iMGV28oz0ygRHuUG1R6e3TqIXEVQHQ+9Cz0cYFRAYQzMMXLz6Vgl8VoO0lsMeMoPGpqUmdZfiCbPGr/PRF4i0je6PBaBSS/vjHN35hK+QnoTP+//t6Ny+Cw5qVHv8XF+mWyZITVTkAAAAASUVORK5CYII="/>
+</div>
+</body>
+</html>
