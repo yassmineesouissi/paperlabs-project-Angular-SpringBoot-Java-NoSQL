@@ -1,0 +1,72 @@
+.pol-conf {
+  font-family: 'calibri';
+  text-align: center;
+  font-size: 25px;
+  color: #071a81;
+  font-weight: 700;
+  margin-top: 5%;
+  text-transform: uppercase;
+}
+.parag-conf {
+  font-family: 'calibri';
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+.group-conf {
+  padding: 3%;
+  text-align: justify;
+  border-top-width: 1px !important;
+  border-right-width: 1px !important;
+  border-bottom-width: 1px !important;
+  border-left-width: 1px !important;
+  border-left-color: #dddddd !important;
+  border-left-style: solid !important;
+  border-right-color: #dddddd !important;
+  border-right-style: solid !important;
+  border-top-color: #dddddd !important;
+  border-top-style: solid !important;
+  border-bottom-color: #dddddd !important;
+  border-bottom-style: solid !important;
+}
+.tit-conf {
+  font-family: 'calibri';
+  font-size: 20px;
+  color: #000000;
+  font-weight: 700;
+}
+.group-legal {
+  padding: 3%;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 508px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 18px;
+}
+.card-overview {
+  background-color: #fafafa;
+  margin-top: -4%;
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .card-overview {
+    background-color: #fafafa;
+    margin-top: -25%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pol-conf {
+    font-family: 'calibri';
+    text-align: center;
+    font-size: 25px;
+    color: #071a81;
+    font-weight: 700;
+    margin-top: 15%;
+    text-transform: uppercase;
+  }
+}

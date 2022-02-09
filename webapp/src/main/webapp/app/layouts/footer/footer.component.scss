@@ -11,26 +11,24 @@ a:hover {
 
 .pap-footer {
   padding-top: 20px;
-  background-color: #e1dfff;
+  background-color: #fafafa;
   padding-left: 15% !important;
   padding-right: 15% !important;
   width: 100%;
 }
 
 .pap-footer-title {
-  font-size: 16px;
-  font-weight: 600;
-  background-repeat: no-repeat;
-  background-size: 24px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  font-size: 17px;
+  font-weight: 700;
   display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   color: #1400c3;
+  line-height: 1;
+  margin-top: 0;
 }
 
 .pap-card {
@@ -49,11 +47,10 @@ fa-icon {
   min-height: calc(100vh - 349px);
 }
 .pap-footer-items {
-  margin: 0;
+  margin: 1;
   padding: 0;
   list-style: none;
-  line-height:3;
-  
+  line-height: 3;
 }
 
 .pap-footer-item {
@@ -62,7 +59,7 @@ fa-icon {
 
 .pap-footer-item,
 .pap-footer-link {
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: -9px;
   font-weight: normal;
   text-decoration: none;
@@ -71,7 +68,7 @@ fa-icon {
   color: #1400c3;
 }
 .pap-footer-sections {
-  width: 100%;
+  width: 160%;
 }
 
 .pap-footer-section {
@@ -79,6 +76,7 @@ fa-icon {
   width: 24.5%;
   vertical-align: top;
   padding-bottom: 35px;
+  font-family: 'calibri';
 }
 
 @media screen and (max-width: 1260px) {
@@ -104,8 +102,34 @@ fa-icon {
 
 .pap-copyright {
   margin-bottom: 20px;
-  text-align: center;
   font-size: 13px;
+  position: relative;
+  font-family: 'calibri';
+  width: 24.5%;
+  margin-left: 39%;
+  margin-right: 15%;
+}
+
+@media screen and (max-width: 955px) {
+  .pap-copyright {
+    margin-bottom: 20px;
+    font-size: 13px;
+    position: relative;
+    font-family: 'calibri';
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .pap-copyright {
+    margin-bottom: 20px;
+    font-size: 13px;
+    position: relative;
+    font-family: 'calibri';
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .pap-color {

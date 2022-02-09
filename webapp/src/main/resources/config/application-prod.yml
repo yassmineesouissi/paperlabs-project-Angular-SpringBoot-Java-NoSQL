@@ -115,6 +115,8 @@ jhipster:
     base-url: http://127.0.0.1:8085
     #base-url: http://196.203.28.46:3393
     #base-url: http://196.203.28.46:3394
+    #base-url: http://172.16.200.202
+    #base-url: http://172.16.200.205
   metrics:
     logs: # Reports metrics in the logs
       enabled: false

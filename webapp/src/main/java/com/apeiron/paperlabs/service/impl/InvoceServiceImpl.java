@@ -27,9 +27,9 @@ import java.util.*;
 @Service
 public class InvoceServiceImpl extends Thread implements InvoiceService {
 
-    private final Logger log = LoggerFactory.getLogger(InvoceServiceImpl.class);
-   private static final String FILLED_FILE_NAME_PREFIX ="/home/admin/paperlabsDocs/invoices/";
-   // private static final String FILLED_FILE_NAME_PREFIX = "D:/Rami-Paperlabs/git-paperlabs-2021-sr/webapp/webapp/generated-invoice/";
+private final Logger log = LoggerFactory.getLogger(InvoceServiceImpl.class);
+   //private static final String FILLED_FILE_NAME_PREFIX ="/home/admin/paperlabsDocs/invoices/";
+    private static final String FILLED_FILE_NAME_PREFIX = "C:/yassmine/paperlabs-Latest/webapp/webapp/invoice/";
 
     private static final String LOGO_PATH = "/jasper/images/pap_logo.png";
     private static final String INVOICE_TEMPLATE = "/jasper/invoice_form.jrxml";

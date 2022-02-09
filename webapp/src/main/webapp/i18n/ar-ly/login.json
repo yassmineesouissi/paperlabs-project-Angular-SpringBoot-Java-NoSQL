@@ -4,7 +4,7 @@
     "form": {
       "password": "كلمه السر",
       "password.placeholder": "كلمة السر خاصتك",
-      "rememberme": "تذكرنى",
+      "rememberMe": "تذكرنى",
       "button": "تسجيل الدخول"
     },
     "messages": {

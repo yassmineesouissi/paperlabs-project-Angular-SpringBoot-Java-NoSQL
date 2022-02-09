@@ -3,7 +3,7 @@
    {
       "id": "step_nature_peronne_caution",
       "title": "Le Bénéficiaire",
-      "description": "la partie qui reçoit le bien meuble incorporel au titre de nantissement",
+      "description": "",
       "blocs": ["bloc_nature_peronne_caution"],
       "visibility": true
     },
@@ -22,7 +22,7 @@
 	{
       "id": "step_nature_peronne_debiteur",
       "title": "Le Constituant",
-      "description": "la partie qui donne en nantissement au bénéficiaire le bien meuble incorporel",
+      "description": "",
       "blocs": ["bloc_nature_peronne_debiteur"],
       "visibility": true
     },
@@ -40,14 +40,34 @@
     },
 	{
       "id": "step_definitions",
-      "title": "",
+      "title": "Créance objet du nantissement du bien meuble incorporel",
       "description": "",
-      "blocs": ["bloc_question_3",
+      "blocs": ["bloc_question_3"
+	            ],
+      "visibility": true
+    },
+	{
+      "id": "step_definitions2",
+      "title": "Le Bien meuble incorporel",
+      "description": "",
+      "blocs": [
 	            "bloc_question_4_1",
 				"bloc_question_4_2_oui",
 				"bloc_question_4_2_1","bloc_question_4_2_2","bloc_question_4_2_3","bloc_question_4_2_4","bloc_question_4_2_5",
-				"bloc_question_4_2_non",
+				"bloc_question_4_2_non"],
+      "visibility": true
+    },
+	{
+      "id": "step_definitions3",
+      "title": "",
+      "description": "",
+      "blocs": [
+	            
 				"bloc_dure_nantissement",
+				"bloc_autres_personnes",
+				 "bloc_autre_personne_1",
+			
+				"bloc_dure_nantissement2",
 				"bloc_notification_election_domicile",
 				"bloc_nombre_exemplaire"],
       "visibility": true
@@ -60,7 +80,7 @@
    
    {
       "id": "bloc_nature_peronne_caution",
-      "title": "",
+      "title": "1- Est-ce la personne est une personne morale ou physique?",
       "description": "",
       "inputs": [
         "input_nature_personne_physique_tunisienne_caution",
@@ -71,7 +91,7 @@
     },
 	{
       "id": "bloc_personne_physique_tunisienne_caution",
-      "title": "Personne physique tunisienne",
+      "title": "",
       "description": "",
       "inputs": [
         "input_nom_personne_physique_tunisienne_caution",
@@ -86,7 +106,7 @@
     },
 	{
       "id": "bloc_personne_physique_etrangere_caution",
-      "title": "Personne physique étrangère",
+      "title": "",
       "description": "",
       "inputs": [
         "input_nom_personne_physique_etrangere_caution",
@@ -100,7 +120,7 @@
     },
 	{
       "id": "bloc_personne_morale_tunisienne_caution",
-      "title": "Personne morale tunisienne",
+      "title": "",
       "description": "",
       "inputs": [
         "input_denomination_personne_morale_tunisienne_caution",
@@ -115,7 +135,7 @@
     },
 	{
       "id": "bloc_personne_morale_etrangere_caution",
-      "title": "Personne morale étrangère",
+      "title": "",
       "description": "",
       "inputs": [
         "input_denomination_personne_morale_etrangere_caution",
@@ -130,7 +150,7 @@
     },
 	{
       "id": "bloc_nature_peronne_debiteur",
-      "title": "",
+      "title": "2- Est-ce la personne est une personne morale ou physique?",
       "description": "",
       "inputs": [
         "input_nature_personne_physique_tunisienne_debiteur",
@@ -141,7 +161,7 @@
     },
 	{
       "id": "bloc_personne_physique_tunisienne_debiteur",
-      "title": "Personne physique tunisienne",
+      "title": "",
       "description": "",
       "inputs": [
         "input_nom_personne_physique_tunisienne_debiteur",
@@ -156,7 +176,7 @@
     },
 	{
       "id": "bloc_personne_physique_etrangere_debiteur",
-      "title": "Personne physique étrangère",
+      "title": "",
       "description": "",
       "inputs": [
         "input_nom_personne_physique_etrangere_debiteur",
@@ -170,7 +190,7 @@
     },
 	{
       "id": "bloc_personne_morale_tunisienne_debiteur",
-      "title": "Personne morale tunisienne",
+      "title": "",
       "description": "",
       "inputs": [
         "input_denomination_personne_morale_tunisienne_debiteur",
@@ -185,7 +205,7 @@
     },
 	{
       "id": "bloc_personne_morale_etrangere_debiteur",
-      "title": "Personne morale étrangère",
+      "title": "",
       "description": "",
       "inputs": [
         "input_denomination_personne_morale_etrangere_debiteur",
@@ -200,7 +220,7 @@
     },
 	{
       "id": "bloc_question_3",
-      "title": "Créance objet du nantissement du bien meuble incorporel",
+      "title": "",
       "description": "",
       "inputs": [
         "input_question_3_1",
@@ -209,7 +229,7 @@
     },
 	{
       "id": "bloc_question_4_1",
-      "title": "Le Bien meuble incorporel",
+      "title": "",
       "description": "",
       "inputs": [
         "input_question_4_1"
@@ -220,10 +240,23 @@
       "visibility": true
     },
 	
+	
+	{
+      "id": "bloc_question_4_2_non",
+      "title": "",
+      "description": "",
+      "inputs": [
+      
+		"input_question_4_2_non"
+		
+		
+		],
+      "visibility": true
+    },
 	{
       "id": "bloc_question_4_2_oui",
-      "title": "",
-      "description": "Est-ce-que le bien meuble incorporel objet du nantissement consiste en une créance future que le Constituant doit à un débiteur ?",
+      "title": "Est-ce-que le bien meuble incorporel objet du nantissement consiste en une créance future que le Constituant doit à un débiteur ?",
+      "description": "",
       "inputs": [
        
 		"input_question_4_2_oui",
@@ -232,18 +265,6 @@
 		"input_question_4_2_oui_3",
 		"input_question_4_2_oui_4",
 	    "input_question_4_2_oui_5"
-		
-		
-		],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_4_2_non",
-      "title": "",
-      "description": "",
-      "inputs": [
-      
-		"input_question_4_2_non"
 		
 		
 		],
@@ -262,8 +283,32 @@
 	
 	{
       "id": "bloc_dure_nantissement",
-      "title": "DUREE DU NANTISSEMENT",
-      "description": "Quelle est la durée du nantissement de l’équipement au profit du bénéficiaire ?",
+      "title": "Quelle est la durée du nantissement de l’équipement au profit du bénéficiaire?",
+      "description": "",
+      "inputs": [
+        
+		"input_select",
+		"input_annee"
+		
+		],
+      "visibility": true
+    },
+	{
+      "id": "bloc_autres_personnes",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_nombre_autres_personnes"
+      ],
+      "visibility": true
+    },
+   {"id": "bloc_autre_personne_1","title": "","description": "","inputs": ["input_qualité_autres_personnes_1"],"visibility": false},
+    
+    
+   {
+      "id": "bloc_dure_nantissement2",
+      "title": "Quelle est la durée du nantissement de l’équipement au profit du bénéficiaire?",
+      "description": "",
       "inputs": [
         
 		
@@ -276,7 +321,7 @@
 		
 		
 		],
-      "visibility": true
+      "visibility": false
     },
 	{
       "id": "bloc_nombre_exemplaire",
@@ -298,6 +343,7 @@
       "inputs": [
       
 		"input_question_6_oui",
+		
 		"input_question_6_1",
 		"input_question_6_2",
 		"input_question_6_3",
@@ -310,14 +356,30 @@
 		],
       "visibility": true
     }
-	
-	
-	
-	
-	
+
   ],
   "inputs": [
-  
+  {
+      "id": "input_nombre_autres_personnes",
+      "type": "select_input_generator",
+      "description": "",
+      "name": "input_nombre_autres_personnes",
+      "label": "Nombre d'autres personnes présentes :",
+      "placeHolder": "",
+      "help": "",
+      "options": ["années","mois","jours"],
+      "value": "",
+      "bookmarkIdPerValue": {
+		
+        "1": ["Autre_personnes"],
+        "2": ["Autre_personnes"],
+        "3": ["Autre_personnes"]
+      },
+      "visibility": true
+    },
+    {"id": "input_qualité_autres_personnes_1","type": "text","description": "","name": "input_qualité_autres_personnes_1","label": "Durée de nantissement:","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {},"visibility": true},
+   
+
   
 	  
   {"id": "input_numero_1","type": "text","description": "","name": "input_numero_1","label": "Numéro 1","placeHolder": "","help": "","options": [],"value": "","bookmarkIdPerValue": {"text": ["bookmarks_numeros_1"]},"visibility": true},
@@ -429,7 +491,7 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["question_5_jours_mois_annee"]
+        "text": []
         },
       "visibility": false
     },{
@@ -443,7 +505,7 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["question_5_jours_mois_annee"]
+        "text": []
         },
       "visibility": false
     },{
@@ -457,7 +519,7 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["question_5_jours_mois_annee"]
+        "text": []
         },
       "visibility": false
     },
@@ -602,6 +664,7 @@
       "visibility": false
     },
 	
+   
   
   {
       "id": "input_question_6_oui",
@@ -638,7 +701,42 @@
       "visibility": true
 	  },
 	
+	{
+      "id": "input_select",
+      "type": "select_input_generator",
+      "description": "",
+      "name": "input_select",
+      "label": "Durée",
+      "placeHolder": "",
+      "help": "",
+      "options": ["années","mois","jours"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "années": ["duree_nan"],
+        "mois": ["duree_nan"],
+        "jours": ["duree_nan"]
+      },
+      "visibility": true
+	  }
+	,
 	
+	{
+	"id": "input_annee",
+	"type": "text",
+	"description": "",
+	"name": "input_annee",
+	"label": "durée du nantissement :",
+	"placeHolder": "",
+	"help": "",
+	"options": [],
+	"value": "",
+	"bookmarkIdPerValue": {
+	"text": ["duree_nan1"]
+	},
+	"visibility": false
+	}
+	,
+   
 	
 	{
       "id": "input_question_5_dinars",
@@ -651,10 +749,10 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_5_annees"],
+        "false": [],
         "true": []
       },
-      "visibility": true
+      "visibility": false
 	  },
 	  {
       "id": "input_question_5_mois",
@@ -667,10 +765,10 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_5_mois"],
+        "false": [],
         "true": []
       },
-      "visibility": true
+      "visibility": false
 	  },
 	  {
       "id": "input_question_5_jours",
@@ -683,10 +781,10 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_5_jours"],
+        "false": [],
         "true": []
       },
-      "visibility": true
+      "visibility": false
 	  },
 	
 	
@@ -708,34 +806,34 @@
     },
     {
       "id": "input_question_4_2_oui",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Oui",
+      "name": "quest4",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["bookmark_question_4_2_oui"],
-        "true": []
+        "Oui": ["bookmark_question_4_2_oui"]
+        
       },
       "visibility": true
 	  },
 	  
     {
       "id": "input_question_4_2_non",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Non",
+      "name": "quest4",
+      "label": "Oui",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["bookmark_question_4_2_non"],
-        "true": []
+        "Non": ["bookmark_question_4_2_non"]
+        
       },
       "visibility": true
 	  },
@@ -4523,48 +4621,8 @@
       "type": "USER_INPUT",
       "fontSize": 11
     },
-	{
-      "bookmarkId": "question_5_annees",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },{
-      "bookmarkId": "question_5_mois",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },{
-      "bookmarkId": "question_5_jours",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "question_5_jours_mois_annee",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+	
+
 	{
       "bookmarkId": "question_4_2_oui_4",
       "value": "",
@@ -4611,6 +4669,28 @@
     },
 	{
       "bookmarkId": "question_4_2_oui_5",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "duree_nan",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "duree_nan1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,

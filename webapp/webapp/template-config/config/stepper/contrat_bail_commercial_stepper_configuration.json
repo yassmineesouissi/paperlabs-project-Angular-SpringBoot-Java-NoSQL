@@ -3,7 +3,7 @@
    {
       "id": "step_nature_peronne_caution",
       "title": "Le Bailleur",
-      "description": "La partie qui souhaite donner en location commerciale le local commercial en sa possession est une :",
+      "description": "la partie qui donne en location l’immeuble en sa possession",
       "blocs": ["bloc_nature_peronne_caution"],
       "visibility": true
     },
@@ -22,7 +22,7 @@
 	{
       "id": "step_nature_peronne_debiteur",
       "title": "Le Preneur",
-      "description": "La partie qui souhaite exploiter le local par voie de location commerciale est une :",
+      "description": "la partie qui exploite l’immeuble par voie de location",
       "blocs": ["bloc_nature_peronne_debiteur"],
       "visibility": true
     },
@@ -39,39 +39,90 @@
       "visibility": true
     },
 	{
-      "id": "step_questions_3_4_5_6",
-      "title": "Contrat de bail commercial",
+      "id": "step_question_3_4_5_6_7_8_9",
+      "title": "",
       "description": "",
       "blocs": [
         "bloc_question_3",
         "bloc_question_4",
 		"bloc_question_5",
-		"bloc_question_6"],
+		"bloc_question_6",
+		"bloc_question_7",
+		"bloc_question_8_9"
+		
+      ],
+      "visibility": true
+    }
+  ],
+  "blocs": [
+    {
+      "id": "bloc_question_8_9",
+      "title": "Période de location",
+      "description": "",
+      "inputs": [
+        "input_question_8",
+		"input_question_9"],
+      "visibility": true
+    },
+  {
+      "id": "bloc_question_6",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_question_6"
+		],
+      "visibility": true
+    },
+	
+	{
+      "id": "bloc_question_7",
+      "title": "7- Quel est le numéro de titre foncier ? ",
+      "description": "",
+      "inputs": [
+        
+		
+		"input_num_titre_fonicier_7_oui",
+		"input_non_applicable_7",
+		"input_numero_titre_financier_7"],
+      "visibility": true
+    },
+   {
+      "id": "bloc_question_5",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_question_5_loyer"],
+      "visibility": true
+    },
+  {
+      "id": "bloc_question_3",
+      "title": "3- Quelle est la qualité de la personne qui a reçu le loyer ? ",
+      "description": "",
+      "inputs": [
+        
+        "input_question_3_mandataire_du_bailleur",
+		"input_question_3_bailleur",
+		"input_question_3_mandataire_du_bailleur_nom",
+		"input_question_3_mandataire_du_bailleur_prenom"
+		],
       "visibility": true
     },
 	{
-      "id": "step_questions_7_8_9_10",
-      "title": "",
+      "id": "bloc_question_4",
+      "title": "4- Quelle est la qualité de la personne qui a payé le loyer ? ",
       "description": "",
-      "blocs": [
-        "bloc_question_7",
-        "bloc_question_8",
-		"bloc_question_9",
-		"bloc_question_10",
-		"bloc_question_11",
-		"bloc_question_12",
-		"bloc_question_13"],
+      "inputs": [
+        
+        "input_question_4_mandataire_du_preneur",
+		"input_question_4_preneur",
+		"input_question_4_mandataire_du_preneur_nom",
+		"input_question_4_mandataire_du_preneur_prenom"],
       "visibility": true
-    }
-	
-	
-  ],
-  "blocs": [
+    },
    {
       "id": "bloc_nature_peronne_caution",
       "title": "",
       "description": "",
-	  "help":"",
       "inputs": [
         "input_nature_personne_physique_tunisienne_caution",
         "input_nature_personne_physique_etrangere_caution",
@@ -115,7 +166,7 @@
       "inputs": [
         "input_denomination_personne_morale_tunisienne_caution",
 		"input_forme_personne_morale_tunisienne_caution",
-		"input_forme_champ_libre_1",
+		"input_champ_libre_forme_1",
 		"input_capital_personne_morale_tunisienne_caution",
 		"input_adresse_siege_personne_morale_tunisienne_caution",
 		"input_identifiant_unique_personne_morale_tunisienne_caution",
@@ -130,7 +181,7 @@
       "inputs": [
         "input_denomination_personne_morale_etrangere_caution",
 		"input_forme_personne_morale_etrangere_caution",
-		"input_forme_champ_libre_2",
+		"input_champ_libre_forme_2",
 		"input_pays_immatriculation_personne_morale_etrangere_caution",
 		"input_adresse_siege_personne_morale_etrangere_caution",
 		"input_num_immatriculation_personne_morale_etrangere_caution",
@@ -185,7 +236,7 @@
       "inputs": [
         "input_denomination_personne_morale_tunisienne_debiteur",
 		"input_forme_personne_morale_tunisienne_debiteur",
-		"input_forme_champ_libre_3",
+		"input_champ_libre_forme_3",
 		"input_capital_personne_morale_tunisienne_debiteur",
 		"input_adresse_siege_personne_morale_tunisienne_debiteur",
 		"input_identifiant_unique_personne_morale_tunisienne_debiteur",
@@ -200,552 +251,82 @@
       "inputs": [
         "input_denomination_personne_morale_etrangere_debiteur",
 		"input_forme_personne_morale_etrangere_debiteur",
-		"input_forme_champ_libre_4",
+		"input_champ_libre_forme_4",
 		"input_pays_immatriculation_personne_morale_etrangere_debiteur",
 		"input_adresse_siege_personne_morale_etrangere_debiteur",
 		"input_num_immatriculation_personne_morale_etrangere_debiteur",
 		"input_nom_personne_morale_etrangere_debiteur",
 		"input_prenom_personne_morale_etrangere_debiteur"],
       "visibility": false
-    },
-	{
-      "id": "bloc_question_3",
-      "title": "Date de début du Bail",
-      "description": "",
-      "inputs": [
-        "input_date_signature",
-		"input_autre_date",
-		"input_inserez_date"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_4",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_question_4"],
-      "visibility": true
-    },
-	
-	{
-      "id": "bloc_question_5",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_question_5_oui",
-    "input_question_5_oui_duree_renouvelement",
-    "input_question_5_non"
-	],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_6",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_adresse_local_6",
-		"input_nombre_piece_6",
-		"input_superficie_approximation_6",
-		"input_num_titre_fonicier_6_oui",
-		"input_numero_titre_financier_6",
-		"input_non_applicable_6"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_7",
-      "title": "Destination du local",
-      "description": "",
-	  "help":"",
-      "inputs": [
-        "input_une_activite_7",
-		"input_precisez_activite_7",
-		"input_toutes_activite_7"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_8",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_montant_loyer_chiffres_8",
-		"input_montant_loyer_lettres_8",
-		"input_echaince_de_paiement_8",
-		"input_loyer_annuel_8",
-		"input_pourcentage_augmentation_8"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_9",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_montant_garantie_9"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_10",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_etat_lieu_10"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_11",
-      "title": "Impôts et taxes",
-      "description": "",
-	  "help":"Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué ?",
-      "inputs": [
-        "input_bailleur_11",
-		"input_preneur_11"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_12",
-      "title": "",
-      "description": "",
-	  "help":"",
-      "inputs": [
-        "input_oui_12",
-		"input_adresse_notification_12_1",
-		"input_adresse_email_bailleur_12_2",
-		"input_num_tel_bailleur_12_3",
-		"input_adresse_bailleur_12_4",
-		"input_adresse_envoye_preneur_12_5",
-		"input_adresse_email_preneur_12_6",
-		"input_num_tel_preneur_12_7",
-    "input_adresse_preneur_12_8",
-    "input_non_12"],
-      "visibility": true
-    },
-	{
-      "id": "bloc_question_13",
-      "title": "",
-      "description": "",
-      "inputs": [
-        "input_nombre_exemplaire_13"],
-      "visibility": true
     }
   ],
   "inputs": [
   {
-      "id": "input_nombre_exemplaire_13",
-      "type": "number",
-      "description": "",
-      "name": "input_nombre_exemplaire_13",
-      "label": "Nombre d’exemplaires",
-      "placeHolder": "",
-      "help": "Quel est le nombre d’exemplaires originaux ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["nombre_exemplaire_13"]
-        },
-      "visibility": true
-    },
-   {
-      "id": "input_num_tel_preneur_12_7",
-      "type": "number",
-      "description": "",
-      "name": "input_num_tel_preneur_12_7",
-      "label": "Quel est le numéro de téléphone du Preneur ?",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["num_tel_preneur_12_7"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_adresse_preneur_12_8",
+      "id": "input_question_8",
       "type": "text",
       "description": "",
-      "name": "input_adresse_preneur_12_8",
-      "label": "Quel est l’adresse du Preneur ?",
+      "name": "input_question_8",
+      "label": "8- Quelle est la date du début de la période de location ?",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["adresse_preneur_12_8"]
+        "text": ["bookmarks_question_8"]
         },
-      "visibility": false
+      "visibility": true
     },
-  {
-      "id": "input_adresse_email_preneur_12_6",
+	{
+      "id": "input_question_9",
       "type": "text",
       "description": "",
-      "name": "input_adresse_email_preneur_12_6",
-      "label": "Quel est l’adresse email du Preneur ?",
+      "name": "input_question_9",
+      "label": "9- Quelle est l’acte de la fin de la période de location ?",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["email_preneur_12_6"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_adresse_envoye_preneur_12_5",
-      "type": "text",
-      "description": "",
-      "name": "input_adresse_envoye_preneur_12_5",
-      "label": "A qui s’adresse les notifications envoyées au Preneur ?",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["adresse_preneur_12_5"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_adresse_bailleur_12_4",
-      "type": "text",
-      "description": "",
-      "name": "input_adresse_bailleur_12_4",
-      "label": "Quel est l’adresse du Bailleur ?",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["adresse_bailleur_12_4"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_num_tel_bailleur_12_3",
-      "type": "number",
-      "description": "",
-      "name": "input_num_tel_bailleur_12_3",
-      "label": "Quel est le numéro de téléphone du Bailleur ?",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["num_tel_bailleur_12_3"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_adresse_email_bailleur_12_2",
-      "type": "text",
-      "description": "",
-      "name": "input_adresse_email_bailleur_12_2",
-      "label": "Quel est l’adresse email du Bailleur ?",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["email_bailleur_12_2"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_adresse_notification_12_1",
-      "type": "text",
-      "description": "",
-      "name": "input_adresse_notification_12_1",
-      "label": "A qui s’adresse les notifications envoyées au Bailleur ?",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["adresse_notific_12_1"]
-        },
-      "visibility": false
-    },
-    {
-      "id": "input_non_12",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Non",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["non_12"],
-        "true": []
-      },
-      "visibility": false
-	  },
-  
- 
-  {
-      "id": "input_oui_12",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Notification et élection de domicile ",
-      "placeHolder": "",
-      "help": "Est-ce que les parties veulent utiliser une adresse différente que leur domicile indiqué pour recevoir les notifications au titre du contrat de bail ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["oui_12",
-		          "oui_12_1",
-				  "oui_12_2",
-				  "oui_12_3",
-				  "oui_12_4",
-				  "oui_12_5",
-				  "oui_12_6",
-				  "oui_12_7",
-				  "oui_12_8",
-				  "oui_12_9",
-				  "oui_12_10"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  {
-      "id": "input_preneur_11",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Le preneur",
-      "placeHolder": "",
-      "help": "Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["preneur_11"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  {
-      "id": "input_bailleur_11",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Le bailleur",
-      "placeHolder": "",
-      "help": "Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["bailleur_11"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  {
-      "id": "input_etat_lieu_10",
-      "type": "text",
-      "description": "",
-      "name": "input_etat_lieu_10",
-      "label": "Etats des lieux",
-      "placeHolder": "",
-      "help": "Quel est l’état des lieux d’entrée ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["etat_lieu_10"]
+        "text": ["bookmarks_question_9"]
         },
       "visibility": true
     },
   {
-      "id": "input_montant_garantie_9",
-      "type": "text",
+      "id": "input_non_applicable_7",
+      "type": "radio",
       "description": "",
-      "name": "input_montant_garantie_9",
-      "label": "Dépôt de garantie",
-      "placeHolder": "",
-      "help": "Quel est le montant de la garantie (habituellement 2 mois de loyer hors taxes) ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["montant_garantie_9"]
-        },
-      "visibility": true
-    },
-  {
-      "id": "input_precisez_activite_7",
-      "type": "text",
-      "description": "",
-      "name": "input_precisez_activite_7",
-      "label": "préciser l’activité commerciale",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["precisez_activite_7"]
-        },
-      "visibility": false
-    },
-  {
-      "id": "input_pourcentage_augmentation_8",
-      "type": "number",
-      "description": "",
-      "name": "input_pourcentage_augmentation_8",
-      "label": "Pourcentage d’augmentation annuel",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["pourcentage_augmentation_8"]
-        },
-      "visibility": true
-    },
-  {
-      "id": "input_loyer_annuel_8",
-      "type": "text",
-      "description": "",
-      "name": "input_loyer_annuel_8",
-      "label": "Loyer annuel",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["loyer_annuel_8"]
-        },
-      "visibility": true
-    },
-  {
-      "id": "input_echaince_de_paiement_8",
-      "type": "text",
-      "description": "",
-      "name": "input_echaince_de_paiement_8",
-      "label": "Echéance de paiement",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["echaince_de_paiement_8","echaince_de_paiement_8_1"]
-        },
-      "visibility": true
-    },
-  
-  {
-      "id": "input_montant_loyer_lettres_8",
-      "type": "text",
-      "description": "",
-      "name": "input_montant_loyer_lettres_8",
-      "label": "Montant du loyer en lettres",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["montant_loyer_lettres_8"]
-        },
-      "visibility": true
-    },
-  
-  {
-      "id": "input_montant_loyer_chiffres_8",
-      "type": "number",
-      "description": "",
-      "name": "input_montant_loyer_chiffres_8",
-      "label": "Montant du Loyer en chiffres ",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["montant_loyer_chiffres_8"]
-        },
-      "visibility": true
-    },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  {
-      "id": "input_toutes_activite_7",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Toute activité commerciale",
-      "placeHolder": "",
-      "help": "Quelle sera l’activité exercée dans le Local ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["toutes_activite_7"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  {
-      "id": "input_une_activite_7",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Une activité commerciale bien déterminée",
-      "placeHolder": "",
-      "help": "Quelle sera l’activité exercée dans le Local ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["une_activite_7"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  {
-      "id": "input_non_applicable_6",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Non applicable",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["non_applicable_6"],
-        "true": []
-      },
-      "visibility": true
-	  },
-   {
-      "id": "input_num_titre_fonicier_6_oui",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
+      "name": "question_7",
       "label": "N° du titre foncier",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non applicable",
       "bookmarkIdPerValue": {
-        "false": ["num_titre_6_oui"],
-        "true": []
+        "Non applicable": ["non_applicable_6"]
+      },
+      "visibility": true
+	  },
+   {
+      "id": "input_num_titre_fonicier_7_oui",
+      "type": "radio",
+      "description": "",
+      "name": "question_7",
+      "label": " Non applicable",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Num titre",
+      "bookmarkIdPerValue": {
+        "Num titre": ["num_titre_6_oui"]
       },
       "visibility": true
 	  },
   {
-      "id": "input_numero_titre_financier_6",
+      "id": "input_numero_titre_financier_7",
       "type": "number",
       "description": "",
-      "name": "input_numero_titre_financier_6",
-      "label": "Quel est le numéro de titre foncier ?",
+      "name": "input_numero_titre_financier_7",
+      "label": "Le numéro de titre foncier ?",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -755,177 +336,159 @@
         },
       "visibility": false
     },
-  {
-      "id": "input_superficie_approximation_6",
-      "type": "number",
-      "description": "",
-      "name": "input_superficie_approximation_6",
-      "label": "Superficie approximative du Local en m2",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["superficie_approximation_6"]
-        },
-      "visibility": true
-    },
-  
-  {
-      "id": "input_nombre_piece_6",
-      "type": "text",
-      "description": "",
-      "name": "input_nombre_piece_6",
-      "label": "Nombre de pièces",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["nombre_piece_6"]
-        },
-      "visibility": true
-    },
-  
-  {
-      "id": "input_adresse_local_6",
-      "type": "text",
-      "description": "",
-      "name": "input_adresse_local_6",
-      "label": "Adresse du local",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["adresse_local_6"]
-        },
-      "visibility": true
-    },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+	
    {
-      "id": "input_question_4",
+      "id": "input_question_6",
       "type": "text",
       "description": "",
-      "name": "input_question_4",
-      "label": "Durée du bail",
-      "placeHolder": "",
-      "help": "Quelle est la durée du bail ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["question_4"]
-        },
-      "visibility": true
-    },
-  {
-      "id": "input_inserez_date",
-      "type": "Date",
-      "description": "",
-      "name": "input_inserez_date",
-      "label": "Préciser la date",
+      "name": "input_question_6",
+      "label": "6- Quelle est l’adresse du local ? ",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["inserez_date"]
+        "text": ["bookmarks_question_6"]
         },
-      "visibility": false
+      "visibility": true
     },
   {
-      "id": "input_question_5_oui_duree_renouvelement",
+      "id": "input_question_5_loyer",
       "type": "text",
       "description": "",
-      "name": "input_question_5_oui_duree_renouvelement",
-      "label": "Quelle est la durée du renouvellement du bail ?",
+      "name": "input_question_5_loyer",
+      "label": "5- Quel est le montant du loyer reçu en dinars tunisien ?",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["question_5_oui_duree"]
+        "text": ["question_5_loyer"]
+        },
+      "visibility": true
+    },
+   {
+      "id": "input_question_3_bailleur",
+      "type": "radio",
+      "description": "",
+      "name": "question_3",
+      "label": " Mandataire du bailleur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "": ["qustion_3_bailleur","qustion_3_bailleur_1"]
+      },
+      "visibility": true
+	  },
+	  {
+      "id": "input_question_3_mandataire_du_bailleur",
+      "type": "radio",
+      "description": "",
+      "name": "question_3",
+      "label": "Bailleur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "question_3_mandataire",
+      "bookmarkIdPerValue": {
+        "question_3_mandataire": ["qustion_3_mandataire_bailleur","qustion_3_mandataire_bailleur_1"]
+      },
+      "visibility": true
+	  },
+	  {
+      "id": "input_question_3_mandataire_du_bailleur_nom",
+      "type": "text",
+      "description": "",
+      "name": "input_question_3_mandataire_du_bailleur_nom",
+      "label": "Nom",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["question_3_mandataire_du_bailleur_nom"]
         },
       "visibility": false
     },
-    {
-      "id": "input_question_5_non",
-      "type": "checkbox",
+	{
+      "id": "input_question_3_mandataire_du_bailleur_prenom",
+      "type": "text",
       "description": "",
-      "name": "",
-      "label": "Non",
+      "name": "input_question_3_mandataire_du_bailleur_prenom",
+      "label": "Prénom",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_5_non"],
-        "true": []
-      },
+        "text": ["question_3_mandataire_du_bailleur_prenom"]
+        },
       "visibility": false
-	  },
-  
-  {
-      "id": "input_question_5_oui",
-      "type": "checkbox",
+    },
+	 {
+      "id": "input_question_4_preneur",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Est-ce que le bail est renouvelable par tacite reconduction ?",
+      "name": "question_4",
+      "label": "Mandataire du preneur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "question_4_preneur",
+      "bookmarkIdPerValue": {
+        "question_4_preneur": ["qustion_4_preneur"]
+      },
+      "visibility": true
+	  },
+	  {
+      "id": "input_question_4_mandataire_du_preneur",
+      "type": "radio",
+      "description": "",
+      "name": "question_4",
+      "label": "Preneur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "question_4_mandataire",
+      "bookmarkIdPerValue": {
+        "question_4_mandataire": ["qustion_4_mandataire_preneur"]
+      },
+      "visibility": true
+	  },
+	  {
+      "id": "input_question_4_mandataire_du_preneur_nom",
+      "type": "text",
+      "description": "",
+      "name": "input_question_4_mandataire_du_bailleur_nom",
+      "label": "Nom",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_5_oui"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  {
-      "id": "input_autre_date",
-      "type": "checkbox",
+        "text": ["question_4_mandataire_du_preneur_nom"]
+        },
+      "visibility": false
+    },
+	{
+      "id": "input_question_4_mandataire_du_preneur_prenom",
+      "type": "text",
       "description": "",
-      "name": "",
-      "label": "Une autre date",
+      "name": "input_question_4_mandataire_du_bailleur_prenom",
+      "label": "Prénom",
       "placeHolder": "",
-      "help": "Quelle est la date de début du bail ?",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["autre_date"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  
-  {
-      "id": "input_date_signature",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Date de Signature",
-      "placeHolder": "",
-      "help": "Quelle est la date de début du bail ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["date_signature"],
-        "true": []
-      },
-      "visibility": true
-	  },
-  
+        "text": ["question_4_mandataire_du_preneur_prenom"]
+        },
+      "visibility": false
+    },
+
+
   {
       "id": "input_prenom_personne_morale_etrangere_debiteur",
       "type": "text",
@@ -988,259 +551,16 @@
     },
    {
       "id": "input_pays_immatriculation_personne_morale_etrangere_debiteur",
-      "type": "select",
+      "type": "country",
       "description": "",
       "name": "input_pays_immatriculation_personne_morale_etrangere_debiteur",
       "label": "Pays d’immatriculation",
       "placeHolder": "",
       "help": "",
-            "options": ["Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne","Andorre","Angola","Antigua et Barbuda","Arabie saoudite","Argentine","Arménie","Australie","Autriche","Azerbaïdjan","Bahamas","Bahrein","Bangladesh","Barbade","Belgique","Bélize","Benin","Bhoutan","Biélorussie","Bolivie","Bosnie-Herzégovine","Botswana","Brésil","Brunei","Bulgarie","Burkina Faso","Burundi","Cambodge","Cameroun","Canada","Cap Vert","Centrafrique","Chili","Chine","Chypre","Colombie","Comores","Congo démocratique","Congo","Corée du Nord","Corée du Sud","Costa Rica","Côte d'Ivoire","Croatie","Cuba","Danemark","Djibouti","Dominique","RépubliqueDominicaine","Egypte","Emirats Arabes Unis","Equateur","Erythrée","Espagne","Estonie","Etats-Unis","Ethiopie","Fidji","Finlande","France","Gabon","Gambie","Géorgie","Ghana","Grèce","Grenade","Groenland","Guatémala","Guinée","Guinée Bissau","Guinée équatoriale","Guyana","Haïti","Honduras","Hong Kong","Hongrie","Inde","Indonésie","Irak","Iran","Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jordanie","Kazakhstan","Kenya","Kirghizstan","Kiribati","Koweït","Laos","Lesotho","Lettonie","Liban","Liberia","Libye","Liechtenstein","Lituanie","Luxembourg","Macédoine","Madagascar","Malaisie","Malawi","Maldives","Mali","Malte","Maroc","Marshall","Maurice","Mauritanie","Mexique","Micronésie","Moldavie","Monaco","Mongolie","Mozambique","Myanmar","Namibie","Népal","Nicaragua","Niger","Nigeria","Norvège","Nouvelle Zélande","Oman","Ouganda","Ouzbekistan","Pakistan","Palau","Palestine","Panama","Papouasie - Nouvelle Guinée","Paraguay","Pays-Bas","Pérou","Philippines","Pologne","Porto Rico","Portugal","Qatar","Roumanie","Royaume-Uni","Russie","Rwanda","Saint Christophe et Nevis","Saint Vincent et les Grenadines","Sainte Lucie","Salomon","Salvador","Samoa","São Tomé et Príncipe","Sénégal","Seychelles","Sierra Leone","Singapour","Slovaquie","Slovénie","Somalie","Somaliland","Soudan","Sri Lanka","Suède","Suisse","Surinam","Syrie","Swaziland","Tadjikistan","Taïwan","Tanzanie","Tchad","Tchéquie","Thaïlande","Tibet","Timor Oriental","Togo","Tonga","Trinité et Tobago","Tunisie","Turkmenistan","Turquie","Tuvalu","Ukraine","Uruguay","Vanuatu","Vatican","Vénézuéla","Vietnam","Yémen","Yougoslavie","Zambie","Zimbabwe"],
-
+      "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "Afghanistan": ["pays_immat_morale_etrg_debiteur"],
-"Afrique du Sud": ["pays_immat_morale_etrg_debiteur"],
-"Albanie": ["pays_immat_morale_etrg_debiteur"],
-"Algérie": ["pays_immat_morale_etrg_debiteur"],
-"Allemagne": ["pays_immat_morale_etrg_debiteur"],
-"Andorre": ["pays_immat_morale_etrg_debiteur"],
-"Angola": ["pays_immat_morale_etrg_debiteur"],
-"Antigua et Barbuda": ["pays_immat_morale_etrg_debiteur"],
-"Arabie saoudite": ["pays_immat_morale_etrg_debiteur"],
-"Argentine": ["pays_immat_morale_etrg_debiteur"],
-"Arménie": ["pays_immat_morale_etrg_debiteur"],
-"Australie": ["pays_immat_morale_etrg_debiteur"],
-"Autriche": ["pays_immat_morale_etrg_debiteur"],
-"Azerbaïdjan": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Bahamas": ["pays_immat_morale_etrg_debiteur"],
-"Bahrein": ["pays_immat_morale_etrg_debiteur"],
-"Bangladesh": ["pays_immat_morale_etrg_debiteur"],
-"Barbade": ["pays_immat_morale_etrg_debiteur"],
-"Belgique": ["pays_immat_morale_etrg_debiteur"],
-"Bélize": ["pays_immat_morale_etrg_debiteur"],
-"Benin": ["pays_immat_morale_etrg_debiteur"],
-"Bhoutan": ["pays_immat_morale_etrg_debiteur"],
-"Biélorussie": ["pays_immat_morale_etrg_debiteur"],
-"Bolivie": ["pays_immat_morale_etrg_debiteur"],
-"Bosnie-Herzégovine": ["pays_immat_morale_etrg_debiteur"],
-"Botswana": ["pays_immat_morale_etrg_debiteur"],
-"Brésil": ["pays_immat_morale_etrg_debiteur"],
-"Brunei": ["pays_immat_morale_etrg_debiteur"],
-"Bulgarie": ["pays_immat_morale_etrg_debiteur"],
-"Burkina Faso": ["pays_immat_morale_etrg_debiteur"],
-"Burundi": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Cambodge": ["pays_immat_morale_etrg_debiteur"],
-"Cameroun": ["pays_immat_morale_etrg_debiteur"],
-"Canada": ["pays_immat_morale_etrg_debiteur"],
-"Cap Vert": ["pays_immat_morale_etrg_debiteur"],
-"Centrafrique": ["pays_immat_morale_etrg_debiteur"],
-"Chili": ["pays_immat_morale_etrg_debiteur"],
-"Chine": ["pays_immat_morale_etrg_debiteur"],
-"Chypre": ["pays_immat_morale_etrg_debiteur"],
-"Colombie": ["pays_immat_morale_etrg_debiteur"],
-"Comores": ["pays_immat_morale_etrg_debiteur"],
-"Congo démocratique": ["pays_immat_morale_etrg_debiteur"],
-"Congo": ["pays_immat_morale_etrg_debiteur"],
-"Corée du Nord": ["pays_immat_morale_etrg_debiteur"],
-"Corée du Sud": ["pays_immat_morale_etrg_debiteur"],
-"Costa Rica": ["pays_immat_morale_etrg_debiteur"],
-"Côte d'Ivoire": ["pays_immat_morale_etrg_debiteur"],
-"Croatie": ["pays_immat_morale_etrg_debiteur"],
-"Cuba": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Danemark": ["pays_immat_morale_etrg_debiteur"],
-"Djibouti": ["pays_immat_morale_etrg_debiteur"],
-"Dominique": ["pays_immat_morale_etrg_debiteur"],
-"RépubliqueDominicaine": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Egypte": ["pays_immat_morale_etrg_debiteur"],
-"Emirats Arabes Unis": ["pays_immat_morale_etrg_debiteur"],
-"Equateur": ["pays_immat_morale_etrg_debiteur"],
-"Erythrée": ["pays_immat_morale_etrg_debiteur"],
-"Espagne": ["pays_immat_morale_etrg_debiteur"],
-"Estonie": ["pays_immat_morale_etrg_debiteur"],
-"Etats-Unis": ["pays_immat_morale_etrg_debiteur"],
-"Ethiopie": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Fidji": ["pays_immat_morale_etrg_debiteur"],
-"Finlande": ["pays_immat_morale_etrg_debiteur"],
-"France": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Gabon": ["pays_immat_morale_etrg_debiteur"],
-"Gambie": ["pays_immat_morale_etrg_debiteur"],
-"Géorgie": ["pays_immat_morale_etrg_debiteur"],
-"Ghana": ["pays_immat_morale_etrg_debiteur"],
-"Grèce": ["pays_immat_morale_etrg_debiteur"],
-"Grenade": ["pays_immat_morale_etrg_debiteur"],
-"Groenland": ["pays_immat_morale_etrg_debiteur"],
-"Guatémala": ["pays_immat_morale_etrg_debiteur"],
-"Guinée": ["pays_immat_morale_etrg_debiteur"],
-"Guinée Bissau": ["pays_immat_morale_etrg_debiteur"],
-"Guinée équatoriale": ["pays_immat_morale_etrg_debiteur"],
-"Guyana": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Haïti": ["pays_immat_morale_etrg_debiteur"],
-"Honduras": ["pays_immat_morale_etrg_debiteur"],
-"Hong Kong": ["pays_immat_morale_etrg_debiteur"],
-"Hongrie": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Inde": ["pays_immat_morale_etrg_debiteur"],
-"Indonésie": ["pays_immat_morale_etrg_debiteur"],
-"Irak": ["pays_immat_morale_etrg_debiteur"],
-"Iran": ["pays_immat_morale_etrg_debiteur"],
-"Irlande": ["pays_immat_morale_etrg_debiteur"],
-"Islande": ["pays_immat_morale_etrg_debiteur"],
-"Israël": ["pays_immat_morale_etrg_debiteur"],
-"Italie": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Jamaïque": ["pays_immat_morale_etrg_debiteur"],
-"Japon": ["pays_immat_morale_etrg_debiteur"],
-"Jordanie": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Kazakhstan": ["pays_immat_morale_etrg_debiteur"],
-"Kenya": ["pays_immat_morale_etrg_debiteur"],
-"Kirghizstan": ["pays_immat_morale_etrg_debiteur"],
-"Kiribati": ["pays_immat_morale_etrg_debiteur"],
-"Koweït": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Laos": ["pays_immat_morale_etrg_debiteur"],
-"Lesotho": ["pays_immat_morale_etrg_debiteur"],
-"Lettonie": ["pays_immat_morale_etrg_debiteur"],
-"Liban": ["pays_immat_morale_etrg_debiteur"],
-"Liberia": ["pays_immat_morale_etrg_debiteur"],
-"Libye": ["pays_immat_morale_etrg_debiteur"],
-"Liechtenstein": ["pays_immat_morale_etrg_debiteur"],
-"Lituanie": ["pays_immat_morale_etrg_debiteur"],
-"Luxembourg": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Macédoine": ["pays_immat_morale_etrg_debiteur"],
-"Madagascar": ["pays_immat_morale_etrg_debiteur"],
-"Malaisie": ["pays_immat_morale_etrg_debiteur"],
-"Malawi": ["pays_immat_morale_etrg_debiteur"],
-"Maldives": ["pays_immat_morale_etrg_debiteur"],
-"Mali": ["pays_immat_morale_etrg_debiteur"],
-"Malte": ["pays_immat_morale_etrg_debiteur"],
-"Maroc": ["pays_immat_morale_etrg_debiteur"],
-"Marshall": ["pays_immat_morale_etrg_debiteur"],
-"Maurice": ["pays_immat_morale_etrg_debiteur"],
-"Mauritanie": ["pays_immat_morale_etrg_debiteur"],
-"Mexique": ["pays_immat_morale_etrg_debiteur"],
-"Micronésie": ["pays_immat_morale_etrg_debiteur"],
-"Moldavie": ["pays_immat_morale_etrg_debiteur"],
-"Monaco": ["pays_immat_morale_etrg_debiteur"],
-"Mongolie": ["pays_immat_morale_etrg_debiteur"],
-"Mozambique": ["pays_immat_morale_etrg_debiteur"],
-"Myanmar": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Namibie": ["pays_immat_morale_etrg_debiteur"],
-"Népal": ["pays_immat_morale_etrg_debiteur"],
-"Nicaragua": ["pays_immat_morale_etrg_debiteur"],
-"Niger": ["pays_immat_morale_etrg_debiteur"],
-"Nigeria": ["pays_immat_morale_etrg_debiteur"],
-"Norvège": ["pays_immat_morale_etrg_debiteur"],
-"Nouvelle Zélande": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Oman": ["pays_immat_morale_etrg_debiteur"],
-"Ouganda": ["pays_immat_morale_etrg_debiteur"],
-"Ouzbekistan": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Pakistan": ["pays_immat_morale_etrg_debiteur"],
-"Palau": ["pays_immat_morale_etrg_debiteur"],
-"Palestine": ["pays_immat_morale_etrg_debiteur"],
-"Panama": ["pays_immat_morale_etrg_debiteur"],
-"Papouasie - Nouvelle Guinée": ["pays_immat_morale_etrg_debiteur"],
-"Paraguay": ["pays_immat_morale_etrg_debiteur"],
-"Pays-Bas": ["pays_immat_morale_etrg_debiteur"],
-"Pérou": ["pays_immat_morale_etrg_debiteur"],
-"Philippines": ["pays_immat_morale_etrg_debiteur"],
-"Pologne": ["pays_immat_morale_etrg_debiteur"],
-"Porto Rico": ["pays_immat_morale_etrg_debiteur"],
-"Portugal": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Qatar": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Roumanie": ["pays_immat_morale_etrg_debiteur"],
-"Royaume-Uni": ["pays_immat_morale_etrg_debiteur"],
-"Russie": ["pays_immat_morale_etrg_debiteur"],
-"Rwanda": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Saint Christophe et Nevis": ["pays_immat_morale_etrg_debiteur"],
-"Saint Vincent et les Grenadines": ["pays_immat_morale_etrg_debiteur"],
-"Sainte Lucie": ["pays_immat_morale_etrg_debiteur"],
-"Salomon": ["pays_immat_morale_etrg_debiteur"],
-"Salvador": ["pays_immat_morale_etrg_debiteur"],
-"Samoa": ["pays_immat_morale_etrg_debiteur"],
-"São Tomé et Príncipe": ["pays_immat_morale_etrg_debiteur"],
-"Sénégal": ["pays_immat_morale_etrg_debiteur"],
-"Seychelles": ["pays_immat_morale_etrg_debiteur"],
-"Sierra Leone": ["pays_immat_morale_etrg_debiteur"],
-"Singapour": ["pays_immat_morale_etrg_debiteur"],
-"Slovaquie": ["pays_immat_morale_etrg_debiteur"],
-"Slovénie": ["pays_immat_morale_etrg_debiteur"],
-"Somalie": ["pays_immat_morale_etrg_debiteur"],
-"Somaliland": ["pays_immat_morale_etrg_debiteur"],
-"Soudan": ["pays_immat_morale_etrg_debiteur"],
-"Sri Lanka": ["pays_immat_morale_etrg_debiteur"],
-"Suède": ["pays_immat_morale_etrg_debiteur"],
-"Suisse": ["pays_immat_morale_etrg_debiteur"],
-"Surinam": ["pays_immat_morale_etrg_debiteur"],
-"Syrie": ["pays_immat_morale_etrg_debiteur"],
-"Swaziland": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Tadjikistan": ["pays_immat_morale_etrg_debiteur"],
-"Taïwan": ["pays_immat_morale_etrg_debiteur"],
-"Tanzanie": ["pays_immat_morale_etrg_debiteur"],
-"Tchad": ["pays_immat_morale_etrg_debiteur"],
-"Tchéquie": ["pays_immat_morale_etrg_debiteur"],
-"Thaïlande": ["pays_immat_morale_etrg_debiteur"],
-"Tibet": ["pays_immat_morale_etrg_debiteur"],
-"Timor Oriental": ["pays_immat_morale_etrg_debiteur"],
-"Togo": ["pays_immat_morale_etrg_debiteur"],
-"Tonga": ["pays_immat_morale_etrg_debiteur"],
-"Trinité et Tobago": ["pays_immat_morale_etrg_debiteur"],
-"Tunisie": ["pays_immat_morale_etrg_debiteur"],
-"Turkmenistan": ["pays_immat_morale_etrg_debiteur"],
-"Turquie": ["pays_immat_morale_etrg_debiteur"],
-"Tuvalu": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Ukraine": ["pays_immat_morale_etrg_debiteur"],
-"Uruguay": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Vanuatu": ["pays_immat_morale_etrg_debiteur"],
-"Vatican": ["pays_immat_morale_etrg_debiteur"],
-"Vénézuéla": ["pays_immat_morale_etrg_debiteur"],
-"Vietnam": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Yémen": ["pays_immat_morale_etrg_debiteur"],
-"Yougoslavie": ["pays_immat_morale_etrg_debiteur"],
-
-
-"Zambie": ["pays_immat_morale_etrg_debiteur"],
-"Zimbabwe": ["pays_immat_morale_etrg_debiteur"]
+        "text": ["pays_immat_morale_etrg_debiteur"]
         },
       "visibility": true
     },
@@ -1256,26 +576,26 @@
       "value": "",
       "bookmarkIdPerValue": {
         "SA": ["forme_morale_etrg_debiteur"],
-		 "SARL": ["forme_morale_etrg_debiteur"],
-		  "SUARL": ["forme_morale_etrg_debiteur"],
-		   "LLP": ["forme_morale_etrg_debiteur"],
-		    "GMBH": ["forme_morale_etrg_debiteur"],
-			"Autre": ["forme_morale_etrg_debiteur"]
+		"SARL": ["forme_morale_etrg_debiteur"],
+		"SUARL": ["forme_morale_etrg_debiteur"],
+		"LLP": ["forme_morale_etrg_debiteur"],
+		"GMBH": ["forme_morale_etrg_debiteur"],
+		"Autre": ["forme_morale_etrg_debiteur"]
         },
       "visibility": true
     },
-	 {
-      "id": "input_forme_champ_libre_4",
-      "type": "text",
+	{
+      "id": "input_champ_libre_forme_4",
+      "type": "select",
       "description": "",
-      "name": "input_forme_champ_libre_4",
+      "name": "input_champ_libre_forme_4",
       "label": "Préciser la forme",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["forme_morale_etrg_debiteur"]
+          "text": ["forme_morale_etrg_debiteur"]
         },
       "visibility": false
     },
@@ -1381,17 +701,17 @@
       "value": "",
       "bookmarkIdPerValue": {
         "SA": ["forme_morale_tun_debiteur"],
-		 "SARL": ["forme_morale_tun_debiteur"],
-		  "SUARL": ["forme_morale_tun_debiteur"],
-		  "Autre": ["forme_morale_tun_debiteur"]
+		"SARL": ["forme_morale_tun_debiteur"],
+		"SUARL": ["forme_morale_tun_debiteur"],
+		"Autre": ["forme_morale_tun_debiteur"]
         },
       "visibility": true
     },
-	 {
-      "id": "input_forme_champ_libre_3",
+	{
+      "id": "input_champ_libre_forme_3",
       "type": "text",
       "description": "",
-      "name": "input_forme_champ_libre_3",
+      "name": "input_champ_libre_forme_3",
       "label": "Préciser la forme",
       "placeHolder": "",
       "help": "",
@@ -1435,7 +755,7 @@
     },
   {
       "id": "input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
       "label": "Date de délivrance du passeport",
@@ -1467,259 +787,17 @@
     },
   {
       "id": "input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur",
-      "type": "select",
+      "type": "country",
       "description": "",
       "name": "input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur",
       "label": "Pays émetteur du Passeport",
       "placeHolder": "",
       "help": "",
-           "options": ["Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne","Andorre","Angola","Antigua et Barbuda","Arabie saoudite","Argentine","Arménie","Australie","Autriche","Azerbaïdjan","Bahamas","Bahrein","Bangladesh","Barbade","Belgique","Bélize","Benin","Bhoutan","Biélorussie","Bolivie","Bosnie-Herzégovine","Botswana","Brésil","Brunei","Bulgarie","Burkina Faso","Burundi","Cambodge","Cameroun","Canada","Cap Vert","Centrafrique","Chili","Chine","Chypre","Colombie","Comores","Congo démocratique","Congo","Corée du Nord","Corée du Sud","Costa Rica","Côte d'Ivoire","Croatie","Cuba","Danemark","Djibouti","Dominique","RépubliqueDominicaine","Egypte","Emirats Arabes Unis","Equateur","Erythrée","Espagne","Estonie","Etats-Unis","Ethiopie","Fidji","Finlande","France","Gabon","Gambie","Géorgie","Ghana","Grèce","Grenade","Groenland","Guatémala","Guinée","Guinée Bissau","Guinée équatoriale","Guyana","Haïti","Honduras","Hong Kong","Hongrie","Inde","Indonésie","Irak","Iran","Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jordanie","Kazakhstan","Kenya","Kirghizstan","Kiribati","Koweït","Laos","Lesotho","Lettonie","Liban","Liberia","Libye","Liechtenstein","Lituanie","Luxembourg","Macédoine","Madagascar","Malaisie","Malawi","Maldives","Mali","Malte","Maroc","Marshall","Maurice","Mauritanie","Mexique","Micronésie","Moldavie","Monaco","Mongolie","Mozambique","Myanmar","Namibie","Népal","Nicaragua","Niger","Nigeria","Norvège","Nouvelle Zélande","Oman","Ouganda","Ouzbekistan","Pakistan","Palau","Palestine","Panama","Papouasie - Nouvelle Guinée","Paraguay","Pays-Bas","Pérou","Philippines","Pologne","Porto Rico","Portugal","Qatar","Roumanie","Royaume-Uni","Russie","Rwanda","Saint Christophe et Nevis","Saint Vincent et les Grenadines","Sainte Lucie","Salomon","Salvador","Samoa","São Tomé et Príncipe","Sénégal","Seychelles","Sierra Leone","Singapour","Slovaquie","Slovénie","Somalie","Somaliland","Soudan","Sri Lanka","Suède","Suisse","Surinam","Syrie","Swaziland","Tadjikistan","Taïwan","Tanzanie","Tchad","Tchéquie","Thaïlande","Tibet","Timor Oriental","Togo","Tonga","Trinité et Tobago","Tunisie","Turkmenistan","Turquie","Tuvalu","Ukraine","Uruguay","Vanuatu","Vatican","Vénézuéla","Vietnam","Yémen","Yougoslavie","Zambie","Zimbabwe"],
-
+      "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "Afghanistan": ["pays_passp_phys_etrg_debiteur"],
-"Afrique du Sud": ["pays_passp_phys_etrg_debiteur"],
-"Albanie": ["pays_passp_phys_etrg_debiteur"],
-"Algérie": ["pays_passp_phys_etrg_debiteur"],
-"Allemagne": ["pays_passp_phys_etrg_debiteur"],
-"Andorre": ["pays_passp_phys_etrg_debiteur"],
-"Angola": ["pays_passp_phys_etrg_debiteur"],
-"Antigua et Barbuda": ["pays_passp_phys_etrg_debiteur"],
-"Arabie saoudite": ["pays_passp_phys_etrg_debiteur"],
-"Argentine": ["pays_passp_phys_etrg_debiteur"],
-"Arménie": ["pays_passp_phys_etrg_debiteur"],
-"Australie": ["pays_passp_phys_etrg_debiteur"],
-"Autriche": ["pays_passp_phys_etrg_debiteur"],
-"Azerbaïdjan": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Bahamas": ["pays_passp_phys_etrg_debiteur"],
-"Bahrein": ["pays_passp_phys_etrg_debiteur"],
-"Bangladesh": ["pays_passp_phys_etrg_debiteur"],
-"Barbade": ["pays_passp_phys_etrg_debiteur"],
-"Belgique": ["pays_passp_phys_etrg_debiteur"],
-"Bélize": ["pays_passp_phys_etrg_debiteur"],
-"Benin": ["pays_passp_phys_etrg_debiteur"],
-"Bhoutan": ["pays_passp_phys_etrg_debiteur"],
-"Biélorussie": ["pays_passp_phys_etrg_debiteur"],
-"Bolivie": ["pays_passp_phys_etrg_debiteur"],
-"Bosnie-Herzégovine": ["pays_passp_phys_etrg_debiteur"],
-"Botswana": ["pays_passp_phys_etrg_debiteur"],
-"Brésil": ["pays_passp_phys_etrg_debiteur"],
-"Brunei": ["pays_passp_phys_etrg_debiteur"],
-"Bulgarie": ["pays_passp_phys_etrg_debiteur"],
-"Burkina Faso": ["pays_passp_phys_etrg_debiteur"],
-"Burundi": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Cambodge": ["pays_passp_phys_etrg_debiteur"],
-"Cameroun": ["pays_passp_phys_etrg_debiteur"],
-"Canada": ["pays_passp_phys_etrg_debiteur"],
-"Cap Vert": ["pays_passp_phys_etrg_debiteur"],
-"Centrafrique": ["pays_passp_phys_etrg_debiteur"],
-"Chili": ["pays_passp_phys_etrg_debiteur"],
-"Chine": ["pays_passp_phys_etrg_debiteur"],
-"Chypre": ["pays_passp_phys_etrg_debiteur"],
-"Colombie": ["pays_passp_phys_etrg_debiteur"],
-"Comores": ["pays_passp_phys_etrg_debiteur"],
-"Congo démocratique": ["pays_passp_phys_etrg_debiteur"],
-"Congo": ["pays_passp_phys_etrg_debiteur"],
-"Corée du Nord": ["pays_passp_phys_etrg_debiteur"],
-"Corée du Sud": ["pays_passp_phys_etrg_debiteur"],
-"Costa Rica": ["pays_passp_phys_etrg_debiteur"],
-"Côte d'Ivoire": ["pays_passp_phys_etrg_debiteur"],
-"Croatie": ["pays_passp_phys_etrg_debiteur"],
-"Cuba": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Danemark": ["pays_passp_phys_etrg_debiteur"],
-"Djibouti": ["pays_passp_phys_etrg_debiteur"],
-"Dominique": ["pays_passp_phys_etrg_debiteur"],
-"RépubliqueDominicaine": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Egypte": ["pays_passp_phys_etrg_debiteur"],
-"Emirats Arabes Unis": ["pays_passp_phys_etrg_debiteur"],
-"Equateur": ["pays_passp_phys_etrg_debiteur"],
-"Erythrée": ["pays_passp_phys_etrg_debiteur"],
-"Espagne": ["pays_passp_phys_etrg_debiteur"],
-"Estonie": ["pays_passp_phys_etrg_debiteur"],
-"Etats-Unis": ["pays_passp_phys_etrg_debiteur"],
-"Ethiopie": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Fidji": ["pays_passp_phys_etrg_debiteur"],
-"Finlande": ["pays_passp_phys_etrg_debiteur"],
-"France": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Gabon": ["pays_passp_phys_etrg_debiteur"],
-"Gambie": ["pays_passp_phys_etrg_debiteur"],
-"Géorgie": ["pays_passp_phys_etrg_debiteur"],
-"Ghana": ["pays_passp_phys_etrg_debiteur"],
-"Grèce": ["pays_passp_phys_etrg_debiteur"],
-"Grenade": ["pays_passp_phys_etrg_debiteur"],
-"Groenland": ["pays_passp_phys_etrg_debiteur"],
-"Guatémala": ["pays_passp_phys_etrg_debiteur"],
-"Guinée": ["pays_passp_phys_etrg_debiteur"],
-"Guinée Bissau": ["pays_passp_phys_etrg_debiteur"],
-"Guinée équatoriale": ["pays_passp_phys_etrg_debiteur"],
-"Guyana": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Haïti": ["pays_passp_phys_etrg_debiteur"],
-"Honduras": ["pays_passp_phys_etrg_debiteur"],
-"Hong Kong": ["pays_passp_phys_etrg_debiteur"],
-"Hongrie": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Inde": ["pays_passp_phys_etrg_debiteur"],
-"Indonésie": ["pays_passp_phys_etrg_debiteur"],
-"Irak": ["pays_passp_phys_etrg_debiteur"],
-"Iran": ["pays_passp_phys_etrg_debiteur"],
-"Irlande": ["pays_passp_phys_etrg_debiteur"],
-"Islande": ["pays_passp_phys_etrg_debiteur"],
-"Israël": ["pays_passp_phys_etrg_debiteur"],
-"Italie": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Jamaïque": ["pays_passp_phys_etrg_debiteur"],
-"Japon": ["pays_passp_phys_etrg_debiteur"],
-"Jordanie": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Kazakhstan": ["pays_passp_phys_etrg_debiteur"],
-"Kenya": ["pays_passp_phys_etrg_debiteur"],
-"Kirghizstan": ["pays_passp_phys_etrg_debiteur"],
-"Kiribati": ["pays_passp_phys_etrg_debiteur"],
-"Koweït": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Laos": ["pays_passp_phys_etrg_debiteur"],
-"Lesotho": ["pays_passp_phys_etrg_debiteur"],
-"Lettonie": ["pays_passp_phys_etrg_debiteur"],
-"Liban": ["pays_passp_phys_etrg_debiteur"],
-"Liberia": ["pays_passp_phys_etrg_debiteur"],
-"Libye": ["pays_passp_phys_etrg_debiteur"],
-"Liechtenstein": ["pays_passp_phys_etrg_debiteur"],
-"Lituanie": ["pays_passp_phys_etrg_debiteur"],
-"Luxembourg": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Macédoine": ["pays_passp_phys_etrg_debiteur"],
-"Madagascar": ["pays_passp_phys_etrg_debiteur"],
-"Malaisie": ["pays_passp_phys_etrg_debiteur"],
-"Malawi": ["pays_passp_phys_etrg_debiteur"],
-"Maldives": ["pays_passp_phys_etrg_debiteur"],
-"Mali": ["pays_passp_phys_etrg_debiteur"],
-"Malte": ["pays_passp_phys_etrg_debiteur"],
-"Maroc": ["pays_passp_phys_etrg_debiteur"],
-"Marshall": ["pays_passp_phys_etrg_debiteur"],
-"Maurice": ["pays_passp_phys_etrg_debiteur"],
-"Mauritanie": ["pays_passp_phys_etrg_debiteur"],
-"Mexique": ["pays_passp_phys_etrg_debiteur"],
-"Micronésie": ["pays_passp_phys_etrg_debiteur"],
-"Moldavie": ["pays_passp_phys_etrg_debiteur"],
-"Monaco": ["pays_passp_phys_etrg_debiteur"],
-"Mongolie": ["pays_passp_phys_etrg_debiteur"],
-"Mozambique": ["pays_passp_phys_etrg_debiteur"],
-"Myanmar": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Namibie": ["pays_passp_phys_etrg_debiteur"],
-"Népal": ["pays_passp_phys_etrg_debiteur"],
-"Nicaragua": ["pays_passp_phys_etrg_debiteur"],
-"Niger": ["pays_passp_phys_etrg_debiteur"],
-"Nigeria": ["pays_passp_phys_etrg_debiteur"],
-"Norvège": ["pays_passp_phys_etrg_debiteur"],
-"Nouvelle Zélande": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Oman": ["pays_passp_phys_etrg_debiteur"],
-"Ouganda": ["pays_passp_phys_etrg_debiteur"],
-"Ouzbekistan": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Pakistan": ["pays_passp_phys_etrg_debiteur"],
-"Palau": ["pays_passp_phys_etrg_debiteur"],
-"Palestine": ["pays_passp_phys_etrg_debiteur"],
-"Panama": ["pays_passp_phys_etrg_debiteur"],
-"Papouasie - Nouvelle Guinée": ["pays_passp_phys_etrg_debiteur"],
-"Paraguay": ["pays_passp_phys_etrg_debiteur"],
-"Pays-Bas": ["pays_passp_phys_etrg_debiteur"],
-"Pérou": ["pays_passp_phys_etrg_debiteur"],
-"Philippines": ["pays_passp_phys_etrg_debiteur"],
-"Pologne": ["pays_passp_phys_etrg_debiteur"],
-"Porto Rico": ["pays_passp_phys_etrg_debiteur"],
-"Portugal": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Qatar": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Roumanie": ["pays_passp_phys_etrg_debiteur"],
-"Royaume-Uni": ["pays_passp_phys_etrg_debiteur"],
-"Russie": ["pays_passp_phys_etrg_debiteur"],
-"Rwanda": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Saint Christophe et Nevis": ["pays_passp_phys_etrg_debiteur"],
-"Saint Vincent et les Grenadines": ["pays_passp_phys_etrg_debiteur"],
-"Sainte Lucie": ["pays_passp_phys_etrg_debiteur"],
-"Salomon": ["pays_passp_phys_etrg_debiteur"],
-"Salvador": ["pays_passp_phys_etrg_debiteur"],
-"Samoa": ["pays_passp_phys_etrg_debiteur"],
-"São Tomé et Príncipe": ["pays_passp_phys_etrg_debiteur"],
-"Sénégal": ["pays_passp_phys_etrg_debiteur"],
-"Seychelles": ["pays_passp_phys_etrg_debiteur"],
-"Sierra Leone": ["pays_passp_phys_etrg_debiteur"],
-"Singapour": ["pays_passp_phys_etrg_debiteur"],
-"Slovaquie": ["pays_passp_phys_etrg_debiteur"],
-"Slovénie": ["pays_passp_phys_etrg_debiteur"],
-"Somalie": ["pays_passp_phys_etrg_debiteur"],
-"Somaliland": ["pays_passp_phys_etrg_debiteur"],
-"Soudan": ["pays_passp_phys_etrg_debiteur"],
-"Sri Lanka": ["pays_passp_phys_etrg_debiteur"],
-"Suède": ["pays_passp_phys_etrg_debiteur"],
-"Suisse": ["pays_passp_phys_etrg_debiteur"],
-"Surinam": ["pays_passp_phys_etrg_debiteur"],
-"Syrie": ["pays_passp_phys_etrg_debiteur"],
-"Swaziland": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Tadjikistan": ["pays_passp_phys_etrg_debiteur"],
-"Taïwan": ["pays_passp_phys_etrg_debiteur"],
-"Tanzanie": ["pays_passp_phys_etrg_debiteur"],
-"Tchad": ["pays_passp_phys_etrg_debiteur"],
-"Tchéquie": ["pays_passp_phys_etrg_debiteur"],
-"Thaïlande": ["pays_passp_phys_etrg_debiteur"],
-"Tibet": ["pays_passp_phys_etrg_debiteur"],
-"Timor Oriental": ["pays_passp_phys_etrg_debiteur"],
-"Togo": ["pays_passp_phys_etrg_debiteur"],
-"Tonga": ["pays_passp_phys_etrg_debiteur"],
-"Trinité et Tobago": ["pays_passp_phys_etrg_debiteur"],
-"Tunisie": ["pays_passp_phys_etrg_debiteur"],
-"Turkmenistan": ["pays_passp_phys_etrg_debiteur"],
-"Turquie": ["pays_passp_phys_etrg_debiteur"],
-"Tuvalu": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Ukraine": ["pays_passp_phys_etrg_debiteur"],
-"Uruguay": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Vanuatu": ["pays_passp_phys_etrg_debiteur"],
-"Vatican": ["pays_passp_phys_etrg_debiteur"],
-"Vénézuéla": ["pays_passp_phys_etrg_debiteur"],
-"Vietnam": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Yémen": ["pays_passp_phys_etrg_debiteur"],
-"Yougoslavie": ["pays_passp_phys_etrg_debiteur"],
-
-
-"Zambie": ["pays_passp_phys_etrg_debiteur"],
-"Zimbabwe": ["pays_passp_phys_etrg_debiteur"]
+        "text": ["pays_passp_phys_etrg_debiteur"]
+        
       },
       "visibility": true
     },
@@ -2132,7 +1210,7 @@
     },
   {
       "id": "input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
       "label": "Date de délivrance de la carte d’identité nationale",
@@ -2180,7 +1258,7 @@
     },
   {
       "id": "input_numero_cin_personne_physique_tunisienne_debiteur",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_numero_cin_personne_physique_tunisienne_debiteur",
       "label": "Numéro de carte d'identité nationale",
@@ -2212,7 +1290,7 @@
     },
   {
       "id": "input_date_naissance_personne_physique_tunisienne_debiteur",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne_debiteur",
       "label": "Date de naissance",
@@ -2262,7 +1340,7 @@
       "id": "input_nature_personne_physique_tunisienne_debiteur",
       "type": "radio",
       "description": "",
-      "name": "nature_employeur_1",
+      "name": "nature_employeur",
       "label": "Personne physique tunisienne",
       "placeHolder": "",
       "help": "",
@@ -2280,7 +1358,7 @@
       "id": "input_nature_personne_physique_etrangere_debiteur",
       "type": "radio",
       "description": "",
-      "name": "nature_employeur_1",
+      "name": "nature_employeur",
       "label": "Personne physique étrangère",
       "placeHolder": "",
       "help": "",
@@ -2298,7 +1376,7 @@
       "id": "input_nature_personne_morale_tunisienne_debiteur",
       "type": "radio",
       "description": "",
-      "name": "nature_employeur_1",
+      "name": "nature_employeur",
       "label": "Personne morale tunisienne",
       "placeHolder": "",
       "help": "",
@@ -2316,7 +1394,7 @@
       "id": "input_nature_personne_morale_etrangere_debiteur",
       "type": "radio",
       "description": "",
-      "name": "nature_employeur_1",
+      "name": "nature_employeur",
       "label": "Personne morale étrangère",
       "placeHolder": "",
       "help": "",
@@ -2393,259 +1471,16 @@
     },
    {
       "id": "input_pays_immatriculation_personne_morale_etrangere_caution",
-      "type": "select",
+      "type": "country",
       "description": "",
       "name": "input_pays_immatriculation_personne_morale_etrangere_caution",
       "label": "Pays d’immatriculation",
       "placeHolder": "",
       "help": "",
-           "options": ["Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne","Andorre","Angola","Antigua et Barbuda","Arabie saoudite","Argentine","Arménie","Australie","Autriche","Azerbaïdjan","Bahamas","Bahrein","Bangladesh","Barbade","Belgique","Bélize","Benin","Bhoutan","Biélorussie","Bolivie","Bosnie-Herzégovine","Botswana","Brésil","Brunei","Bulgarie","Burkina Faso","Burundi","Cambodge","Cameroun","Canada","Cap Vert","Centrafrique","Chili","Chine","Chypre","Colombie","Comores","Congo démocratique","Congo","Corée du Nord","Corée du Sud","Costa Rica","Côte d'Ivoire","Croatie","Cuba","Danemark","Djibouti","Dominique","RépubliqueDominicaine","Egypte","Emirats Arabes Unis","Equateur","Erythrée","Espagne","Estonie","Etats-Unis","Ethiopie","Fidji","Finlande","France","Gabon","Gambie","Géorgie","Ghana","Grèce","Grenade","Groenland","Guatémala","Guinée","Guinée Bissau","Guinée équatoriale","Guyana","Haïti","Honduras","Hong Kong","Hongrie","Inde","Indonésie","Irak","Iran","Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jordanie","Kazakhstan","Kenya","Kirghizstan","Kiribati","Koweït","Laos","Lesotho","Lettonie","Liban","Liberia","Libye","Liechtenstein","Lituanie","Luxembourg","Macédoine","Madagascar","Malaisie","Malawi","Maldives","Mali","Malte","Maroc","Marshall","Maurice","Mauritanie","Mexique","Micronésie","Moldavie","Monaco","Mongolie","Mozambique","Myanmar","Namibie","Népal","Nicaragua","Niger","Nigeria","Norvège","Nouvelle Zélande","Oman","Ouganda","Ouzbekistan","Pakistan","Palau","Palestine","Panama","Papouasie - Nouvelle Guinée","Paraguay","Pays-Bas","Pérou","Philippines","Pologne","Porto Rico","Portugal","Qatar","Roumanie","Royaume-Uni","Russie","Rwanda","Saint Christophe et Nevis","Saint Vincent et les Grenadines","Sainte Lucie","Salomon","Salvador","Samoa","São Tomé et Príncipe","Sénégal","Seychelles","Sierra Leone","Singapour","Slovaquie","Slovénie","Somalie","Somaliland","Soudan","Sri Lanka","Suède","Suisse","Surinam","Syrie","Swaziland","Tadjikistan","Taïwan","Tanzanie","Tchad","Tchéquie","Thaïlande","Tibet","Timor Oriental","Togo","Tonga","Trinité et Tobago","Tunisie","Turkmenistan","Turquie","Tuvalu","Ukraine","Uruguay","Vanuatu","Vatican","Vénézuéla","Vietnam","Yémen","Yougoslavie","Zambie","Zimbabwe"],
-
+      "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "Afghanistan": ["pays_immat_morale_etrg_caution"],
-"Afrique du Sud": ["pays_immat_morale_etrg_caution"],
-"Albanie": ["pays_immat_morale_etrg_caution"],
-"Algérie": ["pays_immat_morale_etrg_caution"],
-"Allemagne": ["pays_immat_morale_etrg_caution"],
-"Andorre": ["pays_immat_morale_etrg_caution"],
-"Angola": ["pays_immat_morale_etrg_caution"],
-"Antigua et Barbuda": ["pays_immat_morale_etrg_caution"],
-"Arabie saoudite": ["pays_immat_morale_etrg_caution"],
-"Argentine": ["pays_immat_morale_etrg_caution"],
-"Arménie": ["pays_immat_morale_etrg_caution"],
-"Australie": ["pays_immat_morale_etrg_caution"],
-"Autriche": ["pays_immat_morale_etrg_caution"],
-"Azerbaïdjan": ["pays_immat_morale_etrg_caution"],
-
-
-"Bahamas": ["pays_immat_morale_etrg_caution"],
-"Bahrein": ["pays_immat_morale_etrg_caution"],
-"Bangladesh": ["pays_immat_morale_etrg_caution"],
-"Barbade": ["pays_immat_morale_etrg_caution"],
-"Belgique": ["pays_immat_morale_etrg_caution"],
-"Bélize": ["pays_immat_morale_etrg_caution"],
-"Benin": ["pays_immat_morale_etrg_caution"],
-"Bhoutan": ["pays_immat_morale_etrg_caution"],
-"Biélorussie": ["pays_immat_morale_etrg_caution"],
-"Bolivie": ["pays_immat_morale_etrg_caution"],
-"Bosnie-Herzégovine": ["pays_immat_morale_etrg_caution"],
-"Botswana": ["pays_immat_morale_etrg_caution"],
-"Brésil": ["pays_immat_morale_etrg_caution"],
-"Brunei": ["pays_immat_morale_etrg_caution"],
-"Bulgarie": ["pays_immat_morale_etrg_caution"],
-"Burkina Faso": ["pays_immat_morale_etrg_caution"],
-"Burundi": ["pays_immat_morale_etrg_caution"],
-
-
-"Cambodge": ["pays_immat_morale_etrg_caution"],
-"Cameroun": ["pays_immat_morale_etrg_caution"],
-"Canada": ["pays_immat_morale_etrg_caution"],
-"Cap Vert": ["pays_immat_morale_etrg_caution"],
-"Centrafrique": ["pays_immat_morale_etrg_caution"],
-"Chili": ["pays_immat_morale_etrg_caution"],
-"Chine": ["pays_immat_morale_etrg_caution"],
-"Chypre": ["pays_immat_morale_etrg_caution"],
-"Colombie": ["pays_immat_morale_etrg_caution"],
-"Comores": ["pays_immat_morale_etrg_caution"],
-"Congo démocratique": ["pays_immat_morale_etrg_caution"],
-"Congo": ["pays_immat_morale_etrg_caution"],
-"Corée du Nord": ["pays_immat_morale_etrg_caution"],
-"Corée du Sud": ["pays_immat_morale_etrg_caution"],
-"Costa Rica": ["pays_immat_morale_etrg_caution"],
-"Côte d'Ivoire": ["pays_immat_morale_etrg_caution"],
-"Croatie": ["pays_immat_morale_etrg_caution"],
-"Cuba": ["pays_immat_morale_etrg_caution"],
-
-
-"Danemark": ["pays_immat_morale_etrg_caution"],
-"Djibouti": ["pays_immat_morale_etrg_caution"],
-"Dominique": ["pays_immat_morale_etrg_caution"],
-"RépubliqueDominicaine": ["pays_immat_morale_etrg_caution"],
-
-
-"Egypte": ["pays_immat_morale_etrg_caution"],
-"Emirats Arabes Unis": ["pays_immat_morale_etrg_caution"],
-"Equateur": ["pays_immat_morale_etrg_caution"],
-"Erythrée": ["pays_immat_morale_etrg_caution"],
-"Espagne": ["pays_immat_morale_etrg_caution"],
-"Estonie": ["pays_immat_morale_etrg_caution"],
-"Etats-Unis": ["pays_immat_morale_etrg_caution"],
-"Ethiopie": ["pays_immat_morale_etrg_caution"],
-
-
-"Fidji": ["pays_immat_morale_etrg_caution"],
-"Finlande": ["pays_immat_morale_etrg_caution"],
-"France": ["pays_immat_morale_etrg_caution"],
-
-
-"Gabon": ["pays_immat_morale_etrg_caution"],
-"Gambie": ["pays_immat_morale_etrg_caution"],
-"Géorgie": ["pays_immat_morale_etrg_caution"],
-"Ghana": ["pays_immat_morale_etrg_caution"],
-"Grèce": ["pays_immat_morale_etrg_caution"],
-"Grenade": ["pays_immat_morale_etrg_caution"],
-"Groenland": ["pays_immat_morale_etrg_caution"],
-"Guatémala": ["pays_immat_morale_etrg_caution"],
-"Guinée": ["pays_immat_morale_etrg_caution"],
-"Guinée Bissau": ["pays_immat_morale_etrg_caution"],
-"Guinée équatoriale": ["pays_immat_morale_etrg_caution"],
-"Guyana": ["pays_immat_morale_etrg_caution"],
-
-
-"Haïti": ["pays_immat_morale_etrg_caution"],
-"Honduras": ["pays_immat_morale_etrg_caution"],
-"Hong Kong": ["pays_immat_morale_etrg_caution"],
-"Hongrie": ["pays_immat_morale_etrg_caution"],
-
-
-"Inde": ["pays_immat_morale_etrg_caution"],
-"Indonésie": ["pays_immat_morale_etrg_caution"],
-"Irak": ["pays_immat_morale_etrg_caution"],
-"Iran": ["pays_immat_morale_etrg_caution"],
-"Irlande": ["pays_immat_morale_etrg_caution"],
-"Islande": ["pays_immat_morale_etrg_caution"],
-"Israël": ["pays_immat_morale_etrg_caution"],
-"Italie": ["pays_immat_morale_etrg_caution"],
-
-
-"Jamaïque": ["pays_immat_morale_etrg_caution"],
-"Japon": ["pays_immat_morale_etrg_caution"],
-"Jordanie": ["pays_immat_morale_etrg_caution"],
-
-
-"Kazakhstan": ["pays_immat_morale_etrg_caution"],
-"Kenya": ["pays_immat_morale_etrg_caution"],
-"Kirghizstan": ["pays_immat_morale_etrg_caution"],
-"Kiribati": ["pays_immat_morale_etrg_caution"],
-"Koweït": ["pays_immat_morale_etrg_caution"],
-
-
-"Laos": ["pays_immat_morale_etrg_caution"],
-"Lesotho": ["pays_immat_morale_etrg_caution"],
-"Lettonie": ["pays_immat_morale_etrg_caution"],
-"Liban": ["pays_immat_morale_etrg_caution"],
-"Liberia": ["pays_immat_morale_etrg_caution"],
-"Libye": ["pays_immat_morale_etrg_caution"],
-"Liechtenstein": ["pays_immat_morale_etrg_caution"],
-"Lituanie": ["pays_immat_morale_etrg_caution"],
-"Luxembourg": ["pays_immat_morale_etrg_caution"],
-
-
-"Macédoine": ["pays_immat_morale_etrg_caution"],
-"Madagascar": ["pays_immat_morale_etrg_caution"],
-"Malaisie": ["pays_immat_morale_etrg_caution"],
-"Malawi": ["pays_immat_morale_etrg_caution"],
-"Maldives": ["pays_immat_morale_etrg_caution"],
-"Mali": ["pays_immat_morale_etrg_caution"],
-"Malte": ["pays_immat_morale_etrg_caution"],
-"Maroc": ["pays_immat_morale_etrg_caution"],
-"Marshall": ["pays_immat_morale_etrg_caution"],
-"Maurice": ["pays_immat_morale_etrg_caution"],
-"Mauritanie": ["pays_immat_morale_etrg_caution"],
-"Mexique": ["pays_immat_morale_etrg_caution"],
-"Micronésie": ["pays_immat_morale_etrg_caution"],
-"Moldavie": ["pays_immat_morale_etrg_caution"],
-"Monaco": ["pays_immat_morale_etrg_caution"],
-"Mongolie": ["pays_immat_morale_etrg_caution"],
-"Mozambique": ["pays_immat_morale_etrg_caution"],
-"Myanmar": ["pays_immat_morale_etrg_caution"],
-
-
-"Namibie": ["pays_immat_morale_etrg_caution"],
-"Népal": ["pays_immat_morale_etrg_caution"],
-"Nicaragua": ["pays_immat_morale_etrg_caution"],
-"Niger": ["pays_immat_morale_etrg_caution"],
-"Nigeria": ["pays_immat_morale_etrg_caution"],
-"Norvège": ["pays_immat_morale_etrg_caution"],
-"Nouvelle Zélande": ["pays_immat_morale_etrg_caution"],
-
-
-"Oman": ["pays_immat_morale_etrg_caution"],
-"Ouganda": ["pays_immat_morale_etrg_caution"],
-"Ouzbekistan": ["pays_immat_morale_etrg_caution"],
-
-
-"Pakistan": ["pays_immat_morale_etrg_caution"],
-"Palau": ["pays_immat_morale_etrg_caution"],
-"Palestine": ["pays_immat_morale_etrg_caution"],
-"Panama": ["pays_immat_morale_etrg_caution"],
-"Papouasie - Nouvelle Guinée": ["pays_immat_morale_etrg_caution"],
-"Paraguay": ["pays_immat_morale_etrg_caution"],
-"Pays-Bas": ["pays_immat_morale_etrg_caution"],
-"Pérou": ["pays_immat_morale_etrg_caution"],
-"Philippines": ["pays_immat_morale_etrg_caution"],
-"Pologne": ["pays_immat_morale_etrg_caution"],
-"Porto Rico": ["pays_immat_morale_etrg_caution"],
-"Portugal": ["pays_immat_morale_etrg_caution"],
-
-
-"Qatar": ["pays_immat_morale_etrg_caution"],
-
-
-"Roumanie": ["pays_immat_morale_etrg_caution"],
-"Royaume-Uni": ["pays_immat_morale_etrg_caution"],
-"Russie": ["pays_immat_morale_etrg_caution"],
-"Rwanda": ["pays_immat_morale_etrg_caution"],
-
-
-"Saint Christophe et Nevis": ["pays_immat_morale_etrg_caution"],
-"Saint Vincent et les Grenadines": ["pays_immat_morale_etrg_caution"],
-"Sainte Lucie": ["pays_immat_morale_etrg_caution"],
-"Salomon": ["pays_immat_morale_etrg_caution"],
-"Salvador": ["pays_immat_morale_etrg_caution"],
-"Samoa": ["pays_immat_morale_etrg_caution"],
-"São Tomé et Príncipe": ["pays_immat_morale_etrg_caution"],
-"Sénégal": ["pays_immat_morale_etrg_caution"],
-"Seychelles": ["pays_immat_morale_etrg_caution"],
-"Sierra Leone": ["pays_immat_morale_etrg_caution"],
-"Singapour": ["pays_immat_morale_etrg_caution"],
-"Slovaquie": ["pays_immat_morale_etrg_caution"],
-"Slovénie": ["pays_immat_morale_etrg_caution"],
-"Somalie": ["pays_immat_morale_etrg_caution"],
-"Somaliland": ["pays_immat_morale_etrg_caution"],
-"Soudan": ["pays_immat_morale_etrg_caution"],
-"Sri Lanka": ["pays_immat_morale_etrg_caution"],
-"Suède": ["pays_immat_morale_etrg_caution"],
-"Suisse": ["pays_immat_morale_etrg_caution"],
-"Surinam": ["pays_immat_morale_etrg_caution"],
-"Syrie": ["pays_immat_morale_etrg_caution"],
-"Swaziland": ["pays_immat_morale_etrg_caution"],
-
-
-"Tadjikistan": ["pays_immat_morale_etrg_caution"],
-"Taïwan": ["pays_immat_morale_etrg_caution"],
-"Tanzanie": ["pays_immat_morale_etrg_caution"],
-"Tchad": ["pays_immat_morale_etrg_caution"],
-"Tchéquie": ["pays_immat_morale_etrg_caution"],
-"Thaïlande": ["pays_immat_morale_etrg_caution"],
-"Tibet": ["pays_immat_morale_etrg_caution"],
-"Timor Oriental": ["pays_immat_morale_etrg_caution"],
-"Togo": ["pays_immat_morale_etrg_caution"],
-"Tonga": ["pays_immat_morale_etrg_caution"],
-"Trinité et Tobago": ["pays_immat_morale_etrg_caution"],
-"Tunisie": ["pays_immat_morale_etrg_caution"],
-"Turkmenistan": ["pays_immat_morale_etrg_caution"],
-"Turquie": ["pays_immat_morale_etrg_caution"],
-"Tuvalu": ["pays_immat_morale_etrg_caution"],
-
-
-"Ukraine": ["pays_immat_morale_etrg_caution"],
-"Uruguay": ["pays_immat_morale_etrg_caution"],
-
-
-"Vanuatu": ["pays_immat_morale_etrg_caution"],
-"Vatican": ["pays_immat_morale_etrg_caution"],
-"Vénézuéla": ["pays_immat_morale_etrg_caution"],
-"Vietnam": ["pays_immat_morale_etrg_caution"],
-
-
-"Yémen": ["pays_immat_morale_etrg_caution"],
-"Yougoslavie": ["pays_immat_morale_etrg_caution"],
-
-
-"Zambie": ["pays_immat_morale_etrg_caution"],
-"Zimbabwe": ["pays_immat_morale_etrg_caution"]
+        "text": ["pays_immat_morale_etrg_caution"]
         },
       "visibility": true
     },
@@ -2660,20 +1495,21 @@
       "options": ["SA","SARL","SUARL","LLP","GMBH","Autre"],
       "value": "",
       "bookmarkIdPerValue": {
-        "SA": ["forme_morale_etrg_caution"],
-	    "SARL": ["forme_morale_etrg_caution"],
-	   "SUARL": ["forme_morale_etrg_caution"],
-	   "LLP": ["forme_morale_etrg_caution"],
-       "GMBH": ["forme_morale_etrg_caution"],
-	   "Autre": ["forme_morale_etrg_caution"]
+        
+		"SA": ["forme_morale_etrg_caution"],
+		"SARL": ["forme_morale_etrg_caution"],
+		"SUARL": ["forme_morale_etrg_caution"],
+		"LLP": ["forme_morale_etrg_caution"],
+		"GMBH": ["forme_morale_etrg_caution"],
+		"Autre": ["forme_morale_etrg_caution"]
         },
       "visibility": true
     },
 	{
-      "id": "input_forme_champ_libre_2",
+      "id": "input_champ_libre_forme_2",
       "type": "text",
       "description": "",
-      "name": "input_forme_champ_libre_2",
+      "name": "input_champ_libre_forme_2",
       "label": "Préciser la forme",
       "placeHolder": "",
       "help": "",
@@ -2793,10 +1629,10 @@
       "visibility": true
     },
 	{
-      "id": "input_forme_champ_libre_1",
+      "id": "input_champ_libre_forme_1",
       "type": "text",
       "description": "",
-      "name": "input_forme_champ_libre_1",
+      "name": "input_champ_libre_forme_1",
       "label": "Préciser la forme",
       "placeHolder": "",
       "help": "",
@@ -2840,7 +1676,7 @@
     },
   {
       "id": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
       "label": "Date de délivrance du passeport",
@@ -2872,259 +1708,16 @@
     },
   {
       "id": "input_pays_emmetteur_passeport_personne_physique_etrangere_caution",
-      "type": "select",
+      "type": "country",
       "description": "",
       "name": "input_pays_emmetteur_passeport_personne_physique_etrangere_caution",
       "label": "Pays émetteur du Passeport",
       "placeHolder": "",
       "help": "",
-            "options": ["Afghanistan","Afrique du Sud","Albanie","Algérie","Allemagne","Andorre","Angola","Antigua et Barbuda","Arabie saoudite","Argentine","Arménie","Australie","Autriche","Azerbaïdjan","Bahamas","Bahrein","Bangladesh","Barbade","Belgique","Bélize","Benin","Bhoutan","Biélorussie","Bolivie","Bosnie-Herzégovine","Botswana","Brésil","Brunei","Bulgarie","Burkina Faso","Burundi","Cambodge","Cameroun","Canada","Cap Vert","Centrafrique","Chili","Chine","Chypre","Colombie","Comores","Congo démocratique","Congo","Corée du Nord","Corée du Sud","Costa Rica","Côte d'Ivoire","Croatie","Cuba","Danemark","Djibouti","Dominique","RépubliqueDominicaine","Egypte","Emirats Arabes Unis","Equateur","Erythrée","Espagne","Estonie","Etats-Unis","Ethiopie","Fidji","Finlande","France","Gabon","Gambie","Géorgie","Ghana","Grèce","Grenade","Groenland","Guatémala","Guinée","Guinée Bissau","Guinée équatoriale","Guyana","Haïti","Honduras","Hong Kong","Hongrie","Inde","Indonésie","Irak","Iran","Irlande","Islande","Israël","Italie","Jamaïque","Japon","Jordanie","Kazakhstan","Kenya","Kirghizstan","Kiribati","Koweït","Laos","Lesotho","Lettonie","Liban","Liberia","Libye","Liechtenstein","Lituanie","Luxembourg","Macédoine","Madagascar","Malaisie","Malawi","Maldives","Mali","Malte","Maroc","Marshall","Maurice","Mauritanie","Mexique","Micronésie","Moldavie","Monaco","Mongolie","Mozambique","Myanmar","Namibie","Népal","Nicaragua","Niger","Nigeria","Norvège","Nouvelle Zélande","Oman","Ouganda","Ouzbekistan","Pakistan","Palau","Palestine","Panama","Papouasie - Nouvelle Guinée","Paraguay","Pays-Bas","Pérou","Philippines","Pologne","Porto Rico","Portugal","Qatar","Roumanie","Royaume-Uni","Russie","Rwanda","Saint Christophe et Nevis","Saint Vincent et les Grenadines","Sainte Lucie","Salomon","Salvador","Samoa","São Tomé et Príncipe","Sénégal","Seychelles","Sierra Leone","Singapour","Slovaquie","Slovénie","Somalie","Somaliland","Soudan","Sri Lanka","Suède","Suisse","Surinam","Syrie","Swaziland","Tadjikistan","Taïwan","Tanzanie","Tchad","Tchéquie","Thaïlande","Tibet","Timor Oriental","Togo","Tonga","Trinité et Tobago","Tunisie","Turkmenistan","Turquie","Tuvalu","Ukraine","Uruguay","Vanuatu","Vatican","Vénézuéla","Vietnam","Yémen","Yougoslavie","Zambie","Zimbabwe"],
-
+      "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "Afghanistan": ["pays_passp_phys_etrg_caution"],
-"Afrique du Sud": ["pays_passp_phys_etrg_caution"],
-"Albanie": ["pays_passp_phys_etrg_caution"],
-"Algérie": ["pays_passp_phys_etrg_caution"],
-"Allemagne": ["pays_passp_phys_etrg_caution"],
-"Andorre": ["pays_passp_phys_etrg_caution"],
-"Angola": ["pays_passp_phys_etrg_caution"],
-"Antigua et Barbuda": ["pays_passp_phys_etrg_caution"],
-"Arabie saoudite": ["pays_passp_phys_etrg_caution"],
-"Argentine": ["pays_passp_phys_etrg_caution"],
-"Arménie": ["pays_passp_phys_etrg_caution"],
-"Australie": ["pays_passp_phys_etrg_caution"],
-"Autriche": ["pays_passp_phys_etrg_caution"],
-"Azerbaïdjan": ["pays_passp_phys_etrg_caution"],
-
-
-"Bahamas": ["pays_passp_phys_etrg_caution"],
-"Bahrein": ["pays_passp_phys_etrg_caution"],
-"Bangladesh": ["pays_passp_phys_etrg_caution"],
-"Barbade": ["pays_passp_phys_etrg_caution"],
-"Belgique": ["pays_passp_phys_etrg_caution"],
-"Bélize": ["pays_passp_phys_etrg_caution"],
-"Benin": ["pays_passp_phys_etrg_caution"],
-"Bhoutan": ["pays_passp_phys_etrg_caution"],
-"Biélorussie": ["pays_passp_phys_etrg_caution"],
-"Bolivie": ["pays_passp_phys_etrg_caution"],
-"Bosnie-Herzégovine": ["pays_passp_phys_etrg_caution"],
-"Botswana": ["pays_passp_phys_etrg_caution"],
-"Brésil": ["pays_passp_phys_etrg_caution"],
-"Brunei": ["pays_passp_phys_etrg_caution"],
-"Bulgarie": ["pays_passp_phys_etrg_caution"],
-"Burkina Faso": ["pays_passp_phys_etrg_caution"],
-"Burundi": ["pays_passp_phys_etrg_caution"],
-
-
-"Cambodge": ["pays_passp_phys_etrg_caution"],
-"Cameroun": ["pays_passp_phys_etrg_caution"],
-"Canada": ["pays_passp_phys_etrg_caution"],
-"Cap Vert": ["pays_passp_phys_etrg_caution"],
-"Centrafrique": ["pays_passp_phys_etrg_caution"],
-"Chili": ["pays_passp_phys_etrg_caution"],
-"Chine": ["pays_passp_phys_etrg_caution"],
-"Chypre": ["pays_passp_phys_etrg_caution"],
-"Colombie": ["pays_passp_phys_etrg_caution"],
-"Comores": ["pays_passp_phys_etrg_caution"],
-"Congo démocratique": ["pays_passp_phys_etrg_caution"],
-"Congo": ["pays_passp_phys_etrg_caution"],
-"Corée du Nord": ["pays_passp_phys_etrg_caution"],
-"Corée du Sud": ["pays_passp_phys_etrg_caution"],
-"Costa Rica": ["pays_passp_phys_etrg_caution"],
-"Côte d'Ivoire": ["pays_passp_phys_etrg_caution"],
-"Croatie": ["pays_passp_phys_etrg_caution"],
-"Cuba": ["pays_passp_phys_etrg_caution"],
-
-
-"Danemark": ["pays_passp_phys_etrg_caution"],
-"Djibouti": ["pays_passp_phys_etrg_caution"],
-"Dominique": ["pays_passp_phys_etrg_caution"],
-"RépubliqueDominicaine": ["pays_passp_phys_etrg_caution"],
-
-
-"Egypte": ["pays_passp_phys_etrg_caution"],
-"Emirats Arabes Unis": ["pays_passp_phys_etrg_caution"],
-"Equateur": ["pays_passp_phys_etrg_caution"],
-"Erythrée": ["pays_passp_phys_etrg_caution"],
-"Espagne": ["pays_passp_phys_etrg_caution"],
-"Estonie": ["pays_passp_phys_etrg_caution"],
-"Etats-Unis": ["pays_passp_phys_etrg_caution"],
-"Ethiopie": ["pays_passp_phys_etrg_caution"],
-
-
-"Fidji": ["pays_passp_phys_etrg_caution"],
-"Finlande": ["pays_passp_phys_etrg_caution"],
-"France": ["pays_passp_phys_etrg_caution"],
-
-
-"Gabon": ["pays_passp_phys_etrg_caution"],
-"Gambie": ["pays_passp_phys_etrg_caution"],
-"Géorgie": ["pays_passp_phys_etrg_caution"],
-"Ghana": ["pays_passp_phys_etrg_caution"],
-"Grèce": ["pays_passp_phys_etrg_caution"],
-"Grenade": ["pays_passp_phys_etrg_caution"],
-"Groenland": ["pays_passp_phys_etrg_caution"],
-"Guatémala": ["pays_passp_phys_etrg_caution"],
-"Guinée": ["pays_passp_phys_etrg_caution"],
-"Guinée Bissau": ["pays_passp_phys_etrg_caution"],
-"Guinée équatoriale": ["pays_passp_phys_etrg_caution"],
-"Guyana": ["pays_passp_phys_etrg_caution"],
-
-
-"Haïti": ["pays_passp_phys_etrg_caution"],
-"Honduras": ["pays_passp_phys_etrg_caution"],
-"Hong Kong": ["pays_passp_phys_etrg_caution"],
-"Hongrie": ["pays_passp_phys_etrg_caution"],
-
-
-"Inde": ["pays_passp_phys_etrg_caution"],
-"Indonésie": ["pays_passp_phys_etrg_caution"],
-"Irak": ["pays_passp_phys_etrg_caution"],
-"Iran": ["pays_passp_phys_etrg_caution"],
-"Irlande": ["pays_passp_phys_etrg_caution"],
-"Islande": ["pays_passp_phys_etrg_caution"],
-"Israël": ["pays_passp_phys_etrg_caution"],
-"Italie": ["pays_passp_phys_etrg_caution"],
-
-
-"Jamaïque": ["pays_passp_phys_etrg_caution"],
-"Japon": ["pays_passp_phys_etrg_caution"],
-"Jordanie": ["pays_passp_phys_etrg_caution"],
-
-
-"Kazakhstan": ["pays_passp_phys_etrg_caution"],
-"Kenya": ["pays_passp_phys_etrg_caution"],
-"Kirghizstan": ["pays_passp_phys_etrg_caution"],
-"Kiribati": ["pays_passp_phys_etrg_caution"],
-"Koweït": ["pays_passp_phys_etrg_caution"],
-
-
-"Laos": ["pays_passp_phys_etrg_caution"],
-"Lesotho": ["pays_passp_phys_etrg_caution"],
-"Lettonie": ["pays_passp_phys_etrg_caution"],
-"Liban": ["pays_passp_phys_etrg_caution"],
-"Liberia": ["pays_passp_phys_etrg_caution"],
-"Libye": ["pays_passp_phys_etrg_caution"],
-"Liechtenstein": ["pays_passp_phys_etrg_caution"],
-"Lituanie": ["pays_passp_phys_etrg_caution"],
-"Luxembourg": ["pays_passp_phys_etrg_caution"],
-
-
-"Macédoine": ["pays_passp_phys_etrg_caution"],
-"Madagascar": ["pays_passp_phys_etrg_caution"],
-"Malaisie": ["pays_passp_phys_etrg_caution"],
-"Malawi": ["pays_passp_phys_etrg_caution"],
-"Maldives": ["pays_passp_phys_etrg_caution"],
-"Mali": ["pays_passp_phys_etrg_caution"],
-"Malte": ["pays_passp_phys_etrg_caution"],
-"Maroc": ["pays_passp_phys_etrg_caution"],
-"Marshall": ["pays_passp_phys_etrg_caution"],
-"Maurice": ["pays_passp_phys_etrg_caution"],
-"Mauritanie": ["pays_passp_phys_etrg_caution"],
-"Mexique": ["pays_passp_phys_etrg_caution"],
-"Micronésie": ["pays_passp_phys_etrg_caution"],
-"Moldavie": ["pays_passp_phys_etrg_caution"],
-"Monaco": ["pays_passp_phys_etrg_caution"],
-"Mongolie": ["pays_passp_phys_etrg_caution"],
-"Mozambique": ["pays_passp_phys_etrg_caution"],
-"Myanmar": ["pays_passp_phys_etrg_caution"],
-
-
-"Namibie": ["pays_passp_phys_etrg_caution"],
-"Népal": ["pays_passp_phys_etrg_caution"],
-"Nicaragua": ["pays_passp_phys_etrg_caution"],
-"Niger": ["pays_passp_phys_etrg_caution"],
-"Nigeria": ["pays_passp_phys_etrg_caution"],
-"Norvège": ["pays_passp_phys_etrg_caution"],
-"Nouvelle Zélande": ["pays_passp_phys_etrg_caution"],
-
-
-"Oman": ["pays_passp_phys_etrg_caution"],
-"Ouganda": ["pays_passp_phys_etrg_caution"],
-"Ouzbekistan": ["pays_passp_phys_etrg_caution"],
-
-
-"Pakistan": ["pays_passp_phys_etrg_caution"],
-"Palau": ["pays_passp_phys_etrg_caution"],
-"Palestine": ["pays_passp_phys_etrg_caution"],
-"Panama": ["pays_passp_phys_etrg_caution"],
-"Papouasie - Nouvelle Guinée": ["pays_passp_phys_etrg_caution"],
-"Paraguay": ["pays_passp_phys_etrg_caution"],
-"Pays-Bas": ["pays_passp_phys_etrg_caution"],
-"Pérou": ["pays_passp_phys_etrg_caution"],
-"Philippines": ["pays_passp_phys_etrg_caution"],
-"Pologne": ["pays_passp_phys_etrg_caution"],
-"Porto Rico": ["pays_passp_phys_etrg_caution"],
-"Portugal": ["pays_passp_phys_etrg_caution"],
-
-
-"Qatar": ["pays_passp_phys_etrg_caution"],
-
-
-"Roumanie": ["pays_passp_phys_etrg_caution"],
-"Royaume-Uni": ["pays_passp_phys_etrg_caution"],
-"Russie": ["pays_passp_phys_etrg_caution"],
-"Rwanda": ["pays_passp_phys_etrg_caution"],
-
-
-"Saint Christophe et Nevis": ["pays_passp_phys_etrg_caution"],
-"Saint Vincent et les Grenadines": ["pays_passp_phys_etrg_caution"],
-"Sainte Lucie": ["pays_passp_phys_etrg_caution"],
-"Salomon": ["pays_passp_phys_etrg_caution"],
-"Salvador": ["pays_passp_phys_etrg_caution"],
-"Samoa": ["pays_passp_phys_etrg_caution"],
-"São Tomé et Príncipe": ["pays_passp_phys_etrg_caution"],
-"Sénégal": ["pays_passp_phys_etrg_caution"],
-"Seychelles": ["pays_passp_phys_etrg_caution"],
-"Sierra Leone": ["pays_passp_phys_etrg_caution"],
-"Singapour": ["pays_passp_phys_etrg_caution"],
-"Slovaquie": ["pays_passp_phys_etrg_caution"],
-"Slovénie": ["pays_passp_phys_etrg_caution"],
-"Somalie": ["pays_passp_phys_etrg_caution"],
-"Somaliland": ["pays_passp_phys_etrg_caution"],
-"Soudan": ["pays_passp_phys_etrg_caution"],
-"Sri Lanka": ["pays_passp_phys_etrg_caution"],
-"Suède": ["pays_passp_phys_etrg_caution"],
-"Suisse": ["pays_passp_phys_etrg_caution"],
-"Surinam": ["pays_passp_phys_etrg_caution"],
-"Syrie": ["pays_passp_phys_etrg_caution"],
-"Swaziland": ["pays_passp_phys_etrg_caution"],
-
-
-"Tadjikistan": ["pays_passp_phys_etrg_caution"],
-"Taïwan": ["pays_passp_phys_etrg_caution"],
-"Tanzanie": ["pays_passp_phys_etrg_caution"],
-"Tchad": ["pays_passp_phys_etrg_caution"],
-"Tchéquie": ["pays_passp_phys_etrg_caution"],
-"Thaïlande": ["pays_passp_phys_etrg_caution"],
-"Tibet": ["pays_passp_phys_etrg_caution"],
-"Timor Oriental": ["pays_passp_phys_etrg_caution"],
-"Togo": ["pays_passp_phys_etrg_caution"],
-"Tonga": ["pays_passp_phys_etrg_caution"],
-"Trinité et Tobago": ["pays_passp_phys_etrg_caution"],
-"Tunisie": ["pays_passp_phys_etrg_caution"],
-"Turkmenistan": ["pays_passp_phys_etrg_caution"],
-"Turquie": ["pays_passp_phys_etrg_caution"],
-"Tuvalu": ["pays_passp_phys_etrg_caution"],
-
-
-"Ukraine": ["pays_passp_phys_etrg_caution"],
-"Uruguay": ["pays_passp_phys_etrg_caution"],
-
-
-"Vanuatu": ["pays_passp_phys_etrg_caution"],
-"Vatican": ["pays_passp_phys_etrg_caution"],
-"Vénézuéla": ["pays_passp_phys_etrg_caution"],
-"Vietnam": ["pays_passp_phys_etrg_caution"],
-
-
-"Yémen": ["pays_passp_phys_etrg_caution"],
-"Yougoslavie": ["pays_passp_phys_etrg_caution"],
-
-
-"Zambie": ["pays_passp_phys_etrg_caution"],
-"Zimbabwe": ["pays_passp_phys_etrg_caution"]
+        "text": ["pays_passp_phys_etrg_caution"]
         
       },
       "visibility": true
@@ -3538,7 +2131,7 @@
     },
    {
       "id": "input_date_delivrance_cin_personne_physique_tunisienne_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_cin_personne_physique_tunisienne_caution",
       "label": "Date de délivrance de la carte d’identité nationale",
@@ -3586,7 +2179,7 @@
     },
   {
       "id": "input_numero_cin_personne_physique_tunisienne_caution",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_numero_cin_personne_physique_tunisienne_caution",
       "label": "Numéro de carte d'identité nationale",
@@ -3618,7 +2211,7 @@
     },
   {
       "id": "input_date_naissance_personne_physique_tunisienne_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne_caution",
       "label": "Date de naissance",
@@ -3739,6 +2332,73 @@
   
    ],
   "bookmarks": [
+  {
+      "bookmarkId": "bookmarks_question_9",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmarks_question_8",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+ {
+      "bookmarkId": "numero_titre_financier_6",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "num_titre_6_oui",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "non_applicable_6",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "bookmarks_question_6",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+  
   
    {
       "bookmarkId": "denomi_morale_etrg_debiteur",
@@ -3752,7 +2412,7 @@
       "fontSize": 11
     },
 	{
-      "bookmarkId": "forme_morale_etrg_debiteur",
+      "bookmarkId": "denomi_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
@@ -3815,6 +2475,132 @@
       "fontSize": 11
     },{
       "bookmarkId": "prenom_morale_etrg_debiteur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "question_5_loyer",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "qustion_3_bailleur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "qustion_3_bailleur_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	
+
+	
+	{
+      "bookmarkId": "qustion_3_mandataire_bailleur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	
+	{
+      "bookmarkId": "qustion_3_mandataire_bailleur_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "question_3_mandataire_du_bailleur_nom",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "question_3_mandataire_du_bailleur_prenom",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "qustion_4_preneur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "qustion_4_mandataire_preneur",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "question_4_mandataire_du_preneur_nom",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "question_4_mandataire_du_preneur_prenom",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
@@ -4185,9 +2971,7 @@
       "capitalized": false,
       "type": "USER_INPUT",
       "fontSize": 11
-    },
-	
-	{
+    },{
       "bookmarkId": "capital_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
@@ -4486,524 +3270,7 @@
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
       "fontSize": 11
-    },
-	{
-      "bookmarkId": "autre_date",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "date_signature",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	
-	{
-      "bookmarkId": "question_5_non",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "question_5_oui",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "question_5_oui_duree",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "inserez_date",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "question_4",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "adresse_local_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "nombre_piece_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "superficie_approximation_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "numero_titre_financier_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "num_titre_6_oui",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "non_applicable_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "une_activite_7",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "toutes_activite_7",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "montant_loyer_chiffres_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "montant_loyer_lettres_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "echaince_de_paiement_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "echaince_de_paiement_8_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "loyer_annuel_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "pourcentage_augmentation_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "precisez_activite_7",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "montant_garantie_9",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "etat_lieu_10",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	 {
-      "bookmarkId": "preneur_11",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-    {
-      "bookmarkId": "bailleur_11",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	 {
-      "bookmarkId": "oui_12",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_2",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_3",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_4",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_5",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_7",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_9",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "oui_12_10",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	 {
-      "bookmarkId": "non_12",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "num_tel_preneur_12_7",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "adresse_preneur_12_8",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "email_preneur_12_6",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "adresse_preneur_12_5",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "adresse_bailleur_12_4",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "num_tel_bailleur_12_3",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "email_bailleur_12_2",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "adresse_notific_12_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "nombre_exemplaire_13",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
     }
+	
   ]
 }

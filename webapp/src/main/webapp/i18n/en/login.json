@@ -4,7 +4,7 @@
     "form": {
       "password": "Password",
       "password.placeholder": "Your password",
-      "rememberme": "Remember me",
+      "rememberMe": "Remember me",
       "button": "Sign in"
     },
     "messages": {

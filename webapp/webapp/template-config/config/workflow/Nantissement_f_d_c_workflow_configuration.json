@@ -450,10 +450,10 @@
 	
 	
 	{
-      "inputId": "input_question_6_oui",
+      "inputId": "input_question_6_non",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             
 			{
@@ -490,7 +490,7 @@
       "inputId": "input_question_6_oui",
       "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             
 			{
@@ -524,43 +524,7 @@
       ]
     },
 	
-	{
-      "inputId": "input_question_6_non",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            
-			{
-              "elementId": "input_question_6_1",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_2",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_3",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_4",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_5",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_6",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_7",
-              "visibility": false
-            },{
-              "elementId": "input_question_6_8",
-              "visibility": false
-            }
-			
-          ]
-        }
-      ]
-    },
+	
 	
 	{
       "inputId": "input_question_5_dinars",

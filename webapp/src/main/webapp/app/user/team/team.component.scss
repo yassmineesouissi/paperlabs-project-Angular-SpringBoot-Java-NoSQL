@@ -1,0 +1,157 @@
+.team-item {
+  text-align: center;
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #1400c3;
+      top: -100%;
+      left: 0;
+      transition: all 300ms;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  &-icons {
+    position: absolute;
+    padding: 15px 0;
+    height: 50px;
+    width: 100%;
+    top: 27%;
+    font-size: 17px;
+    font-family: 'calibri';
+    margin-top: -25px;
+    font-size: 15px;
+    color: #fff;
+    a {
+      color: navajowhite;
+      margin: 0 10px;
+      i {
+        width: 30px;
+        height: 30px;
+        border: 1px solid yellow;
+        font-size: 15px;
+        line-height: 30px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: forestgreen;
+          color: red;
+        }
+      }
+    }
+  }
+
+  &-info {
+    background: #fff;
+    box-shadow: 0px 1px 0px rgb(0 0 0 / 10%);
+    padding: 15px 0;
+  }
+
+  &-name {
+    font-family: 'calibri sans-serif';
+    font-size: 15px;
+  }
+
+  &-position {
+    font-size: 11px;
+    color: #aaaaaa;
+  }
+
+  &:hover {
+    .team-item-image-overlay {
+      top: 0;
+    }
+    .team-item-name {
+      color: #071a81;
+      font-weight: 700;
+    }
+  }
+}
+
+//Responsive
+
+@media screen and (max-width: 540px) {
+  #team {
+    .row [class*='col-'] {
+      width: 100%;
+    }
+
+    .team-item {
+      &-icons {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #team {
+    .team-item {
+      &-icons {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.divider-center-small {
+  background-color: #071a81;
+  height: 4px;
+  width: 30px;
+  margin: 10px auto;
+}
+.title {
+  padding-left: 26%;
+  font-family: 'calibri sans-serif';
+}
+@media screen and (max-width: 600px) {
+  .title {
+    padding-left: 0%;
+    font-family: 'calibri';
+  }
+}
+.section {
+  margin-bottom: 11%;
+}
+
+.card-overview {
+  background-color: #fafafa;
+  margin-top: -4%;
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .card-overview {
+    background-color: #fafafa;
+    margin-top: -25%;
+  }
+}
+.work {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tit {
+  font-family: 'calibri';
+  text-align: center;
+  font-size: 25px;
+  color: #071a81;
+  font-weight: 700;
+  margin-top: 5%;
+}
+@media screen and (max-width: 600px) {
+  .tit {
+    font-family: 'calibri';
+    text-align: center;
+    font-size: 25px;
+    color: #071a81;
+    font-weight: 700;
+    margin-top: 13%;
+  }
+}

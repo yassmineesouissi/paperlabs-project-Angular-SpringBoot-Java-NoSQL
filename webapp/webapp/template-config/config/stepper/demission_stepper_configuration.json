@@ -3,7 +3,7 @@
 		
 		{
 			"id": "step_nature_employe_demission",
-			"title": "L’employé :",
+			"title": "L’Employé",
 			"description": "",
 			"blocs": [
 				"bloc_nature_employe_dimission"
@@ -12,7 +12,7 @@
 		},
 		{
 			"id": "step_employe_dimission",
-			"title": "L’employé :",
+			"title": "L’Employé",
 			"description": "",
 			"blocs": [
 				"bloc_tunisien_dimission",
@@ -22,7 +22,7 @@
 		},
 		{
 			"id": "step_employeur_dimission",
-			"title": "L’employeur:",
+			"title": "L’Employeur",
 			"description": "",
 			"blocs": [
 				"bloc_employeur_dimission"
@@ -31,7 +31,7 @@
 		},
 		{
 			"id": "step_information_employeur_dimission",
-			"title": "L'employeur :",
+			"title": "L'Employeur",
 			"description": "",
 			"blocs": [
 				"bloc_employeur_physique_dimission",
@@ -41,10 +41,11 @@
 		},
 		{
 			"id": "step_fonction_employe_dimission",
-			"title": "Employé :",
+			"title": "Poste et statut du salarié",
 			"description": "",
 			"blocs": [
-				"bloc_fonction_employe_dimission"
+				"bloc_fonction_employe_dimission",
+				"bloc_fonction_employe_dimissionn"
 				
 			],
 			"visibility": true
@@ -56,7 +57,7 @@
 	"blocs": [
 		{
 			"id": "bloc_nature_employe_dimission",
-			"title": "",
+			"title": "1- Est-ce que l’employé est de nationalité tunisienne ou étrangère ?",
 			"description": "",
 			"inputs": [
 				"input_nature_employe_tunisien",
@@ -91,12 +92,12 @@
 				"input_num_passport_représentant_dimission",
 				"input_date_expiration_passport_dimission",
 				"input_adresse_employe_et_dimission"],
-			"visibility": false
+			"visibility": true
 		},
 		
 		{
 			"id": "bloc_employeur_dimission",
-			"title": "L'employeur est une:",
+			"title": "2- Est-ce que l’employeur est une personne morale ou physique ?",
 			"description": "",
 			"inputs": [
 			"input_employeur_physique_dimission",
@@ -132,7 +133,18 @@
 			"title": "",
 			"description": "",
 			"inputs": [
-				"input_fonction_employe_dimission",
+				"input_fonction_employe_dimission"
+				
+				
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_fonction_employe_dimissionn",
+			"title": "",
+			"description": "",
+			"inputs": [
+				
 				"input_date_demission"
 				
 			],
@@ -152,7 +164,7 @@
 			"color":"red",
 			"description": "",
 			"name": "input_prenom_employe_tu_dimission",
-			"label": "Prénom:",
+			"label": "Prénom",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -169,7 +181,7 @@
 			"type": "text",
 			"description": "",
 			"name": "input_nom_employe_tu_dimission",
-			"label": "Nom :",
+			"label": "Nom",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -187,7 +199,7 @@
 			"type": "Date",
 			"description": "",
 			"name": "input_datenaissance_employe_tu_dimission",
-			"label": "Date de naissance:",
+			"label": "Date de naissance",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -204,7 +216,7 @@
 			"type": "text",
 			"description": "",
 			"name": "Ville de naissance ",
-			"label": "Ville de naissance :",
+			"label": "Ville de naissance",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -222,7 +234,7 @@
 			"type": "cin",
 			"description": "",
 			"name": "input_cin_employe_tu_dimission",
-			"label": "Numéro de carte d'identité nationale ",
+			"label": "Numéro de la carte d'identité nationale ",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -259,7 +271,7 @@
 			"type": "text",
 			"description": "",
 			"name": "Ville de naissance ",
-			"label": "Ville de naissance :",
+			"label": "Ville de naissance",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -277,7 +289,7 @@
 			"type": "select",
 			"description": "",
 			"name": "Nationalite: ",
-			"label": "Nationalite: ",
+			"label": "Nationalite",
 			"placeHolder": "",
 			"help": "",
 			"options": ["Afghan-e",
@@ -654,7 +666,7 @@
 			"type": "text",
 			"description": "",
 			"name": "Prénom : ",
-			"label": "Prénom : ",
+			"label": "Prénom",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -671,7 +683,7 @@
 			"type": "text",
 			"description": "",
 			"name": "Nom : ",
-			"label": "Nom : ",
+			"label": "Nom",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -689,7 +701,7 @@
 			"type": "Date",
 			"description": "",
 			"name": "input_datenaissance_employe_et_dimission",
-			"label": "Date de naissance:",
+			"label": "Date de naissance",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -711,7 +723,7 @@
 			"type": "text",
 			"description": "",
 			"name": "Numéro de passport  du représentant: ",
-			"label": "Numéro de passport du représentant: ",
+			"label": "Numéro de passport",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -729,7 +741,7 @@
 			"type": "Date",
 			"description": "",
 			"name": "input_date_expiration_passport_dimission",
-			"label": "Date d’expiration du passeport:",
+			"label": "Date d’expiration du passeport",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -767,7 +779,7 @@
 			
 			"description": "",
 			"name": "employee",
-			"label": "Est de nationalité tunisienne",
+			"label": "De nationalité tunisienne",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -784,13 +796,13 @@
 			"type": "radio",
 			"description": "",
 			"name": "employee",
-			"label": "Est de nationalité étrangère",
+			"label": "De nationalité étrangère",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
-			"value": "Personne étrange",
+			"value": "Personne etrange",
 			"bookmarkIdPerValue": {
-				"Personne étrange": [
+				"Personne etrange": [
 					"Infos_employeur_moral"
 				]
 			},
@@ -836,7 +848,7 @@
 			"type": "text",
 			"description": "",
 			"name": "input_nom_employeur_dimission",
-			"label": "Nom :",
+			"label": "Nom",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -853,7 +865,7 @@
 			"type": "text",
 			"description": "",
 			"name": "input_prenom_employeur_dimission",
-			"label": "Prenom :",
+			"label": "Prénom",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -870,7 +882,7 @@
 			"type": "text",
 			"description": "",
 			"name": "input_denomination_dimission",
-			"label": "Dénomination sociale :",
+			"label": "Dénomination sociale",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -887,7 +899,7 @@
 			"type": "text",
 			"description": "",
 			"name": "input_adresse_siege_social_dimission_dimission",
-			"label": "Adresse siége social :",
+			"label": "Adresse du siége social",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -904,7 +916,7 @@
 			"type": "text",
 			"description": "",
 			"name": "Fonction : ",
-			"label": "Fonction de l'employé: ",
+			"label": "3- Quelle est la fonction de l'employé ?",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -921,7 +933,7 @@
 			"type": "Date",
 			"description": "",
 			"name": "input_date_demission",
-			"label": "Date de demission: ",
+			"label": "4- Quelle est la date d’entrée effective de la démission ?",
 			"placeHolder": "",
 			"help": "",
 			"options": [],
@@ -948,11 +960,11 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		{
@@ -960,44 +972,44 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "datenaissance_associe2",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "villenaissance_associe1",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "villenaissance_associe2",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		{
@@ -1005,11 +1017,11 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		
@@ -1018,22 +1030,22 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "adress_associe1",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "adress_associe2",
@@ -1043,30 +1055,30 @@
 			"bold": true,
 			"italic": false,
 			"capitalized": false,
-			"type": "USER_INPUT",
-			"fontSize": 11
+			"type": "false",
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "Infos_employeur_physique",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "PARAGRAPH_WITH_BOOKMARKS",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "Infos_employeur_moral",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "PARAGRAPH_WITH_BOOKMARKS",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		{
@@ -1074,11 +1086,11 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		
@@ -1087,22 +1099,22 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "nom_representant",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		{
@@ -1110,11 +1122,11 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		
@@ -1123,11 +1135,11 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		
@@ -1136,77 +1148,77 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "prenom_emloyeur",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "nom_emloyeur",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "date_demission",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "prenom_associe1",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		{
 			"bookmarkId": "employeur_physique",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "PARAGRAPH_WITH_BOOKMARKS",
-			"fontSize": 11
+			"fontSize": 12
 		},
 				{
 			"bookmarkId": "employeur_moral",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "PARAGRAPH_WITH_BOOKMARKS",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		
 		
@@ -1215,11 +1227,11 @@
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,
-			"bold": true,
+			"bold": false,
 			"italic": false,
 			"capitalized": false,
 			"type": "USER_INPUT",
-			"fontSize": 11
+			"fontSize": 12
 		}
 		
 	]

@@ -3,7 +3,7 @@
 		
 		{
 			"id": "step_nature_employe",
-			"title": "L’Employé :",
+			"title": "L’Employéee :",
 			"description": "",
 			"blocs": [
 				"bloc_nature_employe"

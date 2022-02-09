@@ -1,6 +1,38 @@
 {
   "workflow": [
   {
+	
+        "inputId": "input_nombre_autres_personnes",
+		"valuesConstraints": [
+        {
+			"value": "select_input_generator",
+			"constraints": [
+            {
+				"elementId": "bloc_autre_personne_1",
+				"visibility": true
+            }
+          ]
+        }
+      ]
+    },
+  {
+	
+        "inputId": "input_select",
+		"valuesConstraints": [
+        {
+			"value": "select_input_generator",
+			"constraints": [
+            {
+				"elementId": "input_annee",
+				"visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	
+
+  {
       "inputId": "input_nature_personne_physique_tunisienne_caution",
       "valuesConstraints": [
         {
@@ -788,10 +820,10 @@
 	
 	
 	{
-      "inputId": "input_question_4_2_oui",
+      "inputId": "input_question_4_2_non",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             
 			{
@@ -816,11 +848,13 @@
         }
       ]
     },
+	
+	
 	{
       "inputId": "input_question_4_2_oui",
       "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             
 			{
@@ -846,105 +880,7 @@
       ]
     },
 	
-	{
-      "inputId": "input_question_4_2_non",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            
-			{
-              "elementId": "input_question_4_2_oui_1",
-              "visibility": false
-            },{
-              "elementId": "input_question_4_2_oui_2",
-              "visibility": false
-            },{
-              "elementId": "input_question_4_2_oui_3",
-              "visibility": false
-            },{
-              "elementId": "input_question_4_2_oui_4",
-              "visibility": false
-            },
-			{
-              "elementId": "input_question_4_2_oui_5",
-              "visibility": false
-            }
-			
-          ]
-        }
-      ]
-    },
 	
-	{
-      "inputId": "input_question_4_2_non",
-      "valuesConstraints": [
-       
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_numero_1",
-              "visibility": false
-            },
-			 {
-              "elementId": "input_montant_1",
-              "visibility": false
-            },
-			 {
-              "elementId": "input_echeance_1",
-              "visibility": false
-            },
-			{
-              "elementId": "input_numero_2",
-              "visibility": false
-            },
-			{
-              "elementId": "input_montant_2",
-              "visibility": false
-            },
-			{
-              "elementId": "input_echeance_2",
-              "visibility": false
-            },
-			{
-              "elementId": "input_numero_3",
-              "visibility": false
-            },
-			{
-              "elementId": "input_montant_3",
-              "visibility": false
-            },
-			{
-              "elementId": "input_echeance_3",
-              "visibility": false
-            },
-			{
-              "elementId": "input_numero_4",
-              "visibility": false
-            },
-			{
-              "elementId": "input_montant_4",
-              "visibility": false
-            },
-			{
-              "elementId": "input_echeance_4",
-              "visibility": false
-            },
-			{
-              "elementId": "input_numero_5",
-              "visibility": false
-            },{
-              "elementId": "input_montant_5",
-              "visibility": false
-            },{
-              "elementId": "input_echeance_5",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
 	
 	
 	

@@ -1,11 +1,11 @@
 
 
-    <div class="row justify-content-center">
+    <div class=" all row justify-content-center">
 
         <div class="col-md-8 pb-5">
-            <div class="card">
-                <h2 class="card-header titel-commande bg-white">Contactez nous</h2>
-                <div class="card-body">
+            <div class="carde">
+                <h2 class=" title carde-header titel-commande bg-white">NOUS CONTACTER</h2>
+                <div class="carde-body">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="alert alert-success" *ngIf="success">
@@ -128,12 +128,12 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="message">Message</label>
-                                        <textarea id="message" name="message" class="form-control" placeholder="Votre message"
+                                        <textarea id="message" name="message" class="controle" placeholder="Votre message"
                                                   formControlName="message" rows="4"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit" [disabled]="contactForm.invalid" class="btn btn-success btn-send">
+                                    <button type="submit" [disabled]="contactForm.invalid" class="controls  btn btn-success">
                                         Envoyer message<fa-icon [icon]="['fas', 'paper-plane']" [fixedWidth]="true" size="lg" pull="right"></fa-icon>
                                     </button>
                                 </div>
@@ -141,7 +141,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="text-muted">
+                            <p class="controls">
                                 <strong>*</strong> Ces champs sont obligatoires.</p>
                         </div>
                     </div>

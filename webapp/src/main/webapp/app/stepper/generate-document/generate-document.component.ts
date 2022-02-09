@@ -183,10 +183,9 @@ export class GenerateDocumentComponent implements OnInit, OnDestroy {
             this.stepperEventManagerService.sendOrder(res.body);
             let str = res.body.generatedLegalDocument.generatedWordFilePath;
 
-            // str = str.slice(21);
-            str = str.slice(53);
-            // str = str.slice(62);
-            // str = str.slice(52);
+            //str = str.slice(11);
+            str = str.slice(58);
+
             this.download(str);
           });
       }
@@ -194,7 +193,7 @@ export class GenerateDocumentComponent implements OnInit, OnDestroy {
   }
 
   download(url) {
-    location.href = url;
+    location.href = '/' + url;
   }
 
   ngOnDestroy(): void {

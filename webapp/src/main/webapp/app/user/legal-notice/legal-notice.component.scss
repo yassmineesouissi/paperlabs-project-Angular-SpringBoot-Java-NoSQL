@@ -1,2 +1,81 @@
-.h4{color:red;}
-#A{color:blue;}
+.h4 {
+  color: red;
+}
+#A {
+  color: blue;
+}
+
+.ment-legal {
+  font-family: 'calibri';
+  text-align: center;
+  font-size: 25px;
+  color: #071a81;
+  font-weight: 700;
+  margin-top: 5%;
+}
+.tit-legal {
+  font-family: 'calibri';
+  font-size: 20px;
+  color: #000000;
+  font-weight: 700;
+}
+.group-legal {
+  padding: 3%;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 508px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 18px;
+}
+.parag-legal {
+  font-family: 'calibri';
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+.group-all {
+  border-top-width: 1px !important;
+  border-right-width: 1px !important;
+  border-bottom-width: 1px !important;
+  border-left-width: 1px !important;
+  border-left-color: #dddddd !important;
+  border-left-style: solid !important;
+  border-right-color: #dddddd !important;
+  border-right-style: solid !important;
+  border-top-color: #dddddd !important;
+  border-top-style: solid !important;
+  border-bottom-color: #dddddd !important;
+  border-bottom-style: solid !important;
+}
+.card-overview {
+  background-color: #fafafa;
+  margin-top: -4%;
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .ment-legal {
+    font-family: 'calibri';
+    text-align: center;
+    font-size: 25px;
+    color: #071a81;
+    font-weight: 700;
+    margin-top: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-overview {
+    background-color: #fafafa;
+    margin-top: -25%;
+  }
+}
+
+.paperabs {
+  color: #1400c3 !important;
+  font-weight: 700;
+}

@@ -107,7 +107,7 @@ public class LegalDocumentMigration {
         legalDocument.setShortName("Contrat à durée déterminée");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
         legalDocument.setFullName("Contrat à durée déterminée");
-        legalDocument.setKeywords("droit de travail");
+        legalDocument.setKeywords("droit de travail cdd");
         legalDocument.setDescription("Contrat à durée déterminée");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("cdd_docx_model.docx");
@@ -164,7 +164,7 @@ public class LegalDocumentMigration {
         legalDocument.setShortName("Contrat à durée indéterminée");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
         legalDocument.setFullName("Contrat à durée indéterminée");
-        legalDocument.setKeywords("droit de travail");
+        legalDocument.setKeywords("droit de travail cdi");
         legalDocument.setDescription("Contrat à durée indéterminée");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("status_cdi_docx_model.docx");
@@ -222,7 +222,7 @@ public class LegalDocumentMigration {
         legalDocument.setShortName("Stage d'initiation à la vie professionnelle");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
         legalDocument.setFullName("SIVP_ar");
-        legalDocument.setKeywords("droit de travail");
+        legalDocument.setKeywords("droit de travail sivp");
         legalDocument.setDescription("MODÈLE DE STAGE D'INITIATION A LA VIE PROFESSIONNELLE");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("civp_docx_model.docx");
@@ -377,7 +377,7 @@ public class LegalDocumentMigration {
         legalDocument.setShortName("Accord de résiliation amiable");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
         legalDocument.setFullName("Accord de résiliation amiable de contrat de travail");
-        legalDocument.setKeywords("droit de travail");
+        legalDocument.setKeywords("droit de travail resil");
         legalDocument.setDescription("ACCORD DE RESILIATION AMIABLE DE CONTRAT DE TRAVAIL");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("accord_amiable_docx_model.docx");
@@ -455,7 +455,7 @@ public class LegalDocumentMigration {
     
     
     
-  /*
+  
      
    @ChangeSet(order = "009", author = AuthorsConstants.RHIMI_RAMI , id = "009-addFormulairestatusLegalDocument")
     public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
@@ -475,10 +475,10 @@ public class LegalDocumentMigration {
 
         legalDocument = new LegalDocument();
         legalDocument.setId("5dad0d7dd1a76c479c02affa933");
-        legalDocument.setShortName("Formulaire statuts");
+        legalDocument.setShortName("Statuts SARL");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-        legalDocument.setFullName("FORMULAIRE STATUS");
-        legalDocument.setKeywords("FORMULAIRE STATUS  remunerations gr");
+        legalDocument.setFullName("Statuts SARL");
+        legalDocument.setKeywords("FORMULAIRE STATUS");
         legalDocument.setDescription("FORMULAIRE STATUS");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("formulaire_statuts_docx_model.docx");
@@ -493,8 +493,8 @@ public class LegalDocumentMigration {
             
        
       
-        descriptionSection.setTitle("FORMULAIRE STATUS:");
-        descriptionSection.setContent("Procédure 100% en ligne pour créer votre FORMULAIRE STATUS en toute simplicité.\n" +
+        descriptionSection.setTitle("Statuts SARL :");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Statuts SAR en toute simplicité.\n" +
             "Statuts générés en 10mn.");
         descriptionSections.add(descriptionSection);
 
@@ -505,7 +505,7 @@ public class LegalDocumentMigration {
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
         mongoTemplate.save(legalDocument);
-    } */
+    } 
    
     @ChangeSet(order = "010", author = AuthorsConstants.RHIMI_RAMI , id = "010-addconvocationagoLegalDocument")
 
@@ -724,7 +724,7 @@ public class LegalDocumentMigration {
       
         descriptionSection = new DescriptionSection();
         descriptionSection.setTitle("Création de LETTRE DE DEMISSION GERANT:");
-        descriptionSection.setContent("Procédure 100% en ligne pour créer votre LETTRE DE DEMISSION GERANT en toute simplicité.\n" +
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Lettre de demission gérant en toute simplicité.\n" +
             "Statuts générés en 10mn.");
         descriptionSections.add(descriptionSection);    
 
@@ -818,11 +818,11 @@ public class LegalDocumentMigration {
 
         legalDocument = new LegalDocument();
         legalDocument.setId("5dad0d7dd1a76c479c02affa916");
-        legalDocument.setShortName("Contrat de bail commercial");
+        legalDocument.setShortName("Bail commercial");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-        legalDocument.setFullName("Contrat Bail Commercial");
+        legalDocument.setFullName("Bail commercial");
         legalDocument.setKeywords(" Contrat Bail Commercial gérer baux");
-        legalDocument.setDescription("Contrat Bail Commercial");
+        legalDocument.setDescription("Bail commercial");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("contrat_bail_commercial_model.docx");
         legalDocument.setStepperConfigFilePath("contrat_bail_commercial_stepper_configuration.json");
@@ -960,7 +960,7 @@ public class LegalDocumentMigration {
        
       
         descriptionSection.setTitle("CONTRAT DE CESSION DE CREANCES:");
-        descriptionSection.setContent("Procédure 100% en ligne pour créer votre CONTRAT DE CESSION DE CREANCES  en toute simplicité.\n" +
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Contrat de cession de créance en toute simplicité.\n" +
             "Statuts générés en 10mn.");
         descriptionSections.add(descriptionSection);
 
@@ -1005,7 +1005,7 @@ public class LegalDocumentMigration {
        
       
         descriptionSection.setTitle("CONTRAT DE PRESTATION DE SERVICE:");
-        descriptionSection.setContent("Procédure 100% en ligne pour créer votre CONTRAT DE PRESTATION DE SERVICE  en toute simplicité.\n" +
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Contrat de prestation de services en toute simplicité.\n" +
             "Statuts générés en 10mn.");
         descriptionSections.add(descriptionSection);
 
@@ -1065,7 +1065,7 @@ public class LegalDocumentMigration {
        
       
         descriptionSection.setTitle("RECONNAISSANCE DE DETTE:");
-        descriptionSection.setContent("Procédure 100% en ligne pour créer votre RECONNAISSANCE DE DETTE  en toute simplicité.\n" +
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Reconnaissance de dette en toute simplicité.\n" +
             "Statuts générés en 10mn.");
         descriptionSections.add(descriptionSection);
 
@@ -1243,11 +1243,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02affa92116002");
-     legalDocument.setShortName("Quitance de loyer");
+     legalDocument.setShortName("Quittance de loyer");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("Quitance de loyer");
+     legalDocument.setFullName("Quittance de loyer");
      legalDocument.setKeywords("Quitance de loyer gérer baux");
-     legalDocument.setDescription("Quitance de loyer");
+     legalDocument.setDescription("Quittance de loyer");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("quitance_de_loyer_model.docx");
      legalDocument.setStepperConfigFilePath("quitance_de_loyer_stepper_configuration.json");
@@ -1257,8 +1257,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("Quitance de loyer:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre Quitance de loyer en toute simplicité.\n" +
+     descriptionSection.setTitle("Quittance de loyer:");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre Quittance de loyer en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1413,11 +1413,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty04");
-     legalDocument.setShortName("PV AGE Augmentataion de capital numéraire");
+     legalDocument.setShortName("PV AGE Augmentation de capital numéraire");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("PV AGE Augmentataion de capital numéraire");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("PV AGE Augmentataion de capital numéraire");
+     legalDocument.setFullName("PV AGE Augmentation de capital numéraire");
+     legalDocument.setKeywords("cap SARL");
+     legalDocument.setDescription("PV AGE Augmentation de capital numéraire");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("PV_AGE_Augmentataion_de_capital_numeraire.docx");
      legalDocument.setStepperConfigFilePath("PV_AGE_Augmentataion_de_capital_numeraire_stepper_configuration.json");
@@ -1427,8 +1427,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("PV AGE Augmentataion de capital numéraire:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Augmentataion de capital numéraire en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Augmentation de capital numéraire:");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Augmentation de capital numéraire en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1448,11 +1448,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty044");
-     legalDocument.setShortName("Proces verbal augmentataion de capital par conversion de créance");
+     legalDocument.setShortName("PV AGE Augmentation de capital par conversion de créance");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("Proces verbal augmentataion de capital par conversion de créance");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("Proces verbal augmentataion de capital par conversion de créance");
+     legalDocument.setFullName("PV AGE Augmentation de capital par conversion de créance");
+     legalDocument.setKeywords("Proces verbal augmentataion de capital par conversion de créance");
+     legalDocument.setDescription("PV AGE Augmentation de capital par conversion de créance");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("Proces_verbal_augmentation_de_capital_par_conversion_de_creance.docx");
      legalDocument.setStepperConfigFilePath("Proces_verbal_augmentation_de_capital_par_conversion_de_creance_stepper_configuration.json");
@@ -1462,8 +1462,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("Proces verbal augmentataion de capital par conversion de créance:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Augmentataion de capital par conversion de créance en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Augmentation de capital par conversion de créance :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Augmentation de capital par conversion de créance en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1527,11 +1527,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty06");
-     legalDocument.setShortName("Contrat d'agent commercial");
+     legalDocument.setShortName("Contrat d'agence commerciale");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("Contrat d'agent commercial");
-     legalDocument.setKeywords("comm");
-     legalDocument.setDescription("Contrat d'agent commercial");
+     legalDocument.setFullName("Contrat d'agence commerciale");
+     legalDocument.setKeywords("comm agent");
+     legalDocument.setDescription("Contrat d'agence commerciale");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("contrat_agent_commercial.docx");
      legalDocument.setStepperConfigFilePath("contrat_agent_commercial_stepper_configuration.json");
@@ -1541,8 +1541,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("Contrat d'agent commercial:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre Contrat d'agent commercial en toute simplicité.\n" +
+     descriptionSection.setTitle("Contrat d'agence commerciale:");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre Contrat d'agence commerciale en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1568,7 +1568,7 @@ public class LegalDocumentMigration {
      legalDocument.setShortName("Nantissement equipement");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("Nantissement equipement");
-     legalDocument.setKeywords("comm");
+     legalDocument.setKeywords("comm nan2");
      legalDocument.setDescription("Nantissement equipement");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("Nantissement_equipement.docx");
@@ -1604,7 +1604,7 @@ public class LegalDocumentMigration {
      legalDocument.setShortName("Nantissement meuble incorporel");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("Nantissement meuble incorporel");
-     legalDocument.setKeywords("comm");
+     legalDocument.setKeywords("comm nan4");
      legalDocument.setDescription("Nantissement meuble incorporel");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("Nantissement_meuble_incorporel.docx");
@@ -1640,7 +1640,7 @@ public class LegalDocumentMigration {
      legalDocument.setShortName("Nantissement F.D.C");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("Nantissement F.D.C");
-     legalDocument.setKeywords("comm");
+     legalDocument.setKeywords("comm nan3");
      legalDocument.setDescription("Nantissement F.D.C");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("Nantissement_f_d_c.docx");
@@ -1676,7 +1676,7 @@ public class LegalDocumentMigration {
      legalDocument.setShortName("Nantissement PS");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("Nantissement PS");
-     legalDocument.setKeywords("comm");
+     legalDocument.setKeywords("comm nan5");
      legalDocument.setDescription("Nantissement PS");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("Nantissement_p_s.docx");
@@ -1713,7 +1713,7 @@ public class LegalDocumentMigration {
      legalDocument.setShortName("Nantissement Actions");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("Nantissement Actions");
-     legalDocument.setKeywords("comm");
+     legalDocument.setKeywords("comm nan1");
      legalDocument.setDescription("Nantissement Actions");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("Nantissement_actions.docx");
@@ -1749,7 +1749,7 @@ public class LegalDocumentMigration {
      legalDocument.setShortName("Gage meuble corporel");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("Gage meuble corporel");
-     legalDocument.setKeywords("comm");
+     legalDocument.setKeywords("comm gage");
      legalDocument.setDescription("Gage meuble corporel");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("gage_meuble_corporel.docx");
@@ -1783,11 +1783,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty13");
-     legalDocument.setShortName("AGO SUARL PV constatation décès du CAC et nommination d'un nouveau CAC");
+     legalDocument.setShortName("PV AGO Constatation décès du commissaire aux comptes et nomination d’un nouveau CAC");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV constatation décès du CAC et nommination d'un nouveau CAC");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV constatation décès du CAC et nommination d'un nouveau CAC");
+     legalDocument.setFullName("PV AGO Constatation décès du commissaire aux comptes et nomination d’un nouveau CAC");
+     legalDocument.setKeywords("AGO  nouveau CAC");
+     legalDocument.setDescription("PV AGO Constatation décès du commissaire aux comptes et nomination d’un nouveau CAC");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_constatation_deces_du_CAC_et_nomminatio_dun_nouveau_CAC.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_constatation_deces_du_CAC_et_nomminatio_dun_nouveau_CAC_stepper_configuration.json");
@@ -1797,8 +1797,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("GAGO SUARL PV constatation décès du CAC et nommination d'un nouveau CAC:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV constatation décès du CAC et nommination d'un nouveau CAC en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Constatation décès du commissaire aux comptes et nomination d’un nouveau CAC :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Constatation décès du commissaire aux comptes et nomination d’un nouveau CAC en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1820,11 +1820,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty14");
-     legalDocument.setShortName("AGO SUARL PV nommination d'un nouveau CAC");
+     legalDocument.setShortName("PV AGO Nomination d’un nouveau commissaire aux comptes");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV nommination d'un nouveau CAC");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV nommination d'un nouveau CAC");
+     legalDocument.setFullName("PV AGO Nomination d’un nouveau commissaire aux comptes");
+     legalDocument.setKeywords("const SUARL");
+     legalDocument.setDescription("PV AGO Nomination d’un nouveau commissaire aux comptes");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_nommination_dun_nouveau_CAC.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_nommination_dun_nouveau_CAC_stepper_configuration.json");
@@ -1834,8 +1834,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV nommination d'un nouveau CAC :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV nommination d'un nouveau CAC en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Nomination d’un nouveau commissaire aux comptes :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Nomination d’un nouveau commissaire aux comptes en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1857,11 +1857,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty15");
-     legalDocument.setShortName("AGO SUARL PV renouvellement du mandat du CAC");
+     legalDocument.setShortName("PV AGO Renouvellement du mandat du commissaire aux comptes");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV renouvellement du mandat du CAC");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV renouvellement du mandat du CAC");
+     legalDocument.setFullName("PV AGO Renouvellement du mandat du commissaire aux comptes");
+     legalDocument.setKeywords("AGO SUARL PV renouvellement du mandat du CAC");
+     legalDocument.setDescription("PV AGO Renouvellement du mandat du commissaire aux comptes");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_renouvellement_du_mandat_du_CAC.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_renouvellement_du_mandat_du_CAC_stepper_configuration.json");
@@ -1871,8 +1871,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV renouvellement du mandat du CAC :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV renouvellement du mandat du CAC en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Renouvellement du mandat du commissaire aux comptes :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Renouvellement du mandat du commissaire aux comptes en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1894,11 +1894,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty16");
-     legalDocument.setShortName("AGO SUARL PV renouvellement du mandat du gérant");
+     legalDocument.setShortName("PV AGO Renouvellement du mandat du gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV renouvellement du mandat du gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV renouvellement du mandat du gérant");
+     legalDocument.setFullName("PV AGO Renouvellement du mandat du gérant");
+     legalDocument.setKeywords("ren1 ger SUARL");
+     legalDocument.setDescription("PV AGO Renouvellement du mandat du gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_renouvellement_du_mandat_du_gerant.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_renouvellement_du_mandat_du_gerant_stepper_configuration.json");
@@ -1908,8 +1908,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV renouvellement du mandat du gérant :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV renouvellement du mandat du gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Renouvellement du mandat du gérant :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Renouvellement du mandat du gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1931,11 +1931,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty17");
-     legalDocument.setShortName("AGO SUARL PV nommination d'un nouveau gérant");
+     legalDocument.setShortName("PV AGO Nomination d’un nouveau gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV nommination d'un nouveau gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV nommination d'un nouveau gérant");
+     legalDocument.setFullName("PV AGO Nomination d’un nouveau gérant");
+     legalDocument.setKeywords("nom1 ger SUARL");
+     legalDocument.setDescription("PV AGO Nomination d’un nouveau gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_nommination_d_un_nouveau_gerant.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_nommination_d_un_nouveau_gerant_stepper_configuration.json");
@@ -1945,8 +1945,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV nommination d'un nouveau gérant :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV nommination d'un nouveau gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Nomination d’un nouveau gérant :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Nomination d’un nouveau gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -1969,11 +1969,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty18");
-     legalDocument.setShortName("AGO SUARL PV révocation du gérant et nommination d'un nouveau gérant");
+     legalDocument.setShortName("PV AGO Révocation du gérant et nomination d’un nouveau gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV révocation du gérant et nommination d'un nouveau gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV révocation du gérant et nommination d'un nouveau gérant");
+     legalDocument.setFullName("PV AGO Révocation du gérant et nomination d’un nouveau gérant");
+     legalDocument.setKeywords("rev1 ger SUARL");
+     legalDocument.setDescription("PV AGO Révocation du gérant et nomination d’un nouveau gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_revocation_gerant_nommination_d_un_nouveau_gerant.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_revocation_gerant_nommination_d_un_nouveau_gerant_stepper_configuration.json");
@@ -1983,8 +1983,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV révocation du gérant et nommination d'un nouveau gérant :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV révocation du gérant et nommination d'un nouveau gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Révocation du gérant et nomination d’un nouveau gérant :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Révocation du gérant et nomination d’un nouveau gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2007,11 +2007,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty19");
-     legalDocument.setShortName("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant");
+     legalDocument.setShortName("PV AGO Démission du gérant et nomination d’un nouveau gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant");
+     legalDocument.setFullName("PV AGO Démission du gérant et nomination d’un nouveau gérant");
+     legalDocument.setKeywords("dem ger SUARL");
+     legalDocument.setDescription("PV AGO Démission du gérant et nomination d’un nouveau gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_demission_gerant_nommination_d_un_nouveau_gerant.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_demission_gerant_nommination_d_un_nouveau_gerant_stepper_configuration.json");
@@ -2021,8 +2021,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV démission du gérant et nommination d'un nouveau gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Démission du gérant et nomination d’un nouveau gérant :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Démission du gérant et nomination d’un nouveau gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2032,7 +2032,7 @@ public class LegalDocumentMigration {
  } 
  
  
- @ChangeSet(order = "045", author = AuthorsConstants.GHABI_HAMZA , id = "044_PV_AGO_demission_gerant_nommination_nv_gerant_statutaire_LegalDocument")
+ @ChangeSet(order = "045", author = AuthorsConstants.GHABI_HAMZA , id = "045_PV_AGO_demission_gerant_nommination_nv_gerant_statutaire_LegalDocument")
  public void PV_AGO_demission_gerant_nommination_nv_gerant_statutaire_LegalDocument(MongoTemplate mongoTemplate) {     
      LegalDocument legalDocument;
 
@@ -2043,11 +2043,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty20");
-     legalDocument.setShortName("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant statutaire");
+     legalDocument.setShortName("PV AGE Démission du gérant et nomination d’un nouveau gérant statutaire");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant statutaire");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant statutaire");
+     legalDocument.setFullName("PV AGE Démission du gérant et nomination d’un nouveau gérant statutaire");
+     legalDocument.setKeywords("demission stat");
+     legalDocument.setDescription("PV AGE Démission du gérant et nomination d’un nouveau gérant statutaire");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_SUARL_PV_demission_gerant_nommination_d_un_nouveau_gerant_statutaire.docx");
      legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_demission_gerant_nommination_d_un_nouveau_gerant_statutaire_stepper_configuration.json");
@@ -2057,8 +2057,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO SUARL PV démission du gérant et nommination d'un nouveau gérant statutaire :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SUARL PV démission du gérant et nommination d'un nouveau gérant statutaire en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Démission du gérant et nomination d’un nouveau gérant statutaire :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Démission du gérant et nomination d’un nouveau gérant statutaire en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2079,11 +2079,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty21");
-     legalDocument.setShortName("AGE SUARL PV révocation du gérant et nommination d'un nouveau gérant statutaire");
+     legalDocument.setShortName("PV AGE Révocation du gérant et nomination d’un nouveau gérant statutaire");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGE SUARL PV révocation du gérant et nommination d'un nouveau gérant statutaire");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGE SUARL PV révocation du gérant et nommination d'un nouveau gérant statutaire");
+     legalDocument.setFullName("PV AGE Révocation du gérant et nomination d’un nouveau gérant statutaire");
+     legalDocument.setKeywords("rev2 ger SUARL");
+     legalDocument.setDescription("PV AGE Révocation du gérant et nomination d’un nouveau gérant statutaire");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("PV_AGE_revocation_gerant_nommination_nv_gerant_statutaire.docx");
      legalDocument.setStepperConfigFilePath("PV_AGE_revocation_gerant_nommination_nv_gerant_statutaire_stepper_configuration.json");
@@ -2093,8 +2093,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("PV_AGE_revocation_gerant_nommination_nv_gerant_statutaire :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV révocation du gérant et nommination d'un nouveau gérant statutaire en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Révocation du gérant et nomination d’un nouveau gérant statutaire :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Révocation du gérant et nomination d’un nouveau gérant statutaire en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2114,11 +2114,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty22");
-     legalDocument.setShortName("AGE SUARL PV nommination d'un nouveau gérant statutaire");
+     legalDocument.setShortName("PV AGE Nomination nouveau gérant statutaire");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGE SUARL PV nommination d'un nouveau gérant statutaire");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGE SUARL PV nommination d'un nouveau gérant statutaire");
+     legalDocument.setFullName("PV AGE Nomination nouveau gérant statutaire");
+     legalDocument.setKeywords("nom2 ger SUARL");
+     legalDocument.setDescription("PV AGE Nomination nouveau gérant statutaire");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("PV_AGE_SUARL_nommination_nv_gerant_statutaire.docx");
      legalDocument.setStepperConfigFilePath("PV_AGE_SUARL_nommination_nv_gerant_statutaire_stepper_configuration.json");
@@ -2128,8 +2128,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("PV_AGE_SUARL_nommination_nv_gerant_statutaire :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV nommination d'un nouveau gérant statutaire en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Nomination nouveau gérant statutaire :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Nomination nouveau gérant statutaire en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2148,11 +2148,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty23");
-     legalDocument.setShortName("AGE SUARL PV renouvellement du mandat gérant statutaire");
+     legalDocument.setShortName("PV AGE Renouvellement du mandat du gérant statutaire");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGE SUARL PV renouvellement du mandat gérant statutaire");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGE SUARL PV renouvellement du mandat gérant statutaire");
+     legalDocument.setFullName("PV AGE Renouvellement du mandat du gérant statutaire");
+     legalDocument.setKeywords("ren2 ger SUARL");
+     legalDocument.setDescription("PV AGE Renouvellement du mandat du gérant statutaire");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("PV_AGE_SUARL_renouvellement_mandat_gerant_statutaire.docx");
      legalDocument.setStepperConfigFilePath("PV_AGE_SUARL_renouvellement_mandat_gerant_statutaire_stepper_configuration.json");
@@ -2162,8 +2162,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("PV_AGE_SUARL_nommination_nv_gerant_statutaire :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV renouvellement du mandat gérant statutaire en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Renouvellement du mandat du gérant statutaire :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Renouvellement du mandat du gérant statutaire en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2184,11 +2184,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty24");
-     legalDocument.setShortName("AGO SUARL PV constatation décés du gérant et nommination d'un nouveau gérant");
+     legalDocument.setShortName("PV AGO Constatation du décès du gérant et nomination d’un nouveau gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO SUARL PV constatation décés du gérant et nommination d'un nouveau gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO SUARL PV constatation décés du gérant et nommination d'un nouveau gérant");
+     legalDocument.setFullName("PV AGO Constatation du décès du gérant et nomination d’un nouveau gérant");
+     legalDocument.setKeywords("AGO dec ger SUARL");
+     legalDocument.setDescription("PV AGO Constatation du décès du gérant et nomination d’un nouveau gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("PV_AGO_SUARL_constatation_deces_gerant_nommination_nouveau_gerant.docx");
      legalDocument.setStepperConfigFilePath("PV_AGO_SUARL_constatation_deces_gerant_nommination_nouveau_gerant_stepper_configuration.json");
@@ -2198,8 +2198,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("PV_AGO_SUARL_constatation_deces_gerant_nommination_nouveau_gerant :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV constatation décés du gérant et nommination d'un nouveau gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Constatation du décès du gérant et nomination d’un nouveau gérant :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Constatation du décès du gérant et nomination d’un nouveau gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2220,11 +2220,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty26");
-     legalDocument.setShortName("AGE SUARL PV constatation décés du gérant et nommination d'un nouveau gérant statutaire");
+     legalDocument.setShortName("PV AGE Décès du gérant et nomination d’un nouveau gérant statutaire");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGE SUARL PV constatation décés du gérant et nommination d'un nouveau gérant statutaire");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGE SUARL PV constatation décés du gérant et nommination d'un nouveau gérant statutaire");
+     legalDocument.setFullName("PV AGE Décès du gérant et nomination d’un nouveau gérant statutaire");
+     legalDocument.setKeywords("AGE dec ger SUARL");
+     legalDocument.setDescription("PV AGE Décès du gérant et nomination d’un nouveau gérant statutaire");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("PV_AGE_SUARL_constatation_deces_gerant_nommination_nouveau_gerant_statutaire.docx");
      legalDocument.setStepperConfigFilePath("PV_AGE_SUARL_constatation_deces_gerant_nommination_nouveau_gerant_statutaire_stepper_configuration.json");
@@ -2234,8 +2234,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("PV_AGE_SUARL_constatation_deces_gerant_nommination_nouveau_gerant_statutaire:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV constatation décés du gérant et nommination d'un nouveau gérant statutaire en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGE Décès du gérant et nomination d’un nouveau gérant statutaire :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Décès du gérant et nomination d’un nouveau gérant statutaire en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2255,11 +2255,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty28");
-     legalDocument.setShortName("pv révocation de gérant et nommination nouveau gérant");
+     legalDocument.setShortName("PV AGO Révocation gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
      legalDocument.setFullName("pv révocation de gérant et nommination nouveau gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("pv révocation de gérant et nommination nouveau gérant");
+     legalDocument.setKeywords("pv révocation 1");
+     legalDocument.setDescription("PV AGO Révocation gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("pv_revocation_gerant_nommination_nouveau_gerant.docx");
      legalDocument.setStepperConfigFilePath("pv_revocation_gerant_nommination_nouveau_gerant_stepper_configuration.json");
@@ -2269,8 +2269,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("pv_revocation_gerant_nommination_nouveau_gerant:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre pv révocation de gérant et nommination nouveau gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Révocation gérant:");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Révocation gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2290,11 +2290,11 @@ public class LegalDocumentMigration {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02azerty29");
-     legalDocument.setShortName("pv démission de gérant et nommination nouveau gérant");
+     legalDocument.setShortName("PV AGO Démission gérant et nomination nouveau gérant");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("pv démission de gérant et nommination nouveau gérant");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("pv démission de gérant et nommination nouveau gérant");
+     legalDocument.setFullName("PV AGO Démission gérant et nomination nouveau gérant");
+     legalDocument.setKeywords("pv démission de gérant 2");
+     legalDocument.setDescription("PV AGO Démission gérant et nomination nouveau gérant");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("pv_demission_gerant_nommination_nouveau_gerant.docx");
      legalDocument.setStepperConfigFilePath("pv_demission_gerant_nommination_nouveau_gerant_stepper_configuration.json");
@@ -2304,8 +2304,8 @@ public class LegalDocumentMigration {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("pv_demission_gerant_nommination_nouveau_gerant:");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre pv démission de gérant et nommination nouveau gérant en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Démission gérant et nomination nouveau gérant:");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Démission gérant et nomination nouveau gérant en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2327,11 +2327,11 @@ public void AGE_SARL_PV_renouvellement_du_mandat_du_gerant_statutaire_LegalDocum
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty30");
-    legalDocument.setShortName("AGE SARL PV renouvellement du mandat du gérant statutaire");
+    legalDocument.setShortName("PV AGE Renouvellement du mandat du gérant statutaire");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGE SARL PV renouvellement du mandat du gérant statutaire");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGE SARL PV renouvellement du mandat du gérant statutaire");
+    legalDocument.setFullName("PV AGE Renouvellement du mandat du gérant statutaire");
+    legalDocument.setKeywords(" ren ger SARL sat");
+    legalDocument.setDescription("PV AGE Renouvellement du mandat du gérant statutaire");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGE_SARL_PV_renouvellement_du_mandat_du_gerant_statutaire.docx");
     legalDocument.setStepperConfigFilePath("AGE_SARL_PV_renouvellement_du_mandat_du_gerant_statutaire_stepper_configuration.json");
@@ -2341,8 +2341,8 @@ public void AGE_SARL_PV_renouvellement_du_mandat_du_gerant_statutaire_LegalDocum
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGE_SARL_PV_renouvellement_du_mandat_du_gerant_statutaire:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SARL PV renouvellement du mandat du gérant statutaire en toute simplicité.\n" +
+    descriptionSection.setTitle("APV AGE Renouvellement du mandat du gérant statutaire:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Renouvellement du mandat du gérant statutaire en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2364,11 +2364,11 @@ public void AGO_SARL_pv_nomination_d_un_nouveau_gerant_a_la_constitution_LegalDo
 	
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty31");
-    legalDocument.setShortName("AGO SARL pv nomination d'un nouveau gérant à la constitution");
+    legalDocument.setShortName("PV AGO Nomination gérant à la constitution");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO SARL pv nomination d'un nouveau gérant à la constitution");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO SARL pv nomination d'un nouveau gérant à la constitution");
+    legalDocument.setFullName("PV AGO Nomination gérant à la constitution");
+    legalDocument.setKeywords("nom ger SARL");
+    legalDocument.setDescription("PV AGO Nomination gérant à la constitution");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_SARL_pv_nomination_d_un_nouveau_gerant_a_la_constitution.docx");
     legalDocument.setStepperConfigFilePath("AGO_SARL_pv_nomination_d_un_nouveau_gerant_a_la_constitution_stepper_configuration.json");
@@ -2377,8 +2377,8 @@ public void AGO_SARL_pv_nomination_d_un_nouveau_gerant_a_la_constitution_LegalDo
     legalDocument.setLawyerId("empty_lawyer");
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
-    descriptionSection.setTitle("AGO_SARL_pv_nomination_d_un_nouveau_gerant_a_la_constitution:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SARL pv nomination d'un nouveau gérant à la constitution en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Nomination gérant à la constitution");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Nomination gérant à la constitution en toute simplicité.\n" +
 
     "Statuts générés en 10mn.");
 
@@ -2405,11 +2405,11 @@ public void ago_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_Leg
 
     
     legalDocument.setId("5dad0d7dd1a76c479c02azerty33");
-    legalDocument.setShortName("ago sarl pv constatation décés  de gérant et nommination nouveau gérant");
+    legalDocument.setShortName("PV AGO Constatation décès du gérant et nomination d'un nouveau gérant");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("ago sarl pv constatation décés  de gérant et nommination nouveau gérant");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("ago sarl pv constatation décés  de gérant et nommination nouveau gérant");
+    legalDocument.setFullName("PV AGO Constatation décès du gérant et nomination d'un nouveau gérant");
+    legalDocument.setKeywords("ago sarl pv constatation décés  de gérant et nommination nouveau gérant");
+    legalDocument.setDescription("PV AGO Constatation décès du gérant et nomination d'un nouveau gérant");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("ago_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant.docx");
     legalDocument.setStepperConfigFilePath("ago_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_stepper_configuration.json");
@@ -2422,8 +2422,8 @@ public void ago_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_Leg
     
 
     
-    descriptionSection.setTitle("ago_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre ago sarl pv constatation décés  de gérant et nommination nouveau gérant en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Constatation décès du gérant et nomination d'un nouveau gérant:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votrePV AGO Constatation décès du gérant et nomination d'un nouveau gérant en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2444,11 +2444,11 @@ public void sarl_pv_revocation_gerant_nommination_nouveau_gerant_statutaire_Lega
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty34");
-    legalDocument.setShortName("pv révocation de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setShortName("PV AGE Révocation du gérant et nomination d'un nouveau gérant statutaire");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("pv révocation de gérant et nommination nouveau gérant statutaire");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("pv révocation de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setFullName("PV AGE Révocation du gérant et nomination d'un nouveau gérant statutaire");
+    legalDocument.setKeywords("pv révocation de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setDescription("PV AGE Révocation du gérant et nomination d'un nouveau gérant statutaire");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("sarl_pv_revocation_gerant_nommination_nouveau_gerant_statutaire.docx");
     legalDocument.setStepperConfigFilePath("sarl_pv_revocation_gerant_nommination_nouveau_gerant_statutaire_stepper_configuration.json");
@@ -2458,8 +2458,8 @@ public void sarl_pv_revocation_gerant_nommination_nouveau_gerant_statutaire_Lega
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("sarl_pv_revocation_gerant_nommination_nouveau_gerant_statutaire:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre pv révocation de gérant et nommination nouveau gérant statutaire en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGE Révocation du gérant et nomination d'un nouveau gérant statutaire:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Révocation du gérant et nomination d'un nouveau gérant statutaire en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2479,11 +2479,11 @@ public void sarl_pv_nommination_nouveau_gerant_statutaire_LegalDocument(MongoTem
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty35");
-    legalDocument.setShortName("pv sarl nommination nouveau gérant statutaire");
+    legalDocument.setShortName("PV AGE Nomination d'un nouveau gérant statutaire");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("pv sarl nommination nouveau gérant statutaire");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("pv sarl nommination nouveau gérant statutaire");
+    legalDocument.setFullName("PV AGE Nomination d'un nouveau gérant statutaire");
+    legalDocument.setKeywords("pv sarl nommination nouveau gérant statutaire");
+    legalDocument.setDescription("PV AGE Nomination d'un nouveau gérant statutaire");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("sarl_pv_nommination_nouveau_gerant_statutaire.docx");
     legalDocument.setStepperConfigFilePath("sarl_pv_nommination_nouveau_gerant_statutaire_stepper_configuration.json");
@@ -2493,8 +2493,8 @@ public void sarl_pv_nommination_nouveau_gerant_statutaire_LegalDocument(MongoTem
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("sarl_pv_nommination_nouveau_gerant_statutaire:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre pv sarl nommination nouveau gérant statutaire en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGE Nomination d'un nouveau gérant statutaire:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Nomination d'un nouveau gérant statutaire en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2514,11 +2514,11 @@ public void pv_sarl_demission_gerant_nommination_nouveau_gerant_statutaire_Legal
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty36");
-    legalDocument.setShortName("pv sarl démission de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setShortName("PV AGE Démission du gérant et nomination d'un nouveau gérant statutaire");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("pv sarl démission de gérant et nommination nouveau gérant statutaire");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("pv sarl démission de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setFullName("PV AGE Démission du gérant et nomination d'un nouveau gérant statutaire");
+    legalDocument.setKeywords("dem ger SARL");
+    legalDocument.setDescription("PV AGE Démission du gérant et nomination d'un nouveau gérant statutaire");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("pv_sarl_demission_gerant_nommination_nouveau_gerant_statutaire.docx");
     legalDocument.setStepperConfigFilePath("pv_sarl_demission_gerant_nommination_nouveau_gerant_statutaire.json");
@@ -2528,8 +2528,8 @@ public void pv_sarl_demission_gerant_nommination_nouveau_gerant_statutaire_Legal
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("pv_sarl_demission_gerant_nommination_nouveau_gerant_statutaire:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre pv sarl démission de gérant et nommination nouveau gérant statutaire en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGE Démission du gérant et nomination d'un nouveau gérant statutaire:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Démission du gérant et nomination d'un nouveau gérant statutaire en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2549,11 +2549,11 @@ public void age_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_sta
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty37");
-    legalDocument.setShortName("age sarl pv constatation décés  de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setShortName("PV AGE Constatation décès du gérant et nomination d'un nouveau gérant statutaire");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("age sarl pv constatation décés  de gérant et nommination nouveau gérant statutaire");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("age sarl pv constatation décés  de gérant et nommination nouveau gérant statutaire");
+    legalDocument.setFullName("PV AGE Constatation décès du gérant et nomination d'un nouveau gérant statutaire");
+    legalDocument.setKeywords("dec ger SARL");
+    legalDocument.setDescription("PV AGE Constatation décès du gérant et nomination d'un nouveau gérant statutaire");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("age_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_statutaire.docx");
     legalDocument.setStepperConfigFilePath("age_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_statutaire_stepper_configuration.json");
@@ -2563,8 +2563,8 @@ public void age_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_sta
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("age_sarl_pv_constatation_deces_gerant_nommination_nouveau_gerant_statutaire:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre age sarl pv constatation décés  de gérant et nommination nouveau gérant statutaire en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGE Constatation décès du gérant et nomination d'un nouveau gérant statutaire:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Constatation décès du gérant et nomination d'un nouveau gérant statutaire en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2584,11 +2584,11 @@ public void AGO_SARL_PV_renouvellement_du_mandat_du_gerant_LegalDocument(MongoTe
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty38");
-    legalDocument.setShortName("AGO SARL PV renouvellement du mandat du gérant");
+    legalDocument.setShortName("PV AGO Renouvellement mandats  ");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO SARL PV renouvellement du mandat du gérant");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO SARL PV renouvellement du mandat du gérant");
+    legalDocument.setFullName("PV AGO Renouvellement mandats");
+    legalDocument.setKeywords("AGO SARL PV renouvellement du mandat du gérant");
+    legalDocument.setDescription("PV AGO Renouvellement mandats");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_SARL_PV_renouvellement_du_mandat_du_gerant.docx");
     legalDocument.setStepperConfigFilePath("AGO_SARL_PV_renouvellement_du_mandat_du_gerant_stepper_configuration.json");
@@ -2598,8 +2598,8 @@ public void AGO_SARL_PV_renouvellement_du_mandat_du_gerant_LegalDocument(MongoTe
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO_SARL_PV_renouvellement_du_mandat_du_gerant:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SARL PV renouvellement du mandat du gérant en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Renouvellement mandats:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Renouvellement mandats en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2619,11 +2619,11 @@ public void AGO_SARL_PV_renouvellement_du_mandat_CAC_LegalDocument(MongoTemplate
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty39");
-    legalDocument.setShortName("AGO SARL PV renouvellement du mandat CAC");
+    legalDocument.setShortName("PV AGO Renouvellement CAC ");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO SARL PV renouvellement du mandat CAC");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO SARL PV renouvellement du mandat CAC");
+    legalDocument.setFullName("PV AGO Renouvellement CAC ");
+    legalDocument.setKeywords("AGO SARL PV renouvellement du mandat CAC");
+    legalDocument.setDescription("PV AGO Renouvellement CAC ");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_SARL_PV_renouvellement_du_mandat_CAC.docx");
     legalDocument.setStepperConfigFilePath("AGO_SARL_PV_renouvellement_du_mandat_CAC_stepper_configuration.json");
@@ -2633,8 +2633,8 @@ public void AGO_SARL_PV_renouvellement_du_mandat_CAC_LegalDocument(MongoTemplate
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO_SARL_PV_renouvellement_du_mandat_CAC:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SARL PV renouvellement du mandat CAC en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Renouvellement CAC:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Renouvellement CAC en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2654,11 +2654,11 @@ public void AGO_SARL_PV_nommination_nouveau_CAC_LegalDocument(MongoTemplate mong
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty40");
-    legalDocument.setShortName("AGO SARL PV nommination du nouveau CAC");
+    legalDocument.setShortName("PV AGO Nomination CAC");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO SARL PV nommination du nouveau CAC");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO SARL PV nommination du nouveau CAC");
+    legalDocument.setFullName("PV AGO Nomination CAC");
+    legalDocument.setKeywords("const SARL");
+    legalDocument.setDescription("PV AGO Nomination CAC");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_SARL_PV_nommination_nouveau_CAC.docx");
     legalDocument.setStepperConfigFilePath("AGO_SARL_PV_nommination_nouveau_CAC_stepper_configuration.json");
@@ -2668,8 +2668,8 @@ public void AGO_SARL_PV_nommination_nouveau_CAC_LegalDocument(MongoTemplate mong
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO_SARL_PV_nommination_nouveau_CAC:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SARL PV nommination du nouveau CAC en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Nomination CAC:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Nomination CAC en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2689,11 +2689,11 @@ public void AGO_SARL_PV_constatation_deces_CAC_nommination_nouveau_CAC_LegalDocu
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty41");
-    legalDocument.setShortName("AGO SARL PV constatation du décés CAC et nommination du nouveau CAC");
+    legalDocument.setShortName("PV AGO Constatation du décès du CAC et nomination d’un nouveau CAC");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO SARL PV constatation du décés CAC et nommination du nouveau CAC");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO SARL PV constatation du décés CAC et nommination du nouveau CAC");
+    legalDocument.setFullName("PV AGO Constatation du décès du CAC et nomination d’un nouveau CAC");
+    legalDocument.setKeywords("AGO SARL PV constatation du décés CAC et nommination du nouveau CAC");
+    legalDocument.setDescription("PV AGO Constatation du décès du CAC et nomination d’un nouveau CAC");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_SARL_PV_constatation_deces_CAC_nommination_nouveau_CAC.docx");
     legalDocument.setStepperConfigFilePath("AGO_SARL_PV_constatation_deces_CAC_nommination_nouveau_CAC_stepper_configuration.json");
@@ -2703,8 +2703,8 @@ public void AGO_SARL_PV_constatation_deces_CAC_nommination_nouveau_CAC_LegalDocu
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO_SARL_PV_constatation_deces_CAC_nommination_nouveau_CAC:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO SARL PV constatation du décés CAC et nommination du nouveau CAC en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Constatation du décès du CAC et nomination d’un nouveau CAC:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Constatation du décès du CAC et nomination d’un nouveau CAC en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2713,7 +2713,7 @@ public void AGO_SARL_PV_constatation_deces_CAC_nommination_nouveau_CAC_LegalDocu
     mongoTemplate.save(legalDocument);
 }
 
-/*@ChangeSet(order = "051", author = AuthorsConstants.GHABI_HAMZA , id = "051_AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau_LegalDocument")
+@ChangeSet(order = "051", author = AuthorsConstants.GHABI_HAMZA , id = "051_AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau_LegalDocument")
 public void AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau_LegalDocument(MongoTemplate mongoTemplate) {     
     LegalDocument legalDocument;
 
@@ -2724,11 +2724,11 @@ public void AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau_L
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty27");
-    legalDocument.setShortName("AGO Approbation des états Financiers avec Resultat déficitaire avec report à nouveau");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO Approbation des états Financiers avec Resultat déficitaire avec report à nouveau");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO Approbation des états Financiers avec Resultat déficitaire avec report à nouveau");
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau");
+    legalDocument.setKeywords("AGO Approbation 3");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau.docx");
     legalDocument.setStepperConfigFilePath("AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau_stepper_configuration.json");
@@ -2738,15 +2738,15 @@ public void AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau_L
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO_Approbation_Etat_Financier_Resultat_deficitaire_Report_nouveau:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO Approbation des états Financiers avec Resultat déficitaire avec report à nouveau  en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
     legalDocument.setPrice(49.99f);
     legalDocument.setDocumentsRecommendationId(new ArrayList<>());
     mongoTemplate.save(legalDocument);
-}*/
+}
 
  @ChangeSet(order = "024", author = AuthorsConstants.BEN_ROMDHANE_AWATEF , id = "024-addagoALegalDocument")
 public void addagoALegalDocument(MongoTemplate mongoTemplate) {     
@@ -2759,11 +2759,11 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c01");
-    legalDocument.setShortName("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau avec distribution des dividendes");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution de dividendes");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau avec distribution des dividendes");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau avec distribution des dividendes");
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution de dividendes");
+    legalDocument.setKeywords("AGO Approbation 2 ");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution de dividendes");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("ago_Approbation_des_etats_financiers_avec_resultat_beneficiaire_avec_report_a_nouveau_avec_distribution_des_dividendes.docx");
     legalDocument.setStepperConfigFilePath("ago_Approbation_des_etats_financiers_avec_resultat_beneficiaire_avec_report_a_nouveau_avec_distribution_des_dividendes_stepper_configuration.json");
@@ -2773,8 +2773,8 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau avec distribution des dividendes :");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau avec distribution des dividendes en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution de dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution de dividendes en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2795,11 +2795,11 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c02");
-     legalDocument.setShortName("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau");
+     legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau");
+     legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau");
+     legalDocument.setKeywords("AGO Approbation report à nouveau 1");
+     legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("ago_Approbation_des_etats_financiers_avec_resultat_beneficiaire_avec_report_a_nouveau.docx");
      legalDocument.setStepperConfigFilePath("ago_Approbation_des_etats_financiers_avec_resultat_beneficiaire_avec_report_a_nouveau_stepper_configuration.json");
@@ -2809,8 +2809,8 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2820,7 +2820,7 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
  }
 
 
- @ChangeSet(order = "068", author = AuthorsConstants.BEN_ROMDHANE_AWATEF , id = "068_AGO_Approbation_des_etats_financiers_avec_resultat_beneficiaire_et_distribution_des_dividendes_LegalDocument")
+ @ChangeSet(order = "069", author = AuthorsConstants.BEN_ROMDHANE_AWATEF , id = "069_AGO_Approbation_des_etats_financiers_avec_resultat_beneficiaire_et_distribution_des_dividendes_LegalDocument")
  public void AGO_Approbation_des_etats_financiers_avec_resultat_beneficiaire_et_distribution_des_dividendes_LegalDocument(MongoTemplate mongoTemplate) {     
      LegalDocument legalDocument;
 
@@ -2831,11 +2831,11 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
 
      legalDocument = new LegalDocument();
      legalDocument.setId("5dad0d7dd1a76c479c44");
-     legalDocument.setShortName("AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes");
+     legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes");
      legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-     legalDocument.setFullName("AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes");
-     legalDocument.setKeywords("remunerations gr");
-     legalDocument.setDescription("AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes");
+     legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes");
+     legalDocument.setKeywords("AGO Aapp bénéficiaire ");
+     legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes");
      legalDocument.setTemplatePreviewPath("empty_preview");
      legalDocument.setTemplateFilePath("AGO_Approbation_des_etats_financiers_avec_resultat_beneficiaire_et_distribution_des_dividendes.docx");
      legalDocument.setStepperConfigFilePath("AGO_Approbation_des_etats_financiers_avec_resultat_beneficiaire_et_distribution_des_dividendes_stepper_configuration.json");
@@ -2845,8 +2845,8 @@ public void addagoALegalDocument(MongoTemplate mongoTemplate) {
      legalDocument.setCreatedDate(Instant.now());
      descriptionSection = new DescriptionSection();
      
-     descriptionSection.setTitle("AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes :");
-     descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes en toute simplicité.\n" +
+     descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes :");
+     descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution des dividendes en toute simplicité.\n" +
          "Statuts générés en 10mn.");
      descriptionSections.add(descriptionSection);
      legalDocument.setDescriptionSections(descriptionSections);
@@ -2866,11 +2866,11 @@ public void Approbation_Etat_Financier_Resultat_deficitaire_distribution_dividen
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty42");
-    legalDocument.setShortName("AGO Approbation des états Financiers avec Resultat déficitaire et distribution des dividendes");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO Approbation des états Financiers avec Resultat déficitaire et distribution des dividendes");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO Approbation des états Financiers avec Resultat déficitaire et distribution des dividendes");
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes");
+    legalDocument.setKeywords("SARL AGO Approbation 4 ");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("Approbation_Etat_Financier_Resultat_deficitaire_distribution_dividendes.docx");
     legalDocument.setStepperConfigFilePath("Approbation_Etat_Financier_Resultat_deficitaire_distribution_dividendes_stepper_configuration.json");
@@ -2880,8 +2880,8 @@ public void Approbation_Etat_Financier_Resultat_deficitaire_distribution_dividen
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("Approbation_Etat_Financier_Resultat_deficitaire_distribution_dividendes:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO Approbation des états Financiers avec Resultat déficitaire et distribution des dividendes  en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2901,11 +2901,11 @@ public void AGO_Approbation_Etat_Financier_Resultat_deficitaire_report_nouveau_d
 
     legalDocument = new LegalDocument();
     legalDocument.setId("5dad0d7dd1a76c479c02azerty43");
-    legalDocument.setShortName("AGO Approbation des états Financiers avec Resultat déficitaire avec report nouveau avec distribution des dividendes");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat déficitaires avec report à nouveau avec distribution des dividendes");
     legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
-    legalDocument.setFullName("AGO Approbation des états Financiers avec Resultat déficitaire avec report nouveau avec distribution des dividendes");
-    legalDocument.setKeywords("remunerations gr");
-    legalDocument.setDescription("AGO Approbation des états Financiers avec Resultat déficitaire avec report nouveau avec distribution des dividendes");
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat déficitaires avec report à nouveau avec distribution des dividendes");
+    legalDocument.setKeywords("AGO Approbation des états Financiers avec Resultat déficitaire avec report nouveau avec distribution des dividendes");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat déficitaires avec report à nouveau avec distribution des dividendes");
     legalDocument.setTemplatePreviewPath("empty_preview");
     legalDocument.setTemplateFilePath("AGO_Approbation_Etat_Financier_Resultat_deficitaire_report_nouveau_distribution_dividendes.docx");
     legalDocument.setStepperConfigFilePath("AGO_Approbation_Etat_Financier_Resultat_deficitaire_report_nouveau_distribution_dividendes_stepper_configuration.json");
@@ -2915,8 +2915,8 @@ public void AGO_Approbation_Etat_Financier_Resultat_deficitaire_report_nouveau_d
     legalDocument.setCreatedDate(Instant.now());
     descriptionSection = new DescriptionSection();
     
-    descriptionSection.setTitle("AGO_Approbation_Etat_Financier_Resultat_deficitaire_report_nouveau_distribution_dividendes:");
-    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGO Approbation des états Financiers avec Resultat déficitaire avec report nouveau avec distribution des dividendes  en toute simplicité.\n" +
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat déficitaires avec report à nouveau avec distribution des dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat déficitaires avec report à nouveau avec distribution des dividendes en toute simplicité.\n" +
         "Statuts générés en 10mn.");
     descriptionSections.add(descriptionSection);
     legalDocument.setDescriptionSections(descriptionSections);
@@ -2926,7 +2926,459 @@ public void AGO_Approbation_Etat_Financier_Resultat_deficitaire_report_nouveau_d
 }
 
 
+@ChangeSet(order = "070", author = AuthorsConstants.SOUISSI_YASSMINE , id = "070_Pv_age_changement_de_denomination_LegalDocument")
+public void Pv_age_changement_de_denomination_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
 
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty44");
+    legalDocument.setShortName("PV AGE Changement de denomination");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGE Changement de denomination");
+    legalDocument.setKeywords("Pv Age Changement De Denomination");
+    legalDocument.setDescription("PV AGE Changement de denomination");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("Pv-age-changement-de-denomination.docx");
+    legalDocument.setStepperConfigFilePath("Pv_age_changement_de_denomination_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("Pv_age_changement_de_denomination_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGE Changement de denomination:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Changement de denomination en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "071", author = AuthorsConstants.SOUISSI_YASSMINE , id = "071_Pv_Age_Transfert_Du_Siege_LegalDocument")
+public void Pv_Age_Transfert_Du_Siege_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty45");
+    legalDocument.setShortName("PV AGE Transfert de siège social");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGE Transfert de siège social");
+    legalDocument.setKeywords("Pv Age Transfert Du Siege");
+    legalDocument.setDescription("PV AGE Transfert de siège social");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("Pv_Age_Transfert_Du_Siege.docx");
+    legalDocument.setStepperConfigFilePath("Pv_Age_Transfert_Du_Siege_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("Pv_Age_Transfert_Du_Siege_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGE Transfert de siège social :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Transfert de siège social en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "072", author = AuthorsConstants.SOUISSI_YASSMINE , id = "072_PV_AGE_Sarl_Dissolution_Anticipee_LegalDocument")
+public void PV_AGE_Sarl_Dissolution_Anticipee_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty46");
+    legalDocument.setShortName("PV AGE Dissolution");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGE Dissolution");
+    legalDocument.setKeywords("PV AGE Sarl Dissolution Anticipee");
+    legalDocument.setDescription("PV AGE Sarl Dissolution");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("PV_AGE_Sarl_Dissolution_Anticipee.docx");
+    legalDocument.setStepperConfigFilePath("pv_age_sarl_dissolution_anticipee_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("pv_age_sarl_dissolution_anticipee_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV_AGE_Sarl_Dissolution_Anticipee_LegalDocument:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Dissolution  en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+@ChangeSet(order = "073", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "073_AGE_SUARL_PV_transfert_du_siège_social_LegalDocument")
+public void AGE_SUARL_PV_transfert_du_siège_social_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty47");
+    legalDocument.setShortName("PV AGE Transfert du siège social");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGE Transfert du siège social");
+    legalDocument.setKeywords("transfert siège SUARL");
+    legalDocument.setDescription("PV AGE Transfert du siège social");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGE_SUARL_PV_transfert_du_siège_social.docx");
+    legalDocument.setStepperConfigFilePath("AGE_SUARL_PV_transfert_du_siège_social_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGE_SUARL_PV_transfert_du_siège_social_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGE Transfert du siège social :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Transfert du siège social en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "074", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "074_AGE_SUARL_PV_changement_de_dénomination_sociale_LegalDocument")
+public void AGE_SUARL_PV_changement_de_dénomination_sociale_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty48");
+    legalDocument.setShortName("PV AGE Changement de dénomination sociale");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGE Changement de dénomination sociale");
+    legalDocument.setKeywords("dénomination SUARL");
+    legalDocument.setDescription("PV AGE Changement de dénomination sociale");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGE_SUARL_PV_changement_de_dénomination_sociale.docx");
+    legalDocument.setStepperConfigFilePath("AGE_SUARL_PV_changement_de_dénomination_sociale_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGE_SUARL_PV_changement_de_dénomination_sociale_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGE Changement de dénomination sociale :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGE Changement de dénomination sociale en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "075", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "075_AGO_SUARL_PV_approbation_des_comptes_avec_résultat_bénéficiaire_et_report_a_nouveau_LegalDocument")
+public void AGO_SUARL_PV_approbation_des_comptes_avec_résultat_bénéficiaire_et_report_a_nouveau_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty49");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau");
+    legalDocument.setKeywords("AGO Approbation1 SUARL");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGO_SUARL_PV_approbation_des_comptes_avec_résultat_bénéficiaire_et_report_a_nouveau.docx");
+    legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_approbation_des_comptes_avec_résultat_bénéficiaire_et_report_a_nouveau_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGO_SUARL_PV_approbation_des_comptes_avec_résultat_bénéficiaire_et_report_a_nouveau_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat bénéficiaire et report à nouveau  en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "076", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "076_AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_et_distribution_de_dividendes_LegalDocument")
+public void AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_et_distribution_de_dividendes_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty50");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution de dividendes");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution de dividendes");
+    legalDocument.setKeywords("AGO Approbation2 SUARL");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution de dividendes");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_et_distribution_de_dividendes.docx");
+    legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_et_distribution_de_dividendes_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_et_distribution_de_dividendes_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution de dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat bénéficiaire et distribution de dividendes en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "077", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "077_AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_report_a_nouveau_LegalDocument")
+public void AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_report_a_nouveau_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty51");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau");
+    legalDocument.setKeywords("AGO Approbation3 SUARL");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_report_a_nouveau.docx");
+    legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_report_a_nouveau_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_report_a_nouveau_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat déficitaires et report à nouveau en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "078", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "078_AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_avec_report_a_nouveau_et_distribution_des_dividendes_LegalDocument")
+public void AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_avec_report_a_nouveau_et_distribution_des_dividendes_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty52");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat déficitaire avec report à nouveau et distribution des dividendes");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat déficitaire avec report à nouveau et distribution des dividendes");
+    legalDocument.setKeywords("AGO Approbation4 SUARL");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat déficitaire avec report à nouveau et distribution des dividendes");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_avec_report_a_nouveau_et_distribution_des_dividendes.docx");
+    legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_avec_report_a_nouveau_et_distribution_des_dividendes_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_avec_report_a_nouveau_et_distribution_des_dividendes_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat déficitaire avec report à nouveau et distribution des dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat déficitaire avec report à nouveau et distribution des dividendes en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "079", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "079_AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_distribution_des_dividendes_LegalDocument")
+public void AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_distribution_des_dividendes_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty53");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes");
+    legalDocument.setKeywords("AGO Approbation5 SUARL");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_distribution_des_dividendes.docx");
+    legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_distribution_des_dividendes_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_déficitaire_et_distribution_des_dividendes_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat déficitaire et distribution des dividendes en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "080", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "080_AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_avec_report_a_nouveau_et_distribution_des_dividendes_LegalDocument")
+public void AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_avec_report_a_nouveau_et_distribution_des_dividendes_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty54");
+    legalDocument.setShortName("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution des dividendes");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution des dividendes");
+    legalDocument.setKeywords("AGO Approbation6 SUARL");
+    legalDocument.setDescription("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution des dividendes");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_avec_report_a_nouveau_et_distribution_des_dividendes.docx");
+    legalDocument.setStepperConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_avec_report_a_nouveau_et_distribution_des_dividendes_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGO_SUARL_PV_approbation_des_états_financiers_avec_résultat_bénéficiaire_avec_report_a_nouveau_et_distribution_des_dividendes_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution des dividendes :");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre PV AGO Approbation des états financiers avec résultat bénéficiaire avec report à nouveau et distribution des dividendes en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "081", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "081_AGE_SUARL_PV_Augmentation_de_capital_en_numéraire_LegalDocument")
+public void AGE_SUARL_PV_Augmentation_de_capital_en_numéraire_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty55");
+    legalDocument.setShortName("AGE SUARL PV augmentation de capital en numéraire");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("AGE SUARL PV augmentation de capital en numéraire");
+    legalDocument.setKeywords("AGE augmentation en numéraire SUARL");
+    legalDocument.setDescription("AGE SUARL PV augmentation de capital en numéraire");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGE_SUARL_PV_Augmentation_de_capital_en_numéraire.docx");
+    legalDocument.setStepperConfigFilePath("AGE_SUARL_PV_Augmentation_de_capital_en_numéraire_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGE_SUARL_PV_Augmentation_de_capital_en_numéraire_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("AGE_SUARL_PV_Augmentation_de_capital_en_numéraire:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV augmentation de capital en numéraire en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
+
+@ChangeSet(order = "082", author = AuthorsConstants.BEN_HAMOUDA_TAREK , id = "082_AGE_SUARL_PV_Augmentation_de_capital_par_conversion_de_créance_LegalDocument")
+public void AGE_SUARL_PV_Augmentation_de_capital_par_conversion_de_créance_LegalDocument(MongoTemplate mongoTemplate) {     
+    LegalDocument legalDocument;
+
+    List<DescriptionSection> descriptionSections = new ArrayList<>();
+    DescriptionSection descriptionSection;
+    List<String> autoFillConcernedEntities = new ArrayList<>();
+    autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+    legalDocument = new LegalDocument();
+    legalDocument.setId("5dad0d7dd1a76c479c02azerty56");
+    legalDocument.setShortName("AGE SUARL PV augmentation de capital par conversion de créance");
+    legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+    legalDocument.setFullName("AGE SUARL PV augmentation de capital par conversion de créance");
+    legalDocument.setKeywords("AGE augmentation par conversion de créance SUARL");
+    legalDocument.setDescription("AGE SUARL PV augmentation de capital par conversion de créance");
+    legalDocument.setTemplatePreviewPath("empty_preview");
+    legalDocument.setTemplateFilePath("AGE_SUARL_PV_Augmentation_de_capital_par_conversion_de_créance.docx");
+    legalDocument.setStepperConfigFilePath("AGE_SUARL_PV_Augmentation_de_capital_par_conversion_de_créance_stepper_configuration.json");
+    legalDocument.setWorkflowConfigFilePath("AGE_SUARL_PV_Augmentation_de_capital_par_conversion_de_créance_workflow_configuration.json");
+    legalDocument.setCategoryId("empty_category");
+    legalDocument.setLawyerId("empty_lawyer");
+    legalDocument.setCreatedDate(Instant.now());
+    descriptionSection = new DescriptionSection();
+    
+    descriptionSection.setTitle("AGE_SUARL_PV_Augmentation_de_capital_par_conversion_de_créance:");
+    descriptionSection.setContent("Procédure 100% en ligne pour créer votre AGE SUARL PV augmentation de capital par conversion de créance en toute simplicité.\n" +
+        "Statuts générés en 10mn.");
+    descriptionSections.add(descriptionSection);
+    legalDocument.setDescriptionSections(descriptionSections);
+    legalDocument.setPrice(49.99f);
+    legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+    mongoTemplate.save(legalDocument);
+}
 
 
 

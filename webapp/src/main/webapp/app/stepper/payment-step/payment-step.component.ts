@@ -7,7 +7,9 @@ import { StepperApiService } from 'app/stepper/stepper/stepper-api.service';
 import { OrderService } from 'app/entities/order/order.service';
 import { ActivatedRoute } from '@angular/router';
 import { StepperDataService } from 'app/stepper/stepper/stepper-data.service';
-import { BsLocaleService, defineLocale, setTheme } from 'ngx-bootstrap';
+import { setTheme } from 'ngx-bootstrap/utils';
+import { BsLocaleService } from 'ngx-bootstrap/datepicker';
+import { defineLocale } from 'ngx-bootstrap/chronos';
 import { frLocale } from 'ngx-bootstrap/locale';
 
 @Component({
@@ -16,7 +18,7 @@ import { frLocale } from 'ngx-bootstrap/locale';
   styleUrls: ['./payment-step.component.scss', '../step/step.scss', '../generate-document/generate-document.component.scss']
 })
 export class PaymentStepComponent implements OnInit, OnDestroy {
-  order: IOrder ={};
+  order: IOrder = {};
   orderSubscriber: Subscription;
   selectedPaymentOption = 'edinar';
   @Output() purchaseEvent = new EventEmitter<IOrder>();

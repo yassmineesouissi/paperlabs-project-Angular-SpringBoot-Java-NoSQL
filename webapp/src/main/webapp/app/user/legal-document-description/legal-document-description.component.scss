@@ -1,6 +1,7 @@
 .doc-containter {
-  padding-right: 15% !important;
-  padding-left: 15% !important;
+  position: relative;
+  left: 15%;
+  right: 15%;
 }
 
 .btn-paperlabs {
@@ -10,9 +11,10 @@
   color: #fff;
   background-color: #1400c3;
   border-radius: 5px;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 600;
   padding-right: 44px;
+  font-family: 'calibri';
 }
 
 .icn-paperlabs {
@@ -25,6 +27,8 @@
   font-size: 34px;
   font-weight: 700;
   line-height: 1.2;
+  font-family: 'calibri';
+  color: #071a81;
 }
 
 .doc-description {
@@ -36,19 +40,38 @@
 }
 
 .headings {
-  font-family: 'OpenSans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  //font-family: 'OpenSans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   box-sizing: border-box;
 }
 
 .doc-features {
   list-style: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 17px;
+  color: #071a81;
+  font-family: 'calibri';
+}
+
+.doc-features2 {
+  list-style: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 9%;
   font-size: 17px;
-  color: #000;
+  color: #071a81;
+  font-family: 'calibri';
 }
 
 .doc-feature-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  -webkit-box-align: center;
+  align-items: center;
+  line-height: 1.2;
+}
+.doc-feature-item2 {
   margin-top: 20px;
   margin-bottom: 20px;
   display: inline-block;
@@ -60,7 +83,7 @@
 .doc-features li a {
   vertical-align: middle;
   margin: 0 24px 0 12px;
-  color: #000;
+  color: #071a81;
   text-decoration: none;
 }
 
@@ -77,7 +100,19 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
-  color: #c1c3c5;
+  color: #071a81;
+}
+
+.doc-feature-icon2 {
+  content: '';
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #071a81;
 }
 
 .doc-sections-title {
@@ -112,10 +147,12 @@
 }
 
 .doc-section-content {
-  font-size: 16px;
-  font-weight: 400;
-  text-align: justify;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
   margin-bottom: 40px;
+  font-family: 'calibri';
+  color: #071a81;
 }
 
 @media screen and (min-width: 768px) {
@@ -161,9 +198,41 @@
   }
 
   .doc-containter {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+    left: 3%;
+    right: 3%;
+    margin-top: 15%;
     text-align: center !important;
     line-height: 1.5;
+  }
+}
+.colmn {
+  width: 37.33%;
+}
+.tab {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.colmn2 {
+  width: 37.33%;
+  padding-right: 5%;
+}
+.img {
+  margin-left: 73%;
+  margin-bottom: -26%;
+  margin-top: 0%;
+}
+
+@media screen and (max-width: 600px) {
+  .img {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: -115%;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .doc-features2 {
+    display: none;
   }
 }
