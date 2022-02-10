@@ -29,8 +29,11 @@ Name DB: paperlabs
 
 
 java 7
+
 Angular
+
 Spring-boot
+
 .......
 
 
