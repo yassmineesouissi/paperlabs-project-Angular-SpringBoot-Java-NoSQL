@@ -20,7 +20,8 @@ Start the server with ./mvnw or using your IDE
 ##########################################DataBase############################################
 
 
-MongoDB 
+MongoDB (4.4.5)
+
 Name DB: paperlabs
 
 
@@ -36,7 +37,7 @@ Spring-boot
 ##########################################Contacts##################################################
 
 
-mail: y.elsouissi@paperlabs.io ||  yassmine.elsouissi@gmail.com  || tél:50110966
+mail: y.elsouissi@paperlabs.io ||  yassmine.elsouissi@gmail.com  || phone:50110966
 
 
 
