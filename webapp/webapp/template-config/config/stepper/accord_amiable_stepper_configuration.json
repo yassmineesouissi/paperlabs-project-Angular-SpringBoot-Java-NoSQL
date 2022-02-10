@@ -49,7 +49,7 @@
 		"blocs": [
 		 {
       "id": "bloc_nature_employeur",
-      "title": "L’employé est :",
+      "title": "2- Est-ce que l’employé est de nationalité tunisienne ou étrangère ?",
       "description": "",
       "inputs": [
         "input_nature_employeur_morale",
@@ -60,7 +60,7 @@
     
 		{
       "id": "bloc_nature_peronne_caution",
-      "title": "L’employeur est une:",
+      "title": "1- Est-ce que l’employeur est une personne morale ou physique ?",
       "description": "",
       "inputs": [
         "input_nature_personne_physique_tunisienne_caution",
@@ -71,7 +71,7 @@
 		
 		{
             "id": "bloc_indemnité",
-            "title": "",
+            "title": "6- Quel est le montant de l’indemnité brut à accorder à l’employé ?",
             "description": "",
             "inputs": [
                 "input_montant_chiffre",
@@ -117,6 +117,8 @@
                 "input_date_naiss_employee_tunisien",
 				"input_lieu_naiss_employee_tunisien",
 				"input_num_cin_employee_tunisien",
+				"input_date_delivrance_cin_personne_physique_tunisienne_employee",
+				"input_lieu_delivrance_cin_personne_physique_tunisienne_employee",
 				"input_adresse_employee_tunisien"
             ],
             "visibility": true
@@ -147,6 +149,8 @@
                 "input_date_naissance_employeur_physique_tunisien",
 				"input_lieu_naissance_employeur_physique_tunisien",
 				"input_num_cin_employeur_physique_tunisien",
+				"input_date_delivrance_cin_personne_physique_tunisienne_employeur",
+				"input_lieu_delivrance_cin_personne_physique_tunisienne_employeur",
 				"input_adresse_employeur_physique_tunisien"
             ],
             "visibility": true
@@ -225,7 +229,7 @@
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "1",
+      "value": "physique tunisienne caution",
       "bookmarkIdPerValue": {
         "physique tunisienne caution": [
 		                                "personne_physique_etrangere_caution",
@@ -243,7 +247,7 @@
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "2",
+      "value": "physique etrangere caution",
       "bookmarkIdPerValue": {
         "physique etrangere caution": ["personne_physique_tunisienne_caution",
 									   "personne_morale_tunisienne_caution"]
@@ -259,7 +263,7 @@
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "3",
+      "value": "morale tunisienne caution",
       "bookmarkIdPerValue": {
         "morale tunisienne caution": [ "personne_physique_tunisienne_caution",
 									  "personne_physique_etrangere_caution"
@@ -271,12 +275,12 @@
 		
 		{
             "id": "input_prise_effet",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_prise_effet",
-            "label": "Prise d'effet",
+            "label": "5- Quelle est la date de commencement du contrat de travail ?",
             "placeHolder": "",
-            "help": "Quelle est la date de commencement du contrat de travail?",
+            "help": "",
             "options": [],
             "value": "",
             "bookmarkIdPerValue": {
@@ -291,7 +295,7 @@
             "name": "input_montant_chiffre",
             "label": " Indemnité en chiffre ",
             "placeHolder": "",
-            "help": "Quel est le montant de l’indemnité brut à accorder à l’employé ?",
+            "help": "",
             "options": [],
             "value": "",
             "bookmarkIdPerValue": {
@@ -320,25 +324,25 @@
             "type": "select",
             "description": "",
             "name": "input_contrat_type",
-            "label": "Type de contrat ",
+            "label": "4- Quel est le type de contrat objet de la résiliation ?",
             "placeHolder": "Type de contrat",
-            "help": "Quel est le type de contrat objet de la résiliation ?",
-            "options": ["Contrat à Durée Déterminée","Contrat à Durée Indéterminée"],
+            "help": "",
+            "options": ["Contrat de travail à Durée Déterminée","Contrat de travail à Durée Indéterminée"],
             "value": "",
             "bookmarkIdPerValue": {
-                "Contrat à Durée Déterminée": ["contrat_type"],
-				"Contrat à Durée Indéterminée": ["contrat_type"]
+                "Contrat de travail à Durée Déterminée": ["contrat_type"],
+				"Contrat de travail à Durée Indéterminée": ["contrat_type"]
             },
             "visibility": true
         },
 		{
             "id": "input_date_conclusion",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_date_conclusion",
-            "label": "Date de conclusion du contrat de travail",
+            "label": "3- Quelle est la date de signature du contrat de travail objet de la résiliation ?",
             "placeHolder": "",
-            "help": "Quelle est la date de signature du contrat de travail objet de la résiliation ?",
+            "help": "",
             "options": [],
             "value": "",
             "bookmarkIdPerValue": {
@@ -378,7 +382,7 @@
         },
 		{
             "id": "input_date_naissance_employee_etrangere",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_date_naissance_employee_etrangere",
             "label": "Date de naissance",
@@ -797,7 +801,7 @@
         },
 		{
             "id": "input_expir_pass_employee_etrangere",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_expir_pass_employee_etrangere",
             "label": "Date d’expiration du passeport",
@@ -857,7 +861,7 @@
         },
 		{
             "id": "input_date_naiss_employee_tunisien",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_date_naiss_employee_tunisien",
             "label": "Date de naissance",
@@ -887,10 +891,10 @@
         },
 		{
             "id": "input_num_cin_employee_tunisien",
-            "type": "cin",
+            "type": "number",
             "description": "",
             "name": "input_num_cin_employee_tunisien",
-            "label": "Numéro de carte d'identité nationale",
+            "label": "Numéro de la carte d'identité nationale",
             "placeHolder": "",
             "help": "",
             "options": [],
@@ -900,6 +904,40 @@
             },
             "visibility": true
         },
+		{
+      "id": "input_date_delivrance_cin_personne_physique_tunisienne_employee",
+      "type": "date",
+      "description": "",
+      "name": "input_date_delivrance_cin_personne_physique_tunisienne_employee",
+      "label": "Date de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_cin_phy_tun_employee"]
+        
+      },
+      "visibility": true
+    },
+		 {
+      "id": "input_lieu_delivrance_cin_personne_physique_tunisienne_employee",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_delivrance_cin_personne_physique_tunisienne_employee",
+      "label": "Lieu de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_cin_phys_tun_employee"]
+        
+      },
+      "visibility": true
+    },
+		
+	
 		{
             "id": "input_adresse_employee_tunisien",
             "type": "text",
@@ -948,7 +986,7 @@
         },
 		{
             "id": "input_date_naissance_employeur_physique_etrangere",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_date_naissance_employeur_physique_etrangere",
             "label": "Date de naissance",
@@ -993,7 +1031,7 @@
         },
 		{
             "id": "input_expiration_passport_employeur_physique_etrangere",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_expiration_passport_employeur_physique_etrangere",
             "label": "Date d’expiration du passeport",
@@ -1041,7 +1079,7 @@
             "type": "select",
             "description": "",
             "name": "input_forme_employeur_morale",
-            "label": "Forme",
+            "label": "Forme de la société",
             "placeHolder": "",
             "help": "",
             "options": ["SA","SARL","SUARL","LLP","GMBH","Autre"],
@@ -1073,7 +1111,7 @@
         },
 		{
             "id": "input_capitale_sociale_employeur_morale",
-            "type": "text",
+            "type": "number",
             "description": "",
             "name": "input_capitale_sociale_employeur_morale",
             "label": "Capital social en Dinars",
@@ -1180,7 +1218,7 @@
         },
 		{
             "id": "input_date_naissance_employeur_physique_tunisien",
-            "type": "Date",
+            "type": "date",
             "description": "",
             "name": "input_date_naissance_employeur_physique_tunisien",
             "label": "Date de naissance",
@@ -1210,10 +1248,10 @@
         },
 		{
             "id": "input_num_cin_employeur_physique_tunisien",
-            "type": "cin",
+            "type": "number",
             "description": "",
             "name": "input_num_cin_employeur_physique_tunisien",
-            "label": "Numéro de carte d'identité nationale",
+            "label": "Numéro de la carte d'identité nationale",
             "placeHolder": "",
             "help": "",
             "options": [],
@@ -1223,6 +1261,38 @@
             },
             "visibility": true
         },
+		{
+      "id": "input_date_delivrance_cin_personne_physique_tunisienne_employeur",
+      "type": "date",
+      "description": "",
+      "name": "input_date_delivrance_cin_personne_physique_tunisienne_employeur",
+      "label": "Date de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_cin_phy_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+		 {
+      "id": "input_lieu_delivrance_cin_personne_physique_tunisienne_employeur",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_delivrance_cin_personne_physique_tunisienne_employeur",
+      "label": "Lieu de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_cin_phys_tun_caution"]
+        
+      },
+      "visibility": true
+    },
 		{
             "id": "input_adresse_employeur_physique_tunisien",
             "type": "text",
@@ -1247,143 +1317,144 @@
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "montant_chiffre",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "prise_effet",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "contrat_type",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
+		
 		{
             "bookmarkId": "date_conclusion",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "nom_employee_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "prenom_employee_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "date_nais_eplyee_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "lieu_nais_eplyee_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "nationalite_employee",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "num_pass_employee_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "expir_pass_employee",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "adresse_employee",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		
 		{
@@ -1391,66 +1462,90 @@
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "prenom_employee_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "date_naiss_employee_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "lieu_nais_employee_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "num_cin_employee_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
+
+	{
+      "bookmarkId": "lieu_cin_phys_tun_employee",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "date_cin_phy_tun_employee",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	
 		{
             "bookmarkId": "adresse_employee_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 	
 		
@@ -1459,55 +1554,55 @@
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "forme_morale",
             "value": "",
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "forme_morale",
             "value": "",
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "capitale_sociale",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "identifiant_unique",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		
 		{
@@ -1515,33 +1610,33 @@
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "nom_employeur_morale",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "prenom_employeur_morale",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		
 		{
@@ -1549,143 +1644,166 @@
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "prenom_phy_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "naiss_phy_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "ville_phy_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "num_pass_phy_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "expir_pass_phy_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "adresse_phy_etrg",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "nom_employeur_phy_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "prenom_employeur_phy_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "date_naiss_phy_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "lieu_nais_phys_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		{
             "bookmarkId": "num_cin_phys_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
+				{
+      "bookmarkId": "date_cin_phy_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+   
+		{
+      "bookmarkId": "lieu_cin_phys_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
 		{
             "bookmarkId": "adresse_phy_tun",
             "value": null,
             "fontFamily": "Times New Roman",
             "color": null,
-            "bold": true,
+            "bold": false,
             "italic": false,
             "capitalized": false,
             "type": "USER_INPUT",
-            "fontSize": 11
+            "fontSize": 12
         },
 		 
 		 
@@ -1695,55 +1813,55 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_physique_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_morale_tunisienne_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	 {
       "bookmarkId": "Infos_employeur_moral",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Infos_employeur_physique",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     }
 		]
 		}

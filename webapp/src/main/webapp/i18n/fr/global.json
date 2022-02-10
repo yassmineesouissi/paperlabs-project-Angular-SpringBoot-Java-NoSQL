@@ -15,6 +15,7 @@
         "order": "Order",
         "dowloadHistory": "Dowload History",
         "company": "Company",
+        "documents": "Documents",
         "employee": "Employee",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
@@ -123,7 +124,7 @@
     "filedupload": {
       "title": "STATUS :"
     },
-    "fileupload": { 
+    "fileupload": {
       "title": " WAITING"
     },
     "validation": {

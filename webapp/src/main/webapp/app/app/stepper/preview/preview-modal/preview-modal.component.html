@@ -1,0 +1,92 @@
+<div class="test">
+    <div class="title"> <strong> CONTRAT DE TRAVAIL A DUREE INDETERMINEE</strong></div>
+    <strong> ENTRE LES SOUSSIGNEES</strong>
+    <!-----------------------------personne physique tunisienne------------------------>
+    <div *ngIf="getHtmlInputElement('input_nature_employeur_morale').checked">
+        <p></p>
+        <p>1. <span *ngIf="getHtmlInputElement('input_nom_employeur').value !== '' ">{{getHtmlInputElement('input_nom_employeur').value}}</span> <span *ngIf="getHtmlInputElement('input_prénom_employeur').value !== '' ">{{getHtmlInputElement('input_prénom_employeur').value}}</span>            de la carte d’identité tunisienne n° <span *ngIf="getHtmlInputElement('input_cin_employeur').value !== '' ">{{getHtmlInputElement('input_cin_employeur').value}}</span> , élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_employeur').value !== '' ">{{getHtmlInputElement('input_adresse_employeur').value}}</span>            </p>
+    </div>
+    <!-----------------------------personne moral------------------------>
+    <div *ngIf="getHtmlInputElement('input_nature_employeur_physique').checked">
+        <p></p>
+        <p> <span *ngIf="getHtmlInputElement('input_dénomination_de_la_societé').value !== '' ">{{getHtmlInputElement('input_dénomination_de_la_societé').value}}</span>, <span *ngIf="getHtmlInputElement('input_type_de_la_societé').value !== '' ">{{getHtmlInputElement('input_type_de_la_societé').value}}</span>,
+            titulaire de l’identifiant unique n° <span *ngIf="getHtmlInputElement('input_identifiant_unique_de_la_societé').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_de_la_societé').value}}</span>, dont le siège social est au
+            <span *ngIf="getHtmlInputElement('input_adresse_de_la_societé').value !== '' ">{{getHtmlInputElement('input_adresse_de_la_societé').value}}</span>, dument représentée par <span *ngIf="getHtmlInputElement('input_nom_du_representant_de_la_societé').value !== '' ">{{getHtmlInputElement('input_nom_du_representant_de_la_societé').value}}</span>            <span *ngIf="getHtmlInputElement('input_prénom_du_representant_de_la_societé').value !== '' ">{{getHtmlInputElement('input_prénom_du_representant_de_la_societé').value}}</span></p>
+    </div>
+    <p> <strong> Ci-après dénommée, l’« Employeur ».</strong></p>
+    <div class="soussigne"> D’une part,</div>
+    <p><strong>ET</strong> </p>
+    <p>2. <span *ngIf="getHtmlInputElement('input_nom_de_lemployé').value !== '' ">{{getHtmlInputElement('input_nom_de_lemployé').value}}</span> <span *ngIf="getHtmlInputElement('input_prénom_de_lemployé').value !== '' ">{{getHtmlInputElement('input_prénom_de_lemployé').value}}</span>,
+        titulaire de la carte d’identité tunisienne n°<span *ngIf="getHtmlInputElement('input_num_CIN_de_lemployé').value !== '' ">{{getHtmlInputElement('input_num_CIN_de_lemployé').value}}</span>, élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_de_lemployé').value !== '' ">{{getHtmlInputElement('input_adresse_de_lemployé').value}}</span>.</p>
+    <p> <strong>Ci-après  dénommé l’« Employé ».</strong></p>
+    <div class="soussigne">D’autre part.</div>
+    <p>L’Employeur et l’Employé seront ci-après désignés, collectivement par les « Parties » et individuellement <br> par la « Partie ».</p>
+
+
+
+    <p> ETANT PREALABLEMENT RAPPELE QUE</p>
+    <strong>Article  1 : Objet du Contrat</strong>
+    <p>L’Employeur engage l’Employé, en qualité de <span *ngIf="getHtmlInputElement('input_poste_de_lemployé').value !== '' ">{{getHtmlInputElement('input_poste_de_lemployé').value}}</span> , pour une durée indéterminée, à compter </p>
+    <strong>Article 2 : Prise d’effet</strong>
+    <p> Le présent Contrat prend effet à compter du <span *ngIf="getHtmlInputElement('input_periode_contrat_commencant').value !== '' ">{{getHtmlInputElement('input_periode_contrat_commencant').value}}</span>. L’Employé se déclare libre de tout autre engagement,
+        conformément aux conditions générales de la législation tunisienne du travail, et aux conditions particulières précisées dans le présent Contrat, qu’il accepte.</p>
+
+    <div *ngIf="getHtmlInputElement('input_periode_dessai_1').checked">
+        <strong> Article 3 : Période d’essai </strong>
+        <p>Le présent Contrat est conclu pour une durée indéterminée, sous réserve de l’accomplissement d’une période d’essai de <span *ngIf="getHtmlInputElement('input_periode_dessai').value !== '' ">{{getHtmlInputElement('input_periode_dessai').value}}</span>            de travail effectif, renouvelable une fois (1) pour la même durée. Avant l’expiration de la première période d’essai et en cas de renouvellement de cette dernière, l’Employeur devra informer l’Employé de sa volonté de procéder à son renouvellement,
+            par écrit. Au cours de cette période d’essai, chacune des deux Parties peut mettre fin au Contrat, sans préavis et sur simple notification.</p>
+    </div>
+
+    <strong> Article 5 : Rémunération </strong>
+    <p>En contrepartie de l’exécution de ses fonctions et compte tenu de la nature de son travail, l’Employé percevra, un salaire mensuel brut de <span *ngIf="getHtmlInputElement('input_salaire_mensuel_net_employé_lettres').value !== '' ">{{getHtmlInputElement('input_salaire_mensuel_net_employé_lettres').value}}</span>        (<span *ngIf="getHtmlInputElement('input_salaire_mensuel_net_employé_chiffres').value !== '' ">{{getHtmlInputElement('input_salaire_mensuel_net_employé_chiffres').value}}</span>) dinars tunisiens.</p>
+    <strong> Article 6 : Lieu de travail et mobilité géographique </strong>
+    <p>L’Employé est engagé et affecté pour travailler principalement dans les locaux que de l’Employeur sis au <span *ngIf="getHtmlInputElement('input_lieu_travail').value !== '' ">{{getHtmlInputElement('input_lieu_travail').value}}</span>. Toutefois, l’Employé
+        reconnait et accepte formellement la possibilité de se déplacer partout où le besoin de ses fonctions le nécessiterait.</p>
+    <strong>Article 7 : Durée du travail</strong>
+    <p>L’Employé sera soumis au régime de travail de <span *ngIf="getHtmlInputElement('input_hebdomadaire').value !== '' ">{{getHtmlInputElement('input_hebdomadaire').value}}</span> heures par semaine.</p>
+    <strong>Article 8 : Congés payés</strong>
+    <p>L’Employé bénéficiera d’un congé payé de <span *ngIf="getHtmlInputElement('input_clause_dexclusivité').value !== '' ">{{getHtmlInputElement('input_clause_dexclusivité').value}}</span>jours ouvrables par mois travaillé.</p>
+    <strong>Article 9 : Absence pour maladie</strong>
+    <p>L’absence pour maladie doit être justifiée dans les 48 heures par un certificat médical délivré par un médecin, précisant sa durée et sa cause.</p>
+    <div *ngIf="getHtmlInputElement('input_clause_de_exculisivité').checked"> <strong>Article 10 : Clause d’exclusivité </strong>
+        <p>Tout au long de la période de validité du présent Contrat, l’Employé s’engage à : - Consacrer toute son activité professionnelle à l’Employeur et à se conformer strictement aux instructions données par son supérieur hiérarchique et à respecter
+            les horaires de travail ; - Consacrer tous ses soins, diligences et la totalité de son activité professionnelle à l’Employeur. Il lui est interdit d’exercer toute autre activité professionnelle.</p>
+    </div>
+    <div *ngIf="getHtmlInputElement('input_clause_de_confidentialité').checked"><strong> Article  11 : Clause de confidentialité </strong>
+        <p>L’Employé s’engage, tant pendant l’exécution du présent Contrat qu’après sa résiliation, à conserver la confidentialité la plus stricte sur les informations inconnues du public, concernant les activités de l’Employeur, y compris et sans limitation,
+            les spécifications de produits et formules, méthodes, documents techniques et produits, ainsi que les études, programmes de recherche et développement, correspondances, liste de clients, noms des clients, rapports de vente et informations
+            financières. L’Employé s’engage à ne pas utiliser et à ne pas communiquer ces informations confidentielles pour quelque motif que ce soit, sans l’accord préalable et écrit de l’Employeur.</p>
+    </div>
+    <div *ngIf="getHtmlInputElement('input_propriété_des_travaux').checked"><strong>Article  12 : Propriété des travaux</strong>
+        <p>L’Employeur conserve la propriété et les droits d’utilisation des logiciels, de la documentation, et de toutes les informations de toute nature (notamment technique ou commerciale) mis à la disposition ou même élaborés, produit, pensé et développé
+            par l’Employé dans le cadre du Contrat. A l’expiration du Contrat, quelle qu’en soit la cause, l’Employé remettra automatiquement et sans délai à l’Employeur tous les supports de quelque nature que ce soit, qui lui auront été confiés ou élaborés
+            par lui dans le cadre du Contrat. L’Employé déclare renoncer de manière ferme et définitive à toute revendication ou droit de propriété intellectuelle relatifs à tout travail réalisé dans le cadre du présent Contrat pour le compte de l’Employeur
+            ou d’un tier.</p>
+    </div>
+    <div *ngIf="getHtmlInputElement('input_non_concurence').checked"> <strong>Article   13 : Non-concurrence</strong>
+        <p>Compte tenu de la nature des informations détenues par l’Employé et des fonctions assurées par ce dernier, et afin de préserver les intérêts de l’Employeur en cas de résiliation du Contrat pour quelque motif que ce soit, l’Employé accepte de ne
+            pas entrer au service d’une entreprise concurrente, ni à participer directement ou indirectement à toute activité pouvant concurrencer l’activité de l’Employeur. La présente clause de non-concurrence s’applique pour une durée de <span *ngIf="getHtmlInputElement('input_non_concurrence_B').value !== '' ">{{getHtmlInputElement('input_non_concurrence_B').value}}</span>mois
+            à compter de la date de résiliation du Contrat et ce dans un périmètre de <span *ngIf="getHtmlInputElement('input_non_concurrence_A').value !== '' ">{{getHtmlInputElement('input_non_concurrence_A').value}}</span>kilomètres du lieu d’établissement
+            de l’Employeur. Après la rupture du Contrat pour quelque motif que ce soit, l’Employeur se réserve le droit de libérer l’Employé de l’interdiction de concurrence moyennant une lettre recommandée avec accusé de réception. En cas de non-respect
+            de la présente obligation de non-concurrence, l’Employé accepte de verser à l’Employeur des dommages et intérêts résultant du non-respect de cette obligation.</p>
+    </div>
+    <strong>Article   14 : Election de domicile</strong>
+    <p>Pour l’exécution du présent Contrat, les Parties font élection de domicile en leur lieu respectif de résidence effectif. Article 15 : Droit applicable et attribution de compétences Le présent Contrat sera régi et interprété selon les lois de la République
+        Tunisienne. Tous litiges pouvant naître à l’occasion de l’interprétation ou de l’exécution du présent Contrat seront soumis aux tribunaux tunisiens. </p>
+    <table>
+        <tr>
+            <td><strong> L’EMPLOYEUR  </strong> </td>
+            <td></td>
+            <td><strong>  L’EMPLOYE   </strong></td>
+        </tr>
+
+        <tr>
+            <td> Date______________________ </td>
+            <td></td>
+            <td> Date______________________ </td>
+        </tr>
+
+    </table>
+
+
+</div>

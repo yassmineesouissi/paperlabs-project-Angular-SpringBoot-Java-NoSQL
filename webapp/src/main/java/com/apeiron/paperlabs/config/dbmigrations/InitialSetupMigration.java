@@ -49,6 +49,20 @@ public class InitialSetupMigration {
         mongoTemplate.save(adminUser);
         
         
+        adminUser.setId("user-17");
+        adminUser.setLogin("fa@paperlabs.io");
+        adminUser.setPassword("$2a$10$ck5mJPAbO5WicfxxmaHWpuAUOGIp9jUvm5UeC.sg5TtG58Rv.lUym");
+        adminUser.setFirstName("FA");
+        adminUser.setLastName("FA");
+        adminUser.setEmail("fa@paperlabs.io");
+        adminUser.setActivated(true);
+        adminUser.setLangKey("fr");
+        adminUser.setCreatedBy(adminUser.getLogin());
+        adminUser.setCreatedDate(Instant.now());
+        adminUser.getAuthorities().add(userAuthority);
+        mongoTemplate.save(adminUser);
+        
+
         adminUser.setId("user-15");
         adminUser.setLogin("r.ferchiou@falaw.tn");
         adminUser.setPassword("$2a$10$n0LYhRcohL48qUGk0FNaJO4NAByHcEwLNlwwqNqeYrHG6tZzgYarq");
@@ -62,7 +76,7 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(adminAuthority);
         adminUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(adminUser);
-        
+
         adminUser.setId("user-14");
         adminUser.setLogin("achraf.khelil@gmail.com");
         adminUser.setPassword("$2a$10$J8Bgt097LZNc4YKq0BiueuyyAim6cW/0maX7nWie6e7fRYufK31lu");

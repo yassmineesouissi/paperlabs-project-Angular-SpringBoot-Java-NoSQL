@@ -485,16 +485,21 @@
       "inputId": "input_autre_date",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_inserez_date",
               "visibility": true
             }
           ]
-        },
+        }
+      ]
+    },
+	{
+      "inputId": "input_date_signature",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Non",
           "constraints": [
             {
               "elementId": "input_inserez_date",
@@ -508,7 +513,7 @@
       "inputId": "input_question_6_oui",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_question_6_duree_renouvelable",
@@ -519,9 +524,14 @@
               "visibility": true
             }
           ]
-        },
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_6_non",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Non",
           "constraints": [
             {
               "elementId": "input_question_6_duree_renouvelable",
@@ -539,23 +549,30 @@
       "inputId": "input_question_8_4_0",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_question_8_4_1",
+              "visibility":false
+            }
+          ]
+        }
+        
+      ]
+    },
+		{
+      "inputId": "input_question_8_4_2",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_question_8_4_1",
               "visibility": true
             }
           ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_8_4_1",
-              "visibility": false
-            }
-          ]
         }
+        
       ]
     },
 	{
@@ -592,10 +609,10 @@
       ]
     },
 	{
-      "inputId": "input_question_oui_18",
+      "inputId": "input_question_non_18",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             {
               "elementId": "input_question_oui_18_1",
@@ -630,9 +647,15 @@
               "visibility": true
             }
           ]
-        },
+        }
+      ]
+    },
+	{
+      "inputId": "input_question_oui_18",
+      "valuesConstraints": [
+       
         {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_question_oui_18_1",
@@ -675,33 +698,24 @@
       "inputId": "input_bailleur_oui",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "bloc_nature_peronne_creancier",
               "visibility": true
             }
-			
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "bloc_nature_peronne_creancier",
-              "visibility": false
-            }
-			
 			
           ]
         }
-      ]
-    },
-	{
+			
+			
+          ]
+        },
+		{
       "inputId": "input_bailleur_oui",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "step_creancier",
@@ -709,14 +723,22 @@
             }
 			
           ]
+        }
+			]
         },
+		{
+      "inputId": "input_bailleur_non",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Non",
           "constraints": [
             {
               "elementId": "step_creancier",
               "visibility": false
             }
+			
+          ]
+        }
 			
 			
           ]

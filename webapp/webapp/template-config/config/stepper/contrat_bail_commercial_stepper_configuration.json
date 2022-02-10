@@ -46,7 +46,8 @@
         "bloc_question_3",
         "bloc_question_4",
 		"bloc_question_5",
-		"bloc_question_6"],
+		"bloc_question_6",
+		"bloc_question_6_4"],
       "visibility": true
     },
 	{
@@ -69,7 +70,7 @@
   "blocs": [
    {
       "id": "bloc_nature_peronne_caution",
-      "title": "",
+      "title": "1- Est-ce la personne est une personne morale ou physique ?",
       "description": "",
 	  "help":"",
       "inputs": [
@@ -140,7 +141,7 @@
     },
 	{
       "id": "bloc_nature_peronne_debiteur",
-      "title": "",
+      "title": "2- Est-ce la personne est une personne morale ou physique ?",
       "description": "",
       "inputs": [
         "input_nature_personne_physique_tunisienne_debiteur",
@@ -210,10 +211,11 @@
     },
 	{
       "id": "bloc_question_3",
-      "title": "Date de début du Bail",
+      "title": "3- Date de début du Bail",
       "description": "",
       "inputs": [
-        "input_date_signature",
+        
+		"input_date_signature",
 		"input_autre_date",
 		"input_inserez_date"],
       "visibility": true
@@ -229,42 +231,51 @@
 	
 	{
       "id": "bloc_question_5",
-      "title": "",
+      "title": "5- Est-ce que le bail est renouvelable par tacite reconduction ?",
       "description": "",
       "inputs": [
-        "input_question_5_oui",
-    "input_question_5_oui_duree_renouvelement",
-    "input_question_5_non"
+        "input_question_5_non",
+        "input_question_5_oui_duree_renouvelement",
+        "input_question_5_oui"
 	],
       "visibility": true
     },
 	{
       "id": "bloc_question_6",
-      "title": "",
+      "title": "6- Quelles sont les caractéristiques du bien loué ? ",
       "description": "",
       "inputs": [
         "input_adresse_local_6",
 		"input_nombre_piece_6",
-		"input_superficie_approximation_6",
-		"input_num_titre_fonicier_6_oui",
+		"input_superficie_approximation_6"
+		],
+      "visibility": true
+    },
+	{
+      "id": "bloc_question_6_4",
+      "title": "Quel est le numéro de titre foncier ?",
+      "description": "",
+      "inputs": [
+	     "input_non_applicable_6",
 		"input_numero_titre_financier_6",
-		"input_non_applicable_6"],
+		"input_num_titre_fonicier_6_oui"
+		],
       "visibility": true
     },
 	{
       "id": "bloc_question_7",
-      "title": "Destination du local",
+      "title": "7- Quelle sera l’activité exercée dans le Local ? ",
       "description": "",
 	  "help":"",
       "inputs": [
-        "input_une_activite_7",
+        "input_toutes_activite_7",
 		"input_precisez_activite_7",
-		"input_toutes_activite_7"],
+		"input_une_activite_7"],
       "visibility": true
     },
 	{
       "id": "bloc_question_8",
-      "title": "",
+      "title": "8- Loyer",
       "description": "",
       "inputs": [
         "input_montant_loyer_chiffres_8",
@@ -284,17 +295,21 @@
     },
 	{
       "id": "bloc_question_10",
-      "title": "",
+      "title": "10- Quel est l’état des lieux d’entrée ?",
       "description": "",
+	  "help": "Assurez-vous qu’un état des lieux est annexé dans le cas où vous choisissez l’une des deux premières réponses.",
       "inputs": [
-        "input_etat_lieu_10"],
+	   "input_etat_lieu_10",
+		"input_etat_lieu_10_1",
+		 "input_etat_lieu_10_3",
+		"input_etat_lieu_10_2"],
       "visibility": true
     },
 	{
       "id": "bloc_question_11",
-      "title": "Impôts et taxes",
+      "title": "11- Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué?",
       "description": "",
-	  "help":"Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué ?",
+	  "help":"",
       "inputs": [
         "input_bailleur_11",
 		"input_preneur_11"],
@@ -302,11 +317,11 @@
     },
 	{
       "id": "bloc_question_12",
-      "title": "",
+      "title": "12- Est-ce que les parties veulent utiliser une adresse différente que leur domicile indiqué pour recevoir les notifications au titre du contrat de bail?",
       "description": "",
 	  "help":"",
       "inputs": [
-        "input_oui_12",
+        "input_non_12",
 		"input_adresse_notification_12_1",
 		"input_adresse_email_bailleur_12_2",
 		"input_num_tel_bailleur_12_3",
@@ -315,7 +330,7 @@
 		"input_adresse_email_preneur_12_6",
 		"input_num_tel_preneur_12_7",
     "input_adresse_preneur_12_8",
-    "input_non_12"],
+    "input_oui_12"],
       "visibility": true
     },
 	{
@@ -333,9 +348,9 @@
       "type": "number",
       "description": "",
       "name": "input_nombre_exemplaire_13",
-      "label": "Nombre d’exemplaires",
+      "label": "13- Qeul est le nombre d’exemplaires originaux",
       "placeHolder": "",
-      "help": "Quel est le nombre d’exemplaires originaux ?",
+      "help": "il est conseillé d'en faire au moins 4",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -465,34 +480,33 @@
     },
     {
       "id": "input_non_12",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Non",
+      "name": "question_12",
+      "label": "Oui",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["non_12"],
-        "true": []
+        "Non": ["non_12"]
       },
-      "visibility": false
+      "visibility": true
 	  },
   
  
   {
       "id": "input_oui_12",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Notification et élection de domicile ",
+      "name": "question_12",
+      "label": "Non",
       "placeHolder": "",
-      "help": "Est-ce que les parties veulent utiliser une adresse différente que leur domicile indiqué pour recevoir les notifications au titre du contrat de bail ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["oui_12",
+        "Oui": ["oui_12",
 		          "oui_12_1",
 				  "oui_12_2",
 				  "oui_12_3",
@@ -502,55 +516,100 @@
 				  "oui_12_7",
 				  "oui_12_8",
 				  "oui_12_9",
-				  "oui_12_10"],
-        "true": []
+				  "oui_12_10"]
       },
       "visibility": true
 	  },
   {
       "id": "input_preneur_11",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Le preneur",
+      "name": "question_11",
+      "label": "Le bailleur",
       "placeHolder": "",
-      "help": "Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "preneur_question_11",
       "bookmarkIdPerValue": {
-        "false": ["preneur_11"],
-        "true": []
+        "preneur_question_11": ["preneur_11"]
       },
       "visibility": true
 	  },
   {
       "id": "input_bailleur_11",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Le bailleur",
+      "name": "question_11",
+      "label": "Le preneur",
       "placeHolder": "",
-      "help": "Qui supporte les taxes municipales, les droits d’enregistrement, et tous autres impôts et taxes relatifs au Local Loué ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "bailleur_question_11",
       "bookmarkIdPerValue": {
-        "false": ["bailleur_11"],
-        "true": []
+        "bailleur_question_11": ["bailleur_11"]
       },
       "visibility": true
 	  },
   {
       "id": "input_etat_lieu_10",
-      "type": "text",
+      "type": "radio",
       "description": "",
-      "name": "input_etat_lieu_10",
-      "label": "Etats des lieux",
+      "name": "EtatdesLieux",
+      "label": "En bon état en conformité avec l’état des lieux établi annexé à ce Contrat.",
       "placeHolder": "",
-      "help": "Quel est l’état des lieux d’entrée ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "En bon état en conformité avec l’état des lieux établi annexé à ce Contrat",
       "bookmarkIdPerValue": {
-        "text": ["etat_lieu_10"]
+        "En bon état en conformité avec l’état des lieux établi annexé à ce Contrat": ["etat_lieu_10"]
+        },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_etat_lieu_10_1",
+      "type": "radio",
+      "description": "",
+      "name": "EtatdesLieux",
+      "label": "En mauvais état en conformité avec l’état des lieux établi annexé à ce Contrat.",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "En mauvais état en conformité avec l’état des lieux établi annexé à ce Contrat.",
+      "bookmarkIdPerValue": {
+        "En mauvais état en conformité avec l’état des lieux établi annexé à ce Contrat.": ["etat_lieu_10_1"]
+        },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_etat_lieu_10_2",
+      "type": "radio",
+      "description": "",
+      "name": "EtatdesLieux",
+      "label": "En mauvais état",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "en mauvais état",
+      "bookmarkIdPerValue": {
+        "en mauvais état": ["etat_lieu_10_2"]
+        },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_etat_lieu_10_3",
+      "type": "radio",
+      "description": "",
+      "name": "EtatdesLieux",
+      "label": "En bon état",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "en bon état",
+      "bookmarkIdPerValue": {
+        "en bon état": ["etat_lieu_10_3"]
         },
       "visibility": true
     },
@@ -559,7 +618,7 @@
       "type": "text",
       "description": "",
       "name": "input_montant_garantie_9",
-      "label": "Dépôt de garantie",
+      "label": "9- Dépôt de garantie",
       "placeHolder": "",
       "help": "Quel est le montant de la garantie (habituellement 2 mois de loyer hors taxes) ?",
       "options": [],
@@ -569,27 +628,13 @@
         },
       "visibility": true
     },
-  {
-      "id": "input_precisez_activite_7",
-      "type": "text",
-      "description": "",
-      "name": "input_precisez_activite_7",
-      "label": "préciser l’activité commerciale",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["precisez_activite_7"]
-        },
-      "visibility": false
-    },
+ 
   {
       "id": "input_pourcentage_augmentation_8",
       "type": "number",
       "description": "",
       "name": "input_pourcentage_augmentation_8",
-      "label": "Pourcentage d’augmentation annuel",
+      "label": "Pourcentage d’augmentation annuelle",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -616,16 +661,20 @@
     },
   {
       "id": "input_echaince_de_paiement_8",
-      "type": "text",
+      "type": "select",
       "description": "",
       "name": "input_echaince_de_paiement_8",
       "label": "Echéance de paiement",
       "placeHolder": "",
       "help": "",
-      "options": [],
+      "options": ["Mensuellement","Trimestriellement","Semestriellement","Annuellement"],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["echaince_de_paiement_8","echaince_de_paiement_8_1"]
+        "Mensuellement": ["echaince_de_paiement_8","echaince_de_paiement_8_1"],
+		"Trimestriellement": ["echaince_de_paiement_8","echaince_de_paiement_8_1"],
+		"Semestriellement": ["echaince_de_paiement_8","echaince_de_paiement_8_1"],
+		"Annuellement": ["echaince_de_paiement_8","echaince_de_paiement_8_1"]
+		
         },
       "visibility": true
     },
@@ -663,86 +712,89 @@
     },
   
   
+   {
+      "id": "input_precisez_activite_7",
+      "type": "text",
+      "description": "",
+      "name": "input_precisez_activite_7",
+      "label": "préciser l’activité commerciale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["precisez_activite_7"]
+        },
+      "visibility": false
+    },
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   
   
   {
       "id": "input_toutes_activite_7",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Toute activité commerciale",
+      "name": "activite_7",
+      "label": "Une activité commerciale bien déterminée",
       "placeHolder": "",
-      "help": "Quelle sera l’activité exercée dans le Local ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "toute_Activite7",
       "bookmarkIdPerValue": {
-        "false": ["toutes_activite_7"],
-        "true": []
+        "toute_Activite7": ["toutes_activite_7"]
       },
       "visibility": true
 	  },
   {
       "id": "input_une_activite_7",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Une activité commerciale bien déterminée",
+      "name": "activite_7",
+      "label": "Toute activité commerciale",
       "placeHolder": "",
-      "help": "Quelle sera l’activité exercée dans le Local ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Activite7",
       "bookmarkIdPerValue": {
-        "false": ["une_activite_7"],
-        "true": []
+        "Activite7": ["une_activite_7"]
       },
       "visibility": true
 	  },
   {
       "id": "input_non_applicable_6",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Non applicable",
+      "name": "question6_4",
+      "label": "N° du titre foncier",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non applicable",
       "bookmarkIdPerValue": {
-        "false": ["non_applicable_6"],
-        "true": []
+        "Non applicable": ["non_applicable_6"]
       },
       "visibility": true
 	  },
    {
       "id": "input_num_titre_fonicier_6_oui",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "N° du titre foncier",
+      "name": "question6_4",
+      "label": " Non applicable",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": " ",
       "bookmarkIdPerValue": {
-        "false": ["num_titre_6_oui"],
-        "true": []
+        " ": ["num_titre_6_oui"]
       },
       "visibility": true
 	  },
   {
       "id": "input_numero_titre_financier_6",
-      "type": "number",
+      "type": "text",
       "description": "",
       "name": "input_numero_titre_financier_6",
       "label": "Quel est le numéro de titre foncier ?",
@@ -773,7 +825,7 @@
   
   {
       "id": "input_nombre_piece_6",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_nombre_piece_6",
       "label": "Nombre de pièces",
@@ -819,9 +871,9 @@
       "type": "text",
       "description": "",
       "name": "input_question_4",
-      "label": "Durée du bail",
+      "label": "4- Durée du bail",
       "placeHolder": "",
-      "help": "Quelle est la durée du bail ?",
+      "help": "4- Quelle est la durée du bail ?",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -831,7 +883,7 @@
     },
   {
       "id": "input_inserez_date",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_inserez_date",
       "label": "Préciser la date",
@@ -861,67 +913,63 @@
     },
     {
       "id": "input_question_5_non",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Non",
+      "name": "question_5",
+      "label": "Oui",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["question_5_non"],
-        "true": []
+        "Non": ["question_5_non"]
       },
-      "visibility": false
+      "visibility": true
 	  },
   
   {
       "id": "input_question_5_oui",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Est-ce que le bail est renouvelable par tacite reconduction ?",
+      "name": "question_5",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["question_5_oui"],
-        "true": []
+        "Oui": ["question_5_oui"]
       },
       "visibility": true
 	  },
   {
       "id": "input_autre_date",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "question_3",
       "label": "Une autre date",
       "placeHolder": "",
-      "help": "Quelle est la date de début du bail ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "date_autre",
       "bookmarkIdPerValue": {
-        "false": ["autre_date"],
-        "true": []
-      },
+        "date_autre": ["date_signature"]
+		},
       "visibility": true
 	  },
   
   {
       "id": "input_date_signature",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "question_3",
       "label": "Date de Signature",
       "placeHolder": "",
-      "help": "Quelle est la date de début du bail ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "signature_date",
       "bookmarkIdPerValue": {
-        "false": ["date_signature"],
-        "true": []
+        "signature_date": ["autre_date"]
       },
       "visibility": true
 	  },
@@ -1356,7 +1404,7 @@
     },
   {
       "id": "input_capital_personne_morale_tunisienne_debiteur",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_capital_personne_morale_tunisienne_debiteur",
       "label": "Capital social",
@@ -1435,7 +1483,7 @@
     },
   {
       "id": "input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_passeport_personne_physique_etrangere_debiteur",
       "label": "Date de délivrance du passeport",
@@ -1957,7 +2005,7 @@
 "Colombien-ne": ["nationalité_phy_etrg_debiteur"],
 "Comorien-ne": ["nationalité_phy_etrg_debiteur"],
 "Congolais-e": ["nationalité_phy_etrg_debiteur"],
-"Congolais-e": ["nationalité_phy_etrg_debiteur"],
+
 "Nord-Coréen-ne": ["nationalité_phy_etrg_debiteur"],
 "Sud-Coréen-ne": ["nationalité_phy_etrg_debiteur"],
 "Costaricain-e, Costaricien-ne": ["nationalité_phy_etrg_debiteur"],
@@ -2132,7 +2180,7 @@
     },
   {
       "id": "input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_cin_personne_physique_tunisienne_debiteur",
       "label": "Date de délivrance de la carte d’identité nationale",
@@ -2180,10 +2228,10 @@
     },
   {
       "id": "input_numero_cin_personne_physique_tunisienne_debiteur",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_numero_cin_personne_physique_tunisienne_debiteur",
-      "label": "Numéro de carte d'identité nationale",
+      "label": "Numéro de la carte d'identité nationale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -2212,7 +2260,7 @@
     },
   {
       "id": "input_date_naissance_personne_physique_tunisienne_debiteur",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne_debiteur",
       "label": "Date de naissance",
@@ -2761,7 +2809,7 @@
     },
   {
       "id": "input_capital_personne_morale_tunisienne_caution",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_capital_personne_morale_tunisienne_caution",
       "label": "Capital social",
@@ -2840,7 +2888,7 @@
     },
   {
       "id": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
       "label": "Date de délivrance du passeport",
@@ -3180,7 +3228,7 @@
 "Colombien-ne",
 "Comorien-ne",
 "Congolais-e",
-"Congolais-e",
+
 "Nord-Coréen-ne",
 "Sud-Coréen-ne",
 "Costaricain-e, Costaricien-ne",
@@ -3363,7 +3411,7 @@
 "Colombien-ne": ["nationalité_phy_etrg_caution"],
 "Comorien-ne": ["nationalité_phy_etrg_caution"],
 "Congolais-e": ["nationalité_phy_etrg_caution"],
-"Congolais-e": ["nationalité_phy_etrg_caution"],
+
 "Nord-Coréen-ne": ["nationalité_phy_etrg_caution"],
 "Sud-Coréen-ne": ["nationalité_phy_etrg_caution"],
 "Costaricain-e, Costaricien-ne": ["nationalité_phy_etrg_caution"],
@@ -3538,7 +3586,7 @@
     },
    {
       "id": "input_date_delivrance_cin_personne_physique_tunisienne_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_cin_personne_physique_tunisienne_caution",
       "label": "Date de délivrance de la carte d’identité nationale",
@@ -3586,10 +3634,10 @@
     },
   {
       "id": "input_numero_cin_personne_physique_tunisienne_caution",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_numero_cin_personne_physique_tunisienne_caution",
-      "label": "Numéro de carte d'identité nationale",
+      "label": "Numéro de la carte d'identité nationale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -3618,7 +3666,7 @@
     },
   {
       "id": "input_date_naissance_personne_physique_tunisienne_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne_caution",
       "label": "Date de naissance",
@@ -3745,168 +3793,168 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "pays_immat_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adress_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "num_immat_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "nom_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "prenom_morale_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
   {
       "bookmarkId": "denomin_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "capital_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adresse_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "identi_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nom_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "prenom_morale_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 
   {
@@ -3914,77 +3962,77 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prenom_phy_etrangere_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nationalité_phy_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "pays_passp_phys_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "num_passp_phys_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "date_passp_phys_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_phys_etrg_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
   
   {
@@ -3992,199 +4040,199 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nom_phys_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "date_naiss_phys_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "lieu_naiss_phy_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "nume_cin_phy_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "lieu_cin_phys_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adresse_phy_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "date_cin_phy_tun_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
   {
       "bookmarkId": "denomi_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "pays_immat_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adress_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "num_immat_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "nom_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "prenom_morale_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
    {
       "bookmarkId": "denomin_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
 	{
@@ -4192,211 +4240,211 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adresse_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "identi_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nom_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "prenom_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
   {
       "bookmarkId": "nom_phys_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prenom_phy_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nationalité_phy_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "pays_passp_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "num_passp_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "date_passp_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
   {
       "bookmarkId": "prenom_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nom_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "date_naiss_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "lieu_naiss_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "nume_cin_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "lieu_cin_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adresse_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "date_cin_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
    
   {
@@ -4404,110 +4452,110 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_physique_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_morale_tunisienne_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_morale_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_physique_tunisienne_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_physique_etrangere_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_morale_tunisienne_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_morale_etrangere_debiteur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "autre_date",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "date_signature",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
 	{
@@ -4515,495 +4563,529 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_5_oui",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_5_oui_duree",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "inserez_date",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_4",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_local_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nombre_piece_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "superficie_approximation_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "numero_titre_financier_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "num_titre_6_oui",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
 	{
       "bookmarkId": "non_applicable_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "une_activite_7",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "toutes_activite_7",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "montant_loyer_chiffres_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "montant_loyer_lettres_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "echaince_de_paiement_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "echaince_de_paiement_8_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "loyer_annuel_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "pourcentage_augmentation_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "precisez_activite_7",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "montant_garantie_9",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "etat_lieu_10",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
+    },
+	
+	{
+      "bookmarkId": "etat_lieu_10_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "etat_lieu_10_2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "etat_lieu_10_3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
 	 {
       "bookmarkId": "preneur_11",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "bailleur_11",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	 {
       "bookmarkId": "oui_12",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_4",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_5",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_7",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_9",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "oui_12_10",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	 {
       "bookmarkId": "non_12",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "num_tel_preneur_12_7",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_preneur_12_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "email_preneur_12_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_preneur_12_5",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_bailleur_12_4",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "num_tel_bailleur_12_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "email_bailleur_12_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_notific_12_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nombre_exemplaire_13",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     }
   ]
 }

@@ -450,33 +450,33 @@
       "inputId": "input_question_7_oui",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             
 			{
               "elementId": "input_question_7_1",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_2",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_3",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_4",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_5",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_6",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_7",
-              "visibility": true
+              "visibility": false
             },{
               "elementId": "input_question_7_8",
-              "visibility": true
+              "visibility": false
             }
 			
           ]
@@ -488,33 +488,33 @@
       "inputId": "input_question_7_non",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             
 			{
               "elementId": "input_question_7_1",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_2",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_3",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_4",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_5",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_6",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_7",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_8",
-              "visibility": false
+              "visibility": true
             }
 			
           ]
@@ -522,234 +522,45 @@
       ]
     },
 	
-	
 	{
-      "inputId": "input_question_6_annee",
+      "inputId": "input_question_6_duree",
       "valuesConstraints": [
-        {
-          "value": "true",
+	  
+		{
+          "value": "jours",
           "constraints": [
             {
-              "elementId": "input_question_6_annee_texte",
+              "elementId": "input_question_6_duree_texte",
               "visibility": true
             }
           ]
         },
-        {
-          "value": "false",
+        
+		{
+          "value": "mois",
           "constraints": [
             {
-              "elementId": "input_question_6_annee_texte",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	{
-      "inputId": "input_question_6_mois",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_mois_texte",
+              "elementId": "input_question_6_duree_texte",
               "visibility": true
             }
           ]
         },
-        {
-          "value": "false",
+		{
+          "value": "années",
           "constraints": [
             {
-              "elementId": "input_question_6_mois_texte",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	{
-      "inputId": "input_question_6_jours",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_jours_texte",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_jours_texte",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	
-	
-	
-	{
-      "inputId": "input_question_6_annee",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_mois",
-              "visibility": false
-            }
-          ]
-        },
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_jours",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	
-	
-	{
-      "inputId": "input_question_6_annee",
-      "valuesConstraints": [
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_mois",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_jours",
+              "elementId": "input_question_6_duree_texte",
               "visibility": true
             }
           ]
         }
+		
+		
+		
       ]
     },
 	
-	
-	
-	
-	
-	
-	{
-      "inputId": "input_question_6_mois",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_annee",
-              "visibility": false
-            }
-          ]
-        },
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_jours",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	
-	
-	{
-      "inputId": "input_question_6_mois",
-      "valuesConstraints": [
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_annee",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_jours",
-              "visibility": true
-            }
-          ]
-        }
-      ]
-    },
-	
-	
-	
-	
-	{
-      "inputId": "input_question_6_jours",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_annee",
-              "visibility": false
-            }
-          ]
-        },
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_mois",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	
-	
-	{
-      "inputId": "input_question_6_jours",
-      "valuesConstraints": [
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_annee",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_question_6_mois",
-              "visibility": true
-            }
-          ]
-        }
-      ]
-    },
-	
+
 	
 	{
       "inputId": "input_question_4_2_oui",

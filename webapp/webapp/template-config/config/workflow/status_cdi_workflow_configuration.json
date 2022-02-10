@@ -32,16 +32,21 @@
       "inputId": "input_periode_dessai_1",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_periode_dessai",
               "visibility": true
             }
           ]
-        },
+        }
+      ]
+    },
+	{
+      "inputId": "input_periode_dessai_2",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Non",
           "constraints": [
             {
               "elementId": "input_periode_dessai",
@@ -55,7 +60,7 @@
       "inputId": "input_non_concurence",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_non_concurrence_A",
@@ -66,9 +71,16 @@
               "visibility": true
             }
           ]
-        },
+        }
+        
+      ]
+    },
+	{
+      "inputId": "input_concurence_non",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Non",
+         
           "constraints": [
             {
               "elementId": "input_non_concurrence_A",

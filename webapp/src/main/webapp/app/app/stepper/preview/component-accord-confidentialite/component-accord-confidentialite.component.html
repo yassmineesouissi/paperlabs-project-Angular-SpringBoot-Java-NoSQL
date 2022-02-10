@@ -1,0 +1,129 @@
+
+<div class="test">
+    <div class="title"> Accord de Confidentialité </div>
+   
+  <div  *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne').checked">
+      <p> <span *ngIf="getHtmlInputElement('input_nom_pt').value !== '' ">{{getHtmlInputElement('input_nom_pt').value}}</span>  <span *ngIf="getHtmlInputElement('input_prénom_pt').value !== '' ">{{getHtmlInputElement('input_prénom_pt').value}}</span>  ,  titulaire de la carte d’identité tunisienne n° <span *ngIf="getHtmlInputElement('input_numéro_de_la_carte_identité_nationale').value !== '' ">{{getHtmlInputElement('input_numéro_de_la_carte_identité_nationale').value}}</span> , élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_domicilisation_pt').value !== '' ">{{getHtmlInputElement('input_adresse_domicilisation_pt').value}}</span>.</p> </div>
+
+    <!-------------- personne_physique_étrangère  --------------------->
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_étrangère').checked">
+        <p> <span *ngIf="getHtmlInputElement('input_nom_pe').value !== '' ">{{getHtmlInputElement('input_nom_pe').value}}</span> <span *ngIf="getHtmlInputElement('input_prénom_pe').value !== '' ">{{getHtmlInputElement('input_prénom_pe').value}}</span>,
+             de nationalité <span *ngIf="getHtmlInputElement('input_nationalité').value !== '' ">{{getHtmlInputElement('input_nationalité').value}}</span> ,
+               titulaire du passeport <span *ngIf="getHtmlInputElement('input_pays_émetteur_de_passeport').value !== '' ">{{getHtmlInputElement('input_pays_émetteur_de_passeport').value}}</span>  n° <span *ngIf="getHtmlInputElement('input_numéro_de_passport').value !== '' ">{{getHtmlInputElement('input_numéro_de_passport').value}}</span> , élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_domicilisation_pe').value !== '' ">{{getHtmlInputElement('input_adresse_domicilisation_pe').value}}</span> </p> </div>
+
+    <!----------------   personne_morale_tunisienne  ------------------->
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne').checked">
+        <p> <span *ngIf="getHtmlInputElement('input_dénomination_sociale_mt').value !== '' ">{{getHtmlInputElement('input_dénomination_sociale_mt').value}}</span>, <span *ngIf="getHtmlInputElement('input_forme_SA_SARL_SUARL').value !== '' ">{{getHtmlInputElement('input_forme_SA_SARL_SUARL').value}}</span> , 
+             titulaire de l’identifiant unique n°<span *ngIf="getHtmlInputElement('input_identifiant_unique').value !== '' ">{{getHtmlInputElement('input_identifiant_unique').value}}</span>, 
+             dont le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_du_siège_social').value !== '' ">{{getHtmlInputElement('input_adresse_du_siège_social').value}}</span> , dument représentée par <span *ngIf="getHtmlInputElement('input_nom_personne_morale_tun_emettrice').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tun_emettrice').value}}</span>  <span *ngIf="getHtmlInputElement('input_prénom_personne_morale_tun_emettrice').value !== '' ">{{getHtmlInputElement('input_prénom_personne_morale_tun_emettrice').value}}</span>  </p> </div>
+   
+   
+        <!---------------  personne_morale_étrangère  -------------------->
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_étrangère').checked">
+        <p> <span *ngIf="getHtmlInputElement('input_dénomination_sociale_me').value !== '' ">{{getHtmlInputElement('input_dénomination_sociale_me').value}}</span>  <span *ngIf="getHtmlInputElement('input_forme_SA_SARL_SUARL_LLP_GMBH').value !== '' ">{{getHtmlInputElement('input_forme_SA_SARL_SUARL_LLP_GMBH').value}}</span>, 
+             immatriculée en <span *ngIf="getHtmlInputElement('input_pays_immatriculation').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation').value}}</span> sous le n°<span *ngIf="getHtmlInputElement('input_numéro_immatriculation_dans_le_pays_origine').value !== '' ">{{getHtmlInputElement('input_numéro_immatriculation_dans_le_pays_origine').value}}</span> 
+             dont le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_du_siège_social_1').value !== '' ">{{getHtmlInputElement('input_adresse_du_siège_social_1').value}}</span> , dument représentée par <span *ngIf="getHtmlInputElement('input_nom_pme_emettrice').value !== '' ">{{getHtmlInputElement('input_nom_pme_emettrice').value}}</span>   <span *ngIf="getHtmlInputElement('input_prénom_pme_emettrice').value !== '' ">{{getHtmlInputElement('input_prénom_pme_emettrice').value}}</span>.  </p> </div>
+    <!----------------------------------->
+
+  <p>  ci-après désignée la « Partie Emettrice »,</p>
+
+
+     <div>
+  <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_d').checked">
+      <p> <span *ngIf="getHtmlInputElement('input_nom_pt_d').value !== '' ">{{getHtmlInputElement('input_nom_pt_d').value}}</span>    <span *ngIf="getHtmlInputElement('input_prénom_pt_d').value !== '' ">{{getHtmlInputElement('input_prénom_pt_d').value}}</span>, titulaire de la carte d’identité tunisienne n° <span *ngIf="getHtmlInputElement('input_numéro_de_la_carte_identité_nationale_d').value !== '' ">{{getHtmlInputElement('input_numéro_de_la_carte_identité_nationale_d').value}}</span>  , élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_domicilisation_pt_d').value !== '' ">{{getHtmlInputElement('input_adresse_domicilisation_pt_d').value}}</span> .</p> </div>
+
+    
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_étrangère_d').checked">
+        <p> <span *ngIf="getHtmlInputElement('input_nom_pe_d').value !== '' ">{{getHtmlInputElement('input_nom_pe_d').value}}</span>  <span *ngIf="getHtmlInputElement('input_prénom_pe_d').value !== '' ">{{getHtmlInputElement('input_prénom_pe_d').value}}</span> ,  de nationalité <span *ngIf="getHtmlInputElement('input_nationalité_d').value !== '' ">{{getHtmlInputElement('input_nationalité_d').value}}</span> , 
+             titulaire du passeport <span *ngIf="getHtmlInputElement('input_pays_émetteur_de_passeport_d').value !== '' ">{{getHtmlInputElement('input_pays_émetteur_de_passeport_d').value}}</span>  n° <span *ngIf="getHtmlInputElement('input_numéro_de_passport_d').value !== '' ">{{getHtmlInputElement('input_numéro_de_passport_d').value}}</span> , élisant domicile au <span *ngIf="getHtmlInputElement('input_adresse_domicilisation_pe_d').value !== '' ">{{getHtmlInputElement('input_adresse_domicilisation_pe_d').value}}</span> . </p> </div>
+    
+    
+    
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_d').checked"><p>
+        <span *ngIf="getHtmlInputElement('input_dénomination_sociale_mt_d').value !== '' ">{{getHtmlInputElement('input_dénomination_sociale_mt_d').value}}</span>,  <span *ngIf="getHtmlInputElement('input_forme_SA_SARL_SUARL_d').value !== '' ">{{getHtmlInputElement('input_forme_SA_SARL_SUARL_d').value}}</span> 
+         titulaire de l’identifiant unique n° <span *ngIf="getHtmlInputElement('input_identifiant_unique_d').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_d').value}}</span>, 
+          dont le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_du_siège_social_d').value !== '' ">{{getHtmlInputElement('input_adresse_du_siège_social_d').value}}</span>, 
+           dument représentée par <span *ngIf="getHtmlInputElement('input_nom_du_représentant_signataire_du_document_d').value !== '' ">{{getHtmlInputElement('input_nom_du_représentant_signataire_du_document_d').value}}</span>  <span *ngIf="getHtmlInputElement('input_prénom_du_représentant_mt_d').value !== '' ">{{getHtmlInputElement('input_prénom_du_représentant_mt_d').value}}</span>. </p> </div>
+
+ 
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_étrangère_d').checked"><p>
+        <span *ngIf="getHtmlInputElement('input_dénomination_sociale_me_d').value !== '' ">{{getHtmlInputElement('input_dénomination_sociale_me_d').value}}</span> , <span *ngIf="getHtmlInputElement('input_forme_SA_SARL_SUARL_LLP_GMBH_d').value !== '' ">{{getHtmlInputElement('input_forme_SA_SARL_SUARL_LLP_GMBH_d').value}}</span> ,  immatriculée en <span *ngIf="getHtmlInputElement('input_pays_immatriculation_d').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_d').value}}</span> , 
+         sous le n° <span *ngIf="getHtmlInputElement('input_numéro_immatriculation_dans_le_pays_origine_d').value !== '' ">{{getHtmlInputElement('input_numéro_immatriculation_dans_le_pays_origine_d').value}}</span>,  dont le siège social est sis au <span *ngIf="getHtmlInputElement('input_adresse_du_siège_social_d_1').value !== '' ">{{getHtmlInputElement('input_adresse_du_siège_social_d_1').value}}</span> , 
+          dument représentée par <span *ngIf="getHtmlInputElement('input_nom_du_représentant_signataire_du_document_d_me').value !== '' ">{{getHtmlInputElement('input_nom_du_représentant_signataire_du_document_d_me').value}}</span>    <span *ngIf="getHtmlInputElement('input_prénom_du_représentant_me_d').value !== '' ">{{getHtmlInputElement('input_prénom_du_représentant_me_d').value}}</span> . </p> </div>
+  
+    
+</div>
+  <P>  ci- après désigné la « Partie Destinataire ».</P>
+
+    <P> La Partie Destinataire et la Partie Emettrice seront désignées collectivement par les « Parties » et individuellement la « Partie ».</P>
+    
+    <div *ngIf="getHtmlInputElement('input_contexte_oui').checked"><p>
+   <p> La Parties Emettrice exerce son activité dans le domaine <span *ngIf="getHtmlInputElement('input_partie_emettrice').value !== '' ">{{getHtmlInputElement('input_partie_emettrice').value}}</span>.</p>
+ <p>   La Parties Emettrice exerce son activité dans le domaine <span *ngIf="getHtmlInputElement('input_partie_destinare').value !== '' ">{{getHtmlInputElement('input_partie_destinare').value}}</span> .</p>
+  <p> •	La Partie Destinataire entend délivrer une prestation de services à la Partie Emettrice. </p> 
+  <p> •	La Partie Destinataire auditer la Partie Emettrice en vue d’une collaboration future avec la Partie Emettrice.</p> 
+ <p>   •	La Partie Destinataire auditer la Partie Emettrice en vue acquisition potentielle de la Partie Emettrice.</p> 
+ <p>   Les Parties seront susceptibles de divulguer ou de s’échanger certaines Informations Confidentielles (telles que définies ci-dessous);</p></div>
+    
+ <p>   Ceci étant, Les Parties conviennent ce qui suit : </p>
+
+  <strong>  Article 1	Obligations de Confidentialité</strong>
+<P>  1.1	En contrepartie de la divulgation par la Partie Emettrice à l'autre partie (la «Partie Destinataire») de l'Information Confidentielle, 
+     la Partie Destinataire accepte de ne pas divulguer les Informations Confidentielles à une tierce partie. 
+     La Partie Destinataire s’engage en outre à ne pas utiliser de telles Informations Confidentielles à d'autres fins que celles relatives
+      à la au projet discuté entre les parties. De plus, les Parties conviennent que les Informations Confidentielles ne seront pas utilisées d’une manière préjudiciable ou désavantageuse
+       d’un point de vu concurrentiel à la Partie Emettrice ou à ses filiales. </P>
+  <P>  Dans le cadre du présent Accord, le terme «Information Confidentielle» signifie toute correspondance commerciale et plans, documentation financière, projets financiers et marketing,
+     la documentation technique, les équipements et matériels ainsi que leurs descriptions, les manuels, les croquis de dessins, les prototypes, code source, projet de programme informatique quel qu’en soit la forme,
+      ou toute autre information qui est la propriété de la Partie Emettrice, qu'elle soit orale ou écrite, dessinée ou enregistrée . </P>
+
+  <P> 1.2	Sur demande de la Partie Emettrice, à tout moment, ou sans délai, si le projet, travail ou prestations sur lequel les parties collaborent (ou tout accord associé) n’a pas été exécutée ou est résiliée, la Partie Destinataire doit retourner à la Partie Emettrice ou détruire, toutes les Informations Confidentielles écrites reçues de la Partie Emettrice, toutes les correspondances ainsi que toutes les analyses, notes, dossiers, memoranda, et tout autre document établi par la Partie Destinataire ou ses agents sur la base de l'Information Confidentielle, et devra transmettre à la Partie Emettrice un certificat attestant que tous les renseignements et documents ont été détruits ou retournés.</P>
+  <P>  1.3 La Partie Destinataire s'engage à ne pas utiliser les Informations Confidentielles qui lui sont divulguées par la Partie Emettrice pour son propre usage ou pour toute fin autre que celle permettant de procéder aux discussions relatives à leurs engagements dans le cadre de leur relation. La Partie Destinataire ne pourra divulguer les Informations Confidentielles de la Partie Emettrice à des tiers ou à ses employés autre que les employés ou agents qui sont liés par l’obligation de confidentialité et qui sont tenus de disposer de ces informations pour mener à bien les discussions relatives à leur relation dans le cadre du présent Accord. La Partie Destinataire s'engage à prendre toutes les mesures
+       raisonnables pour protéger la confidentialité et éviter la divulgation ou l'utilisation de l'Information Confidentielle de la Partie Emettrice afin d'éviter que l’Information Confidentielle ne tombe dans le domaine public ou en possession de personnes autres que les personnes autorisées en vertu du présent Accord. Ces mesures comprennent le plus haut degré de soin que la Partie Destinataire utilise pour protéger ses propres Informations Confidentielles de nature similaire. La Partie Destinataire  s'engage à informer la Partie Emettrice  par écrit de tout abus ou détournement de l’Information Confidentielle de la Partie Emettrice, qui pourrait être adressée à la Partie Destinataire.
+  </P>
+  <strong>  Article 2	Exceptions</strong>
+<p>   2.1	Les informations suivantes ne sont pas considérées comme étant une « Information Confidentielle » et la Partie Destinataire n’aura pas d’obligation par rapport à une telle information : 
+    •	information appartenant au domaine public ou publiquement diffusé, à condition que l’entrée de cette information dans le domaine public ou de leur diffusion publique, ne soit pas le résultat de la violation du présent Accord, et
+    •	information qui au moment où elle est reçue par la Partie Destinataire est de plein droit, vérifiable, et légalement en sa possession.
+    2.2	A moins que la Partie Emettrice n’ait donné son consentement préalable par écrit, la Partie Destinataire s’engage à ne pas divulguer et fera en sorte que les individus autorisés sous sa responsabilité et ayant connaissance de l’information, ne divulgueront à personne les Information Confidentielles.
+</p> 
+  <strong>  Article 3	Titre et Garantie</strong>
+ <p>  La Partie Emettrice garantit qu’elle a l’autorité et le pouvoir de divulguer la donnée confidentielle à la Partie Destinataire. La Partie Destinataire convient et accepte que la Partie Emettrice ne confère aucun droit ou titre de propriété, de façon expresse ou implicite, en vertu ou relative à l’Information Confidentielle. Les droits mentionnés dans cet article restent la propriété de la Partie Emettrice à moins qu’il en soit convenu autrement entre les Parties.
+</p> 
+  <strong>  Article 4	Indemnités et assistance juridique</strong>
+  <p>  4.1	La Partie Destinataire indemnise et défend la Partie Emettrice et ses filiales (ses directeurs, administrateurs, mandataires, agents et représentants), le cas échéant, de toutes et contre toutes réclamations, pertes, dépenses (incluant les frais d’avocats et autres frais de litige), pénalités, responsabilité, jugements ou dommages de quelque nature qu’ils soient découlant directement à l’occasion où résultant de toute utilisation ou divulgation par la Partie Destinataire ou l’un de ses agents de toute Information Confidentielle d’une manière incompatible avec l’Accord ou en violation de cet Accord, à moins qu’une telle utilisation ou divulgation n’ait été expressément autorisée par écrit par la Partie Emettrice.
+    4.2	La Partie Destinataire reconnait que la Partie Emettrice a un droit de recours en justice en cas de violation des dispositions du présent Accord et accepte de payer tous les frais relatifs aux actions, incluant les frais d’avocats et ceux et du tribunal si une telle réparation est accordée. 
+</p>
+  <strong>  Article 5	Survie </strong>
+ <p>   Le présent Accord et les obligations qui y sont exprimées survivront et resteront en vigueur et de plein effet, sans limite de durée tant que les informations communiquées garderont que caractère confidentiel.  Aucun défaut ou retard dans l’exercice d’un droit, pouvoir ou privilège ne doit être interprété comme une renonciation de ceux-ci, ou l’exercice unique ou partiel de ces derniers excluant tout autre exercice de tout autre droit, pouvoir ou privilège.
+</p>
+  <strong>  Article 6	Changements, Amendements et Modifications</strong>
+   <p> Aucune modification, aucun amendement ou changement à cet Accord ne sera considéré comme étant valide à moins qu’ils ne soit établi par écrit et signé par un représentant dument autorisé par chacune des Parties.  
+</p>
+   <strong> Article 7	Successeurs et Transfert </strong>
+   <p> Cet Accord lie les Parties et est conclu dans l’intérêt des Parties signataires, leurs successeurs et ayants droits, étant entendu que l’Information Confidentielle appartenant à la Partie Emettrice ne pourra être transférée sans le consentement préalable de la Partie Emettrice. Le non-respect de cette disposition ne constitue en aucun cas une renonciation des présentes. 
+</p>
+  <strong>  Article 8	Loi applicable </strong>
+ <p>   Cet Accord est régi et sera interprété conformément au droit Tunisien.</p> 
+    <div *ngIf="getHtmlInputElement('input_tribunal').checked">
+  <strong>  Article 9	Tribunal compétent</strong>
+   <p>Les tribunaux de <span *ngIf="getHtmlInputElement('input_reponse_tribunal').value !== '' ">{{getHtmlInputElement('input_reponse_tribunal').value}}</span> seront seuls compétents en cas de contentieux s’élevant entre les Parties relativement à l’interprétation et/ou l’exécution du présent Accord, cela même en cas de pluralité d’instances, de demandeurs, de défendeurs, de demandes incidentes, d’appels en garantie ou mise en cause même par voie de référé. </p>
+  <strong>  Article 9	Arbitrage</strong>
+  <p>  Tous différends découlant du présent Accord ou en relation avec celui-ci seront définitivement soumis à l’arbitrage conformément au code de l’arbitrage tunisien.</p>
+   <P> La Partie voulant recourir à l’arbitrage désignera un (1) arbitre, l’autre Partie désignera le sien dans un délai de quinze (15) jours suivant la notification
+      qui lui aura été faite de la désignation du premier arbitre. Les arbitres ainsi désignés en choisiront un (1) autre dans un délai de quinze (15) jours suivant leur nomination.</P>
+   
+  <P>  A défaut de désignation par une Partie de son arbitre ou à défaut de désignation du troisième arbitre, dans les délais visés ci-dessus, il sera pourvu à cette (ces) désignation(s) par ordonnance de référé rendue par le Président de la Cour d’Appel de Tunis, saisi par la Partie ou l’arbitre le plus diligent.</P>
+ <P>   Le tribunal arbitral statuera en droit et rendra sa sentence arbitrale dans un délai de six (6) mois à compter du jour où (i) le troisième arbitre aura accepté sa mission et 
+    où (ii) les frais et honoraires des arbitres seront réglés par les Parties.</P>
+ <P>   L’arbitrage aura lieu à Tunis. La langue de l’arbitrage sera le français.</P>
+  <P>  La sentence sera définitive et ne sera pas susceptible d’appel. </P></div>
+    
+    
+ <p>   CET ACCORD DE CONFIDENTIALITE est conclu en date du ____________   entre: </p>
+    
+
+ 
+
+
+</div>

@@ -3,15 +3,15 @@
     {   
     
       "id": "step_nature_employeur",
-      "title": "L'employeur:",
+      "title": "L'Employeur(le Boss)",
       "description": "",
       "blocs": ["bloc_nature_employeur"],
       "visibility": true
     },
     {
       "id": "step_lemployeur",
-      "title": "Détails sur l’employeur",
-      "description": "Si vous ne disposez pas de ces informations, vous pouvez passer cette étape et la compléter au niveau du document que vous allez télécharger",
+      "title": "L'Employeur(le Boss)",
+      "description": "",
       "blocs": [
         "bloc_lemployeur_physique",
         "bloc_lemployeur_morale"
@@ -20,23 +20,37 @@
     },
     {
       "id": "step_lemployé",
-      "title": "Détails sur l’employé",
-      "description": " Si vous ne disposez pas de ces informations, vous pouvez passer cette étape et la compléter au niveau du document que vous allez télécharger",
+      "title": "L’Employé (le Salarié)",
+      "description": "",
       "blocs": ["bloc_lemployé"],
       "visibility": true
     },
     {
       "id": "step_description_du_contrat",
-      "title": "Description du contrat",
-      "description": "Si vous ne disposez pas de ces informations, vous pouvez passer cette étape et la compléter au niveau du document que vous allez télécharger",
-      "blocs": ["bloc_poste_statut","bloc_duree_contrat_cdd","bloc_periode_essai","bloc_hebdomadaire"],
+      "title": "Poste et statut du salarié, Durée du contrat de travail",
+      "description": "",
+      "blocs": ["bloc_poste_statut","bloc_duree_contrat_cdd","bloc_periode_essai"],
       "visibility": true
     },
     {
       "id": "step_conditions_de_travail",
-      "title": "Conditions de travail",
-      "description": "Si vous ne disposez pas de ces informations, vous pouvez passer cette étape et la compléter au niveau du document que vous allez télécharger",
-      "blocs": [ "bloc_Rémunération","bloc_lieu_de_travail","bloc_conges_payes","bloc_clause_de_exculisivité", "bloc_clause_de_confidentialité", "bloc_propriété_des_travaux","bloc_non_concurrence"],
+      "title": "Durée hebdomadaire de travail, Rémunération, Lieu du travail,Congés payés",
+      "description": "",
+      "blocs": [ "bloc_hebdomadaire","bloc_Rémunération","bloc_lieu_de_travail","bloc_conges_payes"],
+      "visibility": true
+    },
+	{
+      "id": "step_conditions_de_travaill",
+      "title": "Clause d'exclusivité, Clause de confidentialité",
+      "description": "",
+      "blocs": [ "bloc_clause_de_exculisivité", "bloc_clause_de_confidentialité"],
+      "visibility": true
+    },
+	{
+      "id": "step_conditions_de_travailll",
+      "title": "Propriété des travaux, Non concurrence",
+      "description": "",
+      "blocs": [ "bloc_propriété_des_travaux","bloc_non_concurrence"],
       "visibility": true
     }
     
@@ -44,7 +58,7 @@
   "blocs": [
     {
       "id": "bloc_nature_employeur",
-      "title": "L'employeur est une",
+      "title": "1- Est-ce la personne est une personne morale ou physique ?",
       "description": "",
       "inputs": [
         "input_nature_employeur_morale",
@@ -55,7 +69,7 @@
     
     {
       "id": "bloc_lemployeur_morale",
-      "title": "",
+      "title": "Personne physique tunisienne",
       "description": "",
       "inputs": [
 		"input_nom_employeur",
@@ -67,7 +81,7 @@
     },
 	{
       "id": "bloc_lemployeur_physique",
-      "title": "",
+      "title": "Personne morale établie en Tunisie",
       "description": "",
       "inputs": [
         "input_dénomination_de_la_societé",
@@ -106,7 +120,7 @@
    
 	{
       "id": "bloc_periode_essai",
-      "title": "",
+      "title": "8- Le salarié est-il soumis à une période d'essai ?",
       "description": "",
       "inputs": [        
 	  "input_periode_dessai_1",
@@ -114,7 +128,7 @@
     "input_periode_dessai_2"
 	  
 		],
-      "visibility": true
+      "visibility": false
     },
 	{
       "id": "bloc_hebdomadaire",
@@ -163,7 +177,7 @@
     },
 	{
       "id": "bloc_clause_de_exculisivité",
-      "title": "",
+      "title": "13- Le salarié sera-t-il soumis à une interdiction de conclure tout autre contrat de travail avec un autre employeur pendant la durée de son CDI (exclusivité) ?",
       "description": "",
       "inputs": ["input_clause_de_exculisivité",
         "input_clause_de_exculisivité_non"],
@@ -171,21 +185,21 @@
     },
     {
       "id": "bloc_clause_de_confidentialité",
-      "title": "",
+      "title": "14- Le salarié sera-t-il soumis à une interdiction de révéler des informations de l'entreprise ?",
       "description": "",
       "inputs": ["input_clause_de_confidentialité","input_clause_de_confidentialité_non"],
       "visibility": true
     },
     {
       "id": "bloc_propriété_des_travaux",
-      "title": "",
+      "title": "15- L’employeur souhaitera t’il conserver la propriété des supports élaborés par l’employé dans le cadre de l’exécution du contrat ?",
       "description": "",
       "inputs": ["input_propriété_des_travaux","input_propriété_des_travaux_non"],
       "visibility": true
     },
 	{
       "id": "bloc_non_concurrence",
-      "title": "",
+      "title": "16- Est-ce que l’employeur souhaite introduire une clause de non-concurrence ?",
       "description": "",
       "inputs": ["input_non_concurence","input_non_concurrence_A","input_non_concurrence_B","input_concurence_non"],
       "visibility": true
@@ -198,7 +212,7 @@
       "type": "text",
       "description": "",
       "name": "input_dénomination_de_la_societé",
-      "label": "Dénomination sociale: ",
+      "label": "Dénomination sociale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -216,15 +230,15 @@
       "label": "Forme",
       "placeHolder": "",
       "help": "",
-      "options": ["SA","SARL","SUARL","LLP","GMBH","Autre"],
+      "options": ["SA","SARL","SUARL","LLP","GMBH"],
       "value": "",
       "bookmarkIdPerValue": {
 	  	  "SA": ["Type_de_la_societé"],
 		"SARL": ["Type_de_la_societé"],
 		"SUARL": ["Type_de_la_societé"],
 		"LLP": ["Type_de_la_societé"],
-		"GMBH": ["Type_de_la_societé"],
-        "Autre": ["Type_de_la_societé"]
+		"GMBH": ["Type_de_la_societé"]
+        
       },
       "visibility": true
     },
@@ -248,7 +262,7 @@
       "type": "text",
       "description": "",
       "name": "input_adresse_de_la_societé",
-      "label": "Adresse du siège social: ",
+      "label": "Adresse du siège social",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -263,7 +277,7 @@
       "type": "number",
       "description": "",
       "name": "input_identifiant_unique_de_la_societé",
-      "label": "Identifiant unique: ",
+      "label": "Identifiant Unique",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -279,7 +293,7 @@
       "type": "text",
       "description": "",
       "name": "input_nom_du_representant_de_la_societé",
-      "label": "Nom du représentant signataire du document: ",
+      "label": "Nom du représentant signataire du document",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -294,7 +308,7 @@
       "type": "text",
       "description": "",
       "name": "input_nom_du_representant_de_la_societé",
-      "label": "Prénom du représentant: ",
+      "label": "Prénom du représentant",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -367,10 +381,10 @@
     },
     {
       "id": "input_cin_employeur",
-      "type": "cin",
+      "type": "Number",
       "description": "",
       "name": "input_cin_employeur",
-      "label": "Numéro de carte d'identité nationale :",
+      "label": "Numéro de la carte d'identité nationale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -385,7 +399,7 @@
       "type": "text",
       "description": "",
       "name": "input_adresse_employeur",
-      "label": "Adresse/Domicilisation :",
+      "label": "Adresse/Domiciliation",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -402,9 +416,9 @@
       "type": "number",
       "description": "",
       "name": "input_clause_dexclusivité",
-      "label": "Congés payés",
+      "label": "12- Combien de jours de jour de congé par mois travaillé, est ce que l’employé aura droit ?",
       "placeHolder": "",
-      "help": "Combien de jours de congé par mois travaillé ? (la loi impose un minimum de 1. Il faut voir la convention collective applicable le cas échéant) ",
+      "help": "la loi impose un minimum de 1. Il faut voir la convention collective applicable le cas échéant",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -415,131 +429,131 @@
     },
 	{
       "id": "input_clause_de_exculisivité",  
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Ajouter une clause d’exclusivité",
+      "name": "q14",
+      "label": "Oui",
       "placeHolder": "",
-      "help": "C’est une clause prévoyant que l'employé n'apportera pas son aide/services à un autre employeur durant la durée de validité du contrat et demeure uniquement au service de son employeur. Si vous souhaitez inclure cette clause au niveau de votre contrat cochez oui",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["Article10_titre","Article10_titre_1","Article10_titre_2","Article10_titre_3"],
-        "true": []
+        "Oui": ["Article10_non"]
+        
       },
       "visibility": true
     },
     {
       "id": "input_clause_de_exculisivité_non",
 	  
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "",
+      "name": "q14",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["Article10_non"],
-        "true": []
+        "Non": ["Article10_titre","Article10_titre_1","Article10_titre_2","Article10_titre_3"]
+        
       },
-      "visibility": false
+      "visibility": true
     },
     {
       "id": "input_clause_de_confidentialité",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Ajouter une clause de confidentialité",
+      "name": "q15",
+      "label": "Oui",
       "placeHolder": "",
-      "help": "C’est une clause qui a pour objectif d'imposer une obligation de discrétion sur les informations précisément visées par le secret. Si vous souhaitez inclure cette clause au niveau de votre contrat cochez oui",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["Article11_oui","Article11_titre_1","Article11_titre_2"],
-        "true": []
+        "Oui": ["Article11_non"]
+        
       },
       "visibility": true
     },
     {
       "id": "input_clause_de_confidentialité_non",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "",
+      "name": "q15",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["Article11_non"],
-        "true": []
+        "Non": ["Article11_oui","Article11_titre_1","Article11_titre_2"]
+        
       },
-      "visibility": false
+      "visibility": true
     },
     {
       "id": "input_propriété_des_travaux_non",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "",
+      "name": "q16",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["Article12_non"],
-        "true": []
+        "Non": ["Article12_titre","Article12_titre_1","Article12_titre_2","Article12_titre_3"]
+        
       },
-      "visibility": false
+      "visibility": true
     },
     {
       "id": "input_propriété_des_travaux",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Ajouter une clause  de Propriété des travaux ",
+      "name": "q16",
+      "label": "Oui",
       "placeHolder": "",
-      "help": "C’est une clause qui a pour objectif La reconnaissance que les travaux réalisés par l'employé dans le cadre de l'exécution du contrat demeurent la propriété de l'employeur. Si vous souhaitez inclure cette clause au niveau de votre contrat cochez oui",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["Article12_titre","Article12_titre_1","Article12_titre_2","Article12_titre_3"],
-        "true": []
+        "Oui": ["Article12_non"]
+        
       },
       "visibility": true
     },
     {
       "id": "input_concurence_non",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "",
+      "name": "q17",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["Article10_titre_non"],
-        "true": []
+        "Non": ["Article10_titre_AA","Article13_1","Article13_2","Article13_3","Article13_4"]
+       
       },
-      "visibility": false
+      "visibility": true
     },
 
 	  {
       "id": "input_non_concurence",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Ajouter une clause  de Non concurrence",
+      "name": "q17",
+      "label": "Oui",
       "placeHolder": "",
-      "help": "Est-ce que l’employeur souhaite introduire une clause de non-concurrence",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["Article10_titre_AA","Article13_1","Article13_2","Article13_3","Article13_4"],
-        "true": []
+        "Oui": []
+        
       },
       "visibility": true
 
@@ -552,7 +566,7 @@
       "name": "",
       "label": "Quelle est le périmètre géographique de la clause en kilomètres?",
       "placeHolder": "",
-      "help": "",
+      "help": "il est conseillé de la limiter dans un rayon du lieu de travail raisonnable",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -568,7 +582,7 @@
       "name": "input_non_concurrence_B",
       "label": "Quelle est la durée de l’obligation de non-concurrence en mois ?",
       "placeHolder": "",
-      "help": "",
+      "help": "il est conseillée qu’elle soit inférieure à 3 ans",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -580,16 +594,17 @@
 	
     {
       "id": "input_lieu_travail",
-      "type": "text",
+      "type": "select",
       "description": "",
       "name": "input_lieu_travail",
-      "label": "Lieu de travail",
+      "label": "11- Quel sera le lieu de travail du salarié ?",
       "placeHolder": "",
-      "help": "Quel sera le lieu de travail du salarié ?",
-      "options": [],
+      "help": "",
+      "options": ["au siège social de l'entreprise employeur","a un autre endroit"],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["Article11_titre"]
+        "au siège social de l'entreprise employeur": ["Article11_titre"],
+		"a un autre endroit": ["Article11_titre"]
         
       },
       "visibility": true
@@ -601,7 +616,7 @@
       "type": "text",
       "description": "",
       "name": "input_nom_de_lemployé",
-      "label": "Nom de l'employé: ",
+      "label": "2- Nom",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -616,7 +631,7 @@
       "type": "text",
       "description": "",
       "name": "prénom_de_lemployé",
-      "label": "Prénom de l'employé: ",
+      "label": "3- Prénom",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -628,10 +643,10 @@
     },
     {
       "id": "input_num_CIN_de_lemployé",
-      "type": "cin",
+      "type": "Number",
       "description": "",
       "name": "input_num_CIN_de_lemployé",
-      "label": "Numéro de carte d'identité nationale ",
+      "label": "4- Numéro de la carte d'identité nationale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -647,7 +662,7 @@
       "type": "text",
       "description": "",
       "name": "input_adresse_de_lemployé",
-      "label": "Adresse/Domicilisation: ",
+      "label": "5- Adresse/Domiciliation",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -663,9 +678,9 @@
       "type": "text",
       "description": "",
       "name": "input_poste_de_lemployé",
-      "label": "Poste et statut du salarié",
+      "label": "6- Quelle est la fonction de l'employé ?",
       "placeHolder": "",
-      "help": "Quelle est la fonction de l'employé ?",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -681,21 +696,21 @@
       "name": "",
       "label": "Quelle est la période d’essai applicable ?",
       "placeHolder": "",
-      "help": "",
+      "help": "la période est habituellement de 6 mois il faut vérifier la convention applicable le cas échéant",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["Article2_titre"]
+        "text": []
         
       },
       "visibility": false
     },
 	{
       "id": "input_periode_contrat_commencant",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "",
-      "label": "Quelle est la date de commencement du CDD ?",
+      "label": "7- Quelle est la date de commencement du CDI ?",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -712,9 +727,9 @@
       "type": "number",
       "description": "",
       "name": "",
-      "label": "Durée hebdomadaire de travail",
+      "label": "8- Quel est le nombre d’heures de travail hebdomadaire ?",
       "placeHolder": "",
-      "help": "Quel est le nombre d’heures de travail hebdomadaire ? (la loi prévoit jusqu’à 48h. Certaines conventions prévoient moins.)",
+      "help": "la loi prévoit jusqu’à 48h. Certaines conventions prévoient moins.",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -726,36 +741,36 @@
 	   },
 	    {
       "id": "input_periode_dessai_1",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "input_periode_dessai_1",
-      "label": "Inclure une période d’essaie",
+      "name": "periode",
+      "label": "Oui",
       "placeHolder": "",
-      "help": " Le salarié est-il soumis à une période d'essai ? (la période d’essai est habituellement de 6 mois il faut vérifier la convention applicable le cas échéant) ",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["Article2_titre_1","Article2_titre_22","Article2_titre_3","Article2_titre_4"],
-        "true": []
+        "Oui": []
+        
       },
       "visibility": true
 
      },
      {
       "id": "input_periode_dessai_2",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "input_periode_dessai_2",
-      "label": "",
+      "name": "periode",
+      "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Non",
       "bookmarkIdPerValue": {
-        "false": ["Article2_titre_2"],
-        "true": []
+        "Non": ["Article2_titre_2"]
+        
       },
-      "visibility": false
+      "visibility": true
 
 	   },
 	   
@@ -765,7 +780,7 @@
       "type": "text",
       "description": "",
       "name": "input_salaire_mensuel_net_employé_lettress",
-      "label": " Rémunération brute mensuelle en lettres",
+      "label": "10- Quelle est le montant de la rémunération brute mensuelle en lettres ?",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -780,9 +795,9 @@
       "type": "number",
       "description": "",
       "name": "input_salaire_mensuel_net_employé_chiffress",
-      "label": "Rémunération brute mensuelle en chiffres ",
+      "label": "9- Quelle est le montant de la rémunération brute mensuelle  en chiffre? ",
       "placeHolder": "",
-      "help": "",
+      "help": "Si une convention collective s'applique, vérifiez que le salarié perçoit bien le salaire minimum conventionnel prévu pour la catégorie dont il relève",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -798,11 +813,11 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
    
     {
@@ -810,44 +825,44 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Adresse_de_la_societé",
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "nom_du_representant_de_la_societé",
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prénom_du_representant_de_la_societé",
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
     
@@ -856,22 +871,22 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prénom_de_lemployé",
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
     {
@@ -879,11 +894,11 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 
     {
@@ -891,22 +906,22 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Poste_de_lemployé",
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
    
@@ -916,22 +931,22 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Salaire_mensuel_net_de_lemployé_chiffres",
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
    
    
@@ -940,22 +955,22 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Type_de_la_societé",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
    
 	{
@@ -963,89 +978,79 @@
       "value": null,
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prénom_employeur",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "CIN_de_employeur_physique",
       "value":"",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Adresse_de_employeur_physique",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Infos_employeur_moral",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Infos_employeur_physique",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
-    {
-      "bookmarkId": "Article2_titre",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+ 
 	
 	{
       "bookmarkId": "Article2_titre_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
 	
@@ -1056,11 +1061,11 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     
     {
@@ -1068,11 +1073,11 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     
     
@@ -1082,99 +1087,99 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article10_titre_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article10_titre_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article10_titre_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	 {
       "bookmarkId": "Article10_non",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article11_oui",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article11_titre_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article11_titre_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article11_non",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
     
     
@@ -1184,11 +1189,11 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
    
    
@@ -1198,55 +1203,55 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article12_titre_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article12_titre_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article12_titre_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
     {
       "bookmarkId": "Article12_non",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
     
 	{
@@ -1254,143 +1259,91 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article10_titre_AA",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article13_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article13_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article13_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "Article13_4",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "date_commencant",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "Article2_titre_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "Article2_titre_22",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "Article2_titre_3",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "Article2_titre_4",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "Article10_titre_non",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+
+	
+	
 	{
       "bookmarkId": "hebdomadaire_dure",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
 	{
@@ -1398,11 +1351,11 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     }
   ]
 }

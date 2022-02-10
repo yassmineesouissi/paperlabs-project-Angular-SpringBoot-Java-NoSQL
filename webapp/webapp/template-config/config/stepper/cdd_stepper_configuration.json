@@ -3,7 +3,7 @@
    {
       "id": "step_nature_peronne_caution",
       "title": "L’Employeur",
-      "description": "Est-ce que l'employeur est une personne morale ou physique ?",
+      "description": "",
       "blocs": ["bloc_nature_peronne_caution"],
       "visibility": true
     },
@@ -17,23 +17,15 @@
 		"bloc_personne_morale_tunisienne_caution"],
       "visibility": true
     },
-	 {
+	 
+	{
       "id": "step_nature_employeur",
       "title": "L’Employé",
-      "description": "Est-ce que l'employé est de nationalité tunisienne ou étrangère ?",
-      "blocs": ["bloc_nature_employeur"],
-      "visibility": true
-    },
-	{
-      "id": "step_lemployeur",
-      "title": "L’Employé",
       "description": "",
-      "blocs": [
-        "bloc_lemployeur_physique",
-        "bloc_lemployeur_morale"
-      ],
+      "blocs": ["bloc_lemployeur_physique"],
       "visibility": true
     },
+	
 	{
       "id": "step_question3_4_5_6_7",
       "title": "Contrat à durée déterminée",
@@ -78,7 +70,7 @@
   "blocs": [
    {
       "id": "bloc_nature_peronne_caution",
-      "title": "",
+      "title": "1- Est-ce que l'employeur est une personne morale ou physique ?",
       "description": "",
       "inputs": [
         "input_nature_personne_physique_tunisienne_caution",
@@ -96,6 +88,8 @@
 		"input_date_naissance_personne_physique_tunisienne_caution",
 		"input_lieu_naissance_personne_physique_tunisienne_caution",
 		"input_numero_cin_personne_physique_tunisienne_caution",
+		"input_date_delivrance_cin_personne_physique_tunisienne_employeur",
+		"input_lieu_delivrance_cin_personne_physique_tunisienne_employeur",
 		"input_adresse_personne_physique_tunisienne_caution"],
       "visibility": true
     },
@@ -130,13 +124,13 @@
     },
 	{
       "id": "bloc_nature_employeur",
-      "title": "",
+      "title": "2- Est-ce que l'employé est de nationalité tunisienne ou étrangère ?",
       "description": "",
       "inputs": ["input_nature_employeur_physique",
         "input_nature_employeur_morale"
         
       ],
-      "visibility": true
+      "visibility": false
     },
 	{
       "id": "bloc_lemployeur_physique",
@@ -148,6 +142,8 @@
 		"input_date_naissance_personne_physique_tunisienne",
 		"input_lieu_naissance_personne_physique_tunisienne",
 		"input_numero_cin_personne_physique_tunisienne",
+		"input_date_delivrance_cin_personne_physique_tunisienne_employee",
+		"input_lieu_delivrance_cin_personne_physique_tunisienne_employee",
 		"input_adresse_personne_physique_tunisienne"],
       "visibility": true
     },
@@ -179,20 +175,18 @@
       "title": "",
       "description": "",
       "inputs": [
-        "input_question_4"],
+        "input_question_4",
+		 "input_champ_libre_question_4"],
       "visibility": true
     },
 	{
       "id": "bloc_question_5",
-      "title": "Durée du contrat de travail",
+      "title": "5- Quelle est la durée du contrat ?",
       "description": "",
       "inputs": [
-        "input_annee_question_5",
-		"input_inserez_annee_question_5",
-		"input_mois_question_5",
-		"input_inserez_mois_question_5",
-		"input_jours_question_5",
-		"input_inserez_jours_question_5"],
+		
+       "input_annee_question_5",
+	   "input_inserez_annee_question_5"],
       "visibility": true
     },
 	{
@@ -213,12 +207,12 @@
     },
 	{
       "id": "bloc_question_8",
-      "title": "",
+      "title": "8- Le salarié est-il soumis à une période d'essai ? ",
       "description": "",
       "inputs": [
-        "input_question_oui_8",
+        "input_question_non_8",
 		"input_question_date_essai_8",
-		"input_question_non_8"],
+		"input_question_oui_8"],
       "visibility": true
     },
 	{
@@ -231,29 +225,31 @@
     },
 	{
       "id": "bloc_question_10",
-      "title": "",
+      "title": "10- Quel sera le lieu de travail du salarié ?",
       "description": "",
       "inputs": [
-        "input_question_10"],
+        "input_question_10_autre",
+		"input_question_10_siege",
+		"input_question_10_lieu"],
       "visibility": true
     },
 	{
       "id": "bloc_question_11",
-      "title": "",
+      "title": "11- Le salarié pourra-t-il être muté sans avoir la possibilité de s'y opposer ?",
       "description": "",
       "inputs": [
-        "input_question_oui_11",
-		"input_question_non_11"],
+        "input_question_non_11",
+		"input_question_oui_11"],
       "visibility": true
     },
 	{
       "id": "bloc_question_12",
-      "title": "Durée hebdomadaire de travail",
+      "title": "12- Le salarié est-il à temps complet ou à temps partiel ?",
       "description": "",
       "inputs": [
-        "input_temps_complet_question_12",
+        "input_temps_partiel_question_12",
 		"input_duree_normal_travail_question_12_1",
-		"input_temps_partiel_question_12",
+		"input_temps_complet_question_12",
 		"input_duree_normal_travail_question_12_2",
 		"input_duree_hebdomadaire_question_12_3"],
       "visibility": true
@@ -268,40 +264,40 @@
     },
 	{
       "id": "bloc_question_14",
-      "title": "",
+      "title": "14- Le salarié sera-t-il soumis à une interdiction de conclure tout autre contrat de travail avec un autre employeur pendant la durée de son CDD (exclusivité) ?",
       "description": "",
       "inputs": [
-        "input_question_oui_14",
-		"input_question_non_14"],
+        "input_question_non_14",
+		"input_question_oui_14"],
       "visibility": true
     },
 	{
       "id": "bloc_question_15",
-      "title": "",
+      "title": "15- Le salarié sera-t-il soumis à une interdiction de révéler des informations de l'entreprise (obligation de confidentialité) ?",
       "description": "",
       "inputs": [
-        "input_question_oui_15",
-		"input_question_non_15"],
+        "input_question_non_15",
+		"input_question_oui_15"],
       "visibility": true
     },
 	{
       "id": "bloc_question_16",
-      "title": "",
+      "title": "16- L’employeur souhaitera t’il conserver la propriété des supports élaborés par l’employé dans le cadre de l’exécution du contrat ?",
       "description": "",
       "inputs": [
-        "input_question_oui_16",
-		"input_question_non_16"],
+        "input_question_non_16",
+		"input_question_oui_16"],
       "visibility": true
     },
 	{
       "id": "bloc_question_17",
-      "title": "",
+      "title": "17- Est-ce que l’employeur souhaite introduire une clause de non-concurrence ?",
       "description": "",
       "inputs": [
-        "input_question_oui_17",
+        "input_question_non_17",
 		"input_obligation_question_oui_17",
 		"input_perimetre_question_oui_17",
-		"input_question_non_17"],
+		"input_question_oui_17"],
       "visibility": true
     }
 	
@@ -317,7 +313,7 @@
       "name": "input_perimetre_question_oui_17",
       "label": "Quelle est le périmètre géographique de la clause en kilomètres ?",
       "placeHolder": "",
-      "help": "",
+      "help": "il est conseillé de la limiter dans un rayon du lieu de travail raisonnable",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -333,7 +329,7 @@
       "name": "input_obligation_question_oui_17",
       "label": "Quelle est la durée de l’obligation de non-concurrence en mois ?",
       "placeHolder": "",
-      "help": "",
+      "help": "il est conseillée qu’elle soit inférieure à 3 ans",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -344,130 +340,122 @@
     },
    {
       "id": "input_question_non_17",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "Question_17",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Non",
+      "bookmarkIdPerValue": {
+        "Non": ["question_non_17"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_oui_17",
+      "type": "radio",
+      "description": "",
+      "name": "Question_17",
       "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["question_non_17"],
-        "true": []
-      },
-      "visibility": false
-	   },
-  {
-      "id": "input_question_oui_17",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Non concurrence",
-      "placeHolder": "",
-      "help": "Est-ce que l’employeur souhaite introduire une clause de non-concurrence ",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["question_oui_17","question_oui_17_1","question_oui_17_2","question_oui_17_3","question_oui_17_4"],
-        "true": []
+        "Oui": ["question_oui_17","question_oui_17_1","question_oui_17_2","question_oui_17_3","question_oui_17_4"]
       },
       "visibility": true
 	   },
   {
       "id": "input_question_non_16",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "Question_16",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Non",
+      "bookmarkIdPerValue": {
+        "Non": ["question_non_16"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_oui_16",
+      "type": "radio",
+      "description": "",
+      "name": "Question_16",
       "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["question_non_16"],
-        "true": []
-      },
-      "visibility": false
-	   },
-  {
-      "id": "input_question_oui_16",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Propriété des travaux",
-      "placeHolder": "",
-      "help": "C’est une clause qui a pour objectif La reconnaissance que les travaux réalisés par l'employé dans le cadre de l'exécution du contrat demeurent la propriété de l'employeur. Si vous souhaitez inclure cette clause au niveau de votre contrat cochez oui",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["question_oui_16","question_oui_16_1","question_oui_16_2","question_oui_16_3"],
-        "true": []
+        "Oui": ["question_oui_16","question_oui_16_1","question_oui_16_2","question_oui_16_3"]
       },
       "visibility": true
 	   },
   {
       "id": "input_question_non_15",
-      "type": "checkbox",
+      "type": "radio",
+      "description": "",
+      "name": "",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Non",
+      "bookmarkIdPerValue": {
+        "Non": ["question_non_15"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_oui_15",
+      "type": "radio",
       "description": "",
       "name": "",
       "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["question_non_15"],
-        "true": []
-      },
-      "visibility": false
-	   },
-  {
-      "id": "input_question_oui_15",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Clause de confidentialité",
-      "placeHolder": "",
-      "help": "C’est une clause qui a pour objectif d'imposer une obligation de discrétion sur les informations précisément visées par le secret. Si vous souhaitez inclure cette clause au niveau de votre contrat cochez oui",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["question_oui_15","question_oui_15_1","question_oui_15_2"],
-        "true": []
+        "Oui": ["question_oui_15","question_oui_15_1","question_oui_15_2"]
       },
       "visibility": true
 	   },
  
   {
       "id": "input_question_non_14",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "Question_14",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Non",
+      "bookmarkIdPerValue": {
+        "Non": ["question_non_14"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_oui_14",
+      "type": "radio",
+      "description": "",
+      "name": "Question_14",
       "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "Oui",
       "bookmarkIdPerValue": {
-        "false": ["question_non_14"],
-        "true": []
-      },
-      "visibility": false
-	   },
-  {
-      "id": "input_question_oui_14",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Clause d'exclusivité",
-      "placeHolder": "",
-      "help": "c’est une clause prévoyant que l'employé n'apportera pas son aide/services à un autre employeur durant la durée de validité du contrat et demeure uniquement au service de son employeur. Si vous souhaitez inclure cette clause au niveau de votre contrat cochez oui",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["question_oui_14","question_oui_14_1","question_oui_14_2","question_oui_14_3"],
-        "true": []
+        "Oui": ["question_oui_14","question_oui_14_1","question_oui_14_2","question_oui_14_3"]
       },
       "visibility": true
 	   },
@@ -478,9 +466,9 @@
       "type": "number",
       "description": "",
       "name": "input_question_13",
-      "label": "Congés payés",
+      "label": "13-  Quel est le nombre de jours de congés payés accordé à l’employé ?",
       "placeHolder": "",
-      "help": "Quel est le nombre de jours de congés payés accordé à l’employé ?",
+      "help": "La valeur doit être un nombre supérieur ou égal à 1",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -496,7 +484,7 @@
       "name": "input_duree_hebdomadaire_question_12_3",
       "label": "Quelle est la durée de travail hebdomadaire à laquelle l’employé sera soumis ?",
       "placeHolder": "",
-      "help": "",
+      "help": "La valeur doit être un nombre inférieur ou égal à 70% de la durée normale de travail" ,
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -512,7 +500,7 @@
       "name": "input_duree_normal_travail_question_12_2",
       "label": "Quelle est la durée normale de travail ?",
       "placeHolder": "",
-      "help": "",
+      "help": "La valeur doit être un nombre entre 40 et 48",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -528,7 +516,7 @@
       "name": "input_duree_normal_travail_question_12_1",
       "label": "Quelle est la durée normale de travail ?",
       "placeHolder": "",
-      "help": "",
+      "help": "La valeur doit être un nombre entre 40 et 48",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -539,91 +527,147 @@
     },
   {
       "id": "input_temps_partiel_question_12",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Temps partiel",
+      "name": "Question_12",
+      "label": "Temps complet",
       "placeHolder": "",
-      "help": "Le salarié est-il à temps complet ou à temps partiel ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "t_partiel",
       "bookmarkIdPerValue": {
-        "false": ["temps_partiel_question_12"],
-        "true": []
+        "t_partiel": ["temps_partiel_question_12"]
       },
       "visibility": true
 	   },
    {
       "id": "input_temps_complet_question_12",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Temps complet",
+      "name": "Question_12",
+      "label": "Temps partiel",
       "placeHolder": "",
-      "help": "Le salarié est-il à temps complet ou à temps partiel ?",
+      "help": "",
       "options": [],
-      "value": "",
+      "value": "t_complet",
       "bookmarkIdPerValue": {
-        "false": ["temps_complet_question_12"],
-        "true": []
+        "t_complet": ["temps_complet_question_12"]
       },
       "visibility": true
 	   },
   {
       "id": "input_question_non_11",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "Question_11",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Non",
+      "bookmarkIdPerValue": {
+        "Non": ["question_non_11","question_11"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_oui_11",
+      "type": "radio",
+      "description": "",
+      "name": "Question_11",
       "label": "Non",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Oui",
+      "bookmarkIdPerValue": {
+        "Oui": ["question_oui_11","question_oui_11_1"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_10_siege",
+      "type": "radio",
+      "description": "",
+      "name": "Question_10",
+      "label": "Autre",
       "placeHolder": "",
       "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_non_11"],
-        "true": []
+        "siege": ["adresse_phy_tun_caution_1"] 
       },
-      "visibility": false
-	   },
-  {
-      "id": "input_question_oui_11",
-      "type": "checkbox",
+      "visibility": true
+    },
+	 {
+      "id": "input_question_10_siege",
+      "type": "radio",
       "description": "",
-      "name": "",
-      "label": "Clause de mobilité",
+      "name": "Question_10",
+      "label": "Autre",
       "placeHolder": "",
-      "help": "Le salarié pourra-t-il être muté sans avoir la possibilité de s'y opposer ?",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["question_oui_11"],
-        "true": []
+        "siege": ["adresse_phys_etrg_caution_1"] 
       },
       "visibility": true
-	   },
-  {
-      "id": "input_question_10",
+    },
+	{
+      "id": "input_question_10_siege",
+      "type": "radio",
+      "description": "",
+      "name": "Question_10",
+      "label": "Autre",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "siege": ["adresse_morale_tun_caution_1"] 
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_question_10_autre",
+      "type": "radio",
+      "description": "",
+      "name": "Question_10",
+      "label": "Au siège social de l'entreprise employeur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "autre",
+      "bookmarkIdPerValue": {
+        "autre": ["question_10"] 
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_question_10_lieu",
       "type": "text",
       "description": "",
-      "name": "input_question_9",
-      "label": "Lieu de travail ",
+      "name": "",
+      "label": "Quel sera le lieu de travail du salarié ?",
       "placeHolder": "",
-      "help": "Quel sera le lieu de travail du salarié ?",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["question_10"] 
+        "text": ["question_10_lieu"] 
       },
-      "visibility": true
+      "visibility": false
     },
   {
       "id": "input_question_9",
       "type": "number",
       "description": "",
       "name": "input_question_9",
-      "label": "Rémunération ",
+      "label": "9- Quelle est le montant de la rémunération brute mensuelle ?",
       "placeHolder": "",
-      "help": "Quelle est le montant de la rémunération brute mensuelle ?",
+      "help": "La valeur doit être un nombre suivi de la valeur en toutes lettres entre () exemple 2000 (Deux Milles)",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -633,12 +677,12 @@
     },
   {
       "id": "input_question_date_essai_8",
-      "type": "Date",
+      "type": "number",
       "description": "",
       "name": "input_question_date_essai_8",
-      "label": "Quelle est la période d’essai applicable ?",
+      "label": "Quelle est la période d’essai applicable en mois?",
       "placeHolder": "",
-      "help": "",
+      "help": "La valeur doit être un nombre inférieur ou égal à la moitié de la durée du contrat",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -648,44 +692,42 @@
     },
   {
       "id": "input_question_non_8",
-      "type": "checkbox",
+      "type": "radio",
       "description": "",
-      "name": "",
+      "name": "question_8",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "question_8_non",
+      "bookmarkIdPerValue": {
+        "question_8_non": ["question_non_8"]
+      },
+      "visibility": true
+	   },
+  {
+      "id": "input_question_oui_8",
+      "type": "radio",
+      "description": "",
+      "name": "question_8",
       "label": "Non",
       "placeHolder": "",
       "help": "",
       "options": [],
-      "value": "",
+      "value": "question_8_oui",
       "bookmarkIdPerValue": {
-        "false": ["question_non_8"],
-        "true": []
-      },
-      "visibility": false
-	   },
-  {
-      "id": "input_question_oui_8",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Période d'essai",
-      "placeHolder": "",
-      "help": "Le salarié est-il soumis à une période d'essai ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["question_oui_8","question_oui_8_1","question_oui_8_2","question_oui_8_3"],
-        "true": []
+        "question_8_oui": ["question_oui_8","question_oui_8_1","question_oui_8_2","question_oui_8_3"]
       },
       "visibility": true
 	   },
   {
       "id": "input_question_7",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_question_7",
-      "label": "Expiration",
+      "label": "7- Quelle est la date d’expiration du CDD ? ",
       "placeHolder": "",
-      "help": "Quelle est la date d’expiration du CDD ?",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -695,12 +737,12 @@
     },
   {
       "id": "input_question_6",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_question_6",
-      "label": "Prise d’effet",
+      "label": "6- Quelle est la date de commencement du CDD ?",
       "placeHolder": "",
-      "help": "Quelle est la date de commencement du CDD ?",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -708,123 +750,83 @@
       },
       "visibility": true
     },
-  {
-      "id": "input_inserez_jours_question_5",
-      "type": "text",
-      "description": "",
-      "name": "input_inserez_jours_question_5",
-      "label": "Insérer la durée du contrat",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["inserez_jours_question_5"] 
-      },
-      "visibility": false
-    },
-   {
-      "id": "input_inserez_mois_question_5",
-      "type": "text",
-      "description": "",
-      "name": "input_inserez_mois_question_5",
-      "label": "Insérer la durée du contrat",
-      "placeHolder": "",
-      "help": "",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "text": ["inserez_mois_question_5"] 
-      },
-      "visibility": false
-    },
+ 
   {
       "id": "input_inserez_annee_question_5",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_inserez_annee_question_5",
       "label": "Insérer la durée du contrat",
       "placeHolder": "",
-      "help": "Quelle est la durée du contrat ?",
+      "help": "La valeur doit être un nombre si [en années <=4] [en mois<=48] [en jours<=1440]",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
         "text": ["inserez_annee_question_5"] 
       },
-      "visibility": false
+      "visibility": true
     },
-  {
-      "id": "input_jours_question_5",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Jours",
-      "placeHolder": "",
-      "help": "Quelle est la durée du contrat ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["jours_question_5"],
-        "true": []
-      },
-      "visibility": true
-	   },
-   {
-      "id": "input_mois_question_5",
-      "type": "checkbox",
-      "description": "",
-      "name": "",
-      "label": "Mois",
-      "placeHolder": "",
-      "help": "Quelle est la durée du contrat ?",
-      "options": [],
-      "value": "",
-      "bookmarkIdPerValue": {
-        "false": ["mois_question_5"],
-        "true": []
-      },
-      "visibility": true
-	   },
+
    {
       "id": "input_annee_question_5",
-      "type": "checkbox",
+      "type": "select",
       "description": "",
-      "name": "",
-      "label": "Années",
+      "name": "input_annee_question_5",
+      "label": "Insérer la durée du contrat",
       "placeHolder": "",
-      "help": "Quelle est la durée du contrat ?",
-      "options": [],
+      "help": "",
+      "options": ["jours","mois","années"],
       "value": "",
       "bookmarkIdPerValue": {
-        "false": ["annee_question_5"],
-        "true": []
+        "jours": ["annee_question_5"],
+		"mois": ["annee_question_5"],
+		"années": ["annee_question_5"]
       },
       "visibility": true
 	   },
+  
+	   
   {
       "id": "input_question_4",
-      "type": "text",
+      "type": "select",
       "description": "",
       "name": "input_question_4",
-      "label": "Motif du contrat de travail",
+      "label": "4- Pour quel motif le contrat de travail a-t-il été conclu ?",
       "placeHolder": "",
-      "help": "Pour quel motif le contrat de travail a-t-il été conclu ?",
+      "help": "",
+      "options": ["Remplacement d'un salarié absent","Accroissement temporaire d'activité ","Attente de la prise de fonctions d'un salarié recruté en CDI","Autre"],
+      "value": "",
+      "bookmarkIdPerValue": {
+	  "Remplacement d'un salarié absent ": ["question_4"],
+	  "Accroissement temporaire d'activité ": ["question_4"],
+	  "Attente de la prise de fonctions d'un salarié recruté en CDI": ["question_4"],
+	  "Autre": ["question_4"]
+        },
+      "visibility": true
+    },
+	{
+      "id": "input_champ_libre_question_4",
+      "type": "text",
+      "description": "",
+      "name": "input_champ_libre_question_4",
+      "label": "Préciser le motif",
+      "placeHolder": "",
+      "help": "",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
         "text": ["question_4"]
-        
-      },
-      "visibility": true
+        },
+      "visibility": false
     },
   {
       "id": "input_question_3",
       "type": "text",
       "description": "",
       "name": "input_question_3",
-      "label": "Poste et statut du salarié ",
+      "label": "3- Quelle est la fonction de l'employé ?",
       "placeHolder": "",
-      "help": "Quelle est la fonction de l'employé ?",
+      "help": "Exemples : développeur web, responsable commercial, auditeur interne, etc.",
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
@@ -835,7 +837,7 @@
     },
   {
       "id": "input_validite_passport_personne_physique_tunisienne_1",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_validite_passport_personne_physique_tunisienne_1",
       "label": "Date d’expiration du passeport",
@@ -899,7 +901,6 @@
 "Chypriote, Cypriote",
 "Colombien-ne",
 "Comorien-ne",
-"Congolais-e",
 "Congolais-e",
 "Nord-Coréen-ne",
 "Sud-Coréen-ne",
@@ -1082,7 +1083,6 @@
 "Chypriote, Cypriote": ["nationaliteee_phy_tun_1"],
 "Colombien-ne": ["nationaliteee_phy_tun_1"],
 "Comorien-ne": ["nationaliteee_phy_tun_1"],
-"Congolais-e": ["nationaliteee_phy_tun_1"],
 "Congolais-e": ["nationaliteee_phy_tun_1"],
 "Nord-Coréen-ne": ["nationaliteee_phy_tun_1"],
 "Sud-Coréen-ne": ["nationaliteee_phy_tun_1"],
@@ -1279,7 +1279,7 @@
       "type": "number",
       "description": "",
       "name": "input_numero_cin_personne_physique_tunisienne",
-      "label": "Numéro de carte d'identité nationale",
+      "label": "Numéro de la carte d'identité nationale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -1290,12 +1290,44 @@
       },
       "visibility": true
     },
+	{
+      "id": "input_date_delivrance_cin_personne_physique_tunisienne_employee",
+      "type": "date",
+      "description": "",
+      "name": "input_date_delivrance_cin_personne_physique_tunisienne_employee",
+      "label": "Date de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_cin_phy_tun_employee"]
+        
+      },
+      "visibility": true
+    },
+		 {
+      "id": "input_lieu_delivrance_cin_personne_physique_tunisienne_employee",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_delivrance_cin_personne_physique_tunisienne_employee",
+      "label": "Lieu de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_cin_phys_tun_employee"]
+        
+      },
+      "visibility": true
+    },
    {
       "id": "input_lieu_naissance_personne_physique_tunisienne_1",
       "type": "text",
       "description": "",
       "name": "input_lieu_naissance_personne_physique_tunisienne_1",
-      "label": "Lieu de naissance",
+      "label": "Ville de naissance",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -1311,7 +1343,7 @@
       "type": "text",
       "description": "",
       "name": "input_lieu_naissance_personne_physique_tunisienne",
-      "label": "Lieu de naissance",
+      "label": "Ville de naissance",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -1324,7 +1356,7 @@
     },
    {
       "id": "input_date_naissance_personne_physique_tunisienne_1",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne_1",
       "label": "Date de naissance",
@@ -1340,7 +1372,7 @@
     },
    {
       "id": "input_date_naissance_personne_physique_tunisienne",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne",
       "label": "Date de naissance",
@@ -1431,7 +1463,7 @@
       "options": [],
       "value": "Personne physique",
       "bookmarkIdPerValue": {
-        "Personne physique": ["Infos_employeur_moral","Infos_employeur_physique_1"]
+        "Personne physique": ["Infos_employeur_physique"]
       },
       "visibility": true
     },
@@ -1446,9 +1478,9 @@
       "options": [],
       "value": "Personne morale",
       "bookmarkIdPerValue": {
-        "Personne morale": ["Infos_employeur_physique"]
+        "Personne morale": ["Infos_employeur_moral","Infos_employeur_physique_1"]
       },
-      "visibility": true
+      "visibility": false
     },
 
  
@@ -1508,13 +1540,13 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["adresse_morale_tun_caution"]
+        "text": ["adresse_morale_tun_caution","adresse_morale_tun_caution_1"]
         },
       "visibility": true
     },
   {
       "id": "input_capital_personne_morale_tunisienne_caution",
-      "type": "text",
+      "type": "number",
       "description": "",
       "name": "input_capital_personne_morale_tunisienne_caution",
       "label": "Capital social en Dinars",
@@ -1588,14 +1620,14 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["adresse_phys_etrg_caution"]
+        "text": ["adresse_phys_etrg_caution","adresse_phys_etrg_caution_1"]
         
       },
       "visibility": true
     },
   {
       "id": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_delivrance_passeport_personne_physique_etrangere_caution",
       "label": "Date d’expiration du passeport",
@@ -1643,7 +1675,7 @@
     },
   {
       "id": "input_nationalité_personne_physique_etrangere_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_nationalité_personne_physique_etrangere_caution",
       "label": "Date de naissance",
@@ -1701,18 +1733,49 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": ["adresse_phy_tun_caution"]
+        "text": ["adresse_phy_tun_caution","adresse_phy_tun_caution_1"]
         
       },
       "visibility": true
     },
-  
+  {
+      "id": "input_date_delivrance_cin_personne_physique_tunisienne_employeur",
+      "type": "date",
+      "description": "",
+      "name": "input_date_delivrance_cin_personne_physique_tunisienne_employeur",
+      "label": "Date de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_cin_phy_tun_caution"]
+        
+      },
+      "visibility": true
+    },
+		 {
+      "id": "input_lieu_delivrance_cin_personne_physique_tunisienne_employeur",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_delivrance_cin_personne_physique_tunisienne_employeur",
+      "label": "Lieu de délivrance de la carte d’identité nationale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_cin_phys_tun_caution"]
+        
+      },
+      "visibility": true
+    },
   {
       "id": "input_numero_cin_personne_physique_tunisienne_caution",
       "type": "number",
       "description": "",
       "name": "input_numero_cin_personne_physique_tunisienne_caution",
-      "label": "Numéro de carte d'identité nationale",
+      "label": "Numéro de la carte d'identité nationale",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -1741,7 +1804,7 @@
     },
   {
       "id": "input_date_naissance_personne_physique_tunisienne_caution",
-      "type": "Date",
+      "type": "date",
       "description": "",
       "name": "input_date_naissance_personne_physique_tunisienne_caution",
       "label": "Date de naissance",
@@ -1847,33 +1910,33 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "forme_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
 	{
@@ -1881,848 +1944,834 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "adresse_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
-    },{
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "adresse_morale_tun_caution_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
       "bookmarkId": "identi_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nom_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "prenom_morale_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
   {
       "bookmarkId": "nom_phys_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prenom_phy_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nationalité_phy_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "pays_passp_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "num_passp_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "date_passp_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_phys_etrg_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "adresse_phys_etrg_caution_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
   {
       "bookmarkId": "prenom_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "nom_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "date_naiss_phys_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "lieu_naiss_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "nume_cin_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
-    },{
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "date_cin_phy_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+   
+		{
+      "bookmarkId": "lieu_cin_phys_tun_caution",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
       "bookmarkId": "adresse_phy_tun_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "adresse_phy_tun_caution_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
   {
       "bookmarkId": "personne_physique_tunisienne_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_physique_etrangere_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "personne_morale_tunisienne_caution",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "Infos_employeur_moral",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
+	
 	{
       "bookmarkId": "Infos_employeur_physique",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "Infos_employeur_physique_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "nom_phys_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+	
+	
 	{
       "bookmarkId": "nom_phys_tun",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
-    },{
-      "bookmarkId": "prenom_phys_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "prenom_phys_tun",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "date_naiss_phys_tun",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "date_naiss_phys_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+	
 	{
       "bookmarkId": "lieu_naiss_phy_tun",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
-      "bookmarkId": "lieu_naiss_phy_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },{
       "bookmarkId": "nume_cin_phy_tun",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
-      "bookmarkId": "nume_cin_phy_tun_1",
+      "bookmarkId": "lieu_cin_phys_tun_employee",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "date_cin_phy_tun_employee",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
 	{
       "bookmarkId": "adresse_phy_tun",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "adresse_phy_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "nationaliteee_phy_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "expiration_phy_tun_1",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+	
+	
 	{
       "bookmarkId": "question_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_4",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "question_4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
 	{
       "bookmarkId": "annee_question_5",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "type": "USER_INPUT",
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "mois_question_5",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "jours_question_5",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
-    },
+	
+	
+		
+	
+	
 	{
       "bookmarkId": "inserez_annee_question_5",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
-	{
-      "bookmarkId": "inserez_mois_question_5",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
-	{
-      "bookmarkId": "inserez_jours_question_5",
-      "value": "",
-      "fontFamily": "Times New Roman",
-      "color": null,
-      "bold": true,
-      "italic": false,
-      "capitalized": false,
-      "type": "USER_INPUT",
-      "fontSize": 11
-    },
+	
+	
 	{
       "bookmarkId": "question_6",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_7",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_date_essai_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_non_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_8",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_8_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_8_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_8_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_9",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_10",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
+	{
+      "bookmarkId": "question_10_lieu",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	
 	{
       "bookmarkId": "question_non_11",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_11",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "question_11",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "question_oui_11_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 12
     },
 	{
       "bookmarkId": "temps_complet_question_12",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "temps_partiel_question_12",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_12_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_12_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_12_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_13",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_14",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_14_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_14_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_14_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_non_14",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_15",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_15_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "question_oui_15_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_non_15",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_16",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_16_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_16_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_16_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_non_16",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	
 	{
@@ -2730,84 +2779,84 @@
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "question_oui_17_3",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "question_oui_17_2",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "question_oui_17_1",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "question_oui_17",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },{
       "bookmarkId": "question_non_17",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "PARAGRAPH_WITH_BOOKMARKS",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "perimetre_question_oui_17",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     },
 	{
       "bookmarkId": "obligation_question_oui_17",
       "value": "",
       "fontFamily": "Times New Roman",
       "color": null,
-      "bold": true,
+      "bold": false,
       "italic": false,
       "capitalized": false,
       "type": "USER_INPUT",
-      "fontSize": 11
+      "fontSize": 12
     }
 	
 	

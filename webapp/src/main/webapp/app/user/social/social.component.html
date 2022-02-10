@@ -1,0 +1,51 @@
+<div class="section">
+<div id="main">
+    <div id="menu">
+
+
+   
+
+    </div>
+   <!--  <div id="menul">
+        Menu
+       </div> -->
+    <div id="contenu">
+        <div>
+            <h1 class="maintitle ">
+            Créez votre contrat du  <span class="text-span-7">travail</span> 
+            <!-- <br/> <span class="title-2"> simplement et rapidement </span> -->
+            <span class="text-span-5">!</span></h1>
+            </div>
+        <table class="table-sarl">
+            <tbody class="all-tab-sarl">
+
+                
+                <tr>
+                    <th>Recrutement/Embauche</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('droit de travail cdi')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('droit de travail cdd')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('Demission créer droit de travail')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                </tr>
+               
+                <tr>
+                    <th>Fin du contrat/Résiliation</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('SOLDE DE TOUT COMPTE créer droit de travail')" [routerLink]="['legal-document-description/', legalDocument.id]"><div  class="contrat-4"(click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('droit de travail resil')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+   </div>
+   
+</div>

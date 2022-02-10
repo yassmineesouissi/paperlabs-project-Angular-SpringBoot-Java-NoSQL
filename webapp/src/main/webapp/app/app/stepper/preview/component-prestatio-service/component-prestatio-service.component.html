@@ -1,0 +1,291 @@
+<div class="test">
+    <div class="title"> CONTRAT DE PRESTATION DE SERVICE</div>
+
+    <p><strong>ENTRE LES SOUSSIGNES </strong></p>
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value}}</span>,
+        de nationalité tunisienne, née le <span
+            *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value}}</span>
+        à <span
+            *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value}}</span>,
+        titulaire de la carte d’identité nationale n° <span
+            *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value}}</span>
+        délivrée à <span
+            *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>
+        le <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>,
+        demeurant au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value}}</span>.
+    </div>
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value}}</span>,
+        de nationalité <span
+            *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value}}</span>,
+        titulaire du passeport <span
+            *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value}}</span>
+        n°<span
+            *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value}}</span>
+        délivré le <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value}}</span>,
+        élisant domicile au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value}}</span>.
+    </div>
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+        La société <span
+            *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value}}</span>,
+        <span
+            *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value}}</span>,
+        au capital de <span
+            *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value}}</span>
+        Dinars Tunisiens dont
+        le siège social est sis au <span
+            *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value}}</span>
+        titulaire de
+        l’identifiant unique n° <span
+            *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value}}</span>
+        ,
+        représentée par <span
+            *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value}}</span>dûment
+        habilité(e) à l’effet des présentes.
+    </div>
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_caution').checked">
+        La société <span
+            *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value}}</span>
+        , <span
+            *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value}}</span>,
+        immatriculée en <span
+            *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_caution').value}}</span>
+        sous le n° <span
+            *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value}}</span>
+        ,
+        dont le siège social est sis au <span
+            *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value}}</span>,
+        représentée par <span
+            *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value}}</span>dûment
+        habilité(e) à l’effet des présentes.
+    </div>
+    <p> Ci-après dénommée le « <strong> Client</strong> »</p>
+    <div class="domination"><strong> D’UNE PART</strong> </div>
+
+    <p><strong>ET</strong> </p>
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_debiteur').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value}}</span>,
+        de nationalité tunisienne, née le <span
+            *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value}}</span>
+        à <span
+            *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value}}</span>,
+        titulaire de la carte d’identité nationale n° <span
+            *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value}}</span>
+        délivrée à <span
+            *ngIf="getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>
+        le <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>,
+        demeurant au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value}}</span>.
+    </div>
+
+
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_debiteur').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value}}</span>,
+        de nationalité <span
+            *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value}}</span>,
+        titulaire du passeport <span
+            *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value}}</span>
+        n°<span
+            *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value}}</span>
+        délivré le <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value}}</span>,
+        élisant domicile au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value}}</span>.
+    </div>
+
+
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_debiteur').checked">
+        La société <span
+            *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value}}</span>,
+        <span
+            *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value}}</span>,
+        au capital de <span
+            *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value}}</span>
+        Dinars Tunisiens dont
+        le siège social est sis au <span
+            *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value}}</span>
+        titulaire de
+        l’identifiant unique n° <span
+            *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value}}</span>
+        ,
+        représentée par <span
+            *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value}}</span>dûment
+        habilité(e) à l’effet des présentes.
+    </div>
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_debiteur').checked">
+        La société <span
+            *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value}}</span>
+        , <span
+            *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value}}</span>,
+        immatriculée en <span
+            *ngIf="getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_immatriculation_personne_morale_etrangere_debiteur').value}}</span>
+        sous le n° <span
+            *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value}}</span>
+        ,
+        dont le siège social est sis au <span
+            *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value}}</span>,
+        représentée par <span
+            *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value}}</span>dûment
+        habilité(e) à l’effet des présentes.
+    </div>
+    <p> Ci-après dénommée le «<strong> Prestataire</strong> »</p>
+    <div class="domination"><strong> D’AUTRE PART </strong></div>
+
+    <p> Le Client et le Prestataire seront ci-après dénommés collectivement par les « Parties » et individuellement par
+        la « Partie ».</p>
+
+    <div class="title">
+          <strong>      IL A ETE CONVENU ET ARRETE CE QUI SUIT</strong> 
+    </div>
+
+
+
+    <p><strong>1 DEFINITIONS – INTERPRETATIONS</strong> </p>
+    <p><strong> 1.1 Définitions </strong></p>
+
+    <P> <strong> « Contrat » </strong> Désigne le présent contrat de prestation de service. </P>
+    <p> <strong> « Date de Signature » </strong> Désigne la date à laquelle le présent Contrat sera signé
+        par la dernière Partie.</p>
+    <P> <strong> « Information Confidentielle » </strong> A le sens qui lui est attribué à l’article ‎6 du Contrat.</P>
+    <P> <strong> « Services » </strong> Désigne les services suivants :
+        - <span
+            *ngIf="getHtmlInputElement('input_service').value !== '' ">{{getHtmlInputElement('input_service').value}}</span>.
+    </P>
+  <p><strong>  1.2	Interprétations   </strong>   </p>
+  <div>  Aux termes du présent Contrat, une référence à :
+    i.	Une clause est une référence à une clause du présent Contrat ; 
+    ii.	Des mots au pluriel s'applique au singulier et vice versa ; 
+    iii.	Une personne est une référence à une personne physique, à une société, à une association ou à une entreprise et inclut ses successeurs et cessionnaires ; et 
+    iv.	Lorsqu'un nombre quelconque de jours est prévu pour l'accomplissement d'un quelconque acte ou pour un quelconque but, le calcul inclura le premier et le dernier jour, qui devront être des jours ouvrables et inclura les samedis, dimanches et jours fériés inclus durant la période. </div>
+ 
+  
+ 
+    <strong>    2	OBJET           </strong>  
+ <p>   Le Prestataire consent et s’engage à délivrer au Client les Services, à sa demande, pendant la durée du présent Contrat, et en contrepartie de la rémunération figurant à l’article 4 du présent Contrat.
+ </p>
+  
+   
+<p>  <strong>    3	INDEPENDANCE – POUVOIR        </strong>     </p> 
+    <p> <strong>     3.1	Indépendance juridique  </strong>  </p>
+
+<P>   Le Prestataire exécute l'objet du présent Contrat en toute indépendance juridique. A ce titre, il reconnaît que le présent Contrat ne crée entre les Parties (i) aucune association ou société de fait ou de droit ni (ii) aucun lien de dépendance ou de subordination professionnelle. 
+</P>
+ <P>   Le Prestataire reconnaît que le personnel mis à la disposition du Client fait et fera, durant toute la durée du présent Contrat, partie exclusivement du personnel salarié dudit Prestataire. En conséquence, le Prestataire s’engage à assumer, seul, la rémunération de son personnel (salaires, cotisations sociales, assurances, etc.) et à assurer, seul, toutes les obligations légales et réglementaires incombant aux employés de sorte que le Client ne soit en rien demandé de ce chef. 
+</P>
+      En outre, le Prestataire s'engage, au cas où la responsabilité du Client serait recherchée au titre de l'affectation de son personnel
+      (i) à se constituer en lieu et place du Client dans l'action judiciaire intentée contre ce dernier et
+      (ii) à indemniser le Client de tout dommage subi et/ou de tous frais engagés par suite de cette action et ce quel que soit la qualification juridique donnée à la relation entre le Client et le personnel mis à la disposition du Client par le Prestataire. 
+    
+     <P>Enfin, le Prestataire s'engage, au cas où sa propre responsabilité serait recherchée au titre de l'affectation de son personnel à ne pas rechercher et/ou impliquer de quelque manière que ce soit la responsabilité du Client.
+    </P> 
+
+    <P>  <strong> 3.2	Pouvoirs </strong></P>
+  <P> La mission du Prestataire étant strictement limitée aux prestations de services ci-dessus, celui-ci ne pourra prendre aucune décision pour le compte du Client, à moins d'en avoir au préalable été expressément autorisée par écrit. </P>
+     <P>     <strong>   4	REMUNERATION – MODALITES DE PAIEMENT </strong></P>
+    <P>    <strong>   4.1	Rémunération </strong></P>
+ <p>  En contrepartie de la fourniture des Services, le Prestataire percevra une rémunération s’élevant à  </p>
+ <div *ngIf="getHtmlInputElement('input_dinars_tunisien').checked">
+  <span *ngIf="getHtmlInputElement('input_dinars_tunisien_montant_en_lettres').value !== '' ">{{getHtmlInputElement('input_dinars_tunisien_montant_en_lettres').value}}</span>, (<span *ngIf="getHtmlInputElement('input_dinars_tunisien_montant_en_chiffres').value !== '' ">{{getHtmlInputElement('input_dinars_tunisien_montant_en_chiffres').value}}</span>) Dinars hors frais et taxes.
+ </div>
+ 
+ <div *ngIf="getHtmlInputElement('input_devise_etrangere').checked">
+  <span *ngIf="getHtmlInputElement('input_devise_etrangere_montant_en_lettres').value !== '' ">{{getHtmlInputElement('input_devise_etrangere_montant_en_lettres').value}}</span>, (<span *ngIf="getHtmlInputElement('input_devise_etrangere_montanten_chiffres').value !== '' ">{{getHtmlInputElement('input_devise_etrangere_montanten_chiffres').value}}</span>) 
+  <span *ngIf="getHtmlInputElement('input_nature_devise_en_lettres').value !== '' ">{{getHtmlInputElement('input_nature_devise_en_lettres').value}}</span> 
+   soit la contre-valeur en Dinars de <span *ngIf="getHtmlInputElement('input_devise_etrangere_montant_en_lettres_1').value !== '' ">{{getHtmlInputElement('input_devise_etrangere_montant_en_lettres_1').value}}</span> (<span *ngIf="getHtmlInputElement('input_devise_etrangere_montanten_chiffres_1').value !== '' ">{{getHtmlInputElement('input_devise_etrangere_montanten_chiffres_1').value}}</span>), hors frais et taxes.
+ 
+</div>
+
+    <strong> 4.2	Modalités de paiement</strong>
+  <p>  Le règlement de la rémunération se fera par <span *ngIf="getHtmlInputElement('input_question_5').value !== '' ">{{getHtmlInputElement('input_question_5').value}}</span> dans une période maximale de <span *ngIf="getHtmlInputElement('input_question_6').value !== '' ">{{getHtmlInputElement('input_question_6').value}}</span> jours à compter de la date de réception de la facture par le Client. </p>
+  <P>  <strong>    5	DUREE – RESILIATION ANTICIPEE </strong> </P>
+  <P>  <strong> 5.1	Durée  </strong> </P>
+    Le présent Contrat est conclu pour une durée de <span *ngIf="getHtmlInputElement('input_duree_contrat').value !== '' ">{{getHtmlInputElement('input_duree_contrat').value}}</span> à compter de la Date de Signature.
+    <div *ngIf="getHtmlInputElement('input_echeance_contrat_oui').checked">
+    Une fois arrivé à terme, le présent Contrat sera reconduit pour des périodes successives de <span *ngIf="getHtmlInputElement('input_duree_successive_reconduction').value !== '' ">{{getHtmlInputElement('input_duree_successive_reconduction').value}}</span> 
+    sauf si une des Parties y met un terme à la fin de la durée initiale ou à la fin de tout renouvellement en respectant un préavis de <span *ngIf="getHtmlInputElement('input_combien_jours_preavi').value !== '' ">{{getHtmlInputElement('input_combien_jours_preavi').value}}</span>  jours.
+    </div>
+    <div *ngIf="getHtmlInputElement('input_echeance_contrat_non').checked">
+    Une fois arrivé à terme, le présent Contrat prendra fin sans aucune formalité. Il est précisé qu’en aucun cas le présent Contrat ne pourra être reconduit tacitement. </div>
+   <P>  <strong>  5.2	Résiliation anticipée </strong></P>
+    Le présent Contrat pourra être résilié à tout moment : 
+    i.	Si l'une des Parties devient insolvable ou fait l'objet d'une procédure de redressement/liquidation volontaire ou forcée ; 
+    ii.	En cas de manquement ou de violation par l'une des Parties à l'une des dispositions du présent Contrat, l'autre Partie sera en droit de la mettre en demeure par lettre recommandée avec accusé de réception de se conformer aux dispositions contractuelles méconnues.
+     Si cette mise en demeure n'est pas suivie d'effet dans les  <span *ngIf="getHtmlInputElement('input_question_9').value !== '' ">{{getHtmlInputElement('input_question_9').value}}</span> jours à partir de la date de sa notification, la Partie plaignante pourra alors mettre fin au présent Contrat avec effet immédiat, et ceci sans préjudice des indemnités qu'elle pourra demander à la Partie défaillante.
+    <P>    <strong>  6	CONFIDENTIALITE </strong> </P>
+   <P> Chacune des Parties s’interdit de communiquer à quiconque, directement ou indirectement, tout ou partie des termes du présent Contrat ainsi que toutes informations qui lui seront transmises par l’autre Partie ou dont elle aura eu connaissance à l’occasion de l’exécution de ce dernier (ci-après les « Informations Confidentielles »). </P>
+    
+    <P> Nonobstant ce qui précède, une Information Confidentielle pourra être divulguée par l'une des Parties :</P>
+<div>  <p>  i.	A tout membre de son personnel ou à l’un quelconque de ses préposés ou représentants de quelque nature qu’il soit, permanent ou occasionnel, prenant part à l’exécution des présentes, dans la seule mesure strictement nécessaire à cette exécution, et sous réserve qu’il se soit engagé par écrit auprès de la Partie concernée à ne pas divulguer ces Informations Confidentielles ; 
+</p>
+<p>  ii.	A ses conseils qui ont un besoin légitime d'obtenir des Informations Confidentielles dans le cadre de leurs activités en relation avec l’exécution des présentes et qui se sont engagés par écrit auprès de la Partie concernée à ne pas divulguer ces Informations Confidentielles (à l'exception toutefois des conseils qui en raison de leur profession seraient tenus au secret professionnel) ; et 
+</p>
+      <p>   iii.	A toute autre entité ou autorité à qui l’une ou plusieurs des Informations Confidentielles devra(ont) être communiquée(s) en application de la loi et notamment à toute autorité administrative ou tribunal compétents. 
+      </p>
+        Par ailleurs, il est convenu entre les Parties que la forme et le contenu de toute communication d'Informations Confidentielles devront recevoir l'approbation préalable écrite des Parties. 
+    Toutefois, une information ne sera pas considérée comme une Information Confidentielle si elle est dans le domaine public ou y tombe au cours de l’exécution du Contrat autrement que par une faute de la Partie soumise à l’obligation de confidentialité et/ou de l’un quelconque de ses préposés ou intervenants de quelque nature qu’ils soient, permanents ou occasionnels. 
+    Les obligations des Parties concernant les Informations Confidentielles resteront en vigueur pendant une période de cinq années à compter de l’expiration ou de la résiliation, pour quelque cause que ce soit, du présent Contrat.</div>
+    <p><strong> 7  DIVERS    </strong>  </p>    
+     <p><strong>  7.1	Prédominance du Contrat        </strong>   </p>        
+ <div>  Le présent Contrat constitue la totalité de l'accord entre les Parties afférent à l'objet du présent Contrat et prévaudra en toutes circonstances sur les accords et engagements précédents (écrits ou oraux) afférents au même objet.</div> 
+     <strong> 7.2	Divisibilité</strong>
+  <p> Dans le cas où l'une ou plusieurs stipulations contenues dans le présent Contrat seraient déclarées nulles, la validité des autres stipulations du présent Contrat n'en serait en aucun cas affectée. Les stipulations déclarées nulles seraient, conformément à l'esprit et à l'objet du présent Contrat, remplacées par d'autres stipulations valables, qui, eu égard à leur portée, se rapprocheraient dans la mesure permise par la loi des stipulations déclarées nulles.
+  </p> 
+    <strong>  7.3	Bénéfice </strong>
+   <p> Le présent Contrat est conclu intuitu personae. </p>
+  <p>  En conséquence, le Prestataire ne pourra pas, sous quelle que forme et à quelque titre que ce soit, céder ou transférer ses droits et obligations découlant du présent Contrat sans l’accord préalable et écrit du Client.
+  </p>
+    <strong>  7.4	Election de domicile </strong>
+  <div>  Pour l’exécution du présent Contrat et de ses suites éventuelles, les Parties et le Débiteur font élection de domicile, chacun à son adresse, tel qu’indiqué ci-dessus. </div>
+   
+  <strong>     7.5	Droit applicable et tribunaux compétents </strong>
+    <div>  Le présent Contrat est soumis au droit Tunisien. </div>
+    
+   <p> Fait en autant d’exemplaires que de droit,</p>
+    
+    Tunis le ____________
+    
+   <p>La Client </p>	
+    
+  <p>  Le Prestataire </p>
+     
+    
+    
+    
+
+
+
+
+
+</div>

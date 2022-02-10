@@ -1,0 +1,10 @@
+<!-- <jhi-home-page-section-1></jhi-home-page-section-1>
+<jhi-home-page-section-2></jhi-home-page-section-2>
+<jhi-home-page-section-3></jhi-home-page-section-3>
+<jhi-home-page-section-4></jhi-home-page-section-4> -->
+
+<router-outlet></router-outlet>
+<jhi-home-page-section-1 *ngIf="router.url != '/reset/request'"></jhi-home-page-section-1>
+<jhi-home-page-section-2 *ngIf="router.url != '/reset/request'"></jhi-home-page-section-2>
+<jhi-home-page-section-3 *ngIf="router.url != '/reset/request'"></jhi-home-page-section-3>
+<jhi-home-page-section-4 *ngIf="router.url != '/reset/request'"></jhi-home-page-section-4>

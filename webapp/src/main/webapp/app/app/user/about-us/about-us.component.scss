@@ -1,0 +1,56 @@
+.about {
+  font-family: 'calibri';
+  font-size: 25px;
+  color: #071a81;
+  font-weight: 700;
+  margin-top: 5%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.group-parg-about {
+  padding-bottom: 14%;
+  text-align: justify;
+}
+.parg-about {
+  font-family: 'calibri';
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.card-overview {
+  background-image: url('../../../content/images/us.jpg') !important;
+  background-position: 85%;
+  background-repeat: no-repeat !important;
+  background-size: 35%;
+  padding-top: 5%;
+
+  background-color: #f8f8f8;
+  margin-top: -4%;
+  padding-bottom: 1%;
+}
+
+@media screen and (max-width: 800px) {
+  .card-overview {
+    background-color: #f8f8f8;
+    margin-top: -11%;
+    background-image: url('../../../content/images/us.jpg') !important;
+    background-position: bottom;
+  }
+}
+
+.parag {
+  padding-left: 15%;
+  padding-top: 4%;
+}
+
+@media screen and (max-width: 800px) {
+  .parag {
+    padding-left: 10%;
+  }
+}
+.paperabs {
+  box-shadow: inset 0 -9px 0 0 #4fffb5;
+  font-weight: 600;
+  color: #1400c3;
+}

@@ -1,0 +1,135 @@
+$pap-color: #1400c3;
+
+a {
+  color: #495057;
+}
+
+a:hover {
+  color: $pap-color;
+  text-decoration: none;
+}
+
+.pap-footer {
+  padding-top: 20px;
+  background-color: #fafafa;
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+  width: 100%;
+}
+
+.pap-footer-title {
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  color: #1400c3;
+  line-height: 1;
+  margin-top: 0;
+}
+
+.pap-card {
+  border: none;
+}
+
+.pap-icons {
+  margin-right: 3%;
+  vertical-align: top;
+}
+
+fa-icon {
+  margin-right: 4%;
+}
+.min-height-footer-bottom {
+  min-height: calc(100vh - 349px);
+}
+.pap-footer-items {
+  margin: 1;
+  padding: 0;
+  list-style: none;
+  line-height: 3;
+}
+
+.pap-footer-item {
+  margin-bottom: 13px;
+}
+
+.pap-footer-item,
+.pap-footer-link {
+  font-size: 16px;
+  margin-bottom: -9px;
+  font-weight: normal;
+  text-decoration: none;
+}
+.pap-footer-link:hover {
+  color: #1400c3;
+}
+.pap-footer-sections {
+  width: 160%;
+}
+
+.pap-footer-section {
+  display: inline-block;
+  width: 24.5%;
+  vertical-align: top;
+  padding-bottom: 35px;
+  font-family: 'calibri';
+}
+
+@media screen and (max-width: 1260px) {
+  .pap-footer-section {
+    min-width: 32.5%;
+    width: min-content;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .pap-footer-section {
+    min-width: 49.5%;
+    width: min-content;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .pap-footer-section {
+    min-width: 99.5%;
+    width: min-content;
+  }
+}
+
+.pap-copyright {
+  margin-bottom: 20px;
+  font-size: 13px;
+  position: relative;
+  font-family: 'calibri';
+  width: 24.5%;
+  margin-left: 39%;
+  margin-right: 15%;
+}
+
+@media screen and (max-width: 955px) {
+  .pap-copyright {
+    margin-bottom: 20px;
+    font-size: 13px;
+    position: relative;
+    font-family: 'calibri';
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .pap-copyright {
+    margin-bottom: 20px;
+    font-size: 13px;
+    position: relative;
+    font-family: 'calibri';
+    margin-left: 0%;
+  }
+}
+
+.pap-color {
+  color: $pap-color;
+}

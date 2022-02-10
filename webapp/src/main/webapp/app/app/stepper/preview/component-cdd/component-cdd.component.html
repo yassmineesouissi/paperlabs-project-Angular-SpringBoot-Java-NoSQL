@@ -1,0 +1,248 @@
+ 
+ <div class="test">
+    
+    <div  class="title"><strong> CONTRAT DE TRAVAIL A DUREE DETERMINEE</strong></div>
+    
+    <strong>ENTRE LES SOUSSIGNEES</strong>
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+        <p><span
+                *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value}}</span>
+            , né le
+            <span
+                *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value}}</span>
+            ; à <span
+                *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value}}</span>
+            ,
+            titulaire de la carte d’identité tunisienne n°<span
+                *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value}}</span>
+            , élisant domicile
+            au <span
+                *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value}}</span>
+            ,</p>
+    </div>
+
+
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value}}</span>,
+        né le <span
+            *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value}}</span>
+        à <span
+            *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value}}</span>,
+        titulaire du passeport n° <span
+            *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value}}</span>,
+        valide jusqu’au <span
+            *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value}}</span>,
+        élisant domicile au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value}}</span>.
+
+    </div>
+
+
+    <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+        <p><span
+                *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value}}</span>
+            au
+            capital de
+            <span
+                *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value}}</span>
+            Dinars, titulaire de l’identifiant unique n°<span
+                *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value}}</span>,
+            dont le siège social est au <span
+                *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value}}</span>,
+            dument représentée par <span
+                *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value}}</span>
+        </p>
+    </div>
+
+    <p> <strong> Ci-après dénommée l’« Employeur».</strong></p>
+
+
+
+    <div class="soussigne">D’une part,</div>
+    <p><strong>ET</strong></p>
+
+
+    <div *ngIf="getHtmlInputElement('input_nature_employeur_physique').checked">
+        <p><span
+                *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne').value}}</span>
+            <span
+                *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne').value}}</span>
+            , né le
+            <span
+                *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne').value}}</span>
+            à <span
+                *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne').value}}</span>
+            , titulaire de la carte d’identité tunisienne n°<span
+                *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne').value}}</span>,
+            élisant domicile au. <span
+                *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne').value}}</span>
+    </div>
+
+
+    <div *ngIf="getHtmlInputElement('input_nature_employeur_morale').checked">
+        <span
+            *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_1').value}}</span>
+        <span
+            *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_1').value}}</span>,
+        né le <span
+            *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_1').value}}</span>
+        à <span
+            *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_1').value}}</span>
+        , de nationalité<span
+            *ngIf="getHtmlInputElement('input_nationaliteee_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_nationaliteee_personne_physique_tunisienne_1').value}}</span>
+        ,
+        titulaire du passeport n°<span
+            *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_1').value}}</span>
+        , valide jusqu’au<span
+            *ngIf="getHtmlInputElement('input_validite_passport_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_validite_passport_personne_physique_tunisienne_1').value}}</span>
+        ,
+        élisant domicile au <span
+            *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_1').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_1').value}}</span>.
+    </div>
+
+
+    <strong>Ci-après dénommé l’« Employé».</strong>
+    <div class="soussigne">D’autre part.</div>
+
+
+    <p>L’Employeur et l’Employé seront ci-après désignés, collectivement par les « Parties » et individuellement par la
+        « Partie ». </p>
+    <p> <strong>ETANT PREALABLEMENT RAPPELE QUE</strong></p>
+
+
+
+
+    <strong> Article 1 : Objet du Contrat </strong>
+    <p>L’Employeur engage l’Employé, en qualité de <span
+            *ngIf="getHtmlInputElement('input_question_3').value !== '' ">{{getHtmlInputElement('input_question_3').value}}</span>.
+    </p>
+    Le présent Contrat est conclu afin d’<span
+        *ngIf="getHtmlInputElement('input_question_4').value !== '' ">{{getHtmlInputElement('input_question_4').value}}</span>
+
+    <P> <strong> Article 2 : Durée du Contrat</strong> </P>
+    <div *ngIf="getHtmlInputElement('input_annee_question_5').checked">
+        Le présent Contrat est conclu pour une durée ferme de <span
+            *ngIf="getHtmlInputElement('input_inserez_annee_question_5').value !== '' ">{{getHtmlInputElement('input_inserez_annee_question_5').value}}</span>
+        années à compter de la date de prise d’effet.</div>
+
+    <div *ngIf="getHtmlInputElement('input_mois_question_5').checked">
+        Le présent Contrat est conclu pour une durée ferme de <span
+            *ngIf="getHtmlInputElement('input_inserez_mois_question_5').value !== '' ">{{getHtmlInputElement('input_inserez_mois_question_5').value}}</span>
+        mois à compter de la date de prise d’effet.</div>
+
+    <div *ngIf="getHtmlInputElement('input_jours_question_5').checked">
+        Le présent Contrat est conclu pour une durée ferme de <span
+            *ngIf="getHtmlInputElement('input_inserez_jours_question_5').value !== '' ">{{getHtmlInputElement('input_inserez_jours_question_5').value}}</span>
+        jours à compter de la date de prise d’effet.</div>
+
+
+    <strong> Article 3 : Prise d’effet</strong>
+    <p> Le présent Contrat prend effet à compter du <span
+            *ngIf="getHtmlInputElement('input_question_6').value !== '' ">{{getHtmlInputElement('input_question_6').value}}</span>
+        et expire au
+        <span
+            *ngIf="getHtmlInputElement('input_question_7').value !== '' ">{{getHtmlInputElement('input_question_7').value}}</span>
+        .
+        L’Employé se déclare libre de tout autre engagement, conformément aux conditions générales de lalégislation
+        tunisienne
+        du travail, et aux conditions particulières précisées dans le présent Contrat, qu’ilaccepte.</p>
+    
+              <strong>  Article 4 : Période d’essai  </strong>
+              <div *ngIf="getHtmlInputElement('input_question_oui_8').checked">
+          <p> Le présent Contrat est conclu pour une durée déterminée, sous réserve de l’accomplissement d’une période d’essai de  <span  *ngIf="getHtmlInputElement('input_question_date_essai_8').value !== '' ">{{getHtmlInputElement('input_question_date_essai_8').value}}</span>
+             mois de travail effectif, renouvelable une (1) fois pour la même durée.Avant l’expiration de la première période
+              d’essai et en cas de renouvellement de cette dernière,l’Employeur devra informer l’Employé de sa volonté de procéder à son renouvellement, par écrit.Au cours de cette période d’essai, chacune des deux Parties peut mettre fin au Contrat,
+              sans préavis et sursimple notification.</p>
+              </div>
+            <P>   <strong>      Article 5 : Rémunération </strong> </P>
+          <p> En contre partie de l’exécution de ses fonctions et compte tenu de la nature de son travail, l’Employépercevra, un salaire mensuel brut de <span *ngIf="getHtmlInputElement('input_question_9').value !== '' ">{{getHtmlInputElement('input_question_9').value}}</span>    dinars tunisiens.</p>
+        
+          <strong>     Article 6 : Lieu de travail</strong>
+          <P> L’Employé est engagé et affecté pour travailler principalement dans les locaux de l’Employeur sis au
+              <span *ngIf="getHtmlInputElement('input_question_10').value !== '' ">{{getHtmlInputElement('input_question_10').value}}</span>.Toutefois, l’Employé reconnait et accepte formellement la possibilité de se déplacer partout où le besoinde
+              ses fonctions le nécessiterait.</P>
+        
+              <strong>         Article 7 : Régime horaire</strong>
+              <div *ngIf="getHtmlInputElement('input_temps_complet_question_12').checked">
+          <P> L’Employé sera soumis au régime de travail de <span *ngIf="getHtmlInputElement('input_duree_normal_travail_question_12_1').value !== '' ">{{getHtmlInputElement('input_duree_normal_travail_question_12_1').value}}</span> heures par semaine.</P>
+              </div>
+              <div *ngIf="getHtmlInputElement('input_temps_partiel_question_12').checked">
+                <P> L’Employé sera soumis au régime de travail à temps partiel de  <span *ngIf="getHtmlInputElement('input_duree_normal_travail_question_12_2').value !== '' ">{{getHtmlInputElement('input_duree_normal_travail_question_12_2').value}}</span> heures par semaine.</P>
+                    </div>
+                
+          
+          <strong>   Article 8 : Congés payés</strong>
+          <P> L’Employé bénéficiera d’un congé payé de <span *ngIf="getHtmlInputElement('input_question_13').value !== '' ">{{getHtmlInputElement('input_question_13').value}}</span>jours ouvrables par mois travaillé.</P>
+       
+       
+          <strong>        Article 9 : Absence pour maladie</strong>
+          <P> L’absence pour maladie doit être justifiée dans les 48 heures par un certificat médical délivré par unmédecin, précisant sa durée et sa cause.2 </P>
+        
+          <div *ngIf="getHtmlInputElement('input_question_oui_14').checked">
+          <strong>    Article 10 : Clause d’exclusivité </strong>
+          
+          <P> Tout au long de la période de validité du présent Contrat, l’Employé s’engage à :-Consacrer toute son activité professionnelle à l’Employeur et à se conformer strictement auxinstructions données par son supérieur hiérarchique et à respecter
+              les horaires de travail ;-Consacrer tous ses soins, diligences et la totalité de son activité professionnelle à l’Employeur. Il luiest interdit d’exercer toute autre activité professionnelle.</P>
+          </div>
+
+          <div *ngIf="getHtmlInputElement('input_question_oui_15').checked">
+              <strong>     Article 11 : Clause de confidentialité </strong>
+          <P> L’Employé s’engage, tant pendant l’exécution du présent Contrat qu’après sa résiliation, à conserver laconfidentialité la plus stricte sur les informations inconnues du public, concernant les activités del’Employeur, y compris et sans limitation,
+              les spécifications de produits et formules, méthodes,documents techniques et produits, ainsi que les études, programmes de recherche et développement,correspondances, liste de clients, noms des clients, rapports de vente et informations
+              financières. L’Employé s’engage à ne pas utiliser et à ne pas communiquer ces informations confidentielles pourquelque motif que ce soit, sans l’accord préalable et écrit de l’Employeur.</P>
+          </div>
+          <div *ngIf="getHtmlInputElement('input_question_oui_16').checked">
+              <strong>      Article 12 : Propriété des travaux</strong> <P>
+                  L’Employeur conserve la propriété et les droits d’utilisation des logiciels, de la documentation, et detoutes les informations de toute nature (notamment technique ou commerciale) mis
+          à la disposition oumême élaborés, produit, pensé et développé par l’Employé dans le cadre du Contrat.A l’expiration du Contrat, quelle qu’en soit la cause, l’Employé remettra automatiquement et sans délai àl’Employeur tous les supports de
+          quelque nature que ce soit, qui lui auront été confiés ou élaborés par luidans le cadre du Contrat.L’Employé déclare renoncer de manière ferme et définitive à toute revendication ou droit de propriétéintellectuelle relatifs à tout travail
+          réalisé dans le cadre du présent Contrat pour le compte de l’Employeurou d’un tier.</P>
+          </div>
+          <div *ngIf="getHtmlInputElement('input_question_oui_17').checked">
+          <strong>     Article 13 : Non-concurrence</strong>
+          <P> Compte tenu de la nature des informations détenues par l’Employé et des fonctions assurées par ce dernier, et afin depréserver les intérêts de l’Employeur en cas de résiliation du Contrat pour
+          quelque motif que ce soit, l’Employé accepte de ne pas entrer au service d’une entreprise concurrente, ni à participer directement ou indirectement à toute activité pouvant concurrencer l’activité de l’Employeur. </P>
+           La présente clause de non-concurrence
+          s’applique pour une durée de <span *ngIf="getHtmlInputElement('input_obligation_question_oui_17').value !== '' ">{{getHtmlInputElement('input_obligation_question_oui_17').value}}</span> mois à compter de la date de résiliation du Contrat et ce dans un périmètre
+          de <span *ngIf="getHtmlInputElement('input_perimetre_question_oui_17').value !== '' ">{{getHtmlInputElement('input_perimetre_question_oui_17').value}}</span> kilomètres du lieu d’établissement de l’Employeur.
+          
+          <P>  Après la rupture du Contrat pour quelque motif
+          que ce soit, l’Employeur se réserve le droit de libérer l’Employé de l’interdiction de concurrence moyennant une lettre recommandée avec accusé de réception.</P>
+          <P> En cas de non-respect de la présente obligation de non-concurrence, l’Employé accepte
+          de verser à l’Employeur des dommages et intérêts résultant du non-respect de cette obligation.</P>
+          </div>
+   
+          <strong> Article 14 : Election de domicile </strong>
+    <P>Pour l’exécution du présent Contrat, les Parties font élection de domicile en leur lieu respectif derésidence
+        effectif.</P>
+    <strong> Article 15 : Droit applicable et attribution de compétences</strong>
+    <p> Le présent Contrat sera régi et interprété selon les lois de la République Tunisienne.Tous litiges pouvant
+        naître à l’occasion de l’interprétation ou de l’exécution du présent Contrat serontsoumis aux tribunaux
+        tunisiens. </p>
+    <table>
+        <tr>
+            <td><strong> L’EMPLOYEUR </strong> </td>
+            <td></td>
+            <td><strong> L’EMPLOYE </strong></td>
+        </tr>
+
+        <tr>
+            <td> Date______________________ </td>
+            <td></td>
+            <td> Date______________________ </td>
+        </tr>
+
+    </table>
+
+</div>

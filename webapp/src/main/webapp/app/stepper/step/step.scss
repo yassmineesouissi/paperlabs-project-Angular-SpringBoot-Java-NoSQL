@@ -17,27 +17,21 @@ $indigo: #1400c3;
   font-size: 0.85rem;
 }
 
-
 .step-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   position: relative;
   margin: 0 0 2rem;
-  font-size: calc(100% + 1vw + 1vh);
-  
- 
-  
+  //font-size: calc(100% + 1vw + 1vh);
 }
-.step-description{
+.step-description {
   margin-left: 1em;
   color: gray;
   margin-bottom: 20px;
- 
+
   font-size: 17px;
-    font-family: initial;
-
+  font-family: initial;
 }
-
 
 .navigation-buttons {
   margin-top: 5em;
@@ -53,7 +47,6 @@ $indigo: #1400c3;
   border-radius: 8px;
   border-color: #8080806e;
 }
-
 
 .btn-download:hover {
   background-color: #80808033;
@@ -91,8 +84,8 @@ $indigo: #1400c3;
 
 .preview-btn {
   float: right;
-  color: #000066;
-  margin-right: 5px;
+  //color: #000066;
+  margin-right: 5px; //5px pour afficher
 }
 .preview-btn:hover:enabled {
   color: #fff;
@@ -110,25 +103,21 @@ $indigo: #1400c3;
 }
 
 @media screen and (max-width: 1626px) {
-  .step-description{
+  .step-description {
     margin-left: 1em;
     color: gray;
     margin-bottom: 20px;
     font-size: 15px;
     font-family: initial;
-
-  
   }
 }
 @media screen and (max-width: 1777px) {
-  .step-description{
+  .step-description {
     margin-left: 1em;
     color: gray;
     margin-bottom: 20px;
     font-size: 15px;
     font-family: initial;
-
-  
   }
 }
 /* @media screen and (max-width: 1532px) {
@@ -143,34 +132,31 @@ $indigo: #1400c3;
   }
 } */
 @media screen and (max-width: 1532px) and (min-width: 1401px) {
-  .step-description{
+  .step-description {
     margin-left: 1em;
     color: gray;
     margin-bottom: 20px;
     font-size: 0.8em;
-    font-family: initial;}
+    font-family: initial;
+  }
 }
 @media screen and (max-width: 1400px) {
-  .step-description{
+  .step-description {
     margin-left: 1em;
     color: gray;
     margin-bottom: 20px;
     font-size: 13px;
     font-family: initial;
-
-  
   }
 }
 
 @media screen and (max-width: 1332px) {
-  .step-description{
+  .step-description {
     margin-left: 1em;
     color: gray;
     margin-bottom: 20px;
     font-size: 12px;
     font-family: initial;
-
-  
   }
 }
 
@@ -184,8 +170,6 @@ $indigo: #1400c3;
     border-radius: 4px;
     box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
   }
-  
-  
 }
 
 @media screen and (max-width: 852px) {
@@ -220,4 +204,3 @@ $indigo: #1400c3;
 .innerBloc {
   padding-left: 4%;
 }
-

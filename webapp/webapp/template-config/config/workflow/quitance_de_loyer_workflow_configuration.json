@@ -323,10 +323,10 @@
 	  },
 	  
 	  {
-      "inputId": "input_question_3_mandataire_du_bailleur",
+      "inputId": "input_question_3_bailleur",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "question_3_bailleur",
           "constraints": [
             {
               "elementId": "input_question_3_mandataire_du_bailleur_nom",
@@ -337,9 +337,16 @@
               "visibility": true
             }
           ]
-        },
+        }
+       
+      ]
+    },
+	
+	 {
+      "inputId": "input_question_3_mandataire_du_bailleur",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "question_3_mandataire",
           "constraints": [
             {
               "elementId": "input_question_3_mandataire_du_bailleur_nom",
@@ -351,26 +358,14 @@
             }
           ]
         }
+       
       ]
     },
 	 {
       "inputId": "input_question_4_mandataire_du_preneur",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_4_mandataire_du_preneur_nom",
-              "visibility": true
-            },
-			{
-              "elementId": "input_question_4_mandataire_du_preneur_prenom",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "question_4_mandataire",
           "constraints": [
             {
               "elementId": "input_question_4_mandataire_du_preneur_nom",
@@ -382,32 +377,54 @@
             }
           ]
         }
+        
       ]
     },
-	 {
-      "inputId": "input_question_7",
+	
+	{
+      "inputId": "input_question_4_preneur",
       "valuesConstraints": [
         {
-          "value": "N° du titre foncier",
+          "value": "question_4_preneur",
           "constraints": [
             {
-              "elementId": "input_question_7_1",
+              "elementId": "input_question_4_mandataire_du_preneur_nom",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_4_mandataire_du_preneur_prenom",
               "visibility": true
             }
           ]
-        },
-		{
-          "value": "Non applicable",
+        }
+        
+      ]
+    },
+	 	{
+      "inputId": "input_num_titre_fonicier_7_oui",
+      "valuesConstraints": [
+        {
+          "value": "",
           "constraints": [
             {
-              "elementId": "input_question_7_1",
+              "elementId": "input_numero_titre_financier_7",
               "visibility": false
-            }
-          ]
-        }
+            }]
+          }]
+        },
 		
-      ]
-    }
+		{
+      "inputId": "input_non_applicable_7",
+      "valuesConstraints": [
+        {
+          "value": "",
+          "constraints": [
+            {
+              "elementId": "input_numero_titre_financier_7",
+              "visibility": true
+            }]
+          }]
+        }
 
 	]
 	}

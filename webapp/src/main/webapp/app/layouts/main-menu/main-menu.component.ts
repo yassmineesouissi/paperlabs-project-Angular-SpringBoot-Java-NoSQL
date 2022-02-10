@@ -13,6 +13,7 @@ import { Account } from 'app/core/user/account.model';
 import { LegalDocumentService } from 'app/entities/legal-document/legal-document.service';
 import { ILegalDocument } from 'app/shared/model/legal-document.model';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'jhi-main-menu',
@@ -20,6 +21,8 @@ import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
+  language = 'fr';
+  languages: any[];
   modalRef: NgbModalRef;
   authSubscription: Subscription;
   account: Account;
@@ -45,12 +48,23 @@ export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
     public router: Router,
     private eventManager: JhiEventManager,
     private jhiAlertService: JhiAlertService,
-    private legalDocumentService: LegalDocumentService
+    private legalDocumentService: LegalDocumentService,
+    private translate: TranslateService
   ) {
-    this.isNavbarCollapsed = true;
+    translate.setDefaultLang(this.language), (this.isNavbarCollapsed = true);
   }
-
+  changeLanguage(): void {
+    if (this.language === 'fr') {
+      this.language = 'en';
+    } else {
+      this.language = 'fr';
+    }
+    this.translate.use(this.language);
+  }
   ngOnInit(): void {
+    this.languageHelper.getAll().then(languages => {
+      this.languages = languages;
+    });
     this.accountService.identity().then((account: Account) => {
       this.account = account;
     });
@@ -143,5 +157,12 @@ export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
   handleScroll() {
     this.windowScroll = window.pageYOffset;
     this.windowScroll >= this.elementPosition ? (this.sticky = true) : (this.sticky = false);
+  }
+
+  open(alldocs) {
+    alldocs.openMenu();
+  }
+  clos(alldocs) {
+    alldocs.closMenu();
   }
 }

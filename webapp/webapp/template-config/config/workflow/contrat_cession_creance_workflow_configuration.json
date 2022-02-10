@@ -185,63 +185,27 @@
       "inputId": "input_dinars_tunisien",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_dinars_tunisien_montant_en_lettres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_dinars_tunisien_montant_en_chiffres",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Dinars_Tunisien",
           "constraints": [
             {
               "elementId": "input_dinars_tunisien_montant_en_lettres",
               "visibility": false
             },
+			
 			{
               "elementId": "input_dinars_tunisien_montant_en_chiffres",
               "visibility": false
             }
           ]
         }
+       
       ]
     },
 	{
       "inputId": "input_devise_etrangere",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_devise_etrangere_montant_en_lettres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_devise_etrangere_montanten_chiffres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_nature_devise_en_lettres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_devise_etrangere_montant_en_lettres_1",
-              "visibility": true
-            },
-			{
-              "elementId": "input_devise_etrangere_montanten_chiffres_1",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Devise_Etrangere",
           "constraints": [
             {
               "elementId": "input_devise_etrangere_montant_en_lettres",
@@ -265,6 +229,7 @@
             }
           ]
         }
+       
       ]
     },
 	 {

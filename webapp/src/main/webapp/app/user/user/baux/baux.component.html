@@ -1,0 +1,101 @@
+<!-- <div class="section">
+    <div class="title-page">Contrat de location <span class="gratuit">Gratuit !</span></div>
+ <div class="vc-section">
+    <table>
+        <tr>
+            <td><div *ngFor="let legalDocument of filterByKeyword('Contrat Bail Commercial gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div>
+            <div class="container">
+            <img  class="image" src="../../../content/images/contrat-location-vide.jpg" alt="bail test">
+            <div class="middle">
+                <div class="text">Choisir ce modèle</div>
+              </div>
+            </div>  
+            </td>
+            
+            <td><div *ngFor="let legalDocument of filterByKeyword('Quitance de loyer gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div>
+                <div class="container">
+                    <img  class="image" src="../../../content/images/contrat-location-vide.jpg" alt="bail test">
+                    <div class="middle-2">
+                        <div class="text">Choisir ce modèle</div>
+                      </div>
+                    </div> 
+                 </td>
+            <td><div *ngFor="let legalDocument of filterByKeyword('Contrat de Bail gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div>
+                <div class="container">
+                    <img  class="image" src="../../../content/images/contrat-location-vide.jpg" alt="bail test">
+                    <div class="middle-3">
+                        <div class="text">Choisir ce modèle</div>
+                      </div>
+                    </div> 
+                </td>
+            <td><div *ngFor="let legalDocument of filterByKeyword('Contrat de sous-location gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div  class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</div>
+                 <div class="container">
+            <img  class="image" src="../../../content/images/contrat-location-vide.jpg" alt="bail test">
+            <div class="middle-4">
+                <div class="text">Choisir ce modèle</div>
+              </div>
+            </div> 
+        </td>
+        </tr>
+     </table>
+    </div>
+
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+ -->
+
+
+ 
+  <div class="section">
+ <div id="main">
+  <div id="menu">
+
+
+ 
+
+  </div>
+ <!--  <div id="menul">
+      Menu
+     </div> -->
+  <div id="contenu">
+      <div>
+      <h1 class="maintitle ">
+      Créez votre contrat de  <span class="text-span-7">location</span> 
+      <!-- <br/> <span class="title-2"> simplement et rapidement </span> -->
+      <span class="text-span-5">!</span></h1>
+      </div>
+      <table class="table-sarl">
+          <tbody class="all-tab-sarl">
+              <tr>
+                  <th>Baux</th>
+              </tr>
+             
+              <tr>
+                  <td *ngFor="let legalDocument of filterByKeyword('Contrat de Bail gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+              </tr>
+              <tr>
+                  <td *ngFor="let legalDocument of filterByKeyword('Contrat de sous-location gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div  class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+              </tr>
+              <tr>
+                  <td *ngFor="let legalDocument of filterByKeyword('Quitance de loyer gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+              </tr>
+
+              <tr>
+                  <td *ngFor="let legalDocument of filterByKeyword('Contrat Bail Commercial gérer baux')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+ </div>
+ 
+</div> 

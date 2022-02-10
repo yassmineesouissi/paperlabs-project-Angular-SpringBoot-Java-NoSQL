@@ -19,7 +19,7 @@
       "inputId": "input_nature_employe_etrange",
       "valuesConstraints": [
         {
-          "value": "Personne étrange",
+          "value": "Personne etrange",
           "constraints": [
             {
               "elementId": "bloc_etrange_dimission",

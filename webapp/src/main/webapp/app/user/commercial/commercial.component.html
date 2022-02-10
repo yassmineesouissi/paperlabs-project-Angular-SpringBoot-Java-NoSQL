@@ -1,0 +1,83 @@
+   
+<div id="main">
+    <div id="menu">
+
+     <div class="image-left">
+        <img src="../../../content/images/com.jpg"> <br>
+    </div>
+   
+
+    </div>
+   <!--  <div id="menul">
+        Menu
+       </div> -->
+    <div id="contenu">
+        <div>
+            <h1 class="maintitle ">
+            Créez votre contrat  <span class="text-span-7"> Commercial</span> 
+            <!-- <br/> <span class="title-2"> simplement et rapidement </span> -->
+            <span class="text-span-5">!</span></h1>
+            </div>
+        <table class="table-sarl">
+            <tbody class="all-tab-sarl">
+                <tr>
+                    <th>Contrat de cession</th>
+                </tr>
+               
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('Contrat Cession Creance comm')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                
+                <th>Contrats commerciaux</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm agent')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('Contrat prestation service comm')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+              
+              <!--   <tr>
+                    <th>Concession de dette</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('Concession de dette comm')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr> -->
+                
+                <tr>
+                    <th>Les Garanties</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm nan2')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm nan4')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm nan5')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('Caution solidaire comm')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm gage')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm nan1')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('comm nan3')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+                <tr>
+                    <th>Reconnaissance de dette</th>
+                </tr>
+                <tr>
+                    <td *ngFor="let legalDocument of filterByKeyword('Reconnaissance de dette comm')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+   </div>
+   
+   

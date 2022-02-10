@@ -185,39 +185,32 @@
       "inputId": "input_autre_date",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "date_autre",
           "constraints": [
             {
               "elementId": "input_inserez_date",
               "visibility": true
-            }
-          ]
+            }]
+          }]
         },
+		
+		{
+      "inputId": "input_date_signature",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "signature_date",
           "constraints": [
             {
               "elementId": "input_inserez_date",
               "visibility": false
-            }
-          ]
-        }
-      ]
-    },
+            }]
+          }]
+        },
 	{
       "inputId": "input_question_5_oui",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_5_oui_duree_renouvelement",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_question_5_oui_duree_renouvelement",
@@ -225,45 +218,56 @@
             }
           ]
         }
+        
       ]
     },
 	{
-      "inputId": "input_num_titre_fonicier_6_oui",
+      "inputId": "input_question_5_non",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             {
-              "elementId": "input_numero_titre_financier_6",
+              "elementId": "input_question_5_oui_duree_renouvelement",
               "visibility": true
             }
           ]
-        },
+        }
+        
+      ]
+    },
+	
+	
+		{
+      "inputId": "input_num_titre_fonicier_6_oui",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "Num titre",
           "constraints": [
             {
               "elementId": "input_numero_titre_financier_6",
               "visibility": false
-            }
-          ]
-        }
-      ]
-    },
+            }]
+          }]
+        },
+		
+		{
+      "inputId": "input_non_applicable_6",
+      "valuesConstraints": [
+        {
+          "value": "Non applicable",
+          "constraints": [
+            {
+              "elementId": "input_numero_titre_financier_6",
+              "visibility": true
+            }]
+          }]
+        },
 	{
       "inputId": "input_une_activite_7",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_precisez_activite_7",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Activite7",
           "constraints": [
             {
               "elementId": "input_precisez_activite_7",
@@ -271,56 +275,36 @@
             }
           ]
         }
+        
+      ]
+    },
+	
+	{
+      "inputId": "input_toutes_activite_7",
+      "valuesConstraints": [
+        {
+          "value": "toute_Activite7",
+          "constraints": [
+            {
+              "elementId": "input_precisez_activite_7",
+              "visibility": true
+            }
+          ]
+        }
+        
       ]
     },
 	{
       "inputId": "input_oui_12",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_adresse_notification_12_1",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_email_bailleur_12_2",
-              "visibility": true
-            },
-			{
-              "elementId": "input_num_tel_bailleur_12_3",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_bailleur_12_4",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_envoye_preneur_12_5",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_email_preneur_12_6",
-              "visibility": true
-            },
-			{
-              "elementId": "input_num_tel_preneur_12_7",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_preneur_12_8",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_adresse_notification_12_1",
               "visibility": false
             },
-			 {
+			{
               "elementId": "input_adresse_email_bailleur_12_2",
               "visibility": false
             },
@@ -350,8 +334,57 @@
             }
           ]
         }
+ 
       ]
     },
+	
+	
+	{
+      "inputId": "input_non_12",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_adresse_notification_12_1",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_email_bailleur_12_2",
+              "visibility": true
+            },
+			{
+              "elementId": "input_num_tel_bailleur_12_3",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_bailleur_12_4",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_envoye_preneur_12_5",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_email_preneur_12_6",
+              "visibility": true
+            },
+			{
+              "elementId": "input_num_tel_preneur_12_7",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_preneur_12_8",
+              "visibility": true
+            }
+          ]
+        }
+ 
+      ]
+    },
+	
+	
+	
 	{
       "inputId": "input_forme_personne_morale_tunisienne_caution",
       "valuesConstraints": [

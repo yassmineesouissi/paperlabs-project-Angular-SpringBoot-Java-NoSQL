@@ -211,7 +211,7 @@
       "inputId": "input_par_tranche",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_date_par_tranche",
@@ -234,7 +234,7 @@
       "inputId": "input_par_pluseuirs_tranche",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             {
               "elementId": "input_nombre_tranche",

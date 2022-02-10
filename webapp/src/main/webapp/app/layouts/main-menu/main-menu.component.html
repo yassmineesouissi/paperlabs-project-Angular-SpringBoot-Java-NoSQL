@@ -1,3 +1,6 @@
+
+
+
 <nav class=" navbar navbar-expand-xl navbar-light indexing" [class.sticky]="windowScroll >= 10 && section === 'home-section'" [class.isAdmin]="hasRoleAdmin()">
     <div class="pap-brand">
         <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
@@ -14,23 +17,53 @@
 
 
                 <!---------------------------------- NOS DOCUMENT  ----------------------------------------->
-                <li ngbDropdown class="nav-item dropdown pointer  " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
-                        <span [matMenuTriggerFor]="alldocs" class="item">Nos documents</span></a>
+<!--                 <li ngbDropdown class="nav-item dropdown pointer" display="dynamic" routerLinkActive="active" >
+                    <a    href="javascript:void(0);" id="entity-menu"  routerLink="user/documents">
+            
+              
+
+                    
+                        <span class="item"> Nos documents</span></a>
+                      
+                     
+                    <mat-menu #alldocs="matMenu" xPosition="after" class="fixedmenu1">
+                        <ul class="">
+                            <h3><a mat-menu-item  class="docs1">Services populaires</a></h3>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                            <li><a href='#'>Category Two Sublinkkk</a></li>
+                            <li><a href='#'>Category Two k</a></li>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                          </ul>
+                          <ul class="">
+                            <h3><a mat-menu-item  class="docs">Droit social</a></h3>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                            <li><a href='#'>Category Two Sublinkkk</a></li>
+                            <li><a href='#'>Category Two k</a></li>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                          </ul>
+                          <ul class="">
+                            <h3><a mat-menu-item  class="docs">Droit commercial</a></h3>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                            <li><a href='#'>Category Two Sublinkkk</a></li>
+                            <li><a href='#'>Category Two k</a></li>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                            <li><a href='#'>Category Two Sublink</a></li>
+                          </ul>
+                        
+                        
+                        
+                        <a mat-menu-item  class="docs">Droit des sociétés</a>
+                        <a mat-menu-item  class="docs">Droit immobilier</a>
+                        <a mat-menu-item  class="docs">Droit de la propriété intellectuelle</a>
 
 
-                    <mat-menu #alldocs="matMenu" xPosition="before" class="fixedmenu1">
+                    </mat-menu> -->
 
-                        <a mat-menu-item [matMenuTriggerFor]="docpop" class="docs1">Services populaires</a>
-                        <a mat-menu-item [matMenuTriggerFor]="droitsocial" class="docs">Droit social</a>
-                        <a mat-menu-item [matMenuTriggerFor]="droitcommercial" class="docs">Droit commercial</a>
-                        <a mat-menu-item [matMenuTriggerFor]="droitsociete" class="docs">Droit des sociétés</a>
-                        <a mat-menu-item [matMenuTriggerFor]="droitimmobilier" class="docs">Droit immobilier</a>
-                        <a mat-menu-item [matMenuTriggerFor]="droitpropintel" class="docs">Droit de la propriété intellectuelle</a>
-
-
-                    </mat-menu>
-                    <mat-menu #docpop="matMenu" class="fixedmenu">
+                    
+                    
+                    <!-- <mat-menu #docpop="matMenu" class="fixedmenu">
                         <a>
                             <ul>
                                 <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level3"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
@@ -73,76 +106,17 @@
                             </ul>
                         </a>
                     </mat-menu>
-
+ -->
                 </li>
-
+            
 
                 <!---------------------------------- NOS DOCUMENT  ----------------------------------------->
+                
 
-                <!--  <li ngbDropdown class="nav-item dropdown pointer  " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-
-                                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
-                                        <span class="item">
-                                            Nos documents
-                                        </span>
-                                    </a>
-                
-                
-                
-                                    <ul class="dropdown-menu entreprise-drop " ngbDropdownMenu aria-labelledby="entity-menu">
-                
-                                        <li class="level0-item-1">
-                                            <a class="dropdown-item">
-                                                <span>Droit social</span>
-                                            </a>
-                                            <ul>
-                                                <li *ngFor="let legalDocument of filterByKeyword('droit de travail')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="level0-item-1">
-                                            <a class="dropdown-item">
-                                                <span>Droit commercial</span>
-                                            </a>
-                                            <ul>
-                                                <li *ngFor="let legalDocument of filterByKeyword('comm')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
-                                            </ul>
-                                        </li>
-                
-                
-                
-                                        <li class="level0-item-1">
-                                            <a class="dropdown-item">
-                                                <span>Droit des sociétés</span>
-                                            </a>
-                                            <ul class="item-list">
-                                                <li *ngFor="let legalDocument of filterByKeyword('remunerations gr')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
-                                            </ul>
-                                        </li>
-                
-                                        <li class="level0-item-1">
-                                            <a class="dropdown-item">
-                                                <span>Droit immobilier </span>
-                                            </a>
-                                            <ul>
-                                                <li *ngFor="let legalDocument of filterByKeyword('gérer baux')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
-                                            </ul>
-                                        </li>
-                                        
-                
-                
-                
-                                        <li class="level0-item-1">
-                                            <a class="dropdown-item">
-                                                <span>Droit de la propriété intellectuelle</span>
-                
-                                            </a>
-                                            <ul>
-                                                <li *ngFor="let legalDocument of filterByKeyword('Acc Conf')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
-                
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li> -->
+                        
+                             
+                                
+                        
                 <!-----------------------   FIN NOS DOCUMENTS --------------------------------->
 
 
@@ -182,29 +156,83 @@
                 </ul>
             </li> -->
 
+            
 
+    <li class="nav-item">    
+    <div class='droppable'>
+        <a  class="nav-link dropdown-toggle nav-link item"  routerLink="user/documents" (click)="collapseNavbar()">Nos documents</a>
+        <div class='mega-menu round1'>
+          <div class="container cf">
+            <ul class="ul-reset">
+                <a routerLink='/user/sarl' ><span class="title-scroll">Droit Des Sociétés</span></a>
+              <a routerLink='/user/sarl' >SARL</a>
+              <a routerLink='/user/suarl'>SUARL</a>
+              <!-- <a routerLink='/user/documents'>Société Anonyme</a>
+              <a routerLink='/user/documents'>Associations</a> -->
+            </ul>
+            <ul class="ul-reset">
+                <a routerLink='/user/baux'><span  class="title-scroll">Droit De Vente</span></a>
+              <!-- <a routerLink='/user/baux'>Vente mobilière </a> -->
+              <a routerLink='/user/baux'>Baux</a>
+            </ul>
+            <ul class="ul-reset">
+              <a routerLink='/user/commercial'><span  class="title-scroll">Droit Commercial</span></a>
+              <!-- <a routerLink='/user/commercial'>Commerce électronique</a> -->
+              <a routerLink='/user/commercial'>Contrat de cession</a>
+              <a routerLink='/user/commercial'>Contrats commerciaux</a>
 
+            </ul>
+            
+            <ul class="ul-reset">
+              
+                <a routerLink='/user/social'><span class="title-scroll">Droit Social</span></a> 
+            
+           
+              <a routerLink='/user/social'>Recrutement/Embauche</a> 
+              <a routerLink='/user/social'>Fin du contrat/Résiliation</a>
+              
+          
+            </ul><!-- .ul-reset -->
 
-                <li class="nav-item mx-2 ">
-                    <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()">Guides</a>
-                </li>
+            <ul class="ul-reset">
+              
+                <a routerLink='/user/documents'><span class="title-scroll">Droit Des Suretés</span></a> 
+            
+           
+              <a routerLink='/user/documents'>Gage</a> 
+              <a routerLink='/user/documents'>Nantissement</a>
+              
+          
+            </ul><!-- .ul-reset -->
+          </div><!-- .container -->
+        </div><!-- .mega-menu-->
+      </div><!-- .droppable -->
+    </li>
 
+            <li class="nav-item mx-2 ">
+        
+                <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()" jhiTranslate="mainmenu.form.Guides">Guides</a>
+            </li>
 
-
-
-                <li class="nav-item mx-2">
-                    <a class="nav-link item" routerLink="user/professional-solution" (click)="collapseNavbar()">Solution
-                    Pro</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()">Contact</a>
-                </li>
-                <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
-                    <a class="nav-link item  " (click)="login()">
-                        <span class="item-compte">
-                        Mon compte
+            <li class="nav-item mx-2">
+                <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()" jhiTranslate="mainmenu.form.Contact">Contact</a>
+            </li>
+            <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
+                <a class="nav-link item  " (click)="login()">
+                    <span class="item-compte">
+                    Mon compte
                     </span><span class="sr-only">(current)</span></a>
                 </li>
+
+
+               <!--  <li class="nav-item mx-2">
+                    <div class="" >
+                   
+                    <button  (click)="changeLanguage()" routerLink="" class="nav-link item btn">EN|FR</button>
+                    
+                    </div>
+                </li> -->
+
                 <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer mx-2" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                     <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
                         <span class="sr-only">(current)</span>

@@ -16,6 +16,7 @@
         "dowloadHistory": "Dowload History",
         "company": "Company",
         "employee": "Employee",
+        "documents": "Documents",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

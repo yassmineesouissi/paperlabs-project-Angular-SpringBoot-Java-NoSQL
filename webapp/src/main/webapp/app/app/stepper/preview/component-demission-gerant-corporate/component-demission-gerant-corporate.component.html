@@ -1,0 +1,33 @@
+<div class="test">
+    <p>le <span *ngIf="getHtmlInputElement('input_date_demission').value !== '' ">{{getHtmlInputElement('input_date_demission').value}}</span></p>
+  
+  
+  <P> <span *ngIf="getHtmlInputElement('input_nom_prenom_nv_gerant').value !== '' ">{{getHtmlInputElement('input_nom_prenom_nv_gerant').value}}</span></P>
+   <!--   <P> [Insérer l’adresse actuelle du gérant]</P>-->
+  <div class="domination">
+  <P> <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span></P>
+  <P>  Siège sociale : <span *ngIf="getHtmlInputElement('input_siege_sociale').value !== '' ">{{getHtmlInputElement('input_siege_sociale').value}}</span></P>
+  </div>
+  
+   <p><strong>A l’attention des Associés de la Société</strong> </p>  
+  
+  
+  <p>  Objet : Démission de mes fonctions de gérant de la société <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span>
+  
+  </p>
+  <p> Messieurs les associés,</p>
+  
+  <p> En ma qualité de gérant de la société <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span>, je viens par la présente vous présenter ma démission de mes fonctions de gérant de ladite société, prenant effet à compter de la date à laquelle ma démission est acceptée par les associés réunis en Assemblée Générale.
+  </p>
+  <p>
+  Par ailleurs, je confirme que je n’ai aucune réclamation financière ou autre à l’encontre de la société <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span>, et qu’elle ne m’est redevable d’aucune somme qu’elle soit du fait de l’exercice de mes fonctions de gérant. 
+  </p>
+  <p>
+  Dans l’hypothèse où une telle réclamation ou somme existe ou viendrait à exister, j’y renonce irrévocablement et libère la société <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span> de toute responsabilité à cet égard.
+  </p>
+   <p> Veuillez agréer, Messieurs l’expression de mes meilleures salutations.</p>
+  
+  <div class="domination">
+  <p><span *ngIf="getHtmlInputElement('input_nom_prenom_nv_gerant').value !== '' ">{{getHtmlInputElement('input_nom_prenom_nv_gerant').value}}</span></p> 
+                                  <p>	Bon pour démission</p></div>
+   </div>

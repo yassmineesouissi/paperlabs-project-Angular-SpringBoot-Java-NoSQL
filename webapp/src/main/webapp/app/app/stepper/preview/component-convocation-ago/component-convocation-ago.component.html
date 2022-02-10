@@ -1,0 +1,71 @@
+<div class="test">
+
+   
+    <p>    <strong> Le <span *ngIf="getHtmlInputElement('input_date_convocation').value !== '' ">{{getHtmlInputElement('input_date_convocation').value}}</span></strong></p>
+    
+    <p> <strong>   DE : <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span></strong></p>
+    <p> <strong>   SIEGE SOCIAL <span *ngIf="getHtmlInputElement('input_siege_sociale').value !== '' ">{{getHtmlInputElement('input_siege_sociale').value}}</span></strong></p>
+     <p><strong>    IDENTIFIANT UNIQUE : <span *ngIf="getHtmlInputElement('input_identifiant_unique').value !== '' ">{{getHtmlInputElement('input_identifiant_unique').value}}</span></strong></p>
+        
+     <p><strong>  A : <span *ngIf="getHtmlInputElement('input_liste_associee').value !== '' ">{{getHtmlInputElement('input_liste_associee').value}}</span> </strong></p>
+        
+     <p><strong> Objet : Convocation à l’Assemblée Générale Ordinaire de la société <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span> du <span *ngIf="getHtmlInputElement('input_date_reunion_assemblee').value !== '' ">{{getHtmlInputElement('input_date_reunion_assemblee').value}}</span> </strong></p>
+        
+      <p> Monsieur, </p> 
+      <p>  Nous avons l’honneur de vous convoquer à l’Assemblée Générale Ordinaire de la Société <span *ngIf="getHtmlInputElement('input_denomination_sociale').value !== '' ">{{getHtmlInputElement('input_denomination_sociale').value}}</span> qui se tiendra le <span *ngIf="getHtmlInputElement('input_date_convocation').value !== '' ">{{getHtmlInputElement('input_date_convocation').value}}</span>
+         à <span *ngIf="getHtmlInputElement('input_heure_debut_reunion').value !== '' ">{{getHtmlInputElement('input_heure_debut_reunion').value}}</span> 
+          heures au siège social de la Société <span *ngIf="getHtmlInputElement('input_siege_sociale').value !== '' ">{{getHtmlInputElement('input_siege_sociale').value}}</span> pour délibérer sur l’ordre du jour suivant :</p>
+        
+          <div *ngIf="getHtmlInputElement('input_demission_oui').checked" >  <p>  	Démission et nomination d’un gérant </p> </div>
+          <div *ngIf="getHtmlInputElement('input_deces_oui').checked" >  <p> 	Décès du gérant et nomination d’un nouveau gérant .</p> </div>
+          <div *ngIf="getHtmlInputElement('input_revocation_oui').checked" >   <p>  	Révocation et nomination d’un gérant </p> </div>
+          <div *ngIf="getHtmlInputElement('input_gerant_remunere_oui').checked" >    <p>  	Fixation de la rémunération du gérant </p> </div>
+          <p> -	Questions diverses.</p>
+        
+       <p> Tous les documents requis par la loi et nécessaires à la tenue de l’Assemblée ont été mis dans le délai légal à votre disposition au siège social de la Société.</p>
+        
+        
+        <P><span *ngIf="getHtmlInputElement('input_nom_prenom_emmetteur').value !== '' ">{{getHtmlInputElement('input_nom_prenom_emmetteur').value}}</span> , <span *ngIf="getHtmlInputElement('input_qualite_emmetteur').value !== '' ">{{getHtmlInputElement('input_qualite_emmetteur').value}}</span></P>
+          
+       <strong> PROJETS DE RESOLUTIONS DE L’ASSEMBLEE GENERALE ORDINAIRE DU <span *ngIf="getHtmlInputElement('input_date_reunion_assemblee').value !== '' ">{{getHtmlInputElement('input_date_reunion_assemblee').value}}</span> </strong>
+        
+      <p> <strong class="title">PREMIERE RESOLUTION</strong> </p>
+       <p> L'Assemblée ratifie le mode et le délai de convocation de la présente Assemblée et la déclare régulièrement constituée.</p>
+        
+       <p> Cette résolution mise aux voix, est adoptée à la majorité des associés.</p>
+        
+       <p> <strong class="title">DEUXIEME RESOLUTION</strong>  </p>
+       <div *ngIf="getHtmlInputElement('input_demission_oui').checked" >
+          <p> L’Assemblée prend acte de la démission de <span *ngIf="getHtmlInputElement('input_nom_prenom_ancien_gerant_demission').value !== '' ">{{getHtmlInputElement('input_nom_prenom_ancien_gerant_demission').value}}</span> de ses fonctions de gérant et de lui donner quitus entier ferme et définitif quant à sa gestion antérieure de la Société.</p></div>
+        
+       <div *ngIf="getHtmlInputElement('input_deces_oui').checked" > 
+          <p> L’Assemblée prend acte décès de <span *ngIf="getHtmlInputElement('input_nom_prenom_ancien_gerant_deces').value !== '' ">{{getHtmlInputElement('input_nom_prenom_ancien_gerant_deces').value}}</span> .</p> </div>
+        
+       <div *ngIf="getHtmlInputElement('input_revocation_oui').checked" >
+          <P> L’Assemblée décide de révoquer <span *ngIf="getHtmlInputElement('input_nom_prenom_ancien_gerant_revocation').value !== '' ">{{getHtmlInputElement('input_nom_prenom_ancien_gerant_revocation').value}}</span> de la gérance de la Société. </P> </div>
+        
+    
+          <div *ngIf="getHtmlInputElement('input_gerant_tunisien').checked" >
+       <p> L’Assemblée décide de nommer <span *ngIf="getHtmlInputElement('input_nom_prenom_nv_gerant').value !== '' ">{{getHtmlInputElement('input_nom_prenom_nv_gerant').value}}</span>, 
+        titulaire de la carte d’identité nationale n° <span *ngIf="getHtmlInputElement('input_numero_cin_gerant_tunisien').value !== '' ">{{getHtmlInputElement('input_numero_cin_gerant_tunisien').value}}</span>, pour une période de <span *ngIf="getHtmlInputElement('input_duree_mondat_e_année').value !== '' ">{{getHtmlInputElement('input_duree_mondat_e_année').value}}</span> ans, tout en lui accordant les pouvoirs les plus étendus pour gérer, administrer et représenter la Société en toutes circonstances.</p>
+          </div>
+          <div *ngIf="getHtmlInputElement('input_gerant_non_tunisien').checked" >
+       <p> L’Assemblée décide de nommer <span *ngIf="getHtmlInputElement('input_nom_prenom_nv_gerant').value !== '' ">{{getHtmlInputElement('input_nom_prenom_nv_gerant').value}}</span>,
+          titulaire du passeport <span *ngIf="getHtmlInputElement('input_nationalitee_gerant_non_tunisien').value !== '' ">{{getHtmlInputElement('input_nationalitee_gerant_non_tunisien').value}}</span> n° <span *ngIf="getHtmlInputElement('input_numero_passeport_gerant_non_tunisien').value !== '' ">{{getHtmlInputElement('input_numero_passeport_gerant_non_tunisien').value}}</span>, pour une période de <span *ngIf="getHtmlInputElement('input_duree_mondat_e_année').value !== '' ">{{getHtmlInputElement('input_duree_mondat_e_année').value}}</span> ans, tout en lui accordant les pouvoirs les plus étendus pour gérer, administrer et représenter la Société en toutes circonstances.</p>
+      </div>
+       <div *ngIf="getHtmlInputElement('input_gerant_remunere_oui').checked" >
+           <p>  Le gérant aura une rémunération mensuelle brute de <span *ngIf="getHtmlInputElement('input_remuneration_brute').value !== '' ">{{getHtmlInputElement('input_remuneration_brute').value}}</span> 
+        et sera considéré comme un indépendant, responsable individuellement du paiement de ses impôts et, le cas échéant, de ses contributions sociales.</p> </div>
+        
+      <p>  Le nouveau gérant présent à l’Assemblée, remercie les associés pour la confiance qu’ils lui ont manifesté et déclare accepter les fonctions qui viennent de lui être attribuées. </p>
+        
+      <p>  Cette résolution mise aux voix est adoptée à majorité des associés.</p>
+        
+        <p> <strong class="title"> TROISIEME RESOLUTION </strong></p>
+       <p>L'Assemblée donne tous pouvoirs au porteur d'un extrait ou d'une copie du présent procès-verbal pour accomplir toutes formalités et publications partout où besoin sera.</p> 
+        
+       <p> Cette résolution mise aux voix, est adoptée à majorité des associés.</p>
+        
+      <p>  Plus rien n'étant à l'ordre du jour, la séance est levée à <span *ngIf="getHtmlInputElement('input_heure_fin_reunion').value !== '' ">{{getHtmlInputElement('input_heure_fin_reunion').value}}</span> heures.</p> 
+        </div>
+        

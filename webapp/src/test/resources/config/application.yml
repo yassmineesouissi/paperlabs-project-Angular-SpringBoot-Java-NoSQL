@@ -75,6 +75,8 @@ jhipster:
     #base-url: http://paperlabs.io
     #base-url: http://196.203.28.46:3393
     #base-url: http://196.203.28.46:3394
+    #base-url: http://172.16.200.202
+    #base-url: http://172.16.1.223
   security:
     authentication:
       jwt:

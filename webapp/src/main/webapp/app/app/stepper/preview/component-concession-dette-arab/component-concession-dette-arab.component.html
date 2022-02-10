@@ -1,0 +1,177 @@
+<div class="test">
+   <div class="title"> اعتراف بدين </div>
+   <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_caution').checked">
+      <div> <span *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_caution').value}}</span> 
+          <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_caution').value}}</span>
+      </div>
+      ، مولود في   <span *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_caution').value}}</span>
+         
+      ، بـ    <span *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_caution').value}}</span>
+        
+             
+      ،  صاحب(ة) بطاقة التعريف الوطنية عدد <span *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_caution').value}}</span>
+       
+
+      ،   الصادرة في   <span *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_caution').value}}</span>،
+        
+         الكائن مقره (ا) بـ   <span *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_caution').value}}</span>
+        
+      
+      </div>
+
+
+
+
+
+   <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_caution').checked">
+    <div>  <span  *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_caution').value}}</span>
+      <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_caution').value}}</span>
+   </div>
+      ، جنسيته(ا) <span  *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_caution').value}}</span>
+      ، صاحب(ة) جواز سفر <span  *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_caution').value}}</span>
+      عدد <span  *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_caution').value}}</span>
+      ، الصادر في <span  *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_caution').value}}</span>
+      ، الكائن مقره (ا) بـ <span
+         *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_caution').value}}</span>
+   </div>
+
+   <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_caution').checked">
+      ، شركة <span
+         *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_caution').value}}</span>،<span
+         *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_caution').value}}</span>
+      ذات راس مال <span
+         *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_caution').value}}</span>،
+      والمعرف الوحيد بالسجل الوطني للمؤسّسات عدد <span
+         *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_caution').value}}</span>
+      ، الكائن مقرّها الاجتماعي بـ<span
+         *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_caution').value}}</span>
+      ، ممثّلة في شخص وكيلها <span
+         *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_caution').value}}</span>
+      <span
+         *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_caution').value}}</span>
+   </div>
+
+ 
+   <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_caution').checked">
+      ، شركة <span
+         *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_caution').value}}</span>
+      ،<span
+         *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_caution').value}}</span>
+      مسجلة بـ
+      <span
+         *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value}}</span>
+      تحت عدد <span *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_caution').value}}</span>،
+      الكائن مقرّها الاجتماعي بـ <span *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_caution').value}}</span>
+      ، ممثّلة في شخص وكيلها <span
+         *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_caution').value}}</span>
+      <span
+         *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_caution').value}}</span>
+   </div>
+
+   <div>
+      فيما يلي "المدين".
+   </div>
+
+   <div *ngIf="getHtmlInputElement('input_nature_personne_physique_tunisienne_debiteur').checked">
+   <div>  <span  *ngIf="getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_tunisienne_debiteur').value}}</span>
+      <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_tunisienne_debiteur').value}}</span>
+   </div>
+      مولود في ،  <span  *ngIf="getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_naissance_personne_physique_tunisienne_debiteur').value}}</span>
+     
+      بـ ،   <span *ngIf="getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_lieu_naissance_personne_physique_tunisienne_debiteur').value}}</span>
+     
+      صاحب(ة) بطاقة التعريف الوطنية عدد،  <span  *ngIf="getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_cin_personne_physique_tunisienne_debiteur').value}}</span>
+     
+      الصادرة في <span  *ngIf="getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_cin_personne_physique_tunisienne_debiteur').value}}</span>،
+      الكائن مقره (ا) بـ <span   *ngIf="getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_tunisienne_debiteur').value}}</span>
+   </div>
+
+
+   <div *ngIf="getHtmlInputElement('input_nature_personne_physique_etrangere_debiteur').checked">
+   <div>   <span *ngIf="getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_physique_etrangere_debiteur').value}}</span>
+      <span *ngIf="getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_physique_etrangere_debiteur').value}}</span>
+   </div>
+      ، جنسيته(ا) <span   *ngIf="getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nationalité_personne_physique_etrangere_debiteur').value}}</span>
+      ، صاحب(ة) جواز سفر <span   *ngIf="getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_numero_passeport_personne_physique_etrangere_debiteur').value}}</span>
+      عدد <span    *ngIf="getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_pays_emmetteur_passeport_personne_physique_etrangere_debiteur').value}}</span>
+      ، الصادر في <span   *ngIf="getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_date_delivrance_passeport_personne_physique_etrangere_debiteur').value}}</span>
+      ، الكائن مقره (ا) بـ <span  *ngIf="getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_personne_physique_etrangere_debiteur').value}}</span>
+   </div>
+
+
+   <div *ngIf="getHtmlInputElement('input_nature_personne_morale_tunisienne_debiteur').checked">
+      ، شركة <span
+      *ngIf="getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_tunisienne_debiteur').value}}</span>،<span
+      *ngIf="getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_tunisienne_debiteur').value}}</span>
+   ذات راس مال <span
+      *ngIf="getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_capital_personne_morale_tunisienne_debiteur').value}}</span>،
+   والمعرف الوحيد بالسجل الوطني للمؤسّسات عدد <span
+      *ngIf="getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_personne_morale_tunisienne_debiteur').value}}</span>
+   ، الكائن مقرّها الاجتماعي بـ<span
+      *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_tunisienne_debiteur').value}}</span>
+   ، ممثّلة في شخص وكيلها <span
+      *ngIf="getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_tunisienne_debiteur').value}}</span>
+   <span
+      *ngIf="getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_tunisienne_debiteur').value}}</span>
+   </div>
+
+
+   <div *ngIf="getHtmlInputElement('input_nature_personne_morale_etrangere_debiteur').checked">
+      ، شركة <span
+      *ngIf="getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_denomination_personne_morale_etrangere_debiteur').value}}</span>
+   ،<span
+      *ngIf="getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_forme_personne_morale_etrangere_debiteur').value}}</span>
+   مسجلة بـ
+   <span
+      *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value}}</span>
+   تحت عدد <span *ngIf="getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_num_immatriculation_personne_morale_etrangere_debiteur').value}}</span>،
+   الكائن مقرّها الاجتماعي بـ <span *ngIf="getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_adresse_siege_personne_morale_etrangere_debiteur').value}}</span>
+   ، ممثّلة في شخص وكيلها <span
+      *ngIf="getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_nom_personne_morale_etrangere_debiteur').value}}</span>
+   <span
+      *ngIf="getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value !== '' ">{{getHtmlInputElement('input_prenom_personne_morale_etrangere_debiteur').value}}</span>
+   </div>
+
+
+
+   <div>
+      فيما يلي "الدائن".
+   </div>
+
+   <div *ngIf="getHtmlInputElement('input_dinar_tunisien').checked">
+      يشهد ويعترف المدين أنّ ذمّته عامرة لفائدة الدائن منذ تاريخ <span
+         *ngIf="getHtmlInputElement('input_date_debut_dette').value !== '' ">{{getHtmlInputElement('input_date_debut_dette').value}}</span>
+      بدين قدره أصلا <span
+         *ngIf="getHtmlInputElement('input_dinar_en_lettre').value !== '' ">{{getHtmlInputElement('input_dinar_en_lettre').value}}</span>
+      دينارا
+      (<span
+         *ngIf="getHtmlInputElement('input_dinar_en_chiffre').value !== '' ">{{getHtmlInputElement('input_dinar_en_chiffre').value}}</span>
+      دينار).
+   </div>
+
+   <div *ngIf="getHtmlInputElement('input_devise').checked">
+      يشهد ويعترف المدين أنّ ذمّته عامرة لفائدة الدائن منذ تاريخ <span
+         *ngIf="getHtmlInputElement('input_date_debut_dette').value !== '' ">{{getHtmlInputElement('input_date_debut_dette').value}}</span>
+      بدين قدره أصلا ما يعادل بالدينار التونسي مبلغ
+      <span
+         *ngIf="getHtmlInputElement('input_type_devise').value !== '' ">{{getHtmlInputElement('input_type_devise').value}}</span>
+      <span  *ngIf="getHtmlInputElement('input_devise_en_lettre').value !== '' ">{{getHtmlInputElement('input_devise_en_lettre').value}}</span>
+      (<span  *ngIf="getHtmlInputElement('input_devise_en_chiffre').value !== '' ">{{getHtmlInputElement('input_devise_en_chiffre').value}}</span>).
+   </div>
+
+   <div *ngIf="getHtmlInputElement('input_une_seul_tranche').checked">
+      ويلتزم المدين ويتعهّد بأداء قيمة ذلك الدين دفعة واحدة في تاريخ أقصاه <span
+         *ngIf="getHtmlInputElement('input_date_seul_tranche').value !== '' ">{{getHtmlInputElement('input_date_seul_tranche').value}}</span>.
+   </div>
+   <div *ngIf="getHtmlInputElement('input_plusieurs_tranche').checked">
+      ويلتزم المدين ويتعهّد بأداء قيمة ذلك الدين ابتداء من تاريخ امضاء هذا الكتب على <span
+         *ngIf="getHtmlInputElement('input_nombre_tranche').value !== '' ">{{getHtmlInputElement('input_nombre_tranche').value}}</span>
+      أقساط على ان لا يتجاوز القسط النهائي تاريخ ___.
+      <span
+         *ngIf="getHtmlInputElement('input_date_derniere_tranche').value !== '' ">{{getHtmlInputElement('input_date_derniere_tranche').value}}</span>
+   </div>
+
+   <p> المدين </p>
+   <p> التاريخ  </p>
+ 
+</div>
