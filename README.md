@@ -40,7 +40,7 @@ Spring-boot
 ##########################################Contacts##################################################
 
 
-mail: y.elsouissi@paperlabs.io ||  yassmine.elsouissi@gmail.com  || phone:50110966
+mail: y.elsouissi@paperlabs.io ||  yassmine.elsouissi@gmail.com  
 
 
 
