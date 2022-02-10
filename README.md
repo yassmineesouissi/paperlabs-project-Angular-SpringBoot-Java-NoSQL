@@ -17,18 +17,25 @@ Build the client with the command npm run webpack:build or npm start
 Start the server with ./mvnw or using your IDE
 
 
-#####################DataBase##########################
+##########################################DataBase############################################
+
+
 MongoDB 
 Name DB: paperlabs
 
 
-####################Languages&framework######################
+###################################Languages&framework##########################################
+
+
 java 7
 Angular
 Spring-boot
 .......
 
-########################Contacts#############################
+
+##########################################Contacts##################################################
+
+
 mail: y.elsouissi@paperlabs.io ||  yassmine.elsouissi@gmail.com  || tél:50110966
 
 
@@ -36,4 +43,4 @@ mail: y.elsouissi@paperlabs.io ||  yassmine.elsouissi@gmail.com  || tél:5011096
 
 
 
-########################Thnak youuu############################################# 
+###########################################Thnak youuu############################################# 
