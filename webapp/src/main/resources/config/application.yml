@@ -91,18 +91,17 @@ spring:
     ansi:
       console-available: true
   mail:
-    host: mail.sqoincbo.com
+    host: smtp.office365.com
     port: 587
-    username: paperlabs@sqoincbo.com
-    password: dali2020!
-    protocol: smtp
+    username: sav@contratou.tn
+    password: Contrat22$
     tls: true
     properties:
       mail:
         smtp:
           auth: true
           starttls.enable: true
-          ssl.trust: mail.sqoincbo.com
+          #ssl.trust: 172.16.1.179
 
 server:
   servlet:
@@ -163,5 +162,5 @@ application:
   companyInvoiceFooterLine1: 'Term & Condition'
   companyInvoiceFooterLine2: 'Tous droits réservés legal paper SARL'
   # Change this email to the paperlabs support team email (service-client@paperlabs.com)
-  supportTeamEmail: 'o.ferchiou@falaw.tn'
-  expertTeamEmail: 'o.ferchiou@falaw.tn'
+  supportTeamEmail: 'o.ferchiou@ferchioulaw.com'
+  expertTeamEmail: 'o.ferchiou@ferchioulaw.com'

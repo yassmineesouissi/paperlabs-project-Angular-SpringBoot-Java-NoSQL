@@ -11,7 +11,6 @@
 .controls {
   font-family: 'calibri';
   font-size: 18px;
-  font-weight: 700;
   color: black;
 }
 
@@ -71,6 +70,7 @@
   background-color: #f5f5f5;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+  outline: none;
   border-radius: 0.15rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

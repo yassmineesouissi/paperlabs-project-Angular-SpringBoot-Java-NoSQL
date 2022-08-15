@@ -3,10 +3,10 @@ Home page section 3 styles
 ========================================================================== */
 
 section {
-  min-height: 1080px;
+  min-height: 1020px;
   margin-top: -30px;
   display: block;
-  font-family: OpenSans;
+  font-family: 'calibri';
 }
 section h2,
 h6 {
@@ -25,10 +25,9 @@ hr {
   width: device-width;
 }
 #section_3 {
-  background: url('../../../../content/images/section3-bg-01.png') no-repeat;
+  background-color: #fcfcfc;
   width: auto;
-  height: 1175px;
-  // background: radial-gradient(circle at 100%, #e4e4e4, #e4e4e4 50%, #e4e4e4 75%, #d7d7d7 75%);
+  height: 1020px;
 }
 
 .titel-line {
@@ -109,4 +108,54 @@ iframe {
   h6 {
     margin: 50px auto;
   }
+}
+
+.left {
+  width: 33%;
+  margin-left: 5%;
+}
+
+.right {
+  margin-left: 45%;
+  margin-top: -35%;
+}
+.image {
+  width: auto;
+  height: auto;
+}
+
+/* 
+.right{
+
+  right: 10%;
+  margin-top: -43%;
+}
+.image{
+    position:absolute;
+    width: 95%;
+    
+}
+ */
+
+.number {
+  margin-bottom: 1rem;
+  font-size: 56px;
+  line-height: 56px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: -0.015em;
+  font-family: 'calibri';
+}
+
+.step {
+  text-align: initial;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  line-height: 24px;
+  color: #69719b;
+  font-weight: normal;
+}
+.packs {
+  position: relative;
+  left: 25%;
 }

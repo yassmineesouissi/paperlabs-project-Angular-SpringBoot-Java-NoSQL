@@ -125,8 +125,11 @@ public class MailService {
         context.setVariable(BASE_URL, jHipsterProperties.getMail().getBaseUrl());
         String content = templateEngine.process(templateName, context);
         String subject = messageSource.getMessage(titleKey, null, locale);
-        sendEmail(user.getEmail(), subject, content, false, true);
+        sendEmail(user.getEmail(),subject, content, false, true);
     }
+    
+ 
+
 
     @Async
     public void sendContactEmailFromTemplate(ContactDTO contactDTO, String emailToSend, String templateName, String titleKey) {
@@ -193,13 +196,30 @@ public class MailService {
         log.debug("Sending activation email to '{}'", user.getEmail());
         sendEmailFromTemplate(user, "mail/activationEmail", "email.activation.title");
     }
-
+    
     @Async
+    public void sendActivationEmailToSupportTeam(User user, String supportTeamEmail) {
+        log.debug("Sending activation email to '{}'", supportTeamEmail);
+        sendEmailFromTemplateWithOrderId(user, supportTeamEmail, "mail/activationEmailSupportTeam", "email.activationSupportTeam.title");
+    }
+    
+   
+    
+  
+ 
+
+	@Async
     public void sendActivationEmailWithOrderId(User user, String orderId) {
         log.debug("Sending activation email to '{}'", user.getEmail());
         sendEmailFromTemplateWithOrderId(user, orderId, "mail/activationEmailWithOrderId", "email.activation.title");
     }
 
+    @Async
+    public void sendActivationEmailWithOrderIdToSupportTeam(User user, String orderId, String supportTeamEmail) {
+    	log.debug("Sending activation email to '{}'", user.getEmail());
+        sendEmailFromTemplateWithOrderId(user, orderId, "mail/activationEmailWithOrderId", "email.activation.title");
+    }
+    
     @Async
     public void sendCreationEmail(User user) {
         log.debug("Sending creation email to '{}'", user.getEmail());

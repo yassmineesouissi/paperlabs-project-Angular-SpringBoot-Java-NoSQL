@@ -16,6 +16,8 @@ public class ContactDTO implements Serializable {
     @NotNull
     private String lastName;
 
+   
+    
     @Email
     private String email;
 
@@ -43,6 +45,11 @@ public class ContactDTO implements Serializable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+    
+    
+
+
+  
 
     public String getEmail() {
         return email;

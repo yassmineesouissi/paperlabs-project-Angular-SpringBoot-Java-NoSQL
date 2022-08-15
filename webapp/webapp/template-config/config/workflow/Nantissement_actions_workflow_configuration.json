@@ -450,44 +450,7 @@
       "inputId": "input_question_7_oui",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            
-			{
-              "elementId": "input_question_7_1",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_2",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_3",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_4",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_5",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_6",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_7",
-              "visibility": true
-            },{
-              "elementId": "input_question_7_8",
-              "visibility": true
-            }
-			
-          ]
-        }
-      ]
-    },
-	{
-      "inputId": "input_question_7_oui",
-      "valuesConstraints": [
-        {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             
 			{
@@ -520,37 +483,38 @@
         }
       ]
     },
+	
 	{
       "inputId": "input_question_7_non",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "Non",
           "constraints": [
             
 			{
               "elementId": "input_question_7_1",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_2",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_3",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_4",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_5",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_6",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_7",
-              "visibility": false
+              "visibility": true
             },{
               "elementId": "input_question_7_8",
-              "visibility": false
+              "visibility": true
             }
 			
           ]
@@ -564,16 +528,7 @@
       "inputId": "input_question_6_annee",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_annee_texte",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "q6_annee",
           "constraints": [
             {
               "elementId": "input_question_6_annee_texte",
@@ -587,16 +542,7 @@
       "inputId": "input_question_6_mois",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_6_mois_texte",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "q6_mois",
           "constraints": [
             {
               "elementId": "input_question_6_mois_texte",

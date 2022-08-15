@@ -20,9 +20,9 @@
                     </button>
                 </div>
             </form>
-            <div class="alert alert-warning" *ngIf="ordersByUserId?.length === 0">
+           <!--  <div class="alert alert-warning" *ngIf="ordersByUserId?.length === 0">
                 <span jhiTranslate="paperlabsApp.order.home.notFound">No orders found</span>
-            </div>
+            </div> -->
         </div>
     </div>
     <hr>
@@ -42,11 +42,7 @@
                             <span class="column-title">Date de création</span>
                         </div>
                     </th>
-                    <th>
-                        <div class="table-header">
-                            <span class="column-title">Prix TTC</span>
-                        </div>
-                    </th>
+                  
                     <th>
                         <div class="table-header">
                             <span class="column-title">Status</span>
@@ -63,7 +59,6 @@
                 <tr *ngFor="let orderByUserId of ordersByUserIdCopy ;">
                     <td><a [routerLink]="[orderByUserId.id, 'view' ]">{{transformOrderIdentifier(orderByUserId.orderIdentifier)}}</a></td>
                     <td>{{orderByUserId.generatedLegalDocument.date | date:'dd/MM/yy HH:mm'}}</td>
-                    <td>{{orderByUserId.totalPrice | number : '1.2-2'}} DT</td>
                     <td jhiTranslate="{{'paperlabsApp.OrderStatus.' + orderByUserId.status}}">{{orderByUserId.status}}</td>
                     <td>
                         <div class="btn-group">
@@ -76,7 +71,7 @@
                                     (click)="downloadPDF(orderByUserId.generatedLegalDocument.genratedPDFFilePath, orderByUserId.status, orderByUserId)">
                                 <fa-icon *ngIf="orderByUserId.status === 'PAID'" [icon]="'download'"></fa-icon>
                                 <span *ngIf="orderByUserId.status === 'PAID'" class="d-none d-md-inline"></span>
-                                <fa-icon *ngIf="orderByUserId.status === 'WAITING'" [icon]="'credit-card'"
+                                <fa-icon *ngIf="orderByUserId.status === 'WAITING'" [icon]="''"
                                          class="ml-3 "></fa-icon>
                             </button>
                         </div>

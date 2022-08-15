@@ -13,6 +13,7 @@ import { Account } from 'app/core/user/account.model';
 import { LegalDocumentService } from 'app/entities/legal-document/legal-document.service';
 import { ILegalDocument } from 'app/shared/model/legal-document.model';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { myFunction } from 'app/assets/js/search';
 
 @Component({
   selector: 'jhi-documents',
@@ -20,6 +21,9 @@ import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
   styleUrls: ['./documents.component.scss']
 })
 export class DocumentsComponent implements OnInit, OnDestroy, AfterViewInit {
+  test() {
+    myFunction();
+  }
   modalRef: NgbModalRef;
   authSubscription: Subscription;
   account: Account;

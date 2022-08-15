@@ -1,39 +1,91 @@
-<div class="footer pap-footer card pap-card">
 
-    <div class="pap-footer-sections">
-        <div class="pap-footer-section">
-            <div class="pap-footer-title">A PROPOS</div>
-            <ul class="pap-footer-items">
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/about-us">Qui sommes-nous?</a></li>
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/team">Équipe</a></li>
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/terms-and-conditions">Conditions générales</a></li>
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/legal-notice">Mentions légales</a></li>
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/privacy-policy">Politique de confidentialité</a></li>
-            </ul>
+   
+        <div id="container"></div>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                    
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-about">
+                            <h3>A Propos</h3>
+                            <p class="parg">
+                                Contratou n'est pas un cabinet d'avocats. Contratou fournit uniquement de l'information juridique, un logiciel permettant de générer des documents juridiques sur la base de modèles
+                            </p>
+                            
+                            <div class="footer-social">
+                                <a href="#"><i><fa-icon [icon]="['fab', 'twitter']"></fa-icon></i></a>
+                                <a href="#"><i><fa-icon [icon]="['fab', 'facebook-f']"></fa-icon></i></a>
+                                <a href="#"><i><fa-icon [icon]="['fab', 'youtube']"></fa-icon></i></a>
+                                <a href="#"><i><fa-icon [icon]="['fab', 'instagram']"></fa-icon></i></a>
+                                <a href="#"><i><fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                        <!--Footer Link-->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-links">
+                                <h3>Liens Uitiles</h3>
+                                <a routerLink="user/team" class=" parg"><i class="material-icons">&#xe315;</i>Équipe</a>
+                                <a routerLink="user/terms-and-conditions" class="parg"><i class="material-icons">&#xe315;</i>Conditions générales</a>
+                                <a routerLink="user/legal-notice" class="parg"><i class="material-icons">&#xe315;</i>Mentions légales</a>
+                                <a routerLink="user/privacy-policy" class="parg"><i class="material-icons">&#xe315;</i>Politique de confidentialité</a>
+                                <a routerLink="user/faq" class="parg"><i class="material-icons">&#xe315;</i>F.A.Q</a>
+                            </div>
+                        </div>
+                     
+                         <!--Contact Us-->
+                     <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h3>Nous Contacter</h3>
+                            <div class= "parg">
+                                
+                            <p><i class="material-icons">&#xe567;</i>Tunis</p>
+                            <p><i><span>&#9990;</span></i>+216 12 345 678</p>
+                            <p><i><span>&#9993;</span></i>sav@contratou.tn</p>
+                            <p><i class="material-icons">&#xe192;</i>Lun - Ven, 9AM - 22PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project Image-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-project">
+                            <h3>Nos services</h3>
+                            <a><img src="../../../content/images/3.jpg" alt="Image"></a>
+                            <a><img src="../../../content/images/2.png" alt="Image"></a>
+                            <a><img src="../../../content/images/4.jpeg" alt="Image"></a>
+                            <a><img src="../../../content/images/5.png" alt="Image"></a>
+                            <a><img src="../../../content/images/1.jpg" alt="Image"></a>
+                            <a><img src="../../../content/images/1.jpg" alt="Image"></a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           <!-- Newswletter -->
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                    
+                    <div class="col-md-6">
+                        <div class="copy-text parg">
+                            <p>&copy; <a href="#">Contratou.tn</a> 2022 LEGAL PAPER S A R L</p>
+                        </div>
+                    </div>
+                        <!--Footer Menu-->
+
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="pap-footer-section">
-            <div class="pap-footer-title">LIENS UTILES</div>
-            <ul class="pap-footer-items">
-                <!-- <li class="pap-footer-item"><a class="pap-footer-link"
-                     routerLink="user/legal-guides">Guides juridiques</a></li> -->
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/faq">F.A.Q</a></li>
-                
-            </ul>
-        </div>
-
-        <div class="pap-footer-section">
-            <div class="pap-footer-title">NOUS CONTACTER</div>
-            <ul class="pap-footer-items">
-                <li class="pap-footer-item"><a class="pap-footer-link" routerLink="user/contact">Formulaire de contact</a></li>
-                
-                <li class="pap-footer-item"><a class="pap-footer-link" href="tel:+21628616765"><span
-                    class="material-icons pap-icons"></span></a></li>
-              
-            </ul>
-        </div>
-    </div>
-
-    <div class="pap-copyright">© 2022 LEGAL PAPER S A R L</div>
-
-</div>
+        <!-- Footer End -->

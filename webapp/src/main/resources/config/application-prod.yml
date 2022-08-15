@@ -42,10 +42,10 @@ spring:
     rest:
       uris: http://localhost:9200
   mail:
-    host: mail.sqoincbo.com
+    host: smtp.office365.com
     port: 587
-    username: paperlabs@sqoincbo.com
-    password: dali2020!
+    username: sav@contratou.tn
+    password: Contrat22$
     protocol: smtp
     tls: true
     properties:
@@ -53,7 +53,7 @@ spring:
         smtp:
           auth: true
           starttls.enable: true
-          ssl.trust: mail.sqoincbo.com
+          #ssl.trust: 172.16.1.179
 
   thymeleaf:
     cache: true
@@ -113,6 +113,7 @@ jhipster:
   mail: # specific JHipster mail property, for standard properties see MailProperties
     #base-url: http://paperlabs.io # Modify according to your server's URL
     base-url: http://127.0.0.1:8085
+    #base-url: http://contratou.tn
     #base-url: http://196.203.28.46:3393
     #base-url: http://196.203.28.46:3394
     #base-url: http://172.16.200.202

@@ -22,6 +22,7 @@ $indigo: #1400c3;
   font-weight: 700;
   position: relative;
   margin: 0 0 2rem;
+  font-family: calibri;
   //font-size: calc(100% + 1vw + 1vh);
 }
 .step-description {
@@ -70,9 +71,9 @@ $indigo: #1400c3;
 
 .step {
   padding: 20px 5px 20px 20px;
-  border: solid 1px rgb(88, 79, 255);
-  border-radius: 4px;
-  box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  box-shadow: 0 -2px 15px 0 rgb(32 33 36 / 28%);
   background-color: white;
   z-index: 1;
 }
@@ -166,9 +167,9 @@ $indigo: #1400c3;
 @media screen and (max-width: 992px) {
   .step {
     padding: 20px 20px 20px 20px;
-    border: solid 1px rgb(88, 79, 255);
-    border-radius: 4px;
-    box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    box-shadow: 0 -2px 15px 0 rgb(32 33 36 / 28%);
   }
 }
 

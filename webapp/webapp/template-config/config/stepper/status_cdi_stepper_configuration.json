@@ -27,7 +27,7 @@
     },
     {
       "id": "step_description_du_contrat",
-      "title": "Poste et statut du salarié, Durée du contrat de travail",
+      "title": "Poste et statut du salarié, Durée du contrat de travail, Période d'essai",
       "description": "",
       "blocs": ["bloc_poste_statut","bloc_duree_contrat_cdd","bloc_periode_essai"],
       "visibility": true
@@ -128,7 +128,7 @@
     "input_periode_dessai_2"
 	  
 		],
-      "visibility": false
+      "visibility": true
     },
 	{
       "id": "bloc_hebdomadaire",
@@ -177,7 +177,7 @@
     },
 	{
       "id": "bloc_clause_de_exculisivité",
-      "title": "13- Le salarié sera-t-il soumis à une interdiction de conclure tout autre contrat de travail avec un autre employeur pendant la durée de son CDI (exclusivité) ?",
+      "title": "15- Le salarié sera-t-il soumis à une interdiction de conclure tout autre contrat de travail avec un autre employeur pendant la durée de son CDI (exclusivité) ?",
       "description": "",
       "inputs": ["input_clause_de_exculisivité",
         "input_clause_de_exculisivité_non"],
@@ -192,14 +192,14 @@
     },
     {
       "id": "bloc_propriété_des_travaux",
-      "title": "15- L’employeur souhaitera t’il conserver la propriété des supports élaborés par l’employé dans le cadre de l’exécution du contrat ?",
+      "title": "16- L’employeur souhaitera t’il conserver la propriété des supports élaborés par l’employé dans le cadre de l’exécution du contrat ?",
       "description": "",
       "inputs": ["input_propriété_des_travaux","input_propriété_des_travaux_non"],
       "visibility": true
     },
 	{
       "id": "bloc_non_concurrence",
-      "title": "16- Est-ce que l’employeur souhaite introduire une clause de non-concurrence ?",
+      "title": "17- Est-ce que l’employeur souhaite introduire une clause de non-concurrence ?",
       "description": "",
       "inputs": ["input_non_concurence","input_non_concurrence_A","input_non_concurrence_B","input_concurence_non"],
       "visibility": true
@@ -416,7 +416,7 @@
       "type": "number",
       "description": "",
       "name": "input_clause_dexclusivité",
-      "label": "12- Combien de jours de jour de congé par mois travaillé, est ce que l’employé aura droit ?",
+      "label": "13- Combien de jours de jour de congé par mois travaillé, est ce que l’employé aura droit ?",
       "placeHolder": "",
       "help": "la loi impose un minimum de 1. Il faut voir la convention collective applicable le cas échéant",
       "options": [],
@@ -597,7 +597,7 @@
       "type": "select",
       "description": "",
       "name": "input_lieu_travail",
-      "label": "11- Quel sera le lieu de travail du salarié ?",
+      "label": "12- Quel sera le lieu de travail du salarié ?",
       "placeHolder": "",
       "help": "",
       "options": ["au siège social de l'entreprise employeur","a un autre endroit"],
@@ -700,7 +700,7 @@
       "options": [],
       "value": "",
       "bookmarkIdPerValue": {
-        "text": []
+        "text": ["Article2_titre"]
         
       },
       "visibility": false
@@ -727,7 +727,7 @@
       "type": "number",
       "description": "",
       "name": "",
-      "label": "8- Quel est le nombre d’heures de travail hebdomadaire ?",
+      "label": "9- Quel est le nombre d’heures de travail hebdomadaire ?",
       "placeHolder": "",
       "help": "la loi prévoit jusqu’à 48h. Certaines conventions prévoient moins.",
       "options": [],
@@ -750,7 +750,7 @@
       "options": [],
       "value": "Oui",
       "bookmarkIdPerValue": {
-        "Oui": []
+        "Oui": ["Article2_titre_2"]
         
       },
       "visibility": true
@@ -767,7 +767,7 @@
       "options": [],
       "value": "Non",
       "bookmarkIdPerValue": {
-        "Non": ["Article2_titre_2"]
+        "Non": ["Article2_titre_1","Article2_titre_22","Article2_titre_3","Article2_titre_4"]
         
       },
       "visibility": true
@@ -780,7 +780,7 @@
       "type": "text",
       "description": "",
       "name": "input_salaire_mensuel_net_employé_lettress",
-      "label": "10- Quelle est le montant de la rémunération brute mensuelle en lettres ?",
+      "label": "11- Quelle est le montant de la rémunération brute mensuelle en lettres ?",
       "placeHolder": "",
       "help": "",
       "options": [],
@@ -795,7 +795,7 @@
       "type": "number",
       "description": "",
       "name": "input_salaire_mensuel_net_employé_chiffress",
-      "label": "9- Quelle est le montant de la rémunération brute mensuelle  en chiffre? ",
+      "label": "10- Quelle est le montant de la rémunération brute mensuelle  en chiffre? ",
       "placeHolder": "",
       "help": "Si une convention collective s'applique, vérifiez que le salarié perçoit bien le salaire minimum conventionnel prévu pour la catégorie dont il relève",
       "options": [],
@@ -808,6 +808,50 @@
     
   ],
   "bookmarks": [
+  {
+      "bookmarkId": "Article2_titre_1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Article2_titre_22",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Article2_titre_3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Article2_titre_4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 12
+    },
     {
       "bookmarkId": "Dénomination_de_la_societé",
       "value": null,
@@ -865,7 +909,18 @@
       "fontSize": 12
     },
 	
-    
+    {
+      "bookmarkId": "Article2_titre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	
 	{
       "bookmarkId": "nom_de_lemployé",
       "value": null,

@@ -540,27 +540,27 @@ entity-menu #menu-demo2 li {
 }
 
 /* 
-  @media screen and (max-width: 650px) {
-    ng-deep.cdk-overlay-pane{
-      position: absolute;
-      pointer-events: auto;
-      box-sizing: border-box;
-      z-index: 1000;
-      display: flex;
-      max-width: 100%;
-      max-height: 100%;
-      margin-top: 26px;
-      width: 233px;
-    }ng-deep.mat-menu-panel.fixedmenu1  {
-      width: 400px;
-      max-width: 250px;
-    
-    }
-    ng-deep.mat-menu-panel.fixedmenu  {
-       width: 400px;
-      margin-left: 25px;     
-    }
-  } */
+@media screen and (max-width: 650px) {
+  ng-deep.cdk-overlay-pane{
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 26px;
+    width: 233px;
+  }ng-deep.mat-menu-panel.fixedmenu1  {
+    width: 400px;
+    max-width: 250px;
+  
+  }
+  ng-deep.mat-menu-panel.fixedmenu  {
+     width: 400px;
+    margin-left: 25px;     
+  }
+} */
 
 ::ng-deep.mat-menu-panel.fixedmenu {
   min-width: 112px;
@@ -591,8 +591,8 @@ button {
 }
 
 /* a:hover {
-    background-color: gold; yassmine
-  } */
+  background-color: gold; yassmine
+} */
 
 /* #Mega Menu Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -601,18 +601,19 @@ button {
   display: none;
   text-align: left;
   position: fixed;
-  left: 10%;
-  right: 10%;
-  height: 63%;
+  left: 25%;
+  right: 25%;
+  //padding-top: 2%;
+  //height: 47%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .mega-menu h3 {
   color: #444;
 }
 .mega-menu ul {
   float: left;
-  margin-bottom: 20px;
-  margin-right: 40px;
-  width: 230px;
+  width: 50%;
 }
 .mega-menu ul:last-child {
   margin-right: 0;
@@ -621,13 +622,19 @@ button {
   border-bottom: 1px solid #ddd;
   color: #323648;
   display: block;
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'Calibri Light';
+  padding: 15px 35px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: 'Calibri';
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .mega-menu a:hover {
-  color: #554dff;
+  color: #1700af;
+
+  font-weight: 700;
+  //text-transform: uppercase;
 }
 
 /* #Droppable Class Styles
@@ -660,27 +667,27 @@ button {
 }
 
 /*  @media only screen and (max-width: 450px) {
-    div.mega-menu {
-        left: 2%;
-        margin-left:0%;
-        width: 96%;
-        padding:1px;
-        margin-bottom: 0px;
-    }
-    }
+  div.mega-menu {
+      left: 2%;
+      margin-left:0%;
+      width: 96%;
+      padding:1px;
+      margin-bottom: 0px;
+  }
+  }
 
-    @media only screen and (max-width: 450px) {
-        .mega-menu ul {
-            margin-bottom: 7px;
-        }
-        }
+  @media only screen and (max-width: 450px) {
+      .mega-menu ul {
+          margin-bottom: 7px;
+      }
+      }
 
-        
-    @media only screen and (max-width: 450px) {
-        .mega-menu a  {
-            padding: 0px;
-        }
-        } */ //popup-mobile
+      
+  @media only screen and (max-width: 450px) {
+      .mega-menu a  {
+          padding: 0px;
+      }
+      } */ //popup-mobile
 
 @media screen and (min-width: 300px) and (max-width: 750px) {
   div.container {
@@ -693,6 +700,52 @@ button {
     border-radius: 10px;
   }
 }
-.btn:focus {
-  box-shadow: 0 0 0 0rem rgb(255, 255, 255);
+
+.documents {
+  color: #1700af;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  margin-left: 8%;
+  font-weight: 900;
+  font-family: 'calibri';
+}
+
+.flesh {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* border-radius: 47px; */
+  /* background-color: #defff5; */
+  align-items: center;
+  border-radius: 50px;
+  background-color: #f5f8fa;
+  flex-wrap: nowrap;
+}
+
+.img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 50%;
+  max-width: 100%;
+}
+
+.popup {
+  display: inline;
+}
+
+.right {
+  line-height: 2.65;
 }

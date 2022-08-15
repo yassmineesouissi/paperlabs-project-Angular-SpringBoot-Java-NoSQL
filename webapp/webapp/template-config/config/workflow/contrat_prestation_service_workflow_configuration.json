@@ -121,24 +121,63 @@
         }
       ]
     },
+	
+	{
+		"inputId": "input_nombre_service",
+		"valuesConstraints": [
+        {
+			"value": "select_input_generator",
+			"constraints": [
+            {
+              "elementId": "bloc_service_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_service_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_service_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_service_4",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_service_5",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_service_6",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_service_7",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_service_8",
+              "visibility": true
+            },
+			{
+              "elementId": "bloc_service_9",
+              "visibility": true
+            },
+		
+			{
+              "elementId": "bloc_service_10",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
 	{
       "inputId": "input_dinars_tunisien",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_dinars_tunisien_montant_en_lettres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_dinars_tunisien_montant_en_chiffres",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Dinars_TUN",
           "constraints": [
             {
               "elementId": "input_dinars_tunisien_montant_en_lettres",
@@ -150,38 +189,14 @@
             }
           ]
         }
+       
       ]
     },
 	{
       "inputId": "input_devise_etrangere",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_devise_etrangere_montant_en_lettres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_devise_etrangere_montanten_chiffres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_nature_devise_en_lettres",
-              "visibility": true
-            },
-			{
-              "elementId": "input_devise_etrangere_montant_en_lettres_1",
-              "visibility": true
-            },
-			{
-              "elementId": "input_devise_etrangere_montanten_chiffres_1",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "dev_etrang",
           "constraints": [
             {
               "elementId": "input_devise_etrangere_montant_en_lettres",
@@ -205,26 +220,101 @@
             }
           ]
         }
+        
       ]
     },
+	
+		  {
+      "inputId": "input_question_5",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_5",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "Virement bancaire",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_5",
+              "visibility": false
+            }
+          ]
+        },
+		
+		{
+          "value": "Chèque",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_5",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  
+	   {
+      "inputId": "input_question_6",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_6",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "30",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_6",
+              "visibility": false
+            }
+          ]
+        },
+		 {
+          "value": "60",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_6",
+              "visibility": false
+            }
+          ]
+        },
+		 {
+          "value": "90",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_6",
+              "visibility": false
+            }
+          ]
+        },
+		
+		{
+          "value": "180",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_6",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	  
 	{
       "inputId": "input_echeance_contrat_oui",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_duree_successive_reconduction",
-              "visibility": true
-            },
-			{
-              "elementId": "input_combien_jours_preavi",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_duree_successive_reconduction",
@@ -236,8 +326,132 @@
             }
           ]
         }
+       
       ]
     },
+	
+	{
+      "inputId": "input_echeance_contrat_non",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_duree_successive_reconduction",
+              "visibility": true
+            },
+			{
+              "elementId": "input_combien_jours_preavi",
+              "visibility": true
+            }
+          ]
+        }
+       
+      ]
+    },
+	{
+      "inputId": "input_combien_jours_preavi",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_combien_jours_preavi_libre",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "30",
+          "constraints": [
+            {
+              "elementId": "input_combien_jours_preavi_libre",
+              "visibility": false
+            }
+          ]
+        },
+		
+		{
+          "value": "60",
+          "constraints": [
+            {
+              "elementId": "input_combien_jours_preavi_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "90",
+          "constraints": [
+            {
+              "elementId": "input_combien_jours_preavi_libre",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "180",
+          "constraints": [
+            {
+              "elementId": "input_combien_jours_preavi_libre",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
+	
+	 {
+      "inputId": "input_question_9",
+      "valuesConstraints": [
+        {
+          "value": "Autre",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_9",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "7",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_9",
+              "visibility": false
+            }
+          ]
+        },
+		
+		{
+          "value": "15",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_9",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "21",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_9",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "30",
+          "constraints": [
+            {
+              "elementId": "input_champ_libre_question_9",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+	  },
 	
 	
 	

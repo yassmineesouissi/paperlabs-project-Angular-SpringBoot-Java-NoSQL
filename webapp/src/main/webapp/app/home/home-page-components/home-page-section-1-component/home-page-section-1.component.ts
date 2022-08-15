@@ -3,6 +3,7 @@ import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { ILegalDocument } from 'app/shared/model/legal-document.model';
 import { JhiAlertService } from 'ng-jhipster';
 import { LegalDocumentService } from 'app/entities/legal-document/legal-document.service';
+import { myFunction2 } from 'app/assets/js/chatbot.js';
 
 @Component({
   selector: 'jhi-home-page-section-1',
@@ -10,6 +11,10 @@ import { LegalDocumentService } from 'app/entities/legal-document/legal-document
   styleUrls: ['home-page-section-1.scss']
 })
 export class HomePageSection1Component implements OnInit {
+  chatbot() {
+    myFunction2();
+  }
+
   currentSearch: string;
   legalDocuments: ILegalDocument[] = [];
 

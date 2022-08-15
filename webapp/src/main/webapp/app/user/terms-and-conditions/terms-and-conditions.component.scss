@@ -19,6 +19,7 @@
   line-height: 18px;
 }
 .art-terms {
+  font-style: italic;
   font-family: 'calibri';
   font-size: 20px;
   color: #000000;
@@ -61,4 +62,9 @@
     background-color: #fafafa;
     margin-top: -25%;
   }
+}
+
+.paperabs {
+  color: #1400c3 !important;
+  font-weight: 700;
 }

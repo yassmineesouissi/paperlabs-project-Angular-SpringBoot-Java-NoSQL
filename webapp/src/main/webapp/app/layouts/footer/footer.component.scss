@@ -1,137 +1,151 @@
-$pap-color: #1400c3;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
 
 a {
-  color: #495057;
+  transition: 0.3s;
 }
 
-a:hover {
-  color: $pap-color;
+a:hover,
+a:active,
+a:focus {
+  outline: none;
   text-decoration: none;
 }
 
-.pap-footer {
-  padding-top: 20px;
-  background-color: #fafafa;
-  padding-left: 15% !important;
-  padding-right: 15% !important;
+.footer {
+  position: relative;
+  padding-top: 45px;
+  background: #f5f8fa;
+}
+
+.footer .footer-about,
+.footer .footer-contact,
+.footer .footer-links,
+.footer .footer-project {
+  position: relative;
+  margin-bottom: 45px;
+  color: #69719b;
+}
+
+.footer .footer-about h3,
+.footer .footer-contact h3,
+.footer .footer-links h3,
+.footer .footer-project h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #071a81;
+}
+
+.footer .footer-social {
+  position: relative;
+  margin-top: 20px;
+}
+
+.footer .footer-social a {
+  text-align: center;
+  color: #69719b;
+  font-size: 14px;
+  border: 1px solid #69719b;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  padding: 6px 0;
+  border-radius: 35px;
+}
+
+.footer .footer-social a:hover {
+  color: #ffffff;
+  background: #0085ff;
+  border-color: #0085ff;
+}
+.footer .footer-contact p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #69719b;
+}
+
+.footer .footer-contact i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #69719b;
+}
+
+.footer .footer-contact a:last-child i {
+  margin: 0;
+}
+
+.footer .footer-contact a:hover i {
+  color: #0085ff;
+}
+.footer .footer-links a {
+  margin-bottom: 6px;
+  padding-left: 15px;
+  color: #69719b;
+  display: block;
+}
+
+.footer .footer-links a:last-child {
+  margin: 0;
+}
+
+.footer .footer-links a:hover {
+  color: #0085ff;
+}
+
+.footer .footer-project {
+  float: left;
+  font-size: 0;
+}
+
+.footer .footer-project a {
+  padding: 0 8px 8px 0;
+  display: block;
+  width: 33.33%;
+  float: left;
+}
+
+.footer .footer-project a img {
   width: 100%;
 }
-
-.pap-footer-title {
-  font-size: 17px;
-  font-weight: 700;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 5px;
-  color: #1400c3;
-  line-height: 1;
-  margin-top: 0;
+.footer .copyright {
+  position: relative;
+  padding: 25px 0;
+  background: #000000;
 }
 
-.pap-card {
-  border: none;
+.footer .copyright {
+  position: relative;
+  padding: 25px 0;
+  background: #d6d9dc;
 }
 
-.pap-icons {
-  margin-right: 3%;
-  vertical-align: top;
-}
-
-fa-icon {
-  margin-right: 4%;
-}
-.min-height-footer-bottom {
-  min-height: calc(100vh - 349px);
-}
-.pap-footer-items {
-  margin: 1;
-  padding: 0;
-  list-style: none;
-  line-height: 3;
-}
-
-.pap-footer-item {
-  margin-bottom: 13px;
-}
-
-.pap-footer-item,
-.pap-footer-link {
+.footer .copyright .copy-text p {
+  margin: 0;
   font-size: 16px;
-  margin-bottom: -9px;
-  font-weight: normal;
+  font-weight: 400;
+  color: #69719b;
+}
+
+.footer .copyright .copy-text p a {
+  color: #1400c3;
   text-decoration: none;
 }
-.pap-footer-link:hover {
-  color: #1400c3;
-}
-.pap-footer-sections {
-  width: 160%;
+
+.footer .copyright .copy-text p a:hover {
+  color: #4fffb5;
 }
 
-.pap-footer-section {
-  display: inline-block;
-  width: 24.5%;
-  vertical-align: top;
-  padding-bottom: 35px;
+.parg {
   font-family: 'calibri';
+  font-weight: 500;
 }
 
-@media screen and (max-width: 1260px) {
-  .pap-footer-section {
-    min-width: 32.5%;
-    width: min-content;
-  }
-}
-
-@media screen and (max-width: 955px) {
-  .pap-footer-section {
-    min-width: 49.5%;
-    width: min-content;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .pap-footer-section {
-    min-width: 99.5%;
-    width: min-content;
-  }
-}
-
-.pap-copyright {
-  margin-bottom: 20px;
-  font-size: 13px;
-  position: relative;
-  font-family: 'calibri';
-  width: 24.5%;
-  margin-left: 39%;
-  margin-right: 15%;
-}
-
-@media screen and (max-width: 955px) {
-  .pap-copyright {
-    margin-bottom: 20px;
-    font-size: 13px;
-    position: relative;
-    font-family: 'calibri';
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .pap-copyright {
-    margin-bottom: 20px;
-    font-size: 13px;
-    position: relative;
-    font-family: 'calibri';
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-.pap-color {
-  color: $pap-color;
+span {
+  content: '\2706', '\2709';
 }

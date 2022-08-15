@@ -1,6 +1,7 @@
 
 
 
+
 <nav class=" navbar navbar-expand-xl navbar-light indexing" [class.sticky]="windowScroll >= 10 && section === 'home-section'" [class.isAdmin]="hasRoleAdmin()">
     <div class="pap-brand">
         <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
@@ -155,87 +156,52 @@
                     </li>
                 </ul>
             </li> -->
-
             
 
     <li class="nav-item">    
     <div class='droppable'>
         <a  class="nav-link dropdown-toggle nav-link item"  routerLink="user/documents" (click)="collapseNavbar()">Nos documents</a>
         <div class='mega-menu round1'>
-          <div class="container cf">
-            <ul class="ul-reset">
-                <a routerLink='/user/sarl' ><span class="title-scroll">Droit Des Sociétés</span></a>
-              <a routerLink='/user/sarl' >SARL</a>
-              <a routerLink='/user/suarl'>SUARL</a>
-              <!-- <a routerLink='/user/documents'>Société Anonyme</a>
-              <a routerLink='/user/documents'>Associations</a> -->
-            </ul>
-            <ul class="ul-reset">
-                <a routerLink='/user/baux'><span  class="title-scroll">Droit De Vente</span></a>
-              <!-- <a routerLink='/user/baux'>Vente mobilière </a> -->
-              <a routerLink='/user/baux'>Baux</a>
-            </ul>
-            <ul class="ul-reset">
-              <a routerLink='/user/commercial'><span  class="title-scroll">Droit Commercial</span></a>
-              <!-- <a routerLink='/user/commercial'>Commerce électronique</a> -->
-              <a routerLink='/user/commercial'>Contrat de cession</a>
-              <a routerLink='/user/commercial'>Contrats commerciaux</a>
+            
+          <div class="popup">
+              
+            <ul class="left">
+              <a routerLink='/user/sarl' >SARL<div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></div></a> 
+              <a routerLink='/user/suarl'>SUARL<div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></a>
+              <a routerLink='/user/baux'>Locations / Baux <div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></a>
+                <a routerLink='/user/commercial'>Contrats Commerciaux<div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></a>
 
-            </ul>
-            
-            <ul class="ul-reset">
-              
-                <a routerLink='/user/social'><span class="title-scroll">Droit Social</span></a> 
-            
-           
-              <a routerLink='/user/social'>Recrutement/Embauche</a> 
-              <a routerLink='/user/social'>Fin du contrat/Résiliation</a>
-              
-          
+            </ul><!-- .ul-reset -->
+            <ul class="right">
+              <a routerLink='/user/cession'>  Cessions <div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></a>
+              <a routerLink='/user/surete'>Suretés <div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></a>
+              <a routerLink='/user/social'>Social <div class="flesh"><img class="img" src="../../../content/images/flesh.png" alt=""></a>
+
             </ul><!-- .ul-reset -->
 
-            <ul class="ul-reset">
-              
-                <a routerLink='/user/documents'><span class="title-scroll">Droit Des Suretés</span></a> 
-            
-           
-              <a routerLink='/user/documents'>Gage</a> 
-              <a routerLink='/user/documents'>Nantissement</a>
-              
-          
-            </ul><!-- .ul-reset -->
+            <!-- .ul-reset -->
           </div><!-- .container -->
         </div><!-- .mega-menu-->
       </div><!-- .droppable -->
     </li>
+            
+            
+                <li class="nav-item mx-2 ">
+                    <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()">Guides</a>
+                </li>
+                <li class="nav-item mx-2 ">
+                    <a class="nav-link item" routerLink="user/tarifs" (click)="collapseNavbar()">Tarifs</a>
+                </li>
 
-            <li class="nav-item mx-2 ">
-        
-                <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()" jhiTranslate="mainmenu.form.Guides">Guides</a>
-            </li>
-
-            <li class="nav-item mx-2">
-                <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()" jhiTranslate="mainmenu.form.Contact">Contact</a>
-            </li>
-            <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
-                <a class="nav-link item  " (click)="login()">
-                    <span class="item-compte">
-                    Mon compte
+                <li class="nav-item mx-2">
+                    <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()">Contact</a>
+                </li>
+                <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
+                    <a class="nav-link item  " (click)="login()">
+                        <span class="item-compte">
+                        Mon compte
                     </span><span class="sr-only">(current)</span></a>
                 </li>
-
-              
-                <li class="nav-item mx-2">
-                    <div class="" >
-                   
-                    <button  (click)="changeLanguage()" routerLink="" class="nav-link item btn">EN|FR</button>
-                    
-                     
-                  
-         
-                    </div>
-                </li>
-
                 <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer mx-2" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                     <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
                         <span class="sr-only">(current)</span>

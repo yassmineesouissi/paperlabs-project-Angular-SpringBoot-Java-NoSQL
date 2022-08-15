@@ -21,28 +21,32 @@
 
                 
                 <tr>
-                    <th>Recrutement/Embauche</th>
+                    <th>Contrats de travail</th>
                 </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('droit de travail cdi')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+
+                 <tr>
+                     <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('droit de travail cdd')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                 </tr>
+                
+                 <tr>
+                     <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('droit de travail cdi')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
+                 </tr>
+                 <tr>
+                    <th>Résiliation et fin du contrat de travail</th>
                 </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('droit de travail cdd')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
-                </tr>
-             
-               
-                <tr>
-                    <th>Fin du contrat/Résiliation</th>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('SOLDE DE TOUT COMPTE créer droit de travail')" [routerLink]="['legal-document-description/', legalDocument.id]"><div  class="contrat-4"(click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('droit de travail resil')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('Demission créer droit de travail')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat-4" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
+                
+                 <tr>
+                     <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('SOLDE DE TOUT COMPTE créer droit de travail')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                 </tr>
+                 <tr>
+                     <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('droit de travail resil')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                 </tr>
+                 <tr>
+                     <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('Demission créer droit de travail')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                     
+                 </tr>
+                
             </tbody>
         </table>
     </div>

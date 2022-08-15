@@ -66,13 +66,14 @@ public class AccountResource {
      * {@code POST  /register} : register the user.
      *
      * @param managedUserVM the managed user View Model.
+     * @param supportTeamEmail 
      * @throws InvalidPasswordException {@code 400 (Bad Request)} if the password is incorrect.
      * @throws EmailAlreadyUsedException {@code 400 (Bad Request)} if the email is already used.
      * @throws LoginAlreadyUsedException {@code 400 (Bad Request)} if the login is already used.
      */
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public User registerAccount(@Valid @RequestBody ManagedUserVM managedUserVM, @RequestParam(required = false) String orderId) {
+    public User registerAccount(@Valid @RequestBody ManagedUserVM managedUserVM, @RequestParam(required = false) String orderId, String supportTeamEmail) {
         if (!checkPasswordLength(managedUserVM.getPassword())) {
             throw new InvalidPasswordException();
         }
@@ -84,9 +85,13 @@ public class AccountResource {
                 orderDTO.get().setUser(userMapper.userToUserDTO(user));
                 orderService.save(orderDTO.get());
             }
-        }
+        } 
         else {
             mailService.sendActivationEmail(user);
+        }
+        {
+           
+            mailService.sendActivationEmailToSupportTeam(user,supportTeamEmail);
         }
         return user;
     }

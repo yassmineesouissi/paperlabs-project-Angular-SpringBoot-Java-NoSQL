@@ -46,122 +46,17 @@
         }
       ]
     },
-	{
-      "inputId": "input_nature_employeur_physique",
-      "valuesConstraints": [
-        {
-          "value": "Personne physique",
-          "constraints": [
-            
-			{
-              "elementId": "bloc_lemployeur_physique",
-              "visibility": true
-            }
-			
-          ]
-        }
-      ]
-    },
-	{
-      "inputId": "input_nature_employeur_morale",
-      "valuesConstraints": [
-        {
-          "value": "Personne morale",
-          "constraints": [
-            
-			{
-              "elementId": "bloc_lemployeur_morale",
-              "visibility": true
-            }
-			
-          ]
-        }
-      ]
-    },
 	
-	{
-      "inputId": "input_annee_question_5",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_inserez_annee_question_5",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_inserez_annee_question_5",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	{
-      "inputId": "input_mois_question_5",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_inserez_mois_question_5",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_inserez_mois_question_5",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
-	{
-      "inputId": "input_jours_question_5",
-      "valuesConstraints": [
-        {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_inserez_jours_question_5",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
-          "constraints": [
-            {
-              "elementId": "input_inserez_jours_question_5",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-    },
+	
+	
+	
+
+	
 	{
       "inputId": "input_question_oui_8",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_date_essai_8",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "question_8_oui",
           "constraints": [
             {
               "elementId": "input_question_date_essai_8",
@@ -172,19 +67,62 @@
       ]
     },
 	{
-      "inputId": "input_temps_complet_question_12",
+      "inputId": "input_question_non_8",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "question_8_non",
           "constraints": [
             {
-              "elementId": "input_duree_normal_travail_question_12_1",
+              "elementId": "input_question_date_essai_8",
               "visibility": true
             }
           ]
-        },
+        }
+      ]
+    },
+	{
+			"inputId": "input_question_10_siege",
+			"valuesConstraints": [{
+			"value": "siege",
+			"constraints": [
+
+				{
+					"elementId": "input_adresse_personne_physique_tunisienne_caution",
+					"visibility": false
+				},
+				{
+					"elementId": "input_adresse_personne_physique_etrangere_caution",
+					"visibility": false
+				},
+				{
+					"elementId": "input_adresse_siege_personne_morale_tunisienne_caution",
+					"visibility": false
+				}
+
+				]
+			}]
+	},
+	
+	{
+			"inputId": "input_question_10_autre",
+			"valuesConstraints": [{
+			"value": "autre",
+			"constraints": [
+
+				{
+					"elementId": "input_question_10_lieu",
+					"visibility": false
+				}
+
+				]
+			}]
+	},
+	
+	{
+      "inputId": "input_temps_complet_question_12",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "t_complet",
           "constraints": [
             {
               "elementId": "input_duree_normal_travail_question_12_1",
@@ -192,26 +130,14 @@
             }
           ]
         }
+       
       ]
     },
 	{
       "inputId": "input_temps_partiel_question_12",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_duree_normal_travail_question_12_2",
-              "visibility": true
-            },
-			{
-              "elementId": "input_duree_hebdomadaire_question_12_3",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "t_partiel",
           "constraints": [
             {
               "elementId": "input_duree_normal_travail_question_12_2",
@@ -231,20 +157,7 @@
       "inputId": "input_question_oui_17",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_obligation_question_oui_17",
-              "visibility": true
-            },
-			{
-              "elementId": "input_perimetre_question_oui_17",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Oui",
           "constraints": [
             {
               "elementId": "input_obligation_question_oui_17",
@@ -256,6 +169,27 @@
             }
           ]
         }
+       
+      ]
+    },
+	
+	{
+      "inputId": "input_question_non_17",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_obligation_question_oui_17",
+              "visibility": true
+            },
+			{
+              "elementId": "input_perimetre_question_oui_17",
+              "visibility": true
+            }
+          ]
+        }
+       
       ]
     },
 	{

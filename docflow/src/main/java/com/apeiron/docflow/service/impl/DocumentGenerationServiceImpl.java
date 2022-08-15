@@ -72,7 +72,7 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
     
     private static final String FILLED_FILE_NAME_PREFIX="C:/yassmine/paperlabs-Latest/webapp/target/classes/static/folder/";
 
-      
+    //private static final String FILLED_FILE_NAME_PREFIX="/home/ubuntu/";
     //private static final String FILLED_FILE_NAME_PREFIX="C:/paperlabs/folder/";
 
     public DocumentGenerationServiceImpl(FileManipulationService fileManipulationService, FileValidationService fileValidationService, InputProcessingService inputProccesingService) {

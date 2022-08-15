@@ -33,7 +33,9 @@ public class UserDTO {
 
     @Size(max = 50)
     private String lastName;
-
+    
+  
+    
     @Email
     @Size(min = 5, max = 254)
     private String email;
@@ -123,6 +125,8 @@ public class UserDTO {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+    
+    
 
     public String getEmail() {
         return email;
@@ -233,4 +237,7 @@ public class UserDTO {
             ", address=" + address +
             '}';
     }
+
+
+
 }

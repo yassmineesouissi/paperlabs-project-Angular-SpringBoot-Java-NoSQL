@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "Paperlabs",
+    "title": "Contratou",
     "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
     "menu": {
       "home": "Accueil",
@@ -9,6 +9,7 @@
         "main": "Entités",
         "category": "Category",
         "legalDocument": "Document juridique",
+
         "generatedLegalDocument": "Generated Legal Document",
         "descriptionSection": "Description Section",
         "lawyer": "Lawyer",
@@ -47,9 +48,11 @@
       "username.label": "Nom d'utilisateur",
       "firstName.label": "Prénom",
       "lastName.label": "Nom",
+      "soldeName.label": "solde",
       "firstName.placeholder": "Votre prénom",
       "lastName.placeholder": "Votre nom",
       "username.placeholder": "Votre nom",
+      "soldeName.placeholder": "Votre solde",
       "currentpassword.label": "Mot de passe actuel",
       "currentpassword.placeholder": "Mot de passe actuel",
       "newpassword.label": "Nouveau mot de passe",

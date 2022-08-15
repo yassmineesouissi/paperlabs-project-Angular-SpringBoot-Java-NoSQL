@@ -109,9 +109,10 @@
                                     <label for="need">Préciser votre besoin*</label>
                                     <select id="need" name="need" class="form-control" formControlName="need">
                                         <option value="" disabled>--Préciser votre besoin--</option>
-                                        <option value="Demande de cotation">Demande de cotation</option>
-                                        <option value="Demander le statut de la commande">Demander le statut de la commande</option>
-                                        <option value="Demander une copie d'une facture">Demander une copie d'une facture</option>
+                                        <option value="Question sur nos services">Question sur nos services</option>
+                                        <option value="Signalement d'un bug">Signalement d'un bug</option>
+                                        <option value="Réclamation">Réclamation</option>
+                                        
                                         <option value="Autre">Autre</option>
                                     </select>
                                     <div *ngIf="contactForm.get('need').invalid && (contactForm.get('need').dirty || contactForm.get('need').touched)">

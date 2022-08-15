@@ -86,13 +86,13 @@ describe('Service Tests', () => {
 
       describe('hasAnyAuthority', () => {
         it('should return false if user is not logged', () => {
-          const hasAuthority = service.hasAnyAuthority(['ROLE_USER']);
+          const hasAuthority = service.hasAnyAuthority(['ROLE_USER', 'ROLE_USERW', 'ROLE_USERR']);
           expect(hasAuthority).toBeFalsy();
         });
 
         it('should return false if user is logged and has not authority', () => {
           service.authenticate({
-            authorities: ['ROLE_USER']
+            authorities: ['ROLE_USER', 'ROLE_USERW', 'ROLE_USERR']
           });
 
           const hasAuthority = service.hasAnyAuthority(['ROLE_ADMIN']);
@@ -102,10 +102,10 @@ describe('Service Tests', () => {
 
         it('should return true if user is logged and has authority', () => {
           service.authenticate({
-            authorities: ['ROLE_USER']
+            authorities: ['ROLE_USER', 'ROLE_USERW', 'ROLE_USERR']
           });
 
-          const hasAuthority = service.hasAnyAuthority(['ROLE_USER', 'ROLE_ADMIN']);
+          const hasAuthority = service.hasAnyAuthority(['ROLE_USER', 'ROLE_ADMIN', 'ROLE_USERW', 'ROLE_USERR']);
 
           expect(hasAuthority).toBeTruthy();
         });

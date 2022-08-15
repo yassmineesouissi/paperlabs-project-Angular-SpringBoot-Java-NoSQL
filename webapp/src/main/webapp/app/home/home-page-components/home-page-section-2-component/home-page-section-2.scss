@@ -3,7 +3,8 @@ Home page section 2 styles
 ========================================================================== */
 
 section {
-  min-height: 1080px;
+  //min-height: 1080px;
+  min-height: 500px;
   margin-top: -30px;
   display: block;
   text-align: center;
@@ -23,19 +24,21 @@ h2 {
 .top-documents {
   text-decoration: none;
   h4 {
-    color: #000;
+    color: #071a81;
     text-align: center;
+    font-family: 'calibri';
   }
 }
 
 .top-documents:hover {
   text-decoration: none;
   h4 {
-    color: #1400c3;
+    color: #1b94dd;
   }
 }
 #section_2 {
-  background: url('../../../../content/images/section2-bg-01.png') no-repeat;
+  //background: url('../../../../content/images/section2-bg-01.jpg') no-repeat;
+  background-color: #fcfcfc;
   width: auto;
   height: auto;
   // background: radial-gradient(circle at 100%, #e4e4e4, #e4e4e4 50%, #e4e4e4 75%, #d7d7d7 75%);
@@ -50,7 +53,7 @@ h2 {
   width: 100%;
   position: absolute;
   margin-top: 41px;
-  margin-left: -122px;
+  margin-left: -68px;
 }
 .bloc {
   padding: 10px;
@@ -119,4 +122,24 @@ h2 {
   h6 {
     margin-left: 0;
   }
+}
+
+.im {
+  width: 245px;
+  height: 255px;
+}
+
+.container {
+  margin-top: 3%;
+}
+.gratuit {
+  height: auto;
+  position: absolute;
+  left: -8%;
+  top: 24%;
+  width: 510px;
+}
+
+.text-span-7 {
+  box-shadow: inset 0 -20px 0 0 #4fffb5;
 }

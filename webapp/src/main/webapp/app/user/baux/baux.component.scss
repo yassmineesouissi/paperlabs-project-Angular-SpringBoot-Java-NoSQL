@@ -42,17 +42,16 @@ th {
 }
 
 .maintitle {
-  margin-top: 5px;
   margin-bottom: 0px;
   background-color: transparent;
   font-family: 'Calibri';
-  color: #071a81;
-  font-size: 40px;
-  line-height: 65px;
+  color: #071a81; //#001cb3
+  font-size: 35px;
+  //line-height: 65px;
   font-weight: 900;
-  text-align: left;
+  //text-align: left;
   letter-spacing: -0.5px;
-  margin-left: 19%;
+  //margin-left: 15%;
 }
 
 @media screen and (max-width: 600px) {
@@ -115,4 +114,14 @@ th {
   padding-left: 4%;
   position: relative;
   top: -47px;
+}
+.button {
+  position: absolute;
+  width: 55%;
+  height: 2%;
+  left: 15%;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  outline: none;
 }

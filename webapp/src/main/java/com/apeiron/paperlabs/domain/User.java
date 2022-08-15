@@ -47,9 +47,15 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Field("first_name")
     private String firstName;
 
+
+ 
+
     @Size(max = 50)
     @Field("last_name")
     private String lastName;
+    
+   
+   
 
     @Email
     @Size(min = 5, max = 254)
@@ -112,10 +118,13 @@ public class User extends AbstractAuditingEntity implements Serializable {
     public String getFirstName() {
         return firstName;
     }
+  
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+    
+
 
     public String getLastName() {
         return lastName;
@@ -125,6 +134,8 @@ public class User extends AbstractAuditingEntity implements Serializable {
         this.lastName = lastName;
     }
 
+ 
+    
     public String getEmail() {
         return email;
     }

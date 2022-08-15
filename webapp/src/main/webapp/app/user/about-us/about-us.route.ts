@@ -5,6 +5,6 @@ export const aboutRoute: Route = {
   path: 'about-us',
   component: AboutUsComponent,
   data: {
-    pageTitle: 'paperlabsApp.about-us.title'
+    pageTitle: 'aboutUs.title'
   }
 };

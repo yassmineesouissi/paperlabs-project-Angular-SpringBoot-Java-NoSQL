@@ -148,19 +148,26 @@ $height: 17px;
 
 .help {
   position: relative;
-  right: 85%;
+  right: 77%;
   top: -3px;
   padding-left: 6%;
 }
 
 .col-lg-6 {
   font-weight: 600;
-  margin-left: -4.5%;
+  //margin-left: -4.5%;
 }
 .form-group {
   margin-bottom: 1rem;
   font-weight: 600;
 }
 .col-5 {
-  right: 5%;
+  //right: 5%;
+
+  margin-left: -4.5%;
+}
+
+.ng-star-inserted {
+  font-family: calibri;
+  font-size: 18px;
 }

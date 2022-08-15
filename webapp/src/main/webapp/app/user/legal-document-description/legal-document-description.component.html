@@ -1,23 +1,23 @@
+
+
+
 <img class="img" src="../../../content/images/remplir.jpg">
 
 <div class="doc-containter">
-    <div class="col-12 col-sm-12 col-xl-8 float-left">
+    <div class="col-md-8 pb-5 col-6 col-md-4 float-left">
         <div class="headings">
             <h1 class="doc-title">{{legalDocument.fullName}}</h1>
         </div>
 
         <ul class="doc-features mt-4 mb-4">
             <li class="doc-feature-item">
-                <span class="material-icons doc-feature-icon">create</span><a
-                [routerLink]="['/stepper/doc/', legalDocument.id]">Créez votre contrat</a>
+                <span class="material-icons doc-feature-icon">create</span>Créez votre contrat
             </li>
             <li class="doc-feature-item">
-                <span class="material-icons doc-feature-icon">save</span><a
-                [routerLink]="['/stepper/doc/', legalDocument.id]">Enregistrez et imprimez</a>
+                <span class="material-icons doc-feature-icon">save</span>Enregistrez et imprimez
             </li>
             <li class="doc-feature-item">
-                <span class="material-icons doc-feature-icon">insert_drive_file</span><a
-                [routerLink]="['/stepper/doc/', legalDocument.id]">Signez et partagez</a>
+                <span class="material-icons doc-feature-icon">insert_drive_file</span>Signez et partagez
             </li>
         </ul>
         <button class="btn btn-paperlabs" [routerLink]="['/stepper/doc/', legalDocument.id]">
@@ -35,7 +35,7 @@
                     <h2 class="doc-section-title"></h2>
                     <p class="doc-section-content">{{descriptionSection.content}}</p>
                 </div>
-                <ul class="doc-features2 mt-4 mb-4">
+                <ul class="doc-features2 ">
                 <table class="tab">
                     <thead>
                       <tr>

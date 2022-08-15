@@ -23,6 +23,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
   language = 'fr';
   languages: any[];
+  CollectId: any;
   modalRef: NgbModalRef;
   authSubscription: Subscription;
   account: Account;
@@ -31,6 +32,7 @@ export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
   popularLegalDocuments: ILegalDocument[] = [];
   title = 'landing-page';
   sticky = false;
+
   windowScroll: any;
   @ViewChild('stickyMenu', { static: false }) menuElement: ElementRef;
   elementPosition: any;
@@ -54,6 +56,7 @@ export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
     translate.setDefaultLang(this.language);
     this.isNavbarCollapsed = true;
   }
+
   changeLanguage(): void {
     if (this.language === 'fr') {
       this.language = 'en';
@@ -167,3 +170,5 @@ export class MainMenuComponent implements OnInit, OnDestroy, AfterViewInit {
     alldocs.closMenu();
   }
 }
+
+declare global {}

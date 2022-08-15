@@ -150,7 +150,7 @@ public class MailServiceIT {
         assertThat(message.getSubject()).isEqualTo("test title");
         assertThat(message.getAllRecipients()[0].toString()).isEqualTo(user.getEmail());
         assertThat(message.getFrom()[0].toString()).isEqualTo(jHipsterProperties.getMail().getFrom());
-        assertThat(message.getContent().toString()).isEqualToNormalizingNewlines("<html>test title, http://paperlabs.io, john</html>\n");
+        assertThat(message.getContent().toString()).isEqualToNormalizingNewlines("<html>test title, http://contratou.tn, john</html>\n");
         assertThat(message.getDataHandler().getContentType()).isEqualTo("text/html;charset=UTF-8");
     }
 
@@ -224,7 +224,7 @@ public class MailServiceIT {
 
             String emailTitle = (String) properties.get("email.test.title");
             assertThat(message.getSubject()).isEqualTo(emailTitle);
-            assertThat(message.getContent().toString()).isEqualToNormalizingNewlines("<html>" + emailTitle + ", http://paperlabs.io, john</html>\n");
+            assertThat(message.getContent().toString()).isEqualToNormalizingNewlines("<html>" + emailTitle + ", http://contratou.tn, john</html>\n");
         }
     }
 

@@ -125,16 +125,21 @@
       "inputId": "input_autre_date",
       "valuesConstraints": [
         {
-          "value": "true",
+          "value": "date_autre",
           "constraints": [
             {
               "elementId": "input_inserez_date",
               "visibility": true
             }
           ]
-        },
+        }
+            ]
+    },
+	{
+      "inputId": "input_date_signature",
+      "valuesConstraints": [
         {
-          "value": "false",
+          "value": "signature_date",
           "constraints": [
             {
               "elementId": "input_inserez_date",
@@ -142,26 +147,13 @@
             }
           ]
         }
-      ]
+            ]
     },
 	{
       "inputId": "input_question_5_oui",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_question_5_oui_duree_renouvelement",
-              "visibility": true
-            },
-			{
-              "elementId": "input_question_5_oui_duree_preavis_non_renouvelement",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "Question_5_oui",
           "constraints": [
             {
               "elementId": "input_question_5_oui_duree_renouvelement",
@@ -173,50 +165,59 @@
             }
           ]
         }
+        
       ]
     },
+	
+	{
+      "inputId": "input_question_5_non",
+      "valuesConstraints": [
+        {
+          "value": "Question_5_non",
+          "constraints": [
+            {
+              "elementId": "input_question_5_oui_duree_renouvelement",
+              "visibility": true
+            },
+			{
+              "elementId": "input_question_5_oui_duree_preavis_non_renouvelement",
+              "visibility": true
+            }
+          ]
+        }
+        
+      ]
+    },
+		{
+      "inputId": "input_num_titre_fonicier_6_oui",
+      "valuesConstraints": [
+        {
+          "value": "",
+          "constraints": [
+            {
+              "elementId": "input_numero_titre_financier_6",
+              "visibility": false
+            }]
+          }]
+        },
+		
+		{
+      "inputId": "input_non_applicable_6",
+      "valuesConstraints": [
+        {
+          "value": "Non applicable",
+          "constraints": [
+            {
+              "elementId": "input_numero_titre_financier_6",
+              "visibility": true
+            }]
+          }]
+        },
 	{
       "inputId": "input_oui_14",
       "valuesConstraints": [
         {
-          "value": "true",
-          "constraints": [
-            {
-              "elementId": "input_notification_adresse_bailleur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_email_bailleur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_num_tel_bailleur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_bailleur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_notification_adresse_preneur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_email_preneur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_num_tel_preneur",
-              "visibility": true
-            },
-			{
-              "elementId": "input_adresse_preneur",
-              "visibility": true
-            }
-          ]
-        },
-        {
-          "value": "false",
+          "value": "",
           "constraints": [
             {
               "elementId": "input_notification_adresse_bailleur",
@@ -252,6 +253,50 @@
             }
           ]
         }
+        
+      ]
+    },
+		{
+      "inputId": "input_non_14",
+      "valuesConstraints": [
+        {
+          "value": "",
+          "constraints": [
+            {
+              "elementId": "input_notification_adresse_bailleur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_email_bailleur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_num_tel_bailleur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_bailleur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_notification_adresse_preneur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_email_preneur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_num_tel_preneur",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_preneur",
+              "visibility": true
+            }
+          ]
+        }
+        
       ]
     },
 	

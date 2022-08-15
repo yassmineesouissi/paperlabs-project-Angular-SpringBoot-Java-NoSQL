@@ -40,10 +40,11 @@ span {
 /* regular screens (computers and tablets)*/
 @media only screen and (min-width: 720px) {
   .preview {
-    border: 1px solid #575357;
+    border: 1px solid #d2d2d2;
     width: 220px;
     height: 300px;
     float: left;
+    border-radius: 4px;
     border: solid 1px rgb(210, 210, 210);
     box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
 

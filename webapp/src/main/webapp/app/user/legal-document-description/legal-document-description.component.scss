@@ -17,6 +17,10 @@
   font-family: 'calibri';
 }
 
+.btn:hover {
+  color: #fff;
+}
+
 .icn-paperlabs {
   font-size: 20px;
   vertical-align: middle;
@@ -46,6 +50,7 @@
 
 .doc-features {
   list-style: none;
+
   padding-left: 10%;
   padding-right: 10%;
   font-size: 17px;
@@ -55,9 +60,8 @@
 
 .doc-features2 {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 9%;
+  right: 5%;
+  padding-bottom: 11%;
   font-size: 17px;
   color: #071a81;
   font-family: 'calibri';
@@ -101,6 +105,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   color: #071a81;
+  font-weight: 600;
 }
 
 .doc-feature-icon2 {

@@ -122,13 +122,277 @@
       ]
     },
 	{
+      "inputId": "input_nature_personne_physique_tunisienne_creancier",
+      "valuesConstraints": [
+        {
+          "value": "physique tunisienne creancier",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_creancier",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_etrangere_creancier",
+      "valuesConstraints": [
+        {
+          "value": "physique etrangere creancier",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_etrangere_creancier",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_creancier",
+      "valuesConstraints": [
+        {
+          "value": "morale tunisienne creancier",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_creancier",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_etrangere_creancier",
+      "valuesConstraints": [
+        {
+          "value": "morale etrangere creancier",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_etrangere_creancier",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_autre_date",
+      "valuesConstraints": [
+        {
+          "value": "Une autre date",
+          "constraints": [
+            {
+              "elementId": "input_inserez_date",
+              "visibility": false
+            }]
+          }]
+        },
+		
+		{
+      "inputId": "input_date_signature",
+      "valuesConstraints": [
+        {
+          "value": "Date de Signature",
+          "constraints": [
+            {
+              "elementId": "input_inserez_date",
+              "visibility": true
+            }]
+          }]
+        },
+	{
+      "inputId": "input_question_5_oui",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_question_5_oui_duree_renouvelement",
+              "visibility": false
+            }
+          ]
+        }
+        
+      ]
+    },
+	{
+      "inputId": "input_question_5_non",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_question_5_oui_duree_renouvelement",
+              "visibility": true
+            }
+          ]
+        }
+        
+      ]
+    },
+	
+	
+		{
+      "inputId": "input_num_titre_fonicier_6_oui",
+      "valuesConstraints": [
+        {
+          "value": "Num titre",
+          "constraints": [
+            {
+              "elementId": "input_numero_titre_financier_6",
+              "visibility": false
+            }]
+          }]
+        },
+		
+		{
+      "inputId": "input_non_applicable_6",
+      "valuesConstraints": [
+        {
+          "value": "Non applicable",
+          "constraints": [
+            {
+              "elementId": "input_numero_titre_financier_6",
+              "visibility": true
+            }]
+          }]
+        },
+	{
+      "inputId": "input_une_activite_7",
+      "valuesConstraints": [
+        {
+          "value": "Activite7",
+          "constraints": [
+            {
+              "elementId": "input_precisez_activite_7",
+              "visibility": false
+            }
+          ]
+        }
+        
+      ]
+    },
+	
+	{
+      "inputId": "input_toutes_activite_7",
+      "valuesConstraints": [
+        {
+          "value": "toute_Activite7",
+          "constraints": [
+            {
+              "elementId": "input_precisez_activite_7",
+              "visibility": true
+            }
+          ]
+        }
+        
+      ]
+    },
+	{
+      "inputId": "input_oui_12",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_adresse_notification_12_1",
+              "visibility": false
+            },
+			{
+              "elementId": "input_adresse_email_bailleur_12_2",
+              "visibility": false
+            },
+			{
+              "elementId": "input_num_tel_bailleur_12_3",
+              "visibility": false
+            },
+			{
+              "elementId": "input_adresse_bailleur_12_4",
+              "visibility": false
+            },
+			{
+              "elementId": "input_adresse_envoye_preneur_12_5",
+              "visibility": false
+            },
+			{
+              "elementId": "input_adresse_email_preneur_12_6",
+              "visibility": false
+            },
+			{
+              "elementId": "input_num_tel_preneur_12_7",
+              "visibility": false
+            },
+			{
+              "elementId": "input_adresse_preneur_12_8",
+              "visibility": false
+            }
+          ]
+        }
+ 
+      ]
+    },
+	
+	
+	{
+      "inputId": "input_non_12",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_adresse_notification_12_1",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_email_bailleur_12_2",
+              "visibility": true
+            },
+			{
+              "elementId": "input_num_tel_bailleur_12_3",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_bailleur_12_4",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_envoye_preneur_12_5",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_email_preneur_12_6",
+              "visibility": true
+            },
+			{
+              "elementId": "input_num_tel_preneur_12_7",
+              "visibility": true
+            },
+			{
+              "elementId": "input_adresse_preneur_12_8",
+              "visibility": true
+            }
+          ]
+        }
+ 
+      ]
+    },
+	
+	
+	
+	{
       "inputId": "input_forme_personne_morale_tunisienne_caution",
       "valuesConstraints": [
         {
           "value": "Autre",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_1",
+              "elementId": "input_forme_champ_libre_1",
               "visibility": true
             }
           ]
@@ -137,7 +401,7 @@
           "value": "SUARL",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_1",
+              "elementId": "input_forme_champ_libre_1",
               "visibility": false
             }
           ]
@@ -146,7 +410,7 @@
           "value": "SARL",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_1",
+              "elementId": "input_forme_champ_libre_1",
               "visibility": false
             }
           ]
@@ -155,7 +419,7 @@
           "value": "SA",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_1",
+              "elementId": "input_forme_champ_libre_1",
               "visibility": false
             }
           ]
@@ -169,7 +433,7 @@
           "value": "Autre",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_2",
+              "elementId": "input_forme_champ_libre_2",
               "visibility": true
             }
           ]
@@ -178,7 +442,7 @@
           "value": "GMBH",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_2",
+              "elementId": "input_forme_champ_libre_2",
               "visibility": false
             }
           ]
@@ -187,7 +451,7 @@
           "value": "LLP",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_2",
+              "elementId": "input_forme_champ_libre_2",
               "visibility": false
             }
           ]
@@ -196,7 +460,7 @@
           "value": "SUARL",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_2",
+              "elementId": "input_forme_champ_libre_2",
               "visibility": false
             }
           ]
@@ -205,7 +469,7 @@
           "value": "SARL",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_2",
+              "elementId": "input_forme_champ_libre_2",
               "visibility": false
             }
           ]
@@ -214,48 +478,7 @@
           "value": "SA",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_2",
-              "visibility": false
-            }
-          ]
-        }
-      ]
-	  },
-	  {
-      "inputId": "input_forme_personne_morale_tunisienne_debiteur",
-      "valuesConstraints": [
-        {
-          "value": "Autre",
-          "constraints": [
-            {
-              "elementId": "input_champ_libre_forme_3",
-              "visibility": true
-            }
-          ]
-        },
-		{
-          "value": "SUARL",
-          "constraints": [
-            {
-              "elementId": "input_champ_libre_forme_3",
-              "visibility": false
-            }
-          ]
-        },
-		{
-          "value": "SARL",
-          "constraints": [
-            {
-              "elementId": "input_champ_libre_forme_3",
-              "visibility": false
-            }
-          ]
-        },
-		{
-          "value": "SA",
-          "constraints": [
-            {
-              "elementId": "input_champ_libre_forme_3",
+              "elementId": "input_forme_champ_libre_2",
               "visibility": false
             }
           ]
@@ -269,7 +492,7 @@
           "value": "Autre",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_4",
+              "elementId": "input_forme_champ_libre_4",
               "visibility": true
             }
           ]
@@ -278,7 +501,7 @@
           "value": "GMBH",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_4",
+              "elementId": "input_forme_champ_libre_4",
               "visibility": false
             }
           ]
@@ -287,7 +510,7 @@
           "value": "LLP",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_4",
+              "elementId": "input_forme_champ_libre_4",
               "visibility": false
             }
           ]
@@ -296,7 +519,7 @@
           "value": "SUARL",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_4",
+              "elementId": "input_forme_champ_libre_4",
               "visibility": false
             }
           ]
@@ -305,7 +528,7 @@
           "value": "SARL",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_4",
+              "elementId": "input_forme_champ_libre_4",
               "visibility": false
             }
           ]
@@ -314,117 +537,56 @@
           "value": "SA",
           "constraints": [
             {
-              "elementId": "input_champ_libre_forme_4",
+              "elementId": "input_forme_champ_libre_4",
               "visibility": false
             }
           ]
         }
       ]
 	  },
-	  
 	  {
-      "inputId": "input_question_3_bailleur",
+      "inputId": "input_forme_personne_morale_tunisienne_debiteur",
       "valuesConstraints": [
         {
-          "value": "question_3_bailleur",
+          "value": "Autre",
           "constraints": [
             {
-              "elementId": "input_question_3_mandataire_du_bailleur_nom",
-              "visibility": true
-            },
-			{
-              "elementId": "input_question_3_mandataire_du_bailleur_prenom",
+              "elementId": "input_forme_champ_libre_3",
               "visibility": true
             }
           ]
-        }
-       
-      ]
-    },
-	
-	 {
-      "inputId": "input_question_3_mandataire_du_bailleur",
-      "valuesConstraints": [
-        {
-          "value": "question_3_mandataire",
-          "constraints": [
-            {
-              "elementId": "input_question_3_mandataire_du_bailleur_nom",
-              "visibility": false
-            },
-			{
-              "elementId": "input_question_3_mandataire_du_bailleur_prenom",
-              "visibility": false
-            }
-          ]
-        }
-       
-      ]
-    },
-	 {
-      "inputId": "input_question_4_mandataire_du_preneur",
-      "valuesConstraints": [
-        {
-          "value": "question_4_mandataire",
-          "constraints": [
-            {
-              "elementId": "input_question_4_mandataire_du_preneur_nom",
-              "visibility": false
-            },
-			{
-              "elementId": "input_question_4_mandataire_du_preneur_prenom",
-              "visibility": false
-            }
-          ]
-        }
-        
-      ]
-    },
-	
-	{
-      "inputId": "input_question_4_preneur",
-      "valuesConstraints": [
-        {
-          "value": "question_4_preneur",
-          "constraints": [
-            {
-              "elementId": "input_question_4_mandataire_du_preneur_nom",
-              "visibility": true
-            },
-			{
-              "elementId": "input_question_4_mandataire_du_preneur_prenom",
-              "visibility": true
-            }
-          ]
-        }
-        
-      ]
-    },
-	 	{
-      "inputId": "input_num_titre_fonicier_7_oui",
-      "valuesConstraints": [
-        {
-          "value": "Num titre",
-          "constraints": [
-            {
-              "elementId": "input_numero_titre_financier_7",
-              "visibility": false
-            }]
-          }]
         },
-		
 		{
-      "inputId": "input_non_applicable_7",
-      "valuesConstraints": [
-        {
-          "value": "Non applicable",
+          "value": "SUARL",
           "constraints": [
             {
-              "elementId": "input_numero_titre_financier_7",
-              "visibility": true
-            }]
-          }]
+              "elementId": "input_forme_champ_libre_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SARL",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre_3",
+              "visibility": false
+            }
+          ]
+        },
+		{
+          "value": "SA",
+          "constraints": [
+            {
+              "elementId": "input_forme_champ_libre_3",
+              "visibility": false
+            }
+          ]
         }
-
-	]
-	}
+      ]
+    }
+	
+	
+	
+	 ]
+    }

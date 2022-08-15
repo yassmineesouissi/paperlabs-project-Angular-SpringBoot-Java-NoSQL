@@ -12,112 +12,137 @@
     <div id="contenu">
         <div>
         <h1 class="maintitle ">
-        Créez et Gérez votre <span class="text-span-7">SUARL</span> 
-        <br/>simplement et rapidement 
+            Société unipersonelle à responsabilité limitée <span class="text-span-7"> SUARL</span> 
+        <!-- <br/>simplement et rapidement  -->
         <span class="text-span-5">!</span></h1>
         </div>
         <table class="table-sarl">
             <tbody class="all-tab-sarl">
                 <tr>
-                    <th>Constitution</th>
+                    <th>Commissaire aux comptes</th>
                 </tr>
-               
+                           
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('const SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('const SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
+                </tr>
+
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO SUARL PV renouvellement du mandat du CAC')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO SUARL PV renouvellement du mandat du CAC')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO  nouveau CAC')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO  nouveau CAC')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
                     <th>Gérance</th>
                 </tr>
+
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO dec ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('nom1 ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('nom1 ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('nom2 ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td  *ngFor="let legalDocument of filterByKeyword('AGO dec ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
-                </tr>
-               
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('rev1 ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('ren1 ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGE dec ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('ren2 ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('ren1 ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-              
-                
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('nom2 ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-               
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('ren2 ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-            
-               
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('rev2 ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('rev1 ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('dem ger SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('rev2 ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('demission stat')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                
-                <tr>
-                    <th>Comptes Annuels</th>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('dem ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO Approbation1 SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('demission stat')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO Approbation2 SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO dec ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO Approbation6 SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO Approbation3 SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO Approbation5 SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGO Approbation4 SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                         
-                  
-                <tr>
-                    <th>Modifications Statutaires</th>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('transfert siège SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('dénomination SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGE dec ger SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
 
                 <tr>
-                    <th>Capital</th>
+                    <th>Comptes Annuels</th>
+                </tr>
+
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO Approbation1 SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGE augmentation en numéraire SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</td>
-                </tr>
-                <tr>
-                    <td *ngFor="let legalDocument of filterByKeyword('AGE augmentation par conversion de créance SUARL')" [routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}} </td>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO Approbation2 SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
                 </tr>
                 
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO Approbation6 SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
+                </tr>
+                        
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO Approbation3 SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                </tr>
+                        
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO Approbation5 SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
+                </tr>
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGO Approbation4 SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
+                </tr>
+
+                <tr>
+                    <th>Modifications Statutaires</th>
+                </tr>
+
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('transfert siège SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
+                </tr>
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('dénomination SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
+                </tr>
+                <tr>
+                    <th> Capital</th>
+                </tr>
+
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGE augmentation en numéraire SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                    
+                </tr>
+                                
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('AGE augmentation par conversion de créance SUARL')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                   
+                </tr>
+                <tr>
+                    <th> Capital</th>
+                </tr>
+                <tr>
+                    <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('Contrat Cession Creance comm')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                 
+                </tr>
             </tbody>
         </table>
     </div>

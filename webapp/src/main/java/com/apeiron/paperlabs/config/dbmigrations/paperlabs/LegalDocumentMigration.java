@@ -126,7 +126,7 @@ public class LegalDocumentMigration {
 
         legalDocument.setDescriptionSections(descriptionSections);
 
-        legalDocument.setPrice(49.99f);
+        legalDocument.setPrice(77.99f);
 
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
@@ -189,10 +189,10 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
-   @ChangeSet(order = "004", author = AuthorsConstants.RHIMI_RAMI , id = "004-addSIVPLegalDocument")
+   /* @ChangeSet(order = "004", author = AuthorsConstants.RHIMI_RAMI , id = "004-addSIVPLegalDocument")
     public void addCIVPLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
-
+ 
         List<DescriptionSection> descriptionSections = new ArrayList<>();
         DescriptionSection descriptionSection;
         List<String> autoFillConcernedEntities = new ArrayList<>();
@@ -246,7 +246,7 @@ public class LegalDocumentMigration {
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
         mongoTemplate.save(legalDocument);
-    } 
+    }  */
     @ChangeSet(order = "005", author = AuthorsConstants.RHIMI_RAMI , id = "005-addSoldeCompteLegalDocument")
     public void addSoldeCompteLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
@@ -457,7 +457,7 @@ public class LegalDocumentMigration {
     
   
      
-   @ChangeSet(order = "009", author = AuthorsConstants.RHIMI_RAMI , id = "009-addFormulairestatusLegalDocument")
+  /*  @ChangeSet(order = "009", author = AuthorsConstants.RHIMI_RAMI , id = "009-addFormulairestatusLegalDocument")
     public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
   
@@ -505,7 +505,7 @@ public class LegalDocumentMigration {
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
         mongoTemplate.save(legalDocument);
-    } 
+    }  */
    
     @ChangeSet(order = "010", author = AuthorsConstants.RHIMI_RAMI , id = "010-addconvocationagoLegalDocument")
 
@@ -681,7 +681,7 @@ public class LegalDocumentMigration {
     }*/
    
     
-   @ChangeSet(order = "013", author = AuthorsConstants.RHIMI_RAMI , id = "013-addLettreDeDemissionGerantLegalDocument")
+  /*  @ChangeSet(order = "013", author = AuthorsConstants.RHIMI_RAMI , id = "013-addLettreDeDemissionGerantLegalDocument")
     public void addLettreDeDemissionGerantLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
 
@@ -735,7 +735,7 @@ public class LegalDocumentMigration {
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
         mongoTemplate.save(legalDocument);
-    } 
+    }  */
    
     @ChangeSet(order = "014", author = AuthorsConstants.RHIMI_RAMI , id = "014-addDemissionLegalDocument")
     public void addDemissionLegalDocument(MongoTemplate mongoTemplate) {     
@@ -1137,7 +1137,7 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
- @ChangeSet(order = "021", author = AuthorsConstants.RHIMI_RAMI , id = "021-addconfessionLegalDocument")
+/*  @ChangeSet(order = "021", author = AuthorsConstants.RHIMI_RAMI , id = "021-addconfessionLegalDocument")
  public void addCofessionLegalDocument(MongoTemplate mongoTemplate) {     
      LegalDocument legalDocument;
 
@@ -1195,7 +1195,7 @@ public class LegalDocumentMigration {
      legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
      mongoTemplate.save(legalDocument);
- }
+ } */
  
   @ChangeSet(order = "022", author = AuthorsConstants.RHIMI_RAMI , id = "022-addcontratsouslocationLegalDocument")
  public void addcontratsouslocationLegalDocument(MongoTemplate mongoTemplate) {     

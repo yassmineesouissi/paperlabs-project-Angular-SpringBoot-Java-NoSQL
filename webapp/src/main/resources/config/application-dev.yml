@@ -48,18 +48,17 @@ spring:
         path:
           home: target/elasticsearch
   mail:
-    host: mail.sqoincbo.com
+    host: smtp.office365.com
     port: 587
-    username: paperlabs@sqoincbo.com
-    password: dali2020!
-    protocol: smtp
+    username: sav@contratou.tn
+    password: Contrat22$
     tls: true
     properties:
       mail:
         smtp:
           auth: true
           starttls.enable: true
-          ssl.trust: mail.sqoincbo.com
+          #ssl.trust: mail.sqoincbo.com
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
@@ -98,11 +97,12 @@ jhipster:
   mail: # specific JHipster mail property, for standard properties see MailProperties
     base-url: http://127.0.0.1:8085
     #base-url: http://paperlabs.io
+    #base-url: http://contratou.tn
     #base-url: http://196.203.28.46:3393
     #base-url: http://196.203.28.46:3394
     #base-url: http://172.16.200.202
     #base-url: http://172.16.200.205
-    from: paperlabs@sqoincbo.com
+    from: sav@contratou.tn
 
   metrics:
     logs: # Reports metrics in the logs

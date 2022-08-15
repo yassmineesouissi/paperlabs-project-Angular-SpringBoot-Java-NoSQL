@@ -1,0 +1,37 @@
+<div class="section">
+    <div id="main">
+        <div id="menu">
+    
+    
+       
+    
+        </div>
+       <!--  <div id="menul">
+            Menu
+           </div> -->
+        <div id="contenu">
+            <div>
+                <h1 class="maintitle ">
+                Créez votre contrat de <span class="text-span-7">cession</span> 
+                <!-- <br/> <span class="title-2"> simplement et rapidement </span> -->
+                <span class="text-span-5">!</span></h1>
+                </div>
+            <table class="table-sarl">
+                <tbody class="all-tab-sarl">
+    
+                    
+                    <tr>
+                        <th>Cession</th>
+                    </tr>
+    
+                     <tr>
+                         <td class="colmn-left" *ngFor="let legalDocument of filterByKeyword('Contrat Cession Creance comm')"[routerLink]="['legal-document-description/', legalDocument.id]"><div class="contrat" (click)="collapseNavbar()">{{legalDocument.shortName}}</div></td>
+                     </tr>
+
+                     
+                </tbody>
+            </table>
+        </div>
+       </div>
+       
+    </div>

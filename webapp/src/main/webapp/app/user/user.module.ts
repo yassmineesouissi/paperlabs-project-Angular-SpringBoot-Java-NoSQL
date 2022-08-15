@@ -20,6 +20,9 @@ import { SuarlComponent } from './suarl/suarl.component';
 import { BauxComponent } from './baux/baux.component';
 import { CommercialComponent } from './commercial/commercial.component';
 import { SocialComponent } from './social/social.component';
+import { TarifsComponent } from './tarifs/tarifs.component';
+import { CessionComponent } from './cession/cession.component';
+import { SureteComponent } from './surete/surete.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { SocialComponent } from './social/social.component';
     SuarlComponent,
     BauxComponent,
     CommercialComponent,
-    SocialComponent
+    SocialComponent,
+    TarifsComponent,
+    CessionComponent,
+    SureteComponent
   ],
   imports: [PaperlabsSharedModule, RouterModule.forChild(userRoutes)]
 })

@@ -22,8 +22,15 @@ public class InitialSetupMigration {
         adminAuthority.setName(AuthoritiesConstants.ADMIN);
         Authority userAuthority = new Authority();
         userAuthority.setName(AuthoritiesConstants.USER);
+        Authority userwAuthority = new Authority();
+        userwAuthority.setName(AuthoritiesConstants.USERW);
+        Authority userrAuthority = new Authority();
+        userrAuthority.setName(AuthoritiesConstants.USERR);
         mongoTemplate.save(adminAuthority);
         mongoTemplate.save(userAuthority);
+        mongoTemplate.save(userwAuthority);
+        mongoTemplate.save(userrAuthority);
+       
     }
 
     @ChangeSet(order = "02", author = "initiator", id = "02-addUsers")
@@ -32,6 +39,10 @@ public class InitialSetupMigration {
         adminAuthority.setName(AuthoritiesConstants.ADMIN);
         Authority userAuthority = new Authority();
         userAuthority.setName(AuthoritiesConstants.USER);
+        Authority userwAuthority = new Authority();
+        userwAuthority.setName(AuthoritiesConstants.USERW);
+        Authority userrAuthority = new Authority();
+        userrAuthority.setName(AuthoritiesConstants.USERR);
         
         User adminUser = new User();
         adminUser.setId("user-16");
@@ -193,6 +204,21 @@ public class InitialSetupMigration {
         adminUser.setCreatedDate(Instant.now());
         adminUser.getAuthorities().add(adminAuthority);
         adminUser.getAuthorities().add(userAuthority);
+        mongoTemplate.save(adminUser);
+        
+        
+        
+        adminUser.setId("user-18");
+        adminUser.setLogin("vvv@gmail.com");
+        adminUser.setPassword("$2a$10$OZXVfwHN1o.8QnNo0ZT.beyn7CVaEHh5pJZdOWbJhzf6PPWN.NqBm");
+        adminUser.setFirstName("test");
+        adminUser.setLastName("test");
+        adminUser.setEmail("vvv@gmail.com");
+        adminUser.setActivated(true);
+        adminUser.setLangKey("fr");
+        adminUser.setCreatedBy(adminUser.getLogin());
+        adminUser.setCreatedDate(Instant.now());
+        adminUser.getAuthorities().add(userwAuthority);
         mongoTemplate.save(adminUser);
 
        
